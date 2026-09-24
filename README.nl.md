@@ -11,3 +11,5 @@ De agent heeft zoek- en browsertoegang en hulpmiddelen voor de aangeleverde docu
 Officiële bronnen krijgen voorrang. Identificatoren worden niet geraden. Een technische storing bewijst niet dat een arrest niet bestaat. Bij een bekend arrestnummer van de Belgische Raad van State wordt eerst het officiële geavanceerde zoekformulier gebruikt. De FR- en NL-trefwoordenstructuren van juriDict zijn niet automatisch elkaars vertaling.
 
 Zie [VALIDATION.md](VALIDATION.md) voor echte proeven, simulaties en beperkingen. Deze bèta is geen algemene V1-certificering; er wordt geen algemeen betrouwbaarheidspercentage gegeven. Menselijke controle blijft nodig voor professioneel gebruik. Oorspronkelijke documentatie: [CC BY-NC-SA 4.0](LICENSE). Externe bronnen behouden hun eigen voorwaarden en worden hier niet verspreid.
+
+Bètatest: [instructies voor juristen (Frans)](tests/beta/guide.md) en [feedbackformulier](tests/beta/fiche-retour.md).
