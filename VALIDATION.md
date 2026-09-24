@@ -1,4 +1,4 @@
-# Validation publique — 0.5.0-beta.1
+# Validation publique — 0.5.0-beta.2
 
 24 septembre 2026. **Bêta expérimentale ; validation générale V1 non démontrée.** Cette note est une synthèse des essais réalisés, pas une certification ni une reproduction des documents de travail.
 
@@ -32,3 +32,9 @@ Les références doctrinales peuvent être identifiées dans une notice ou un ma
 Les protocoles sont descriptifs. Le paquet ne fournit pas de moteur d’audit automatique ni de suite attestant mécaniquement la justesse juridique. Les vérifications de frontmatter, liens et archive sont des contrôles de conditionnement. Rejouer les cas affectés en conservant entrées, réponses, observations et comparaison séparées.
 
 Les livres, PDF officiels, captures et journaux bruts ne sont pas redistribués. Le dépôt publie les règles, les protocoles synthétiques et cette synthèse de résultats. La disponibilité des sources peut changer ; conserver la date et les limites de chaque nouvel audit.
+
+## Compléments de la bêta 2
+
+Dix recherches numériques officielles supplémentaires ont abouti à des PDF FR/NL, téléchargés et ouverts localement après l’échec d’autres clients. Les essais distinguent recherche, transfert et lecture ; aucun schéma d’URL n’a été reconstruit. Un lien de juriDict FR a livré un texte NL, et un lien récent une page HTML en HTTP 200 : la langue et le contenu reçu sont désormais contrôlés explicitement. Les scénarios T53-R décrivent les comportements à rejouer ; ils ne sont pas présentés comme huit exécutions indépendantes.
+
+Le générateur français a passé cinq tests : rejet des preuves manquantes pour une référence vérifiée, identifiants dupliqués, comptage distinct des sources et occurrences, contrôle distinct des traductions, conservation d’une fiche longue à travers la pagination. Un rapport pilote de six pages a été inspecté visuellement. Ces contrôles portent sur la présentation et la cohérence, pas sur la validité juridique. Le [protocole V1](tests/validation-v1/protocole.md) reste prospectif ; la validation humaine indépendante n’est pas acquise.

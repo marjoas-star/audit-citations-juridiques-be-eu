@@ -1,6 +1,6 @@
 # Audit des citations juridiques — Belgique & Europe
 
-**Version 0.5.0-beta.1 — publication expérimentale.** Méthode pour auditer les références et citations d’un document en droit belge, droit de l’Union européenne et CEDH. Ce skill accompagne un agent ; ce n’est pas un moteur de recherche autonome.
+**Version 0.5.0-beta.2 — publication expérimentale.** Méthode pour auditer les références et citations d’un document en droit belge, droit de l’Union européenne et CEDH. Ce skill accompagne un agent ; ce n’est pas un moteur de recherche autonome.
 
 [Français](README.fr.md) · [Nederlands](README.nl.md) · [Deutsch](README.de.md) · [English](README.en.md)
 
@@ -23,6 +23,10 @@ Exemple de demande :
 > Utilise audit-citations-juridiques-be-eu pour auditer les références et citations de ce document. Conserve les originaux, indique les sources réellement consultées et distingue les vérifications incomplètes des erreurs.
 
 Préciser le périmètre, les documents de contexte et, lorsqu’elle compte, la date juridique pertinente. Les règles du skill sont rédigées en français ; les langues de travail sont FR/NL/DE/EN. L’accès aux sources dépend des outils de recherche et de navigation de l’agent. La lecture des PDF/DOCX et la production de fichiers nécessitent les outils correspondants. PyYAML n’est pas nécessaire pour utiliser la méthode documentaire.
+
+## Rapport lisible
+
+Un [générateur de rapport français](templates/report-rendering.md) fournit une présentation PDF et Markdown régulière, avec des libellés compréhensibles par un juriste. Le PDF requiert Python et ReportLab ; le générateur met en page des conclusions déjà établies. Il ne réalise pas les recherches.
 
 ## Validation et limites
 

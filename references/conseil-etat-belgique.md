@@ -54,6 +54,20 @@ Lorsqu'un numéro exact d'arrêt est connu :
 7. ne relever un ECLI que s'il est effectivement présent dans une source suffisamment forte ;
 8. conserver le niveau de preuve par champ.
 
+### 4.0. Récupérer et lire efficacement le document
+
+Rechercher d’abord le numéro seul (début = fin), sans ajouter le nom ou la date cités : les critères supplémentaires sont combinés par AND et une erreur dans la citation masquerait le bon résultat. Sélectionner explicitement les langues pertinentes et le type de document ; ne pas confondre langue de l’interface et langues recherchées.
+
+Après la recherche, relever le `href` réel du lien du résultat, son titre et l’URL de la page de résultats. Ne pas reconstruire un lien à partir d’un texte visuellement abrégé. Distinguer le PDF original et les éventuelles traductions ; ouvrir leur première page pour le confirmer.
+
+Lorsque le lecteur intégré échoue ou empêche l’extraction, utiliser un téléchargement standard du lien effectivement observé, puis lire le PDF localement. Un outil tel que `curl --fail --location` a fonctionné dans le parcours du 24 septembre 2026 alors qu’un autre client et le lecteur web échouaient ; ce résultat ne garantit pas tous les environnements. Ne pas contourner un contrôle d’accès ni un CAPTCHA. Conserver l’échec du premier client et le résultat du repli.
+
+Conserver le lien complet, y compris son fragment éventuel `#xml=...`. Pour télécharger le fichier, le fragment peut être retiré : il concerne l’affichage des occurrences et ne fait pas partie de la requête HTTP. Le domaine, le chemin et les paramètres de requête restent inchangés ; ce retrait n’autorise aucune reconstruction d’URL.
+
+Un statut HTTP 200 ne suffit pas : vérifier la signature PDF, l’ouverture par un lecteur, le nombre de pages et l’identité du document. Une page HTML d’erreur servie en 200 reste un échec de récupération. Lire l’en-tête, la langue, les mentions de traduction et de rectification avant le passage cité. Chercher ensuite le passage dans le texte extrait et rendre visuellement les pages pertinentes si l’extraction est douteuse. Ne pas transformer des espaces parasites d’extraction en fautes de l’auteur.
+
+Pour un lot, réutiliser le formulaire, conserver les liens observés dans un manifeste, limiter les téléchargements simultanés et réutiliser les fichiers déjà obtenus. Un seul changement de client standard suffit pour tester un repli ; en cas d’échec persistant, consigner la limite et passer à une voie de corroboration. Séparer recherche, téléchargement et lecture dans les traces : la panne du lecteur ne doit pas être attribuée au formulaire qui a abouti.
+
 ### 4.1. Échec du formulaire
 
 Si le formulaire officiel ne peut pas être piloté, renvoie une erreur, un timeout ou une réponse techniquement inexploitable :
@@ -87,7 +101,9 @@ La structure est divisée en branches francophone et néerlandophone.
 
 La documentation officielle francophone indique un accès systématique à partir du n° 61.000 du 17 juillet 1996 ; avant cette date, la reprise est sporadique. Les décisions ne tranchant pas de nouvelles questions juridiques peuvent ne pas y figurer.
 
-Les informations de couverture doivent être vérifiées dans chaque langue lorsque l'asymétrie entre les interfaces ou taxonomies est pertinente.
+La [présentation néerlandaise](https://www.raadvst-consetat.be/?lang=nl&page=juridict) annonce une couverture systématique depuis le 1er janvier 2000, et depuis juin 2018 pour les affaires d’étrangers ; auparavant, celles-ci étaient sélectionnées selon leur intérêt. Les décisions de procédure sont exclues. Le manuel présente encore une formulation plus restrictive pour les étrangers : conserver cette différence documentaire, sans extrapoler une exhaustivité.
+
+Ces indications concernent juriDict, pas la collection générale des PDF depuis septembre 1994. Vérifier séparément les informations dans chaque langue.
 
 ### 5.2. Taxonomies FR/NL
 
@@ -160,6 +176,16 @@ Ne pas fabriquer ou réutiliser aveuglément d'anciens schémas d'URL, notamment
 
 Une URL reconstruite à partir d'un numéro n'est jamais une preuve d'existence documentaire.
 
+Un lien `arr.php` réellement affiché peut être suivi tel quel ; son seul nom ne justifie pas de l’écarter. Dans le parcours du 24 septembre 2026, un lien de la fiche FR de juriDict a livré le texte néerlandais du même arrêt : contrôler la langue reçue et revenir au résultat PDF approprié, sans ajouter soi-même un paramètre de langue.
+
+## 9.1. Autres voies de consultation
+
+- Recherche simple : utile pour des mots, une expression entre guillemets ou une recherche booléenne ; elle porte sur le texte et ne remplace pas le champ numérique pour identifier un arrêt exact. L’aide annonce une limite de 1 000 documents.
+- juriDict : une recherche peut produire plusieurs points de droit pour un seul arrêt. Ne pas compter ces lignes comme autant de sources. Le manuel annonce un maximum de 100 résultats et une séparation linguistique des collections.
+- Décisions récentes : accès par mois et matière, utile pour découvrir des décisions nouvelles. La date d’ajout n’est pas la date du prononcé. Un lien défaillant de cette liste ne démontre pas l’inexistence du document ; revenir au formulaire avec le bon type.
+
+Aides consultées : [recherche avancée](https://www.raadvst-consetat.be/?lang=fr&page=search_help_adv), [recherche simple](https://www.raadvst-consetat.be/?lang=fr&page=search_help), [manuel juriDict NL](https://www.raadvst-consetat.be/?lang=nl&page=juridict_help).
+
 ## 10. Procédure recommandée
 
 ### Cas A — numéro exact connu
@@ -219,3 +245,5 @@ COUNCIL_OF_STATE_EXACT_NUMBER_RETRIEVAL = GREEN
 ## Traçabilité de T53
 
 Conserver les observations brutes et la sortie réelle séparément de l'oracle. Les variantes simulées testent les décisions face aux observations fournies, pas le pilotage du site. Un succès sur un arrêt ne prouve pas la récupération générale. Un test sans sortie conservée reste `NOT_DEMONSTRATED`.
+
+Complément de protocole : [récupération et lecture](../tests/cases/conseil-etat-recuperation.md).

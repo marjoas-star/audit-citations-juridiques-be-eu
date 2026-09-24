@@ -1,5 +1,12 @@
 # Notes de version
 
+## 0.5.0-beta.2 — 24 septembre 2026
+
+- Présentation juridique française réutilisable : synthèse, corrections, fiches, citations et limites ; générateur PDF/Markdown et cinq tests de conditionnement.
+- Récupération des PDF du Conseil d’État depuis les liens observés, contrôle du contenu reçu et de la langue ; compléments T53-R et précisions FR/NL de juriDict.
+- Protocole prospectif V1 et plan du corpus réservé, sans revendication de campagne indépendante exécutée.
+
+
 ## 0.5.0-beta.1 — première publication publique
 
 - Recherche exacte prioritaire du Conseil d’État belge par formulaire officiel ; panne distincte d’absence de résultat.

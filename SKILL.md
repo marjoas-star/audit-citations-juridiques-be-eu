@@ -369,11 +369,12 @@ Procédure :
 1. rechercher le numéro exact dans la collection officielle ;
 2. ne jamais transformer le numéro en URL supposée ;
 3. ouvrir le document officiel lorsqu'il est accessible ;
-4. vérifier numéro, date, nature du document, parties et langue ;
-5. vérifier le passage cité lorsque le texte est accessible ;
-6. ne relever un ECLI que s'il est effectivement fourni par une source suffisamment forte ;
-7. si le formulaire officiel ne peut pas être piloté ou échoue techniquement, enregistrer `TECHNICAL_FAILURE`, jamais `NO_RESULT` ;
-8. poursuivre ensuite par les voies de corroboration prévues sans sur-vérifier.
+4. si le lecteur échoue, télécharger le lien effectivement observé avec un client standard puis lire le PDF localement ; distinguer cet échec de lecture d’un échec du formulaire ;
+5. vérifier le contenu réellement reçu, numéro, date, nature du document, parties, langue et éventuelles rectifications ;
+6. vérifier le passage cité lorsque le texte est accessible ;
+7. ne relever un ECLI que s'il est effectivement fourni par une source suffisamment forte ;
+8. si le formulaire officiel ne peut pas être piloté ou échoue techniquement, enregistrer `TECHNICAL_FAILURE`, jamais `NO_RESULT` ;
+9. poursuivre ensuite par les voies de corroboration prévues sans sur-vérifier.
 
 La collection officielle annonce tous les arrêts depuis septembre 1994, sous réserve du régime de publication particulier du contentieux des étrangers. Une impossibilité récurrente d'interroger cette collection pour un arrêt postérieur à septembre 1994 constitue une limitation technique du skill, pas une preuve d'absence documentaire.
 
@@ -457,7 +458,11 @@ Le test T53 doit confirmer que la recherche officielle par numéro exact est ten
 
 ## 52. Rapport
 
-Produire par défaut : résumé conversationnel, Markdown canonique et PDF professionnel lorsque les outils de génération et de contrôle visuel sont disponibles ; DOCX si demandé. Si un format ne peut pas être produit, livrer les résultats disponibles et indiquer cette limite, sans annoncer un fichier inexistant. Le skill fournit une méthode et un modèle de rapport, pas un générateur intégré.
+Produire par défaut : résumé conversationnel, Markdown canonique et PDF professionnel lorsque les outils de génération et de contrôle visuel sont disponibles ; DOCX si demandé. Si un format ne peut pas être produit, livrer les résultats disponibles et indiquer cette limite, sans annoncer un fichier inexistant. Pour un rapport en français, utiliser le générateur de mise en page `scripts/render_report.py` selon `templates/report-rendering.md`. Il produit Markdown et PDF à partir des mêmes fiches déjà vérifiées ; il ne réalise pas les recherches. Pour les autres langues, appliquer le modèle éditorial dans la langue du rapport avec les outils disponibles.
+
+### Présentation destinée au juriste
+
+Suivre `templates/report-template.md`. Commencer par les conclusions utiles et les corrections, puis donner les preuves et les limites. Afficher les statuts en langage courant dans la langue du rapport ; conserver les codes techniques dans les données et traces. Expliquer ce qui a été contrôlé sans supposer que le lecteur connaît un schéma de données. Aucun pourcentage de fiabilité déduit du seul nombre de références retrouvées. Conserver une première réponse gelée quand le rapport sert à une évaluation indépendante ; une nouvelle présentation ne remplace pas cette réponse.
 
 ## 53. Rapport PDF
 

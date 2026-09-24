@@ -1,14 +1,24 @@
 # Rapport d'audit des citations juridiques
 
+## Ligne éditoriale et présentation
+
+Le lecteur est un juriste, sans connaissance requise des formats de données. Préférer « Référence vérifiée », « Correction nécessaire », « Vérification partielle » et « Vérification impossible avec les sources accessibles » aux codes internes. Pour les citations : « Texte conforme », « Écart mineur », « Citation inexacte » ; distinguer toujours les mots du texte de leur effet sur le sens. Ne pas fusionner une référence non retrouvée et une contradiction : préciser le cas effectivement rencontré dans la fiche.
+
+Structure de lecture : synthèse et périmètre en première page ; corrections et limites ; fiches de références ; contrôle des citations ; méthode et sources. Les sections ci-dessous constituent les informations à conserver, pas quatorze chapitres obligatoires. Regrouper les sections non pertinentes et éviter les répétitions.
+
+A4, typographie intégrée, titres bleu sombre, accent vert sobre, corps lisible, espaces réguliers et pages numérotées. Les mots portent le diagnostic : la couleur seule n’est jamais nécessaire. Garder une fiche courte sur une page lorsque possible, éviter un titre ou un lien de preuve isolé sur la page suivante. Les liens de preuve sont cliquables et accompagnés d’un localisateur précis.
+
+Le [générateur français](report-rendering.md) stabilise cette présentation. Le contenu des conclusions reste à établir par l’audit.
+
 ## Couverture
 
 Document audité, date de l'audit, version du skill, langue du rapport.
 
 ## 1. Résumé exécutif
 
-Afficher le nombre de références détectées et de sources uniques, puis les statuts : VERIFIED, VERIFIED_WITH_ANOMALY, PARTIALLY_VERIFIED, NOT_VERIFIABLE_WITH_ACCESSIBLE_SOURCES, NOT_FOUND_OR_CONTRADICTORY.
+Afficher le nombre de références effectivement examinées et de sources principales distinctes, puis les statuts traduits en langage courant (codes internes : VERIFIED, VERIFIED_WITH_ANOMALY, PARTIALLY_VERIFIED, NOT_VERIFIABLE_WITH_ACCESSIBLE_SOURCES, NOT_FOUND_OR_CONTRADICTORY).
 
-Afficher séparément les statuts des citations : EXACT, EXACT_WITH_SIGNALLED_ADAPTATIONS, MINOR_DEVIATION, INEXACT, NOT_VERIFIABLE, NOT_APPLICABLE_TRANSLATION. Ne pas compter les traductions comme des citations littéralement exactes. Calculer les totaux à partir des fiches finales ; si des fiches restent à revalider, l'indiquer et ne pas publier de total certifié.
+Afficher séparément les statuts des citations, également traduits pour le lecteur : EXACT, EXACT_WITH_SIGNALLED_ADAPTATIONS, MINOR_DEVIATION, INEXACT, NOT_VERIFIABLE, NOT_APPLICABLE_TRANSLATION. Ne pas compter les traductions comme des citations littéralement exactes. Calculer les totaux à partir des fiches finales ; si des fiches restent à revalider, l'indiquer et ne pas publier de total certifié.
 
 Afficher l'intégrité des adaptations : FAITHFUL, MATERIAL_BUT_NOT_MISLEADING, MISLEADING, NOT_VERIFIABLE.
 
