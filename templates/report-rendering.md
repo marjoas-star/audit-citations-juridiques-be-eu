@@ -1,4 +1,4 @@
-# Produire un rapport régulier en français
+# Produire un rapport régulier (FR, NL, DE, EN)
 
 Le générateur transforme des conclusions établies en PDF et Markdown. Il ne recherche aucune source, n’évalue pas le droit et ne transforme pas une preuve faible en vérification. Les couleurs, polices, marges, titres, compteurs et règles de pagination sont centralisés dans un seul fichier.
 
@@ -16,7 +16,7 @@ Le premier appel produit rapport.md et rapport.pdf ; le second uniquement rappor
 
 ## Données d’entrée
 
-Objet JSON UTF-8. Les données doivent être rédigées en français courant ; `report_language` vaut `fr`. Le générateur refuse une autre langue pour éviter de produire silencieusement un rapport bilingue. Le skill conserve ses quatre langues de travail ; les rapports NL/DE/EN utilisent le modèle éditorial avec un autre outil de mise en page jusqu’à localisation du générateur.
+Objet JSON UTF-8. `report_language` vaut `fr`, `nl`, `de` ou `en` (par défaut `fr`) : les titres, statuts, dates, avertissement et libellés sont alors produits dans cette langue. Rédiger dans la même langue la synthèse, le périmètre, les limites, la méthode, les contrôles et les constats ; les passages probants restent dans la langue de la source. Toute autre langue est refusée. Si la synthèse chiffre les sources distinctes ou les erreurs (« onze sources distinctes », « 4 corrections établies »…), ces chiffres doivent correspondre aux compteurs calculés, faute de quoi le rapport est refusé. Les références confirmées sans aucune réserve sont regroupées en fin de rapport, sous forme de liste compacte avec leurs preuves ; les autres gardent une fiche complète.
 
 Un exemple complet, valide et entièrement fictif se trouve dans [example-audit.json](example-audit.json) : le copier et le remplacer champ par champ. Il ne reproduit aucun cas de test. Dans `excerpt`, donner le passage sans guillemets : le générateur les ajoute (une paire englobante fournie par erreur est retirée).
 

@@ -66,13 +66,15 @@ A setting only takes effect in a **new** task or conversation. References: [Cowo
 2. Attach your document (paperclip or drag and drop), or give its location in a connected folder.
 3. Copy this request, adapting it if needed:
 
-> Use the audit-citations-juridiques-be-eu skill to check all references and quotations in the attached document. Produce a report in English.
+> Use the audit-citations-juridiques-be-eu skill to check all references and quotations in the attached document. Produce a report in English, as a PDF. The document speaks as at 1 March 2024.
+
+Replace the date with that of your document (date of drafting, or the date at which the law must be assessed). If you leave it out, Claude infers it from the document or, failing that, checks the law in force today, and tells you so.
 
 Useful details to add if they apply to you:
 
 - **the scope**: "only the footnotes in chapter 2", "only the case law";
 - **the legal reference date**: "the document speaks as of 1 January 2024" (useful for checking a statute as it stood at the time);
-- **the language of the report**: French, Dutch, German or English (the formatted PDF currently exists only in French; in the other languages, Claude prepares a Markdown report);
+- **the language of the report**: French, Dutch, German or English (the PDF is formatted in the language you choose);
 - **the substance**: if you also want to know whether the sources actually support your statements, ask for it expressly; this check is not done by default.
 
 ## 6. How long it takes
@@ -93,14 +95,14 @@ The report starts with the **key points** and the **corrections needed**, then g
 
 | Status | Meaning |
 |---|---|
-| **Reference verified** (PDF: « Référence vérifiée ») | the source exists and matches what you wrote |
-| **Reference verified · quotation: minor discrepancy** (or "inaccurate quotation") (PDF: « Référence vérifiée · citation : écart mineur » / « citation inexacte ») | the source is correct, but the text in quotation marks does not match exactly |
-| **Reference identified, correction needed** (PDF: « Référence identifiée, correction nécessaire ») | it is indeed the right source, but one element is wrong (date, number, ECLI, article…); the correction is indicated |
-| **Partial verification** (PDF: « Vérification partielle ») | some elements are confirmed, others could not be |
-| **Verification impossible with the accessible sources** (PDF: « Vérification impossible avec les sources accessibles ») | the source could be neither confirmed nor ruled out (paywall, blocked website, work not digitized): **check it yourself; this is not an established error** |
-| **Reference not found or contradiction established** (PDF: « Référence non retrouvée ou contradiction établie ») | an official source contradicts the reference: to be examined first |
+| **Reference verified** | the source exists and matches what you wrote |
+| **Reference verified · quotation: minor deviation** (or "inaccurate") | the source is correct, but the text in quotation marks does not match exactly |
+| **Reference identified, correction needed** | it is indeed the right source, but one element is wrong (date, number, ECLI, article…); the correction is indicated |
+| **Partially verified** | some elements are confirmed, others could not be |
+| **Not verifiable with accessible sources** | the source could be neither confirmed nor ruled out (paywall, blocked website, work not digitized): **check it yourself; this is not an established error** |
+| **Reference not found or contradicted** | an official source contradicts the reference: to be examined first |
 
-The importance of each correction is indicated: **critical priority** (PDF: « priorité critique »), **important correction** (PDF: « correction importante »), **minor correction** (PDF: « correction ponctuelle ») or **information** (PDF: « information »). Each correction comes with the passage from the source that supports it: you can check it in one click.
+The importance of each correction is indicated: **critical priority**, **important correction**, **minor correction** or **information**. Each correction comes with the passage from the source that supports it: you can check it in one click.
 
 The report is an aid: **review the corrections before carrying them over**, especially in a court filing.
 

@@ -66,13 +66,15 @@ Een instelling geldt pas in een **nieuwe** taak of een nieuw gesprek. Referentie
 2. Voeg uw document toe (paperclip of slepen en neerzetten), of geef de locatie ervan in een gekoppelde map aan.
 3. Kopieer deze vraag en pas ze zo nodig aan:
 
-> Gebruik de skill audit-citations-juridiques-be-eu om alle verwijzingen en citaten in het bijgevoegde document te controleren. Stel een verslag op in het Nederlands.
+> Gebruik de skill audit-citations-juridiques-be-eu om alle verwijzingen en citaten in het bijgevoegde document te controleren. Stel een verslag op in het Nederlands, als pdf. Het document situeert zich op 1 maart 2024.
+
+Vervang de datum door die van uw document (datum van opstelling, of de datum waarop het recht moet worden beoordeeld). Laat u ze weg, dan leidt Claude ze af uit het document of controleert het, bij gebrek daaraan, het vandaag geldende recht, en zegt het u dat.
 
 Nuttige preciseringen, toe te voegen als ze op u van toepassing zijn:
 
 - **de reikwijdte**: "alleen de voetnoten van hoofdstuk 2", "alleen de rechtspraak";
 - **de juridische peildatum**: "het document plaatst zich op 1 januari 2024" (nuttig om een wet te controleren in haar toenmalige versie);
-- **de taal van het verslag**: Frans, Nederlands, Duits of Engels (de opgemaakte pdf bestaat momenteel alleen in het Frans; in de andere talen stelt Claude een verslag in Markdown op);
+- **de taal van het verslag**: Frans, Nederlands, Duits of Engels (de pdf wordt opgemaakt in de taal die u kiest);
 - **de grond van de zaak**: wilt u ook weten of de bronnen uw beweringen werkelijk ondersteunen, vraag het dan uitdrukkelijk; die controle gebeurt niet standaard.
 
 ## 6. Hoe lang het duurt
@@ -93,14 +95,14 @@ Het verslag begint met **wat u moet onthouden** en de **noodzakelijke correcties
 
 | Vermelding | Betekenis |
 |---|---|
-| **Verwijzing gecontroleerd** (pdf: « Référence vérifiée ») | de bron bestaat en stemt overeen met wat u schreef |
-| **Verwijzing gecontroleerd · citaat: kleine afwijking** (of "onjuist citaat") (pdf: « Référence vérifiée · citation : écart mineur » / « citation inexacte ») | de bron klopt, maar de tekst tussen aanhalingstekens stemt niet precies overeen |
-| **Verwijzing geïdentificeerd, correctie nodig** (pdf: « Référence identifiée, correction nécessaire ») | het is wel degelijk de juiste bron, maar een element is fout (datum, nummer, ECLI, artikel…); de correctie wordt vermeld |
-| **Gedeeltelijke controle** (pdf: « Vérification partielle ») | sommige elementen zijn bevestigd, andere konden niet worden bevestigd |
-| **Controle onmogelijk met de toegankelijke bronnen** (pdf: « Vérification impossible avec les sources accessibles ») | de bron kon noch bevestigd noch uitgesloten worden (betaalde toegang, geblokkeerde website, niet-gedigitaliseerd werk): **zelf na te gaan, dit is geen vastgestelde fout** |
-| **Verwijzing niet teruggevonden of tegenstrijdigheid vastgesteld** (pdf: « Référence non retrouvée ou contradiction établie ») | een officiële bron spreekt de verwijzing tegen: met voorrang te onderzoeken |
+| **Verwijzing gecontroleerd** | de bron bestaat en stemt overeen met wat u schreef |
+| **Verwijzing gecontroleerd · citaat: kleine afwijking** (of "onjuist") | de bron klopt, maar de tekst tussen aanhalingstekens stemt niet precies overeen |
+| **Verwijzing geïdentificeerd, correctie nodig** | het is wel degelijk de juiste bron, maar een element is fout (datum, nummer, ECLI, artikel…); de correctie wordt vermeld |
+| **Gedeeltelijk gecontroleerd** | sommige elementen zijn bevestigd, andere konden niet worden bevestigd |
+| **Niet controleerbaar met de toegankelijke bronnen** | de bron kon noch bevestigd noch uitgesloten worden (betaalde toegang, geblokkeerde website, niet-gedigitaliseerd werk): **zelf na te gaan, dit is geen vastgestelde fout** |
+| **Verwijzing niet teruggevonden of tegenstrijdigheid vastgesteld** | een officiële bron spreekt de verwijzing tegen: met voorrang te onderzoeken |
 
-Het belang van elke correctie wordt aangegeven: **kritieke prioriteit** (pdf: « priorité critique »), **belangrijke correctie** (pdf: « correction importante »), **kleine correctie** (pdf: « correction ponctuelle ») of **informatie** (pdf: « information »). Bij elke correctie staat de passage uit de bron die ze staaft: u kunt ze met één klik controleren.
+Het belang van elke correctie wordt aangegeven: **kritieke prioriteit**, **belangrijke correctie**, **kleine correctie** of **informatie**. Bij elke correctie staat de passage uit de bron die ze staaft: u kunt ze met één klik controleren.
 
 Het verslag is een hulpmiddel: **lees de correcties na voordat u ze overneemt**, zeker in een procedurestuk.
 

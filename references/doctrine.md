@@ -22,6 +22,8 @@ S'arrêter dès que la référence est établie, ou lorsque ces trois voies ont 
 
 **Plateformes d'éditeurs sur abonnement** (par exemple Strada lex) : ne pas les tenter, même sur leurs pages publiques ; elles exigent un compte et refusent généralement les accès automatisés. Les indiquer seulement au juriste comme lieu où vérifier lui-même, s'il y a accès. Jurisquare n'existe plus depuis 2024 (voir l'annonce de la bibliothèque de droit de la KU Leuven : https://bib.kuleuven.be/rbib/collectie/stopzetting-jurisquare) : ne pas le consulter ni le proposer.
 
+**Contenu non lu.** Une notice d'éditeur ou de bibliothèque établit l'identité (auteur, titre, revue, année, pages) mais pas le contenu : lorsque le document attribue à l'ouvrage une proposition, une page précise ou une citation, le statut est `PARTIALLY_VERIFIED` et la fiche dit « contenu non vérifié ». Proposer alors au juriste de fournir l'extrait concerné (copie des pages ou PDF qu'il possède) pour compléter le contrôle.
+
 ## Exprimer un doute sérieux
 
 - **Contradiction établie** : si le sommaire complet du volume cité est accessible et ne contient pas l'article à la page indiquée (ou si cette page n'existe pas dans le volume), le statut est `NOT_FOUND_OR_CONTRADICTORY`, avec le sommaire comme preuve.

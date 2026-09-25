@@ -4,6 +4,7 @@ from datetime import datetime, timedelta
 import json
 from pathlib import Path
 from zoneinfo import ZoneInfo
+import tempfile
 import unittest
 
 from test_render_report import renderer, sample
@@ -73,6 +74,32 @@ class ClarityTests(unittest.TestCase):
         text = (Path(__file__).parents[1] / 'SKILL.md').read_text(encoding='utf-8')
         desc = ' '.join(re.search(r'description: >\n(.*?)\n---', text, re.S).group(1).split())
         self.assertLessEqual(len(desc), 500)
+
+    def test_report_languages(self):
+        french_only = ('Référence vérifiée', 'Ce qu’il faut retenir', 'Avertissement', 'Méthode suivie', 'Sources consultées')
+        for code, marker in (('nl', 'Wat u moet onthouden'), ('de', 'Das Wichtigste'), ('en', 'Key points')):
+            d = sample(); d['report_language'] = code
+            text = str(list(renderer.sections(renderer.validate(d))))
+            self.assertIn(marker, text)
+            for word in french_only:
+                self.assertNotIn(word, text)
+            with tempfile.TemporaryDirectory() as tmp:
+                renderer.write_pdf(list(renderer.sections(d)), Path(tmp) / 'r.pdf', d)
+        d = sample(); d['report_language'] = 'es'
+        with self.assertRaises(ValueError): renderer.validate(d)
+
+    def test_confirmed_references_go_to_compact_annex(self):
+        d = sample(); r = d['records'][0]
+        r.update(status='VERIFIED', checks=['Intitulé'], limits='', sources=[dict(label='Source', url='https://example.org', locator='art. 1', language='FR')])
+        nodes = list(renderer.sections(renderer.validate(d)))
+        self.assertIn(('h1', 'Références confirmées sans réserve'), nodes)
+        self.assertNotIn(('h2', 'Référence fictive'), nodes)
+
+    def test_summary_counts_must_match(self):
+        d = sample(); d['summary'] = 'Onze sources distinctes examinées.'
+        with self.assertRaises(ValueError): renderer.validate(d)
+        d['summary'] = 'Une seule source distincte : 1 sources distinctes.'
+        renderer.validate(d)
 
 
 if __name__ == '__main__':

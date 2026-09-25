@@ -66,13 +66,15 @@ Eine Einstellung wird erst in einer **neuen** Aufgabe oder Unterhaltung wirksam.
 2. Fügen Sie Ihr Dokument bei (Büroklammer oder Ziehen und Ablegen) oder geben Sie seinen Speicherort in einem verbundenen Ordner an.
 3. Kopieren Sie diese Anfrage und passen Sie sie bei Bedarf an:
 
-> Verwende den Skill audit-citations-juridiques-be-eu, um alle Fundstellen und Zitate im beigefügten Dokument zu überprüfen. Erstelle einen Bericht auf Deutsch.
+> Verwende den Skill audit-citations-juridiques-be-eu, um alle Fundstellen und Zitate im beigefügten Dokument zu überprüfen. Erstelle einen Bericht auf Deutsch, als PDF. Das Dokument bezieht sich auf den Stand vom 1. März 2024.
+
+Ersetzen Sie das Datum durch das Ihres Dokuments (Datum der Abfassung oder Zeitpunkt, zu dem die Rechtslage zu beurteilen ist). Lassen Sie es weg, leitet Claude es aus dem Dokument ab oder prüft ersatzweise das heute geltende Recht und teilt Ihnen dies mit.
 
 Nützliche Präzisierungen, die Sie hinzufügen können, wenn sie Sie betreffen:
 
 - **der Umfang**: „nur die Fußnoten von Kapitel 2“, „nur die Rechtsprechung“;
 - **der rechtliche Stichtag**: „das Dokument bezieht sich auf den Stand vom 1. Januar 2024“ (nützlich, um ein Gesetz in seiner damaligen Fassung zu überprüfen);
-- **die Sprache des Berichts**: Französisch, Niederländisch, Deutsch oder Englisch (das gestaltete PDF gibt es derzeit nur auf Französisch; in den anderen Sprachen erstellt Claude einen Bericht im Markdown-Format);
+- **die Sprache des Berichts**: Französisch, Niederländisch, Deutsch oder Englisch (das PDF wird in der gewählten Sprache gestaltet);
 - **die inhaltliche Prüfung**: Möchten Sie auch wissen, ob die Quellen Ihre Aussagen tatsächlich stützen, verlangen Sie dies ausdrücklich; diese Kontrolle erfolgt nicht standardmäßig.
 
 ## 6. Wie lange es dauert
@@ -93,14 +95,14 @@ Der Bericht beginnt mit dem **Wesentlichen** und den **notwendigen Korrekturen**
 
 | Vermerk | Bedeutung |
 |---|---|
-| **Fundstelle überprüft** (PDF: « Référence vérifiée ») | die Quelle existiert und entspricht dem, was Sie geschrieben haben |
-| **Fundstelle überprüft · Zitat: geringfügige Abweichung** (oder „ungenaues Zitat“) (PDF: « Référence vérifiée · citation : écart mineur » / « citation inexacte ») | die Quelle ist richtig, aber der Text in Anführungszeichen stimmt nicht genau überein |
-| **Fundstelle identifiziert, Korrektur erforderlich** (PDF: « Référence identifiée, correction nécessaire ») | es handelt sich um die richtige Quelle, aber ein Element ist falsch (Datum, Nummer, ECLI, Artikel…); die Korrektur wird angegeben |
-| **Teilweise Überprüfung** (PDF: « Vérification partielle ») | einige Elemente sind bestätigt, andere konnten nicht bestätigt werden |
-| **Überprüfung mit den zugänglichen Quellen unmöglich** (PDF: « Vérification impossible avec les sources accessibles ») | die Quelle konnte weder bestätigt noch ausgeschlossen werden (kostenpflichtiger Zugang, gesperrte Website, nicht digitalisiertes Werk): **selbst zu überprüfen; dies ist kein festgestellter Fehler** |
-| **Fundstelle nicht auffindbar oder Widerspruch festgestellt** (PDF: « Référence non retrouvée ou contradiction établie ») | eine amtliche Quelle widerspricht der Fundstelle: vorrangig zu prüfen |
+| **Fundstelle überprüft** | die Quelle existiert und entspricht dem, was Sie geschrieben haben |
+| **Fundstelle überprüft · Zitat: geringfügige Abweichung** (oder „unzutreffend“) | die Quelle ist richtig, aber der Text in Anführungszeichen stimmt nicht genau überein |
+| **Fundstelle identifiziert, Korrektur erforderlich** | es handelt sich um die richtige Quelle, aber ein Element ist falsch (Datum, Nummer, ECLI, Artikel…); die Korrektur wird angegeben |
+| **Teilweise überprüft** | einige Elemente sind bestätigt, andere konnten nicht bestätigt werden |
+| **Mit den zugänglichen Quellen nicht überprüfbar** | die Quelle konnte weder bestätigt noch ausgeschlossen werden (kostenpflichtiger Zugang, gesperrte Website, nicht digitalisiertes Werk): **selbst zu überprüfen; dies ist kein festgestellter Fehler** |
+| **Fundstelle nicht auffindbar oder Widerspruch festgestellt** | eine amtliche Quelle widerspricht der Fundstelle: vorrangig zu prüfen |
 
-Die Bedeutung jeder Korrektur wird angegeben: **kritische Priorität** (PDF: « priorité critique »), **wichtige Korrektur** (PDF: « correction importante »), **punktuelle Korrektur** (PDF: « correction ponctuelle ») oder **Information** (PDF: « information »). Jeder Korrektur ist die Passage aus der Quelle beigefügt, die sie belegt: Sie können sie mit einem Klick nachprüfen.
+Die Bedeutung jeder Korrektur wird angegeben: **kritische Priorität**, **wichtige Korrektur**, **punktuelle Korrektur** oder **Information**. Jeder Korrektur ist die Passage aus der Quelle beigefügt, die sie belegt: Sie können sie mit einem Klick nachprüfen.
 
 Der Bericht ist ein Hilfsmittel: **Lesen Sie die Korrekturen durch, bevor Sie sie übernehmen**, insbesondere in einem Verfahrensschriftstück.
 

@@ -8,7 +8,7 @@ Extract the release archive and install the `audit-citations-juridiques-be-eu` f
 
 Example: “Use audit-citations-juridiques-be-eu to audit this document’s citations. Preserve the original references, report the evidence actually consulted and distinguish errors from access limitations.”
 
-The agent needs search/browser access and tools for reading the supplied documents. Markdown is the canonical report; PDF requires generation and visual inspection tools. The package includes a [French PDF/Markdown renderer](templates/report-rendering.md) (Python and ReportLab for PDF: `pip install -r requirements.txt`), but no autonomous search engine; PyYAML is not required to use its instructions.
+The agent needs search/browser access and tools for reading the supplied documents. Markdown is the canonical report; PDF requires generation and visual inspection tools. The package includes a [PDF/Markdown renderer in French, Dutch, German or English](templates/report-rendering.md) (Python and ReportLab for PDF: `pip install -r requirements.txt`), but no autonomous search engine; PyYAML is not required to use its instructions.
 
 Official sources take priority. Never guess an identifier, equate a failed search interface with a nonexistent decision, or treat a snippet as a consulted judgment. Belgian Council of State decisions with a known number must be sought first through the official advanced search form.
 

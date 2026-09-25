@@ -33,7 +33,7 @@ class RevisionTests(unittest.TestCase):
     def test_revision_requires_scope_and_preserves_initial_date(self):
         d=sample();m=d['report_metadata'];m['report_version']='v2';m['revision']=dict(issued_at='2026-09-25T12:00:00+02:00',scope='Présentation seulement',previous_version='v1')
         text=str(list(renderer.sections(renderer.validate(d))))
-        self.assertIn('2026-09-24T14:00:00+02:00',text);self.assertIn('Présentation seulement',text)
+        self.assertIn('24 septembre 2026 à 14 h 00',text);self.assertIn('Présentation seulement',text)
         del m['revision']['scope']
         with self.assertRaises(ValueError):renderer.validate(d)
 
@@ -83,7 +83,7 @@ class RevisionTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             f=Path(tmp)/'a.pdf';renderer.write_pdf(list(renderer.sections(renderer.validate(d))),f,d)
             text='\n'.join(p.extract_text() for p in PdfReader(f).pages)
-            self.assertIn('https://example.org/doc',text);self.assertIn('2026-09-24T14:00:00+02:00',text);self.assertIn('Texte de preuve synthétique',text)
+            self.assertIn('https://example.org/doc',text);self.assertIn('24 septembre 2026 à 14 h 00',text);self.assertIn('Texte de preuve synthétique',text)
             self.assertTrue(any(p.get('/Annots') for p in PdfReader(f).pages))
 
     def test_source_date_and_cross_category_conflict(self):

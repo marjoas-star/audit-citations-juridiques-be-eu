@@ -52,7 +52,7 @@ contrôle des accès (§10) → inventaire → renvois internes → dédoublonna
 → intégrité des adaptations → rapport
 ```
 
-**Inventaire.** Avant toute recherche : relever toutes les références, citations, renvois abrégés et la bibliographie ; dédupliquer les sources. Ne rien corriger à ce stade.
+**Inventaire.** Avant toute recherche : relever toutes les références, citations, renvois abrégés et la bibliographie ; dédupliquer les sources. Relever aussi les références citées dans le corps du texte sans note (« l'article 6 de la Convention ») et les décisions évoquées sans être citées (« comme la Cour l'avait déjà jugé ») : les identifier si possible, sinon les signaler comme non identifiées. Ne rien corriger à ce stade.
 
 **Renvois internes.** Résoudre `ibid.`, `idem`, `op. cit.`, `précité`, `supra`, `infra` dans le document. Si plusieurs sources restent possibles : `SOURCE_ATTRIBUTION_UNCERTAIN`. Ne pas utiliser le web pour deviner la source.
 
@@ -94,6 +94,8 @@ Des métadonnées officielles (fiche ou notice de la juridiction ou de l'éditeu
 - ⚪ `NOT_VERIFIABLE_WITH_ACCESSIBLE_SOURCES` — **l'absence de vérification ne signifie pas que la référence est erronée.**
 - 🔴 `NOT_FOUND_OR_CONTRADICTORY`
 
+**Référence probablement inexistante.** Pour une décision ou un texte officiel, lorsque chaque identifiant cité (numéro d'affaire, ECLI, numéro d'arrêt, date) renvoie à un autre document ou à rien, et qu'une recherche par les parties, la date et l'objet dans la base officielle ne donne aucun document correspondant, écrire « référence probablement inexistante » en énumérant ces constats. Proposer de supprimer la référence ou une reformulation prête à coller qui ne prête plus rien à la juridiction ; ne jamais substituer une autre décision sans preuve qu'elle est celle visée. Pour la doctrine, appliquer la règle plus prudente de [doctrine.md](references/doctrine.md).
+
 ### Gravité
 
 `CRITICAL`, `MAJOR`, `MINOR`, `INFORMATION`. Critiques notamment : identifiant inventé, source fictive, mauvais document présenté comme vérifié, documents distincts fusionnés, citation substantiellement inexacte, adaptation trompeuse.
@@ -116,7 +118,8 @@ Créer un `QUOTATION_RECORD` pour toute citation attribuée à une source. Contr
 
 - **Ellipses `[...]`** : vérifier ce qui a été supprimé, la grammaire et la portée résultantes, et la suppression éventuelle d'une réserve. Si le contexte supprimé est inaccessible, l'intégrité reste `NOT_VERIFIABLE`.
 - **Crochets** : vérifier l'antécédent, l'identité et l'absence d'élargissement ou de réduction de la règle.
-- **Traductions** : appliquer [language-policy.md](references/language-policy.md). Une comparaison entre langues différentes ne produit jamais `EXACT` : utiliser `NOT_APPLICABLE_TRANSLATION` et évaluer séparément la fidélité (`FAITHFUL`, `FAITHFUL_WITH_MINOR_VARIATION`, `PARTIALLY_FAITHFUL`, `MISLEADING`, `NOT_VERIFIABLE`). Si la version citée est inconnue, ne pas supposer une traduction d'auteur.
+- **Version non applicable** : si les mots cités correspondent exactement à une autre version du texte (antérieure ou future) que celle applicable à la date juridique, ce n'est pas une citation inexacte : la citation est fidèle à cette autre version. Le dire ainsi (« citation exacte d'une version qui n'était pas / plus en vigueur à la date retenue »), indiquer la version applicable et son texte, et ne jamais écrire « sens déformé » ni prêter une altération à l'auteur. Réserver `INEXACT` aux mots qui ne correspondent à aucune version.
+- **Traductions** : si une citation semble traduite d'une autre version linguistique, ouvrir cette version et comparer avant de conclure ; ne pas se contenter de le supposer. Appliquer [language-policy.md](references/language-policy.md). Une comparaison entre langues différentes ne produit jamais `EXACT` : utiliser `NOT_APPLICABLE_TRANSLATION` et évaluer séparément la fidélité (`FAITHFUL`, `FAITHFUL_WITH_MINOR_VARIATION`, `PARTIALLY_FAITHFUL`, `MISLEADING`, `NOT_VERIFIABLE`). Si la version citée est inconnue, ne pas supposer une traduction d'auteur.
 
 ## 7. Langues
 
@@ -198,8 +201,7 @@ Commencer par ce que le juriste doit faire : corrections établies, puis points 
 
 Par défaut : résumé conversationnel, Markdown canonique et PDF lorsque les outils de génération et de contrôle visuel sont disponibles ; DOCX si demandé. Si un format ne peut être produit, livrer ce qui est disponible et le dire, sans annoncer un fichier inexistant.
 
-- **Français** : utiliser `scripts/render_report.py` selon [report-rendering.md](templates/report-rendering.md). Il met en page Markdown et PDF à partir de fiches déjà vérifiées ; il ne fait aucune recherche.
-- **Autres langues** : appliquer le modèle éditorial dans la langue du rapport avec les outils disponibles.
+- **Toutes langues (FR, NL, DE, EN)** : utiliser `scripts/render_report.py` selon [report-rendering.md](templates/report-rendering.md), avec `report_language` égal à la langue demandée par l'utilisateur (par défaut, celle de sa demande). Les libellés du rapport sont alors dans cette langue ; rédiger aussi dans cette langue la synthèse, les constats, les contrôles et les limites. Les passages probants restent dans la langue de la source. Le générateur met en page Markdown et PDF à partir de fiches déjà vérifiées ; il ne fait aucune recherche.
 
 Présentation selon [report-template.md](templates/report-template.md) :
 

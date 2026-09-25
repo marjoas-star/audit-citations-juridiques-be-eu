@@ -66,13 +66,15 @@ Un réglage n'est pris en compte que dans une **nouvelle** tâche ou conversatio
 2. Joignez votre document (trombone ou glisser-déposer), ou indiquez son emplacement dans un dossier connecté.
 3. Copiez cette demande, en l'adaptant si besoin :
 
-> Utilise le skill audit-citations-juridiques-be-eu pour vérifier toutes les références et citations du document joint. Produis un rapport en français, en PDF.
+> Utilise le skill audit-citations-juridiques-be-eu pour vérifier toutes les références et citations du document joint. Produis un rapport en français, en PDF. Le document se place à la date du 1er mars 2024.
+
+Remplacez la date par celle de votre document (date de rédaction ou date à laquelle le droit doit être apprécié). Si vous l'omettez, Claude la déduit du document ou, à défaut, contrôle le droit en vigueur aujourd'hui, et vous le dit.
 
 Précisions utiles, à ajouter si elles vous concernent :
 
 - **le périmètre** : « seulement les notes du chapitre 2 », « seulement la jurisprudence » ;
 - **la date juridique** : « le document se place au 1er janvier 2024 » (utile pour vérifier une loi dans sa version de l'époque) ;
-- **la langue du rapport** : français, néerlandais, allemand ou anglais (le PDF mis en page n'existe actuellement qu'en français) ;
+- **la langue du rapport** : français, néerlandais, allemand ou anglais (le PDF est mis en page dans la langue choisie) ;
 - **le fond** : si vous voulez aussi savoir si les sources soutiennent réellement vos affirmations, demandez-le expressément ; ce contrôle n'est pas fait par défaut.
 
 ## 6. Combien de temps cela prend
