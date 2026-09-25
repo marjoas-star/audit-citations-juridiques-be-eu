@@ -2,7 +2,7 @@
 
 ## Non publié
 
-- Deux archives par version : allégée (35 fichiers, à importer dans Claude) et complète (`-complet`). Liens vers `tests/` remplacés par des adresses GitHub, pour rester valables dans l'archive allégée.
+- Deux archives par version : allégée (30 fichiers, à importer dans Claude) et complète (`-complet`). Liens vers `tests/` remplacés par des adresses GitHub, pour rester valables dans l'archive allégée.
 - Modes d'emploi : parade à la décompression automatique des `.zip` par Safari.
 - Lien de téléchargement direct et permanent (`…/releases/latest/download/audit-citations-juridiques-be-eu.zip`) dans les modes d'emploi ; la publication est marquée « Latest ».
 
