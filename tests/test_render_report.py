@@ -12,7 +12,7 @@ spec.loader.exec_module(renderer)
 
 def sample():
     return dict(title='Rapport de test fictif', document='Document synthétique', date='24 septembre 2026',
-                version='test', scope='Cas synthétique sans recherche juridique.', summary='Contrôle de présentation uniquement.',
+                report_metadata=dict(established_at='2026-09-24T14:00:00+02:00', timezone='Europe/Brussels', precision='second', report_version='v1', checks_started_on='2026-09-23', checks_completed_on='2026-09-24', legal_reference='Non précisée'), version='test', scope='Cas synthétique sans recherche juridique.', summary='Contrôle de présentation uniquement.',
                 limitations=['Aucune preuve juridique.'], method=['Données entièrement fictives.'], quotations=[],
                 records=[dict(id='R1', source_id='S1', title='Référence fictive', original='Référence fictive',
                               checked='Non établie', location='Page 1', status='NOT_VERIFIABLE_WITH_ACCESSIBLE_SOURCES',
@@ -46,7 +46,7 @@ class ReportTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as folder:
             p=Path(folder)/'report.pdf';renderer.write_pdf(nodes,p,d)
             text='\n'.join(page.extract_text() for page in PdfReader(p).pages)
-            self.assertIn('FIN DU CONTROLE LONG.', text)
+            self.assertIn('FIN DU CONTROLE LONG.', ' '.join(text.split()))
             self.assertIn('Source inaccessible.', text)
             self.assertNotIn('NOT_VERIFIABLE_WITH_ACCESSIBLE_SOURCES', text)
             renderer.write_markdown(nodes,p.with_suffix('.md'))

@@ -1,6 +1,6 @@
 # Audit des citations juridiques — Belgique & Europe
 
-**Version 0.5.0-beta.2 — publication expérimentale.** Méthode pour auditer les références et citations d’un document en droit belge, droit de l’Union européenne et CEDH. Ce skill accompagne un agent ; ce n’est pas un moteur de recherche autonome.
+**Version 0.5.0-beta.3 — publication expérimentale.** Méthode pour auditer les références et citations d’un document en droit belge, droit de l’Union européenne et CEDH. Ce skill accompagne un agent ; ce n’est pas un moteur de recherche autonome.
 
 [Français](README.fr.md) · [Nederlands](README.nl.md) · [Deutsch](README.de.md) · [English](README.en.md)
 

@@ -9,7 +9,7 @@ Python 3.10 ou ultérieur. Le PDF nécessite ReportLab ; ses polices Vera sont u
 ```sh
 python3 scripts/render_report.py audit.json --output rapport
 python3 scripts/render_report.py audit.json --output rapport --markdown-only
-python3 tests/test_render_report.py
+python3 -m unittest discover -s tests -p 'test_*.py'
 ```
 
 Le premier appel produit rapport.md et rapport.pdf ; le second uniquement rapport.md. Le chemin de sortie est choisi par l’utilisateur ou l’agent. Garder les données personnelles, documents sources et rapports de clients hors du dépôt public. Une sortie existante est remplacée : utiliser un nouveau nom pour une révision et préserver les réponses gelées d’une évaluation.
@@ -20,16 +20,22 @@ Objet JSON UTF-8. Les données doivent être rédigées en français courant ; `
 
 Champs racine : `title`, `document`, `date`, `version`, `scope`, `summary` (textes) ; `limitations` et `method` (listes de textes) ; `records` et `quotations` (listes). Décrire le périmètre réellement audité et les dates inconnues ; ne pas assimiler date d’export et date de rédaction.
 
+`report_metadata` est obligatoire : `established_at` (ISO 8601 avec décalage UTC), `timezone`, `precision` (`second` ou `day` si l’heure ancienne n’est pas conservée), `report_version`, `checks_started_on`, `checks_completed_on` (dates ISO) et `legal_reference` (date juridique et provenance, ou incertitude explicite). Une révision ajoute `revision` : `issued_at`, `scope`, `previous_version`. Le générateur ne lit pas l’horloge et ne modifie jamais ces dates. Exemple fictif :
+
+```json
+{"established_at":"2026-09-24","timezone":"Europe/Brussels","precision":"day","report_version":"v2","checks_started_on":"2026-09-24","checks_completed_on":"2026-09-25","legal_reference":"Non précisée dans la consigne","revision":{"issued_at":"2026-09-25T10:00:00+02:00","scope":"Corrections ciblées de deux références ; autres contrôles conservés","previous_version":"v1"}}
+```
+
 Chaque fiche `records` comporte :
 
-- `id` unique pour l’occurrence ; `source_id` commun aux occurrences du même document ;
+- `id` unique pour l’occurrence ; `additional_occurrences` peut conserver des renvois regroupés (objets `id`, `location`, `original`), inclus dans le compteur ; leurs emplacements doivent rester visibles dans `location` ; `source_id` commun aux occurrences du même document ;
 - `title`, `original`, `checked`, `location` ;
 - `status` : un des cinq statuts internes de référence ;
 - `checks` : liste explicite des champs/passages contrôlés, en précisant les différences de preuve si nécessaire ; `limits` : texte, éventuellement vide lorsque la limite commune figure déjà dans la synthèse ;
 - `sources` : liste d’objets `label`, `url`, `locator`, `language`. Ne transmettre que des liens observés et des preuves réellement consultées. Pour des preuves locales, décrire les pièces dans la fiche et la méthode ; ne pas inventer une URL publique pour satisfaire le générateur ; utiliser le modèle manuel si aucune URL pertinente n’est disponible ;
-- facultativement `notes` et `findings`. Chaque constat contient `severity`, `problem`, `action`. Ne pas proposer une correction certaine lorsque la preuve ne le permet pas.
+- facultativement `notes` et `findings`. Chaque constat contient `id` (stable pour une même erreur répétée), `kind` (`error` ou `suggestion`), `severity`, `problem`, `action`. Toute erreur exige un court `excerpt` probant dans ses sources. `consulted_on` précise la date de consultation d’une source. `notes` est une liste de textes. `original_kind: summary` signale honnêtement une référence abrégée, si sa transcription intégrale n’a pas été conservée. Ne pas proposer une correction certaine lorsque la preuve ne le permet pas.
 
-Chaque citation `quotations` comporte `id`, `record_id`, `title`, `location`, `status`, `integrity`, `comparison`, `context`. Le dernier champ précise notamment le locuteur et l’effet des retraits. `translation_assessment` est obligatoire pour une traduction ; la conformité littérale et la fidélité de traduction ne se confondent pas. Décrire les mots qui diffèrent, les adaptations signalées et leurs conséquences dans `comparison` et `context`, sans longues reproductions inutiles.
+Chaque citation `quotations` comporte `id`, `record_id`, `title`, `location`, `status`, `integrity`, `comparison`, `context`. Le dernier champ précise notamment le locuteur et l’effet des retraits. `attribution` et `temporal_assessment` permettent de séparer source attribuée et version temporelle de la fidélité des mots. `translation_assessment` est obligatoire pour une traduction ; la conformité littérale et la fidélité de traduction ne se confondent pas. Décrire les mots qui diffèrent, les adaptations signalées et leurs conséquences dans `comparison` et `context`, sans longues reproductions inutiles.
 
 La convention d’audit complète reste dans [citation-record.md](../schemas/citation-record.md). L’entrée de présentation est une projection de ces données, pas leur remplacement. Les traces techniques détaillées restent séparées du rapport lisible.
 

@@ -12,7 +12,7 @@ Le [générateur français](report-rendering.md) stabilise cette présentation. 
 
 ## Couverture
 
-Document audité, date de l'audit, version du skill, langue du rapport.
+Document audité ; rapport établi le (date, heure conservée, fuseau) ; période des vérifications ; version du rapport ; révision et son étendue, le cas échéant. La date juridique est distincte et n’est jamais fixée par le gabarit.
 
 ## 1. Résumé exécutif
 
@@ -76,4 +76,8 @@ Séparer correction certaine et piste de vérification humaine.
 
 ## 14. Avertissement
 
-Ce rapport est généré automatiquement à l'aide de systèmes d'IA et de recherches documentaires. Sa fiabilité dépend de la disponibilité, de l'accessibilité, de l'indexation et de la mise à jour des sources. L'absence de vérification ne signifie pas qu'une référence est erronée. Une vérification humaine demeure indispensable avant toute utilisation juridictionnelle, procédurale, consultative ou scientifique. Toute limitation de responsabilité s'entend dans les limites permises par le droit applicable.
+Ce rapport est généré automatiquement à l'aide de systèmes d'IA et de recherches documentaires. Sa fiabilité dépend de la disponibilité, de l'accessibilité, de l'indexation et de la mise à jour des sources. L'absence de vérification ne signifie pas qu'une référence est erronée. Une vérification humaine demeure indispensable avant toute utilisation juridictionnelle, procédurale, consultative ou scientifique.
+
+## Révision après bêta-test
+
+Appliquer [datation-et-rapport.md](../references/datation-et-rapport.md). Les rubriques ci-dessus sont des informations, pas des pages obligatoires. Regrouper source, citation, preuve et correction ; suggestions à part. Afficher les erreurs distinctes, sans additionner leurs occurrences. Prévoir un court passage probant et un identifiant lisible sur papier. La version Markdown constitue l’alternative textuelle structurée ; ne pas prétendre que le PDF est balisé sans contrôle.

@@ -207,3 +207,11 @@ evidence:
 - `COLLECTIVE_HISTORICAL_SUPPORT`
 
 Autres catégories explicites : `WRONG_PROVISION_LOCATOR`, `TRUNCATED_CASE_NUMBER`, `PROCEDURAL_STATUS_MISMATCH`. La liste de catégories est ouverte ; une nouvelle catégorie doit être expliquée par un constat traçable. Une source correctement identifiée peut avoir une occurrence fautive : conserver les deux statuts sans compter cette occurrence comme une nouvelle source.
+
+## Métadonnées de rapport et axes indépendants (révision bêta)
+
+`report_metadata` : `established_at` (ISO 8601 avec décalage, ou date seule accompagnée de `precision: day`), `timezone`, `precision`, `report_version`, `checks_started_on`, `checks_completed_on`, `legal_reference` (texte et provenance, inconnu autorisé), `revision` (nul ou objet `issued_at`, `scope`, `previous_version`). La date d’export est distincte, technique, et ne remplace jamais ces dates. Une révision ne change pas `established_at`.
+
+Les constats portent `id`, `kind` (`error` ou `suggestion`), `severity`, `problem`, `action`. Les occurrences d’une même erreur réutilisent cet identifiant et le même contenu. La présentation regroupe les références par source sans confondre leurs localisateurs. Chaque citation peut porter `attribution` et `temporal_assessment` indépendamment de `status` et `integrity`.
+
+Une preuve de présentation porte `label`, `url` observée, `locator`, `language`, éventuellement `excerpt`, `consulted_on`, `version`, `basis` (lecture directe/notice/citation indirecte). `excerpt` est le passage effectivement lu, jamais une conclusion reformulée. `original` conserve la note exacte ; `original_kind: summary` signale explicitement un ancien relevé abrégé qui ne doit pas être présenté comme une copie littérale.

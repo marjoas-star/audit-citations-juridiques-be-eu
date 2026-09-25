@@ -1,6 +1,6 @@
 # Legal citation audit — Belgium & Europe
 
-**0.5.0-beta.2, experimental public release.** A skill for an agent auditing references, quotations and internal cross-references in Belgian, EU and ECHR legal documents. Instructions are written in French; working languages are French, Dutch, German and English.
+**0.5.0-beta.3, experimental public release.** A skill for an agent auditing references, quotations and internal cross-references in Belgian, EU and ECHR legal documents. Instructions are written in French; working languages are French, Dutch, German and English.
 
 Extract the release archive and install the `audit-citations-juridiques-be-eu` folder through your host’s skill mechanism. For Codex, put it under `~/.codex/skills/`, or the configured CODEX_HOME skills folder, preserving subfolders. Entry point: `SKILL.md`.
 

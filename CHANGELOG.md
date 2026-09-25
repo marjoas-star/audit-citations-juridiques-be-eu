@@ -1,5 +1,9 @@
 # Notes de version
 
+## 0.5.0-beta.3 — 25 septembre 2026
+
+Datation persistante des rapports et révisions, contrôle de version avant alerte, axes de citation séparés, erreurs et suggestions distinctes, preuves visibles, regroupement des occurrences et nettoyage de la restitution. Validation documentaire et tests de rendu ne constituent pas une certification générale.
+
 ## Après 0.5.0-beta.2 — sources de développement
 
 - Dates d'adoption, d'annonce, de publication et versions institutionnelles distinguées ; consultation clôturée distincte de version finale.

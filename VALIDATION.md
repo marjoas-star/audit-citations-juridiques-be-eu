@@ -1,4 +1,8 @@
-# Validation publique — 0.5.0-beta.2
+# Validation publique — 0.5.0-beta.3
+
+25 septembre 2026. Révision après retours de bêta-test : voir [les résultats et leurs limites](tests/results/beta3-revision.md). Les résultats historiques ci-dessous restent conservés. Aucune certification générale ni taux de fiabilité global n’est revendiqué.
+
+## Historique — 0.5.0-beta.2
 
 24 septembre 2026. **Bêta expérimentale ; validation générale V1 non démontrée.** Cette note est une synthèse des essais réalisés, pas une certification ni une reproduction des documents de travail.
 

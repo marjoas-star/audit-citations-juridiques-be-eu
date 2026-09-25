@@ -64,3 +64,7 @@ Exemple fictif : « Le rapport déclare la citation exacte. Le paragraphe consul
 - Pièces ou informations à conserver strictement dans le dossier de test :
 
 L’accord pour citer une observation n’autorise pas la publication du document source ni de votre identité. Le coordinateur vous sollicitera séparément s’il souhaite publier des éléments identifiants.
+
+## Traçabilité de la relecture
+
+Indiquer la version du rapport, sa date d’établissement et, s’il existe, la date et le périmètre de sa révision. Distinguer la date de votre relecture de celles-ci. Signaler si le nom utilisé est un pseudonyme et si la relecture a été effectuée par une personne, avec assistance d’IA, ou entièrement simulée. Pour le temps passé, préciser « mesuré » ou « estimé » ; ne pas les confondre dans les résultats.

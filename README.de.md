@@ -1,6 +1,6 @@
 # Prüfung juristischer Fundstellen — Belgien & Europa
 
-**0.5.0-beta.2, experimentelle öffentliche Version.** Dieser Skill unterstützt einen Agenten bei der Prüfung von Fundstellen, Zitaten und internen Verweisen in belgischen, EU- und EMRK-Dokumenten. Die Anweisungen sind französisch; Arbeitssprachen sind FR/NL/DE/EN.
+**0.5.0-beta.3, experimentelle öffentliche Version.** Dieser Skill unterstützt einen Agenten bei der Prüfung von Fundstellen, Zitaten und internen Verweisen in belgischen, EU- und EMRK-Dokumenten. Die Anweisungen sind französisch; Arbeitssprachen sind FR/NL/DE/EN.
 
 Das Release-Archiv entpacken und den Ordner `audit-citations-juridiques-be-eu` über die Skill-Funktion der jeweiligen Anwendung installieren. Für Codex liegt er unter `~/.codex/skills/` oder im skills-Ordner des konfigurierten CODEX_HOME. Unterordner beibehalten; Einstiegspunkt ist `SKILL.md`.
 

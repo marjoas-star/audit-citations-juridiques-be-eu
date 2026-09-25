@@ -7,3 +7,5 @@ Principe : RefLex cartographie, le Moniteur belge établit la publication, Juste
 Toujours distinguer date de l'acte, publication, entrée en vigueur et date/version pertinente. Une version consolidée actuelle ne doit pas être utilisée seule pour vérifier une citation historique.
 
 La consolidation peut accuser un retard ; les tables de modification et le Moniteur peuvent être nécessaires. NUMAC doit être copié depuis une source suffisante, jamais reconstruit.
+
+Avant de qualifier une citation d’inexacte, appliquer le contrôle de version de [datation-et-rapport.md](datation-et-rapport.md). La date de consolidation, la date d’effet et la date de consultation sont distinctes. Comparer les textes modificatifs si deux consolidations divergent.

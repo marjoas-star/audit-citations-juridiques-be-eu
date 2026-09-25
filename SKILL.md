@@ -263,9 +263,13 @@ Conserver séparément `discovery_source` et `verification_source`.
 
 Utiliser `schemas/citation-record.md` avec les objets `SOURCE_RECORD`, `OCCURRENCE_RECORD`, `QUOTATION_RECORD`, `SEARCH_ATTEMPT` et `AUDIT_RECORD`.
 
+## 23.1. Datation, versions et rapports réutilisables
+
+Appliquer [datation-et-rapport.md](references/datation-et-rapport.md) à tout audit et toute révision. Enregistrer séparément la date réelle d’établissement, les consultations, la révision et son étendue. Réexporter ne réactualise pas le contrôle. Ne jamais inventer une heure ancienne ni imposer une date juridique fixe. Avant une correction normative, établir la version pertinente.
+
 ## 24. Original et corrigé
 
-Toujours conserver `original` et `verified`. Une correction ne doit jamais effacer la référence originale.
+Toujours conserver `original` et `verified`. Une correction ne doit jamais effacer la référence originale. Copier celle-ci littéralement ; placer toute normalisation dans le corrigé. Respecter la convention et la langue du document dans la formulation prête à reprendre.
 
 ## 25. Vérification par champ
 
@@ -422,6 +426,8 @@ Ne jamais contourner paywall, authentification, DRM ou restrictions techniques.
 
 Proposer une correction uniquement lorsqu'elle est établie. Ne jamais transformer `non vérifié` en `corrigé` par approximation.
 
+Séparer les erreurs établies des suggestions : une paraphrase susceptible d’être complétée ne constitue pas, à elle seule, une citation fautive. Après correction, vérifier les marqueurs chronologiques (« déjà », « récemment », « depuis ») affectés par la nouvelle source. Une erreur répétée garde un identifiant de constat unique ; les occurrences restent localisées sans multiplier les erreurs.
+
 ## 50. Gravité
 
 `CRITICAL`, `MAJOR`, `MINOR`, `INFORMATION`.
@@ -468,7 +474,7 @@ Suivre `templates/report-template.md`. Commencer par les conclusions utiles et l
 
 ## 53. Rapport PDF
 
-Doit contenir : couverture, résumé exécutif, déroulement de l'audit, statistiques, anomalies prioritaires, fiches détaillées, contrôle des citations, intégrité des adaptations, niveau de preuve, sources consultées, limitations et avertissement.
+Conserver datation, synthèse, périmètre, corrections, preuves, limites et contrôle des citations. Adapter la longueur au document : tableau des références, fiches regroupées par source ou problème, occurrences en annexe si utile. Aucune couverture ou page distincte n’est imposée pour chaque rubrique. Le diagnostic, son extrait probant et sa correction restent réunis.
 
 ## 54. Déroulement de l'audit dans le rapport
 
@@ -480,7 +486,7 @@ Présenter séparément : fidélité textuelle, adaptations détectées, adaptat
 
 ## 56. Avertissement
 
-Inclure notamment : génération assistée par IA ; dépendance aux sources accessibles ; évolution possible des interfaces ; absence de vérification ≠ erreur ; nécessité d'une vérification humaine ; limitation de responsabilité dans les limites permises par le droit applicable.
+Inclure notamment : génération assistée par IA ; dépendance aux sources accessibles ; évolution possible des interfaces ; absence de vérification ≠ erreur ; nécessité d'une vérification humaine ; ne pas ajouter de clause générale de limitation de responsabilité au rapport.
 
 ## 57. Maintenance
 
