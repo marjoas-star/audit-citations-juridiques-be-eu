@@ -2,6 +2,7 @@
 
 ## Non publié
 
+- Retour du rapport E en néerlandais (0.7.0-beta.1, Cowork) : rapport entièrement localisé, 7 pages au lieu de 9, 3 erreurs sur 3. Corrigé : une traduction fidèle non signalée est une suggestion, non une erreur ; l'édition du Moniteur (« deuxième édition ») est recherchée explicitement pour la correction.
 - Deux archives par version : allégée (30 fichiers, à importer dans Claude) et complète (`-complet`). Liens vers `tests/` remplacés par des adresses GitHub, pour rester valables dans l'archive allégée.
 - Modes d'emploi : parade à la décompression automatique des `.zip` par Safari.
 - Lien de téléchargement direct et permanent (`…/releases/latest/download/audit-citations-juridiques-be-eu.zip`) dans les modes d'emploi ; la publication est marquée « Latest ».
