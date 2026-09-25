@@ -1,6 +1,6 @@
 # Audit van juridische verwijzingen — België & Europa
 
-> **Juristen:** een stapsgewijze [handleiding](MODE-EMPLOI.md) (voorlopig in het Frans) legt uit hoe u de skill installeert, welke toegang Claude nodig heeft, hoe lang een audit duurt en hoe u het rapport leest.
+> **Juristen:** een stapsgewijze [handleiding](HANDLEIDING.md) legt uit hoe u de skill installeert, welke toegang Claude nodig heeft, hoe lang een audit duurt en hoe u het rapport leest.
 
 **0.5.0-beta.3, experimentele publieke versie.** Deze skill begeleidt een agent bij de controle van verwijzingen, citaten en interne verwijzingen in Belgische, EU- en EVRM-documenten. De instructies zijn in het Frans; werktalen zijn FR/NL/DE/EN.
 

@@ -1,6 +1,6 @@
 # Legal citation audit — Belgium & Europe
 
-> **Legal practitioners:** a step-by-step [user guide](MODE-EMPLOI.md) (in French for now) explains installation, the access Claude needs, how long an audit takes and how to read the report.
+> **Legal practitioners:** a step-by-step [user guide](USER-GUIDE.md) explains installation, the access Claude needs, how long an audit takes and how to read the report.
 
 **0.5.0-beta.3, experimental public release.** A skill for an agent auditing references, quotations and internal cross-references in Belgian, EU and ECHR legal documents. Instructions are written in French; working languages are French, Dutch, German and English.
 

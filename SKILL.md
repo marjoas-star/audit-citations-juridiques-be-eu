@@ -169,7 +169,7 @@ Avant l'inventaire, vérifier quels outils sont réellement disponibles et, si p
 |---|---|---|
 | Recherche web | trouver les sources | audit impossible : le dire et s'arrêter |
 | Lecture de pages web | ouvrir notices et textes officiels | vérifications limitées aux extraits de recherche, donc presque rien de vérifié |
-| Navigateur réel | sites qui renvoient une page vide aux outils simples (EUR-Lex, CURIA, HUDOC) | vérifications partielles pour ces sources |
+| Navigateur réel (dans Cowork : navigateur intégré de l'application de bureau) | sites qui renvoient une page vide aux outils simples ou refusent les connexions venant de serveurs (EUR-Lex, CURIA, HUDOC, Conseil d'État) | vérifications partielles pour ces sources ; indiquer à l'utilisateur de choisir le navigateur intégré dans les réglages de Cowork et de laisser l'application de bureau ouverte |
 | Lecture du document joint | lire PDF ou DOCX | demander un autre format ou un copier-coller |
 | Exécution de code | générer le PDF, lire un PDF officiel téléchargé | rapport en Markdown seulement ; certains textes non lus |
 

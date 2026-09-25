@@ -1,6 +1,6 @@
 # Prüfung juristischer Fundstellen — Belgien & Europa
 
-> **Juristinnen und Juristen:** Eine schrittweise [Anleitung](MODE-EMPLOI.md) (vorerst auf Französisch) erklärt Installation, die nötigen Zugriffe für Claude, die Dauer einer Prüfung und das Lesen des Berichts.
+> **Juristinnen und Juristen:** Eine schrittweise [Anleitung](ANLEITUNG.md) erklärt Installation, die nötigen Zugriffe für Claude, die Dauer einer Prüfung und das Lesen des Berichts.
 
 **0.5.0-beta.3, experimentelle öffentliche Version.** Dieser Skill unterstützt einen Agenten bei der Prüfung von Fundstellen, Zitaten und internen Verweisen in belgischen, EU- und EMRK-Dokumenten. Die Anweisungen sind französisch; Arbeitssprachen sind FR/NL/DE/EN.
 

@@ -1,5 +1,7 @@
 # Mode d'emploi pour les juristes
 
+[Français](MODE-EMPLOI.md) · [Nederlands](HANDLEIDING.md) · [Deutsch](ANLEITUNG.md) · [English](USER-GUIDE.md)
+
 Ce guide s'adresse aux juristes qui veulent faire vérifier les références d'un document par Claude. Aucune connaissance informatique n'est nécessaire. Les menus de l'application Claude évoluent : si un libellé diffère légèrement, cherchez le terme le plus proche.
 
 ## 1. À quoi sert ce skill
@@ -15,59 +17,54 @@ Ce qu'il **ne fait pas** : il ne juge pas la qualité de votre argumentation (sa
 
 ## 2. Ce qu'il vous faut
 
-- Un compte Claude sur lequel les **compétences** (« Skills ») et la **recherche web** sont disponibles. Dans une organisation (offres Team ou Enterprise), c'est l'administrateur qui les active (voir la section 4).
+- **Claude Cowork**, disponible avec les abonnements payants (Pro, Max, Team, Enterprise), et de préférence l'**application de bureau Claude** (Mac ou Windows) installée sur votre ordinateur : c'est elle qui fournit le navigateur dont le skill a besoin pour plusieurs sites officiels (section 4).
 - Le fichier du skill : l'archive `.zip` de la dernière version, à télécharger sur la page [Releases du dépôt](https://github.com/marjoas-star/audit-citations-juridiques-be-eu/releases) (rubrique « Assets », fichier `audit-citations-juridiques-be-eu-….zip`). **Ne décompressez pas l'archive.**
 - Votre document en PDF, Word ou texte. Un PDF scanné (image sans texte) est plus difficile à lire : préférez la version Word ou un PDF « texte ».
 
+Le skill fonctionne aussi dans une conversation Claude ordinaire et dans Claude Code ; les réglages sont semblables (voir la fin de la section 3).
+
 ## 3. Installer le skill (une seule fois)
 
-### Dans l'application Claude (site claude.ai ou application de bureau)
-
-1. Ouvrez **Paramètres › Capacités** (« Settings › Capabilities ») et activez **Exécution de code et création de fichiers** (« Code execution and file creation »). Sans cette option, les skills ne fonctionnent pas.
-2. Ouvrez **Personnaliser › Skills** (« Customize › Skills »).
+1. Dans l'application Claude, ouvrez **Paramètres › Capacités** (« Settings › Capabilities ») et activez **Exécution de code et création de fichiers** (« Code execution and file creation »). Sans cette option, les skills ne fonctionnent pas.
+2. Ouvrez **Personnaliser** (« Customize », dans la barre latérale gauche) › **Skills**.
 3. Cliquez sur **+**, puis **Créer un skill** (« Create skill »), puis **Importer un skill** (« Upload a skill »).
 4. Choisissez l'archive `.zip` téléchargée.
 5. Vérifiez que le skill **audit-citations-juridiques-be-eu** apparaît dans la liste et qu'il est activé.
 
-Aide officielle : [Use skills in Claude](https://support.claude.com/en/articles/12512180-use-skills-in-claude).
+Le skill est alors disponible dans Cowork comme dans les conversations ordinaires. Aide officielle : [Use skills in Claude](https://support.claude.com/en/articles/12512180-use-skills-in-claude).
 
-### Dans Claude Code (onglet « Code » de l'application de bureau)
-
-C'est l'environnement dans lequel le skill a été testé le plus complètement, parce qu'il dispose d'un navigateur intégré. Le plus simple est de le demander à Claude lui-même :
-
-> Installe pour tous mes projets le skill qui se trouve dans le dépôt GitHub marjoas-star/audit-citations-juridiques-be-eu (dernière version publiée).
-
-Acceptez les demandes d'autorisation qui s'affichent : il s'agit de télécharger et de copier le dossier du skill.
+**Dans Claude Code** (onglet « Code » de l'application de bureau), le plus simple est de le demander à Claude : « Installe pour tous mes projets le skill du dépôt GitHub marjoas-star/audit-citations-juridiques-be-eu (dernière version publiée). »
 
 ## 4. Les accès à donner à Claude
 
-C'est le point le plus important : **le skill ne vaut que par les sources qu'il peut ouvrir.** Sans accès au web, il ne peut rien vérifier.
+C'est le point le plus important : **le skill ne vaut que par les sources qu'il peut ouvrir.**
 
 | Accès | À quoi il sert | Où l'activer | S'il manque |
 |---|---|---|---|
-| **Exécution de code et création de fichiers** | faire fonctionner le skill, produire le rapport PDF, lire les PDF officiels | Paramètres › Capacités | le skill ne se charge pas |
-| **Recherche web** (« Web search ») | trouver les arrêts, lois et articles, et ouvrir les pages officielles | dans chaque conversation : bouton **+** en bas à gauche du champ de saisie › **Recherche web** (une coche apparaît) | **audit impossible** |
-| **Navigateur** | ouvrir les sites qui refusent les outils simples (EUR-Lex, CURIA, HUDOC) | disponible dans Claude Code (onglet « Code ») ; dans l'application Claude, selon les extensions installées | ces sources ne sont vérifiées que partiellement |
+| **Exécution de code et création de fichiers** | faire fonctionner le skill, produire le rapport PDF | Paramètres › Capacités | le skill ne se charge pas |
+| **Recherche web** (« Web search ») | trouver les arrêts, lois et articles | comprise dans Cowork (l'administrateur d'une organisation peut l'avoir désactivée) ; dans une conversation ordinaire, bouton **+** du champ de saisie › **Recherche web** | **audit impossible** |
+| **Navigateur intégré** (« Built-in browser ») | ouvrir les sites qui refusent les connexions venant de serveurs : EUR-Lex, CURIA, HUDOC, Conseil d'État | Paramètres › **Cowork** › **Navigateur préféré** (« Preferred browser ») › **Navigateur intégré** ; laisser l'application de bureau **ouverte et connectée** pendant l'audit | ces sources ne sont vérifiées que partiellement, ou pas du tout |
+| **Dossier connecté** (facultatif) | lire le document et enregistrer le rapport directement sur votre ordinateur | à la première demande de Cowork, autoriser le dossier concerné | joindre le document à la conversation et télécharger le rapport |
 
-Avant de commencer, Claude vérifie lui-même ces accès. S'il en manque un, il vous le dit et vous explique quoi faire, avant de lancer les recherches.
+**Pourquoi le navigateur est si important.** Cowork travaille par défaut sur des serveurs d'Anthropic. Or plusieurs sites officiels (EUR-Lex, CURIA, Conseil d'État) bloquent les connexions venant de serveurs informatiques, et les outils de lecture simples reçoivent d'eux une page vide. Le navigateur intégré, lui, fonctionne dans l'application de bureau, sur votre ordinateur : ces sites l'acceptent normalement. Claude signale toujours un site bloqué comme une difficulté d'accès, jamais comme l'absence de la source.
+
+Avant de commencer, Claude vérifie lui-même ses accès. S'il en manque un, il vous le dit et vous explique quoi faire, avant de lancer les recherches.
 
 ### Pour l'administrateur d'une organisation (Team, Enterprise)
 
 À transmettre à la personne qui gère votre compte Claude :
 
-- dans **Paramètres de l'organisation**, activer les **Skills**, l'**exécution de code et la création de fichiers** et la **recherche web** ;
-- si l'accès réseau de l'exécution de code est restreint, autoriser au minimum ces domaines, utilisés pour télécharger les textes officiels : `eur-lex.europa.eu`, `data.europa.eu`, `curia.europa.eu`, `infocuria.curia.europa.eu`, `hudoc.echr.coe.int`, `ks.echr.coe.int`, `www.ejustice.just.fgov.be`, `juportal.be`, `www.const-court.be`, `www.raadvst-consetat.be`, `www.lachambre.be`, `www.dekamer.be`, `www.senate.be`, `www.edpb.europa.eu`, `orbi.uliege.be`, `dial.uclouvain.be`, `api.crossref.org`.
+- **Paramètres de l'organisation › Cowork** : activer Cowork et le **navigateur intégré** (désactivé par défaut sur Enterprise) ;
+- **Paramètres de l'organisation › Capacités** : activer les **Skills**, l'**exécution de code et la création de fichiers** et la **recherche web** ;
+- dans **Capacités › Exécution de code**, si l'accès réseau est restreint (c'est le cas par défaut sur Enterprise), autoriser au minimum ces domaines, utilisés pour télécharger les textes officiels : `eur-lex.europa.eu`, `data.europa.eu`, `curia.europa.eu`, `infocuria.curia.europa.eu`, `hudoc.echr.coe.int`, `ks.echr.coe.int`, `www.ejustice.just.fgov.be`, `juportal.be`, `www.const-court.be`, `www.raadvst-consetat.be`, `www.lachambre.be`, `www.dekamer.be`, `www.senate.be`, `www.edpb.europa.eu`, `orbi.uliege.be`, `dial.uclouvain.be`, `api.crossref.org`.
 
-Un réglage n'est pris en compte que dans une **nouvelle** conversation.
-
-Remarque : certains sites officiels (EUR-Lex, CURIA, Conseil d'État) bloquent les connexions venant de serveurs informatiques. Depuis un ordinateur personnel ou de bureau (Claude Code), ils sont généralement accessibles ; depuis un environnement « dans le cloud », ils peuvent rester fermés même après autorisation. Claude le signale alors comme une difficulté d'accès, jamais comme une absence de la source.
+Un réglage n'est pris en compte que dans une **nouvelle** tâche ou conversation. Références : [Cowork pour Team et Enterprise](https://support.claude.com/en/articles/13455879-use-claude-cowork-on-team-and-enterprise-plans), [navigateur intégré](https://support.claude.com/en/articles/16607400-use-the-built-in-browser-in-claude-cowork).
 
 ## 5. Lancer un audit
 
-1. Ouvrez une **nouvelle conversation**.
-2. Vérifiez que la **recherche web** est activée (bouton **+**).
-3. Joignez votre document (trombone ou glisser-déposer).
-4. Copiez cette demande, en l'adaptant si besoin :
+1. Ouvrez l'application de bureau Claude et démarrez une **nouvelle tâche Cowork** (choisissez « Cowork » dans la zone de saisie).
+2. Joignez votre document (trombone ou glisser-déposer), ou indiquez son emplacement dans un dossier connecté.
+3. Copiez cette demande, en l'adaptant si besoin :
 
 > Utilise le skill audit-citations-juridiques-be-eu pour vérifier toutes les références et citations du document joint. Produis un rapport en français, en PDF.
 
@@ -86,7 +83,9 @@ Précisions utiles, à ajouter si elles vous concernent :
 - À titre d'exemple, lors des essais : 6 références ont pris 7 à 10 minutes ; 7 cas de droit européen, environ 11 minutes.
 - Une vingtaine de sources : entre 20 minutes et une heure. Au-delà d'une cinquantaine, il est plus confortable de procéder par chapitre.
 
-Après avoir lu votre document, Claude vous annonce le nombre de sources et une fourchette de durée, puis donne des points d'étape (« 12 sources sur 25 vérifiées »). **Laissez la conversation ouverte** ; vous pouvez faire autre chose et revenir. Ne relancez pas la demande : cela recommencerait le travail.
+Après avoir lu votre document, Claude vous annonce le nombre de sources et une fourchette de durée, puis donne des points d'étape (« 12 sources sur 25 vérifiées »). **Laissez l'application de bureau ouverte et connectée** : la tâche Cowork se poursuit sur les serveurs, mais le navigateur intégré a besoin de l'application. Vous pouvez faire autre chose et revenir. Ne relancez pas la demande : cela recommencerait le travail.
+
+Un long audit consomme une part notable de votre quota d'utilisation (Paramètres › Utilisation, « Settings › Usage »). Pour un document volumineux, procéder par chapitre permet de mieux le répartir.
 
 ## 7. Lire le rapport
 
@@ -114,7 +113,8 @@ Le rapport est une aide : **relisez les corrections avant de les reporter**, en 
 ## 9. Problèmes fréquents
 
 - **Claude répond sans utiliser le skill.** Mentionnez son nom dans la demande (« utilise le skill audit-citations-juridiques-be-eu ») et vérifiez qu'il est activé (section 3).
-- **Presque tout est « non vérifiable ».** La recherche web est probablement désactivée, ou un site essentiel est bloqué. Activez-la et relancez dans une nouvelle conversation.
+- **Presque tout est « non vérifiable ».** La recherche web est probablement désactivée, ou un site essentiel est bloqué. Activez-la et relancez dans une nouvelle tâche.
+- **Les sources européennes ou du Conseil d'État restent « partielles ».** Le navigateur intégré n'est pas activé, ou l'application de bureau a été fermée pendant l'audit (section 4).
 - **Pas de PDF, seulement du texte.** L'exécution de code n'est pas activée, ou l'environnement ne permet pas de créer des fichiers. Le contenu du rapport reste le même.
 - **Un site demande de prouver qu'on est humain (« CAPTCHA »).** Claude ne contourne jamais ces protections : il cherche une autre voie officielle ou signale la limite.
 - **Le document est très long.** Demandez un audit par chapitre ; chaque rapport reste daté et autonome.
