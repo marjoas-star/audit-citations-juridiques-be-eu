@@ -2,6 +2,8 @@
 
 **Version 0.5.0-beta.3 — publication expérimentale.** Méthode pour auditer les références et citations d’un document en droit belge, droit de l’Union européenne et CEDH. Ce skill accompagne un agent ; ce n’est pas un moteur de recherche autonome.
 
+> **Vous êtes juriste ?** Lisez d'abord le **[mode d'emploi](MODE-EMPLOI.md)** : installation pas à pas, accès à donner à Claude, temps à prévoir et lecture du rapport. Aucune connaissance informatique n'est nécessaire.
+
 [Français](README.fr.md) · [Nederlands](README.nl.md) · [Deutsch](README.de.md) · [English](README.en.md)
 
 ## Ce qu’il fait
@@ -15,6 +17,9 @@
 Pour un arrêt du Conseil d’État belge dont le numéro est connu, la recherche avancée officielle par numéro est prioritaire. Une panne du formulaire est un échec technique, jamais une preuve d’inexistence. Couverture annoncée depuis septembre 1994, régime particulier étrangers et asymétrie juriDict FR/NL sont conservés dans le module.
 
 ## Installation et usage
+
+La procédure détaillée pour les juristes figure dans le [mode d'emploi](MODE-EMPLOI.md) ; ce qui suit s'adresse aux utilisateurs techniques.
+
 
 Télécharger l’archive de la version dans les publications GitHub et extraire le dossier `audit-citations-juridiques-be-eu`. Dans Codex, placer ce dossier dans `~/.codex/skills/` (ou dans le dossier `skills` du CODEX_HOME configuré). Le fichier d’entrée doit être `audit-citations-juridiques-be-eu/SKILL.md`. Dans Claude Code, placer ce dossier dans `~/.claude/skills/` (tous les projets) ou dans `.claude/skills/` d’un projet ; dans l’application Claude, importer l’archive zip du dossier depuis les réglages des compétences (Skills). Dans un autre hôte compatible, utiliser son mécanisme de chargement de skills en conservant les sous-dossiers.
 

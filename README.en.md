@@ -1,5 +1,7 @@
 # Legal citation audit — Belgium & Europe
 
+> **Legal practitioners:** a step-by-step [user guide](MODE-EMPLOI.md) (in French for now) explains installation, the access Claude needs, how long an audit takes and how to read the report.
+
 **0.5.0-beta.3, experimental public release.** A skill for an agent auditing references, quotations and internal cross-references in Belgian, EU and ECHR legal documents. Instructions are written in French; working languages are French, Dutch, German and English.
 
 Extract the release archive and install the `audit-citations-juridiques-be-eu` folder through your host’s skill mechanism. For Codex, put it under `~/.codex/skills/`, or the configured CODEX_HOME skills folder, preserving subfolders. For Claude Code, put it under `~/.claude/skills/` (all projects) or a project’s `.claude/skills/`; in the Claude app, upload a zip of the folder from the Skills settings. Entry point: `SKILL.md`.

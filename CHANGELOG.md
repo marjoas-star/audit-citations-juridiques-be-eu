@@ -16,6 +16,7 @@
 - Rejeu réel de la note piégée à six références : grille satisfaite, un écart de procédure déclaré (sonde d'un identifiant non encore affiché). Voir `tests/results/note-piegee-replay/`.
 - Corrections issues de ce rejeu : exemple d'entrée entièrement fictif, version du skill indiquée dans `SKILL.md`, guillemets d'extrait non doublés, bloc final du PDF indivisible, renvoi à `VALIDATION.md` retiré de `cjue.md`, règle de sonde étendue aux identifiants affichés par une source officielle et interdisant la sonde d'un identifiant supposé.
 - Licence du code : les fichiers Python de `scripts/` et `tests/` passent sous PolyForm Noncommercial 1.0.0 (`LICENSE-CODE.md`, en-têtes SPDX), licence conçue pour du logiciel et qui conserve la restriction non commerciale ; la documentation reste sous CC BY-NC-SA 4.0.
+- Expérience des juristes : `MODE-EMPLOI.md` (installation pas à pas, accès à donner, domaines pour l'administrateur, durée à prévoir, lecture du rapport, confidentialité, problèmes fréquents), signalé en tête des README. `SKILL.md` : contrôle des accès avant l'inventaire, message de départ avec fourchette de durée indicative (1 à 3 minutes par source), points d'étape et messages en langage courant, sans codes internes.
 
 ## 0.5.0-beta.3 — 25 septembre 2026
 

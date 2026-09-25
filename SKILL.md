@@ -52,7 +52,7 @@ Une source fournie par l'utilisateur peut vérifier texte, page et version ; ne 
 ## 4. Déroulement
 
 ```text
-inventaire → renvois internes → dédoublonnage → classification → routage
+contrôle des accès (§10) → inventaire → renvois internes → dédoublonnage → classification → routage
 → recherche externe → niveau de preuve → métadonnées → contrôle textuel
 → intégrité des adaptations → rapport
 ```
@@ -157,11 +157,42 @@ Travail natif en FR, NL, DE, EN. Distinguer `document_language`, `citation_langu
 - Après correction, vérifier les marqueurs chronologiques (« déjà », « récemment », « depuis ») affectés par la nouvelle source.
 - Une erreur répétée garde un identifiant de constat unique ; ses occurrences restent localisées.
 
-## 10. Communication pendant l'audit
+## 10. Communication avec l'utilisateur
 
-Pour un audit nécessitant plusieurs recherches, annoncer dès le début les étapes : inventaire, vérification de chaque source unique, contrôle séparé des citations accessibles, recherches pouvant exiger plusieurs voies. Pas de durée prévisionnelle.
+L'utilisateur est un juriste, pas un informaticien. Dans tous les messages qui lui sont destinés : langage courant, dans sa langue ; aucun code interne (`VERIFIED`, `TECHNICAL_FAILURE`, noms de champs) ; aucun jargon technique (proxy, HTTP, curl, JSON) sans explication en une phrase ; les codes restent dans les données et les traces. Guide de l'utilisateur : [MODE-EMPLOI.md](MODE-EMPLOI.md).
 
-Donner des compteurs réels (`31/57 sources traitées`, `14/22 citations contrôlées`) plutôt qu'un pourcentage. Ne publier une mise à jour qu'à un changement d'état réel : inventaire terminé, nouvelle famille de sources, lot significatif vérifié, difficulté technique importante, anomalie majeure confirmée, début du contrôle des citations, consolidation finale. Signaler sobrement une difficulté, sans la transformer en inexistence juridique. Pour quelques références simples, ne pas multiplier les messages.
+### Avant de commencer : contrôle des accès
+
+Avant l'inventaire, vérifier quels outils sont réellement disponibles et, si possible, les essayer une fois (une recherche simple, l'ouverture d'une page officielle, par exemple la page d'accueil d'EUR-Lex) :
+
+| Accès | Rôle | Sans lui |
+|---|---|---|
+| Recherche web | trouver les sources | audit impossible : le dire et s'arrêter |
+| Lecture de pages web | ouvrir notices et textes officiels | vérifications limitées aux extraits de recherche, donc presque rien de vérifié |
+| Navigateur réel | sites qui renvoient une page vide aux outils simples (EUR-Lex, CURIA, HUDOC) | vérifications partielles pour ces sources |
+| Lecture du document joint | lire PDF ou DOCX | demander un autre format ou un copier-coller |
+| Exécution de code | générer le PDF, lire un PDF officiel téléchargé | rapport en Markdown seulement ; certains textes non lus |
+
+Si un accès indispensable manque, ne pas commencer l'audit : expliquer en deux ou trois phrases ce qui manque, ce que cela change pour le résultat et où l'activer (renvoyer à la section « Les accès à donner » du mode d'emploi). Si seul un accès utile manque, le dire et demander si l'utilisateur veut poursuivre avec des vérifications plus limitées. Ne jamais demander de mot de passe, ni de désactiver une protection de sécurité en général.
+
+### Message de départ
+
+Après l'inventaire, un seul message court, avant les recherches :
+
+- ce qui a été trouvé : nombre de références et de sources distinctes, citations textuelles à contrôler ;
+- les étapes : vérification de chaque source dans les bases officielles, puis contrôle des citations, puis rapport ;
+- **une fourchette de durée**, présentée comme indicative : compter environ 1 à 3 minutes par source distincte, davantage pour la doctrine, les décisions anciennes ou les sites lents (par exemple : « une vingtaine de sources : entre 20 minutes et une heure ») ; ne jamais donner une durée précise ;
+- ce que l'utilisateur doit faire : rien, sauf laisser la conversation ouverte ; il peut faire autre chose et revenir ; des points d'étape suivront.
+
+Pour un document très long (plus d'une cinquantaine de sources), proposer de commencer par une partie (un chapitre, les notes d'une section) ou de traiter le document par lots, chaque lot faisant l'objet d'un rapport daté.
+
+### Pendant l'audit
+
+Donner des compteurs réels (« 31 sources sur 57 vérifiées », « 14 citations sur 22 contrôlées ») plutôt qu'un pourcentage. Ne publier un point d'étape qu'à un changement d'état réel : inventaire terminé, nouvelle famille de sources, lot significatif vérifié, difficulté d'accès importante, erreur importante confirmée, début du contrôle des citations, rédaction du rapport. Signaler sobrement une difficulté d'accès (« le site de la Cour européenne des droits de l'homme bloque les consultations automatisées ; je passe par une autre voie »), sans la transformer en inexistence juridique. Pour quelques références simples, ne pas multiplier les messages ni annoncer de durée.
+
+### Fin de l'audit
+
+Commencer par ce que le juriste doit faire : corrections établies, puis points à vérifier lui-même, puis ce qui est confirmé. Rappeler en une phrase qu'une référence « non vérifiable » n'est pas pour autant erronée. Indiquer où se trouvent le rapport et ses fichiers.
 
 ## 11. Rapport
 
