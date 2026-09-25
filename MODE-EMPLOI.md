@@ -36,6 +36,17 @@ Le skill est alors disponible dans Cowork comme dans les conversations ordinaire
 
 **Dans Claude Code** (onglet « Code » de l'application de bureau), le plus simple est de le demander à Claude : « Installe pour tous mes projets le skill du dépôt GitHub marjoas-star/audit-citations-juridiques-be-eu (dernière version publiée). »
 
+### Vous utilisez ChatGPT plutôt que Claude ?
+
+Le skill suit un format ouvert que ChatGPT accepte aussi. **Il n'a pas encore été testé avec ChatGPT** : vos retours sont particulièrement bienvenus.
+
+- **Disponibilité** : selon OpenAI, les skills sont proposés dans ChatGPT **Business, Enterprise, Healthcare et Edu**. L'administrateur de l'espace de travail doit autoriser les skills et leur import (« Enable skills », « Enable skill uploading »).
+- **Import** : barre latérale › **Plugins** › onglet **Skills** › **Create** › **Upload from your computer**, puis choisir le même fichier `.zip`. ChatGPT analyse le skill avant de le rendre disponible ; il peut être marqué « Needs Review ».
+- **Utilisation** : lancer l'audit dans **ChatGPT Work**, de préférence dans l'**application de bureau** (travail en local, avec le navigateur de votre ordinateur). Sur le web, Work fonctionne sur les serveurs d'OpenAI : EUR-Lex, CURIA et le Conseil d'État risquent alors de refuser les connexions, comme avec Claude dans le cloud.
+- La demande-type de la section 5 s'utilise telle quelle.
+
+Aide officielle : [Skills in ChatGPT](https://help.openai.com/en/articles/20001066-skills-in-chatgpt), [ChatGPT Work](https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex).
+
 ## 4. Les accès à donner à Claude
 
 C'est le point le plus important : **le skill ne vaut que par les sources qu'il peut ouvrir.**

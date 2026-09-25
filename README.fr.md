@@ -18,6 +18,8 @@ Pour un arrêt du Conseil d’État belge dont le numéro est connu, la recherch
 
 ## Installation et usage
 
+Le skill fonctionne aussi, en principe, avec ChatGPT (offres Business, Enterprise, Edu) : voir le mode d'emploi, section « Vous utilisez ChatGPT ? » (non encore testé).
+
 La procédure détaillée pour les juristes figure dans le [mode d'emploi](MODE-EMPLOI.md) ; ce qui suit s'adresse aux utilisateurs techniques.
 
 

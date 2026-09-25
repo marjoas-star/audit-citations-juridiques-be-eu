@@ -36,6 +36,17 @@ De skill is dan beschikbaar in Cowork en in gewone gesprekken. Officiële hulp (
 
 **In Claude Code** (tabblad "Code" van de desktopapp) is de eenvoudigste manier het aan Claude te vragen: "Installeer voor al mijn projecten de skill uit de GitHub-repository marjoas-star/audit-citations-juridiques-be-eu (laatst gepubliceerde versie)."
 
+### Gebruikt u ChatGPT in plaats van Claude?
+
+De skill volgt een open formaat dat ook ChatGPT aanvaardt. **Hij werd nog niet met ChatGPT getest**: uw feedback is bijzonder welkom.
+
+- **Beschikbaarheid**: volgens OpenAI zijn skills beschikbaar in ChatGPT **Business, Enterprise, Healthcare en Edu**. De beheerder van de werkruimte moet skills en het uploaden ervan toestaan ("Enable skills", "Enable skill uploading").
+- **Importeren**: zijbalk › **Plugins** › tabblad **Skills** › **Create** › **Upload from your computer**, en kies hetzelfde `.zip`-bestand. ChatGPT scant de skill voordat hij beschikbaar wordt; hij kan als "Needs Review" worden gemarkeerd.
+- **Gebruik**: voer de audit uit in **ChatGPT Work**, bij voorkeur in de **desktopapp** (lokaal werk, met de browser van uw computer). Op het web draait Work op de servers van OpenAI: EUR-Lex, CURIA en de Raad van State kunnen dan verbindingen weigeren, zoals bij Claude in de cloud.
+- De voorbeeldvraag van punt 5 kan ongewijzigd worden gebruikt.
+
+Officiële hulp: [Skills in ChatGPT](https://help.openai.com/en/articles/20001066-skills-in-chatgpt), [ChatGPT Work](https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex).
+
 ## 4. De toegang die Claude nodig heeft
 
 Dit is het belangrijkste punt: **de skill is maar zo goed als de bronnen die hij kan openen.**

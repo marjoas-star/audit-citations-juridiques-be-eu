@@ -174,7 +174,7 @@ Avant l'inventaire, vérifier quels outils sont réellement disponibles et, si p
 |---|---|---|
 | Recherche web | trouver les sources | audit impossible : le dire et s'arrêter |
 | Lecture de pages web | ouvrir notices et textes officiels | vérifications limitées aux extraits de recherche, donc presque rien de vérifié |
-| Navigateur réel (dans Cowork : navigateur intégré de l'application de bureau) | sites qui renvoient une page vide aux outils simples ou refusent les connexions venant de serveurs (EUR-Lex, CURIA, HUDOC, Conseil d'État) | vérifications partielles pour ces sources ; indiquer à l'utilisateur de choisir le navigateur intégré dans les réglages de Cowork et de laisser l'application de bureau ouverte |
+| Navigateur réel (Claude Cowork : navigateur intégré de l'application de bureau ; ChatGPT Work : navigateur depuis l'application de bureau) | sites qui renvoient une page vide aux outils simples ou refusent les connexions venant de serveurs (EUR-Lex, CURIA, HUDOC, Conseil d'État) | vérifications partielles pour ces sources ; indiquer à l'utilisateur d'activer le navigateur de l'application de bureau (réglages de Cowork pour Claude, travail local de Work pour ChatGPT) et de laisser l'application ouverte |
 | Lecture du document joint | lire PDF ou DOCX | demander un autre format ou un copier-coller |
 | Exécution de code | générer le PDF, lire un PDF officiel téléchargé | rapport en Markdown seulement ; certains textes non lus |
 
@@ -188,7 +188,7 @@ Après l'inventaire, un seul message court, avant les recherches :
 - les étapes : vérification de chaque source dans les bases officielles, puis contrôle des citations, puis rapport ;
 - **la date juridique retenue** : celle que l'utilisateur a indiquée ; à défaut, celle que le document permet de déduire, présentée comme une hypothèse et avec l'indice qui la fonde (à défaut d'une date précise, au moins une borne : « postérieur au 31 octobre 2025, date de la source la plus récente citée ») ; à défaut, le droit en vigueur au jour de l'audit. Toujours ajouter que l'utilisateur peut indiquer une autre date (« vérifie au 1er janvier 2016 ») ; ne pas attendre sa réponse pour commencer, mais s'il en donne une, refaire les seuls contrôles qui dépendent de la date (versions des textes, décisions postérieures) ;
 - **une fourchette de durée**, présentée comme indicative : compter environ une minute par source distincte, souvent moins, davantage pour la doctrine, les décisions anciennes ou les sites lents (par exemple : « une douzaine de sources : 5 à 15 minutes environ ») ; ne jamais donner une durée précise ; mieux vaut une fourchette courte et honnête qu'une estimation prudente qui décourage ;
-- ce que l'utilisateur doit faire : rien, sauf laisser la conversation ouverte (dans Cowork, laisser aussi l'application de bureau ouverte et connectée, car le navigateur intégré en dépend) ; il peut faire autre chose et revenir ; des points d'étape suivront.
+- ce que l'utilisateur doit faire : rien, sauf laisser la conversation ouverte (avec Claude Cowork ou ChatGPT Work, laisser aussi l'application de bureau ouverte et connectée, car le navigateur en dépend) ; il peut faire autre chose et revenir ; des points d'étape suivront.
 
 Pour un document très long (plus d'une cinquantaine de sources), proposer de commencer par une partie (un chapitre, les notes d'une section) ou de traiter le document par lots, chaque lot faisant l'objet d'un rapport daté.
 
