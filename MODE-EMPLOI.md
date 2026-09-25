@@ -27,7 +27,7 @@ Le skill fonctionne aussi dans une conversation Claude ordinaire et dans Claude 
 
 1. Dans l'application Claude, ouvrez **Paramètres › Capacités** (« Settings › Capabilities ») et activez **Exécution de code et création de fichiers** (« Code execution and file creation »). Sans cette option, les skills ne fonctionnent pas.
 2. Toujours dans les paramètres, rubrique **Personnaliser**, ouvrez **Compétences** (« Customize › Skills » dans l'interface anglaise).
-3. Cliquez sur **+**, puis sur l'option de création d'une compétence, puis sur celle qui permet d'importer un fichier (« Create skill » puis « Upload a skill » dans l'interface anglaise).
+3. Cliquez sur le bouton **+ Ajouter** (en haut à droite), puis sur **Importer une compétence** (« Upload a skill » dans l'interface anglaise).
 4. Choisissez l'archive `.zip` téléchargée.
 5. Vérifiez que **audit-citations-juridiques-be-eu** apparaît dans la liste des compétences et que son interrupteur est activé (bleu). La fiche indique « Ajoute uniquement des instructions pour Claude » : c'est normal.
 
