@@ -3,6 +3,7 @@
 ## Non publié
 
 - Description du skill ramenée sous 500 caractères : l'aperçu de l'application Claude coupe au-delà (test ajouté). Mode d'emploi français aligné sur les libellés de l'interface française (Paramètres › Compétences).
+- Retour du premier audit réel dans Claude Cowork (extrait A du bêta-test v2, 4 erreurs sur 4, 1 précision, 3 informations de vigueur, 0 faux positif ; navigateur intégré efficace pour le Conseil d'État, Justel, EUR-Lex et la Cour constitutionnelle) : règle cardinale « chercher à partir du document, jamais de sa mémoire » après la sonde d'un numéro d'arrêt non cité ; vouvoiement par défaut ; CELEX transcrit d'un numéro d'affaire admis sous contrôle du type de document ; réutilisation de l'adresse de résultat du formulaire du Conseil d'État avec un numéro cité.
 
 ## 0.6.0-beta.1 — 25 septembre 2026
 
