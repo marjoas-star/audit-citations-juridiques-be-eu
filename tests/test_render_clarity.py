@@ -67,6 +67,13 @@ class ClarityTests(unittest.TestCase):
     def test_pdf_replaces_glyphs_missing_from_font(self):
         self.assertEqual(renderer.pdf_text('C\u201123/14\u202f§'), 'C-23/14\u00a0§')
 
+    def test_skill_description_fits_app_preview(self):
+        # The Claude app preview shows the first 500 characters of the description.
+        import re
+        text = (Path(__file__).parents[1] / 'SKILL.md').read_text(encoding='utf-8')
+        desc = ' '.join(re.search(r'description: >\n(.*?)\n---', text, re.S).group(1).split())
+        self.assertLessEqual(len(desc), 500)
+
 
 if __name__ == '__main__':
     unittest.main()

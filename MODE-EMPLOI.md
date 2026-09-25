@@ -26,10 +26,10 @@ Le skill fonctionne aussi dans une conversation Claude ordinaire et dans Claude 
 ## 3. Installer le skill (une seule fois)
 
 1. Dans l'application Claude, ouvrez **Paramètres › Capacités** (« Settings › Capabilities ») et activez **Exécution de code et création de fichiers** (« Code execution and file creation »). Sans cette option, les skills ne fonctionnent pas.
-2. Ouvrez **Personnaliser** (« Customize », dans la barre latérale gauche) › **Skills**.
-3. Cliquez sur **+**, puis **Créer un skill** (« Create skill »), puis **Importer un skill** (« Upload a skill »).
+2. Toujours dans les paramètres, rubrique **Personnaliser**, ouvrez **Compétences** (« Customize › Skills » dans l'interface anglaise).
+3. Cliquez sur **+**, puis sur l'option de création d'une compétence, puis sur celle qui permet d'importer un fichier (« Create skill » puis « Upload a skill » dans l'interface anglaise).
 4. Choisissez l'archive `.zip` téléchargée.
-5. Vérifiez que le skill **audit-citations-juridiques-be-eu** apparaît dans la liste et qu'il est activé.
+5. Vérifiez que **audit-citations-juridiques-be-eu** apparaît dans la liste des compétences et que son interrupteur est activé (bleu). La fiche indique « Ajoute uniquement des instructions pour Claude » : c'est normal.
 
 Le skill est alors disponible dans Cowork comme dans les conversations ordinaires. Aide officielle : [Use skills in Claude](https://support.claude.com/en/articles/12512180-use-skills-in-claude).
 
@@ -55,7 +55,7 @@ Avant de commencer, Claude vérifie lui-même ses accès. S'il en manque un, il 
 À transmettre à la personne qui gère votre compte Claude :
 
 - **Paramètres de l'organisation › Cowork** : activer Cowork et le **navigateur intégré** (désactivé par défaut sur Enterprise) ;
-- **Paramètres de l'organisation › Capacités** : activer les **Skills**, l'**exécution de code et la création de fichiers** et la **recherche web** ;
+- **Paramètres de l'organisation › Capacités** : activer les **Compétences** (« Skills »), l'**exécution de code et la création de fichiers** et la **recherche web** ;
 - dans **Capacités › Exécution de code**, si l'accès réseau est restreint (c'est le cas par défaut sur Enterprise), autoriser au minimum ces domaines, utilisés pour télécharger les textes officiels : `eur-lex.europa.eu`, `data.europa.eu`, `curia.europa.eu`, `infocuria.curia.europa.eu`, `hudoc.echr.coe.int`, `ks.echr.coe.int`, `www.ejustice.just.fgov.be`, `juportal.be`, `www.const-court.be`, `www.raadvst-consetat.be`, `www.lachambre.be`, `www.dekamer.be`, `www.senate.be`, `www.edpb.europa.eu`, `orbi.uliege.be`, `dial.uclouvain.be`, `api.crossref.org`.
 
 Un réglage n'est pris en compte que dans une **nouvelle** tâche ou conversation. Références : [Cowork pour Team et Enterprise](https://support.claude.com/en/articles/13455879-use-claude-cowork-on-team-and-enterprise-plans), [navigateur intégré](https://support.claude.com/en/articles/16607400-use-the-built-in-browser-in-claude-cowork).

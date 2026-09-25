@@ -1,5 +1,9 @@
 # Notes de version
 
+## Non publié
+
+- Description du skill ramenée sous 500 caractères : l'aperçu de l'application Claude coupe au-delà (test ajouté). Mode d'emploi français aligné sur les libellés de l'interface française (Paramètres › Compétences).
+
 ## 0.6.0-beta.1 — 25 septembre 2026
 
 Version tournée vers les juristes : mode d'emploi en quatre langues centré sur Claude Cowork, contrôle des accès avant l'audit, durée annoncée, messages en langage courant. Règles de sonde, de gravité et de doctrine précisées, générateur de rapport plus lisible, licence logicielle distincte pour le code. Rejeux réels et d'expérience utilisateur consignés ; aucune certification générale.
