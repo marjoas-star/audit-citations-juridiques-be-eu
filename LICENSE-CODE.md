@@ -1,4 +1,4 @@
-Required Notice: Copyright 2026 marjoas-star (https://github.com/marjoas-star/audit-citations-juridiques-be-eu)
+Required Notice: Copyright 2026 Marc Joassart (https://github.com/marjoas-star/audit-citations-juridiques-be-eu)
 
 # PolyForm Noncommercial License 1.0.0
 
