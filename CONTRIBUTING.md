@@ -11,3 +11,37 @@ Avant une publication : contrôler les liens relatifs et le frontmatter, relire 
 La prochaine campagne suit le [protocole prospectif V1](tests/validation-v1/protocole.md) et son [plan de corpus réservé](tests/validation-v1/corpus.md). Ils décrivent des travaux à exécuter, pas des résultats acquis.
 
 Pour un essai exploratoire par un juriste : [guide des bêta-testeurs](tests/beta/guide.md) et [fiche de retour](tests/beta/fiche-retour.md). Les retours d’usage ne remplacent pas la validation indépendante.
+
+## Règles de maintenance et de publication
+
+Ces règles concernent les mainteneurs ; elles ne font pas partie des instructions exécutées pendant un audit (`SKILL.md`).
+
+### Datation des modules
+
+Chaque module de `references/` indique sa date de révision des instructions. Les vérifications fonctionnelles sont datées séparément et rattachées aux parcours réellement exécutés : une révision documentaire ne prouve pas le fonctionnement d’une interface. Tester URLs, recherche, interfaces, replis et exemples selon les changements observés.
+
+### Versionnement
+
+Semantic Versioning `MAJOR.MINOR.PATCH`. Avant V1 : `0.x`.
+
+### Benchmarks exigés avant V1
+
+Benchmark v0.1, benchmark v0.2 adversarial, benchmark v0.3 intégration, test UX de progression, test T53 et audits d’intégration complets.
+
+Un résultat de test renvoie à ses entrées, à la sortie effectivement produite, aux observations/outils et à la comparaison avec l’oracle. Distinguer revue de spécification, scénario simulé et parcours réel. Un oracle seul n’est pas une exécution ; une validation de structure ou de mise en page n’est pas une validation comportementale ou documentaire. Sans trace suffisante, noter `NOT_DEMONSTRATED`, jamais `PASS`. Les résultats historiques non traçables ne permettent pas le passage au vert.
+
+Conditions minimales : 0 invention, 0 sur-vérification, 0 fusion documentaire, 0 adaptation trompeuse acceptée et progression adaptée à la taille de l’audit.
+
+### Release blockers
+
+Une V1 publique est interdite tant qu’un benchmark révèle :
+
+- **A — invention** : identifiant fabriqué ou référence complétée sans preuve ;
+- **B — sur-vérification** : snippet → `VERIFIED`, source secondaire → ECLI vérifié, panne → inexistence ;
+- **C — fusion** : arrêt + conclusions, proposition + directive, rapport + projet, texte adopté + loi ;
+- **D — intégrité citationnelle** : ellipse trompeuse validée comme simple adaptation ;
+- **E — récupération Conseil d’État par numéro exact** : avant passage du `PUBLIC_RELEASE_GATE` au vert, `COUNCIL_OF_STATE_EXACT_NUMBER_RETRIEVAL = GREEN`. Le test T53 doit confirmer que la recherche officielle par numéro exact est tentée prioritairement, sans reconstruction d’URL/ECLI, et qu’un échec du formulaire produit `TECHNICAL_FAILURE` plutôt qu’une fausse inexistence.
+
+### Documentation et licence
+
+README en FR/NL/DE/EN : `README.md`, `README.fr.md`, `README.nl.md`, `README.de.md`, `README.en.md`. Documentation sous `CC BY-NC-SA 4.0` ; ne pas qualifier le projet d’« open source » au sens OSI compte tenu de la restriction NC.

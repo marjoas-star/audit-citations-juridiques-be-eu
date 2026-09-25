@@ -2,7 +2,7 @@
 
 **0.5.0-beta.3, experimentelle öffentliche Version.** Dieser Skill unterstützt einen Agenten bei der Prüfung von Fundstellen, Zitaten und internen Verweisen in belgischen, EU- und EMRK-Dokumenten. Die Anweisungen sind französisch; Arbeitssprachen sind FR/NL/DE/EN.
 
-Das Release-Archiv entpacken und den Ordner `audit-citations-juridiques-be-eu` über die Skill-Funktion der jeweiligen Anwendung installieren. Für Codex liegt er unter `~/.codex/skills/` oder im skills-Ordner des konfigurierten CODEX_HOME. Unterordner beibehalten; Einstiegspunkt ist `SKILL.md`.
+Das Release-Archiv entpacken und den Ordner `audit-citations-juridiques-be-eu` über die Skill-Funktion der jeweiligen Anwendung installieren. Für Codex liegt er unter `~/.codex/skills/` oder im skills-Ordner des konfigurierten CODEX_HOME. Für Claude Code unter `~/.claude/skills/` (alle Projekte) oder im `.claude/skills/` eines Projekts; in der Claude-App ein Zip des Ordners über die Skills-Einstellungen hochladen. Unterordner beibehalten; Einstiegspunkt ist `SKILL.md`.
 
 Beispiel: „Prüfe mit audit-citations-juridiques-be-eu die Fundstellen und Zitate dieses Dokuments. Bewahre die ursprünglichen Angaben und unterscheide nachgewiesene Fehler von Zugangsbeschränkungen.“
 

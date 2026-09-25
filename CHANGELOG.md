@@ -1,5 +1,12 @@
 # Notes de version
 
+## Non publié
+
+- `SKILL.md` allégé (environ 3 200 → 2 200 mots) et réorganisé en 12 sections : règles cardinales regroupées, table de routage par famille de sources, doublons avec le module Conseil d'État réduits. Aucune règle d'audit supprimée.
+- Règles de maintenance, benchmarks, release blockers, versionnement et licence déplacés dans `CONTRIBUTING.md`.
+- Description enrichie de formulations de déclenchement (FR/NL/EN).
+- README : installation dans Claude Code et l'application Claude.
+
 ## 0.5.0-beta.3 — 25 septembre 2026
 
 Datation persistante des rapports et révisions, contrôle de version avant alerte, axes de citation séparés, erreurs et suggestions distinctes, preuves visibles, regroupement des occurrences et nettoyage de la restitution. Validation documentaire et tests de rendu ne constituent pas une certification générale.

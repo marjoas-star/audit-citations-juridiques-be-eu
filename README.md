@@ -16,7 +16,7 @@ Pour un arrêt du Conseil d’État belge dont le numéro est connu, la recherch
 
 ## Installation et usage
 
-Télécharger l’archive de la version dans les publications GitHub et extraire le dossier `audit-citations-juridiques-be-eu`. Dans Codex, placer ce dossier dans `~/.codex/skills/` (ou dans le dossier `skills` du CODEX_HOME configuré). Le fichier d’entrée doit être `audit-citations-juridiques-be-eu/SKILL.md`. Dans un autre hôte compatible, utiliser son mécanisme de chargement de skills en conservant les sous-dossiers.
+Télécharger l’archive de la version dans les publications GitHub et extraire le dossier `audit-citations-juridiques-be-eu`. Dans Codex, placer ce dossier dans `~/.codex/skills/` (ou dans le dossier `skills` du CODEX_HOME configuré). Le fichier d’entrée doit être `audit-citations-juridiques-be-eu/SKILL.md`. Dans Claude Code, placer ce dossier dans `~/.claude/skills/` (tous les projets) ou dans `.claude/skills/` d’un projet ; dans l’application Claude, importer l’archive zip du dossier depuis les réglages des compétences (Skills). Dans un autre hôte compatible, utiliser son mécanisme de chargement de skills en conservant les sous-dossiers.
 
 Exemple de demande :
 
