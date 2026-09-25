@@ -6,6 +6,7 @@
 - Règles de maintenance, benchmarks, release blockers, versionnement et licence déplacés dans `CONTRIBUTING.md`.
 - Description enrichie de formulations de déclenchement (FR/NL/EN).
 - README : installation dans Claude Code et l'application Claude.
+- Rejeu hors ligne ELLIPSIS E1–E3 et N–Q sur la version allégée : invariants satisfaits (simulations) ; rejeu européen T54–T60 en attente d'un accès réseau. Voir `tests/results/skill-allege-replay/`.
 
 ## 0.5.0-beta.3 — 25 septembre 2026
 
