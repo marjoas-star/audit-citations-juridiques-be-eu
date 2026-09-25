@@ -334,6 +334,8 @@ Router vers `references/moniteur-belge-justel.md`; RefLex peut aider pour les re
 
 Router vers `references/eur-lex-legislation.md`. Distinguer acte publié, version consolidée, document préparatoire et procédure.
 
+Ce module précise aussi les références au JO depuis octobre 2023, les titres abrégés, les dates institutionnelles et les versions de lignes directrices. Distinguer une erreur documentaire d'une harmonisation éditoriale ; pour un acte délégué ou d'exécution, contrôler séparément l'habilitation et la disposition mise en œuvre.
+
 ### 38.1. Disposition et objet normatif
 
 Lorsqu'une note renvoie à une disposition pour une définition ou une règle déterminée, vérifier à la fois le localisateur et le contenu. Ce contrôle ciblé du localisateur ne constitue pas un avis sur le bien-fondé de l’argumentation, qui relève du niveau 3 sur demande. L'existence de l'article cité ne suffit pas. Si la définition se trouve dans une autre disposition, conserver la citation originale et signaler `WRONG_PROVISION_LOCATOR` avec la disposition officiellement vérifiée.

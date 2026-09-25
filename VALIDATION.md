@@ -42,3 +42,7 @@ Le générateur français a passé cinq tests : rejet des preuves manquantes pou
 ## Dernier benchmark avant bêta-tests humains
 
 Un [benchmark complémentaire](tests/results/benchmark-final-beta2.md), avec [entrées et protocole](tests/cases/benchmark-final-beta2.md), a porté sur six références réelles et huit simulations. Les trois anomalies introduites ont été détectées. Cinq références ont été vérifiées directement dans des documents officiels ; une reste partielle sur copie secondaire après résultat officiel nul. Les huit invariants simulés sont satisfaits. Aucun défaut critique observé dans cette passe ; aucun taux général de fiabilité déduit. Bêta-tests accompagnés recommandés, validation V1 toujours non démontrée.
+
+## Rejeu européen après revue — 25 septembre 2026
+
+Sept cas T54–T60 précisés et rejoués sur les sources accessibles donnent sept résultats satisfaisants dans leur périmètre, avec premières réponses et traces conservées. Résumés officiels et métadonnées restent distingués des textes intégraux. Ces nouveaux résultats ne certifient pas rétroactivement les scores déclarés dans le dossier reçu. Voir le [rapport du rejeu](tests/results/benchmark-v0.4-replay.md). Les instructions évoluent dans la branche principale ; l’archive beta.2 reste inchangée et la validation générale V1 non démontrée.

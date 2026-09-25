@@ -1,5 +1,14 @@
 # Notes de version
 
+## Après 0.5.0-beta.2 — sources de développement
+
+- Dates d'adoption, d'annonce, de publication et versions institutionnelles distinguées ; consultation clôturée distincte de version finale.
+- Références JO et titres abrégés évalués selon le contexte éditorial, sans faux défaut documentaire automatique.
+- Habilitation et disposition mise en œuvre des actes délégués/d'exécution contrôlées séparément, avec champs de preuve correspondants.
+- Rejeu européen T54–T60 révisé ; résultats et limites documentés séparément des anciens résultats déclarés.
+
+Ces modifications concernent les sources de la branche principale. L'archive publiée sous le tag 0.5.0-beta.2 reste inchangée.
+
 ## 0.5.0-beta.2 — 24 septembre 2026
 
 - Présentation juridique française réutilisable : synthèse, corrections, fiches, citations et limites ; générateur PDF/Markdown et cinq tests de conditionnement.

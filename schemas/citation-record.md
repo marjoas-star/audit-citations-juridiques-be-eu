@@ -58,6 +58,16 @@ fields:
   date:
   parties:
   document_type:
+  document_version:
+  document_status:  # consultation / final / revised, si établi
+  adoption_date:
+  announcement_date:
+  oj_publication_date:
+  notification_date:
+  entry_into_force_date:
+  base_act:
+  enabling_provision:
+  operative_provision_implemented:
 evidence:
   overall_level:
   per_field: {}
