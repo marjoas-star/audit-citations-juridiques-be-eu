@@ -1,4 +1,14 @@
-# Validation publique — 0.6.0-beta.1
+# Validation publique — 0.7.0-beta.1
+
+25 septembre 2026. Aucune certification générale ni taux de fiabilité global n'est revendiqué.
+
+- **Bêta-test v2 dans Claude Cowork** (application de bureau, navigateur intégré), sur la version 0.6.0-beta.1 : cinq extraits réels préparés avec corrigé, dont quatre passés à l'aveugle dans des tâches neuves. 22 erreurs introduites sur 22 détectées, aucune fausse alerte de fond ; les sources bloquées depuis le cloud (Conseil d'État, Justel, EUR-Lex, Cour constitutionnelle) ont toutes été consultées. Les évaluations détaillées sont conservées dans le dossier de travail du coordinateur.
+- **Régressions relevées** (référence fantôme trop prudente, version non applicable qualifiée d'altération, date juridique, inventaire incomplet, cohérence des compteurs, longueur) : règles corrigées, puis **rejeu à l'aveugle des extraits B et D** en local : 6/6 erreurs dans chacun, régressions levées ; longueur encore à réduire (budget de mots ajouté).
+- **Générateur** : 35 tests automatisés, dont le rendu en quatre langues et le contrôle des chiffres de la synthèse.
+
+Limites : un passage par extrait, coordinateur auteur des corrigés, deux écarts de procédure déclarés par les agents (recherche fondée sur la mémoire, requête déguisée en navigateur) sans effet sur les conclusions.
+
+## Historique — 0.6.0-beta.1
 
 25 septembre 2026. Aucune certification générale ni taux de fiabilité global n'est revendiqué. Essais de cette version, avec premières réponses, empreintes et comparaisons conservées :
 

@@ -12,7 +12,7 @@ description: >
 
 # Audit des citations juridiques — Belgique & Europe
 
-Version du skill : `0.6.0-beta.1` (à reporter dans le champ `skill_version` du rapport).
+Version du skill : `0.7.0-beta.1` (à reporter dans le champ `skill_version` du rapport).
 
 ## 1. Objet
 
