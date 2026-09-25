@@ -1,19 +1,18 @@
 ---
 name: audit-citations-juridiques-be-eu
 description: >
-  Audite les références, citations et sources d'un document juridique en droit
-  belge, droit de l'Union européenne et droit de la CEDH : vérifie dans les
-  sources officielles que chaque arrêt, loi, acte, travail parlementaire ou
-  ouvrage cité existe et correspond bien à la référence (numéro, date, rôle,
-  ECLI, CELEX, NUMAC, page), contrôle les citations textuelles, ellipses et
-  traductions, signale les anomalies et ce qui n'a pas pu être vérifié, et peut
-  produire un rapport Markdown/PDF. À utiliser dès que l'utilisateur demande de
-  vérifier, contrôler, relire ou auditer des références, notes de bas de page,
-  citations, ECLI ou sources d'un mémoire, de conclusions, d'un avis, d'un
-  article ou d'un texte généré par IA, ou demande si un arrêt ou une référence
-  existe (« vérifie mes notes », « cet arrêt existe-t-il ? », « contrôle les
-  ECLI », « controleer de voetnoten », « check these citations »). Fonctionne
-  en français, néerlandais, allemand et anglais.
+  Vérifie dans les sources officielles les références et citations d'un
+  document juridique (droit belge, UE, CEDH). Contrôle que chaque arrêt, loi,
+  acte, travail parlementaire ou ouvrage cité existe et correspond à la
+  référence (numéro, date, rôle, ECLI, CELEX, NUMAC, page), vérifie les
+  citations textuelles, ellipses et traductions, signale les erreurs et ce qui
+  n'a pas pu être vérifié, et produit un rapport PDF. À utiliser dès que
+  l'utilisateur demande de vérifier, contrôler, relire ou auditer les
+  références, notes de bas de page, citations, ECLI ou sources d'un mémoire,
+  de conclusions, d'un avis, d'un article ou d'un texte généré par IA, ou
+  demande si un arrêt existe (« vérifie mes notes », « cet arrêt existe-t-il ? »,
+  « controleer de voetnoten », « check these citations »). Fonctionne en
+  français, néerlandais, allemand et anglais.
 ---
 
 # Audit des citations juridiques — Belgique & Europe
