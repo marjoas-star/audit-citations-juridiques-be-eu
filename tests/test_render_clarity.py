@@ -44,6 +44,25 @@ class ClarityTests(unittest.TestCase):
         path = Path(__file__).parents[1] / 'templates/example-audit.json'
         renderer.validate(json.loads(path.read_text(encoding='utf-8')))
 
+    def test_supplied_guillemets_are_not_doubled(self):
+        self.assertEqual(renderer.bare_excerpt('« Texte. »'), 'Texte.')
+        self.assertEqual(renderer.bare_excerpt('Texte « cité » ici'), 'Texte « cité » ici')
+
+    def test_closing_block_is_kept_together(self):
+        kinds = [k for k, v in renderer.sections(renderer.validate(sample()))]
+        start, end = kinds.index('keep_start'), kinds.index('keep_end')
+        self.assertLess(start, kinds.index('callout')); self.assertGreater(end, kinds.index('callout'))
+
+    def test_skill_md_states_current_version(self):
+        root = Path(__file__).parents[1]
+        version = (root / 'VERSION').read_text(encoding='utf-8').strip()
+        self.assertIn('Version du skill : `' + version + '`', (root / 'SKILL.md').read_text(encoding='utf-8'))
+
+    def test_example_is_fictitious(self):
+        text = (Path(__file__).parents[1] / 'templates/example-audit.json').read_text(encoding='utf-8')
+        for marker in ('Schrems', 'Post Danmark', 'Dupont-Verhaegen', 'Google Spain', 'Salduz', '29 juillet 1991', 'Rantos', 'ByteDance'):
+            self.assertNotIn(marker, text)
+
 
 if __name__ == '__main__':
     unittest.main()

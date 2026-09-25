@@ -22,6 +22,6 @@ Pour un statut procédural, vérifier l'instance exacte : dossier du Tribunal, p
 
 Exemple de garde-fou : dans C-287/98 `Linster`, les conclusions AG du 11 janvier 2000 (`ECLI:EU:C:2000:3`) et l'arrêt du 19 septembre 2000 (`ECLI:EU:C:2000:468`) sont deux documents distincts.
 
-Repli fonctionnel observé le 24 septembre 2026 : lorsque le lecteur web échoue, ouvrir dans un navigateur le lien réellement découvert et suivre la redirection institutionnelle. Pour Huber et Weltimmo, le texte français était lisible dans InfoCuria alors que le lecteur web échouait. Ne pas généraliser la panne d’un outil à toutes les voies disponibles. Voir `VALIDATION.md`.
+Repli fonctionnel observé le 24 septembre 2026 : lorsque le lecteur web échoue, ouvrir dans un navigateur le lien réellement découvert et suivre la redirection institutionnelle. Pour Huber et Weltimmo, le texte français était lisible dans InfoCuria alors que le lecteur web échouait. Ne pas généraliser la panne d’un outil à toutes les voies disponibles. Les essais correspondants sont consignés dans le dépôt du projet, hors du skill.
 
 Pour une plage de points, vérifier les changements de section et de locuteur. Un argument de partie reproduit dans l’arrêt n’est pas une conclusion de la Cour. Exemple testé lors de la validation : C-413/23 P, le point 91 ouvre les arguments sur un second grief après la conclusion du point 90.

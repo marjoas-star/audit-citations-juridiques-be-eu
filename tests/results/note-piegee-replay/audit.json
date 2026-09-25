@@ -1,0 +1,280 @@
+{
+ "title": "Audit des références — Note juridique « Protection des données et motivation des actes administratifs »",
+ "document": "entree.md — Note juridique « Protection des données et motivation des actes administratifs » (6 points numérotés)",
+ "date": "Non indiquée dans le document",
+ "skill_version": "non indiquée dans le skill (modules révisés les 24 et 25 septembre 2026)",
+ "report_language": "fr",
+ "report_metadata": {
+  "established_at": "2026-09-25T14:26:31+02:00",
+  "timezone": "Europe/Brussels",
+  "precision": "second",
+  "report_version": "v1",
+  "checks_started_on": "2026-09-25",
+  "checks_completed_on": "2026-09-25",
+  "legal_reference": "Non précisée par la consigne ni par le document ; normes contrôlées dans leur texte d'origine publié et dans leur version consolidée consultée le 25 septembre 2026"
+ },
+ "scope": "Identité documentaire des six références de la note (niveau 1) et fidélité de la seule citation textuelle entre guillemets (niveau 2). Le soutien substantif des propositions juridiques (niveau 3) n'a pas été demandé et n'est pas évalué.",
+ "summary": "Six références examinées, six sources distinctes. Quatre références sont correctement identifiées ; deux demandent une correction : l'ECLI cité pour l'arrêt Schrems désigne un autre arrêt du même jour (Post Danmark, affaire C-23/14), et la définition du « traitement » figure à l'article 4, point 2, du RGPD, non au point 1. La citation de l'article 3 de la loi du 29 juillet 1991 présente un écart mineur (« consiste dans » au lieu de « consiste en »), sans effet sur le sens. L'article de doctrine attribué à J. Dupont-Verhaegen n'a pu être retrouvé dans aucune source accessible ; aucune contradiction n'est établie, mais un contrôle humain prioritaire est recommandé.",
+ "limitations": [
+  "La base HUDOC a présenté une vérification anti-robot dans le navigateur ; elle n'a pas été contournée. L'arrêt Salduz a été vérifié par l'interface publique de recherche et de conversion de HUDOC.",
+  "EUR-Lex a renvoyé des réponses vides aux requêtes en ligne de commande ; la notice et le texte ont été lus dans un navigateur.",
+  "Jurisquare (sommaires de la Revue belge de droit constitutionnel) était inaccessible (échec de connexion) ; seul un sommaire partiel du numéro 2021/1 a pu être lu sur le site de l'UCLouvain. Le volume 2021 n'a donc pas pu être contrôlé à la page 512.",
+  "Le dépôt DIAL (UCLouvain) a redirigé la recherche vers sa page d'accueil : aucune réponse exploitable.",
+  "L'absence de vérification ne signifie pas qu'une référence est erronée."
+ ],
+ "method": [
+  "Inventaire des six points de la note, sans renvoi interne à résoudre ; chaque point contient une source distincte.",
+  "Jurisprudence de l'Union : fiche d'affaire InfoCuria par numéro d'affaire, puis texte de l'arrêt ouvert sur EUR-Lex par le lien affiché dans InfoCuria ; recherche InfoCuria de l'ECLI tel que cité.",
+  "Règlement 2016/679 : notice et texte d'origine sur EUR-Lex (numéro CELEX obtenu par transcription mécanique du numéro de l'acte), lecture de l'article 4.",
+  "CEDH : métadonnées HUDOC par numéro de requête et texte français de l'arrêt de Grande Chambre.",
+  "Loi du 29 juillet 1991 : recherche Justel par titre et nature juridique, lecture de l'article 3 consolidé, puis image de la publication au Moniteur belge du 12 septembre 1991.",
+  "Doctrine : recherche du titre exact (moteur général, Crossref), de l'auteur (ORBi, DIAL, Crossref) et de la revue (site de l'UCLouvain, Jurisquare).",
+  "Les traces chronologiques des consultations sont conservées séparément (traces.md)."
+ ],
+ "records": [
+  {
+   "id": "OCC-1",
+   "source_id": "SRC-1",
+   "title": "C.J.U.E., 13 mai 2014, Google Spain et Google, C-131/12",
+   "original": "C.J.U.E., 13 mai 2014, Google Spain et Google, C-131/12, ECLI:EU:C:2014:317",
+   "checked": "C.J.U.E. (gr. ch.), 13 mai 2014, Google Spain et Google, C-131/12, ECLI:EU:C:2014:317",
+   "location": "Point 1",
+   "status": "VERIFIED",
+   "checks": [
+    "Numéro d'affaire, intitulé usuel et date du prononcé : fiche officielle de l'affaire",
+    "ECLI de l'arrêt (et non des conclusions de l'avocat général du 25 juin 2013) : fiche de l'affaire et texte de l'arrêt",
+    "Nature du document : arrêt de la grande chambre, texte français ouvert"
+   ],
+   "limits": "Le soutien de la proposition (consécration d'un droit à l'effacement) n'a pas été évalué.",
+   "sources": [
+    {
+     "label": "InfoCuria — fiche de l'affaire C-131/12",
+     "url": "https://infocuria.curia.europa.eu/tabs/affair?lang=fr&sort=AFF_NUM-DESC&searchTerm=%2522C%252D131%252F12%2522&publishedId=C-131%2F12",
+     "locator": "Documents de jurisprudence : « Arrêt, 13/05/2014, ECLI:EU:C:2014:317 »",
+     "language": "fr",
+     "consulted_on": "2026-09-25",
+     "basis": "notice officielle"
+    },
+    {
+     "label": "EUR-Lex — arrêt C-131/12 (CELEX 62012CJ0131)",
+     "url": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:62012CJ0131",
+     "locator": "En-tête : « Arrêt de la Cour (grande chambre), 13 mai 2014 »",
+     "language": "fr",
+     "consulted_on": "2026-09-25",
+     "basis": "lecture directe"
+    }
+   ]
+  },
+  {
+   "id": "OCC-2",
+   "source_id": "SRC-2",
+   "title": "Règlement (UE) 2016/679 (RGPD), article 4",
+   "original": "Le règlement (UE) 2016/679 du 27 avril 2016 (RGPD), publié au JO L 119 du 4 mai 2016, p. 1, définit la notion de « traitement » en son article 4, 1).",
+   "checked": "Règlement (UE) 2016/679 du Parlement européen et du Conseil du 27 avril 2016, JO L 119 du 4 mai 2016, p. 1, article 4, point 2",
+   "location": "Point 2",
+   "status": "VERIFIED_WITH_ANOMALY",
+   "checks": [
+    "Numéro, date et intitulé du règlement : texte publié",
+    "Référence de publication (JO L 119 du 4.5.2016, p. 1) : notice EUR-Lex",
+    "Contenu de l'article 4 : le point 1 définit les « données à caractère personnel », le point 2 le « traitement »"
+   ],
+   "limits": "Vérification faite sur le texte d'origine publié ; les rectificatifs ultérieurs n'ont pas été examinés, aucun n'étant nécessaire pour situer la définition.",
+   "findings": [
+    {
+     "id": "F-RGPD-ART4",
+     "kind": "error",
+     "severity": "MAJOR",
+     "problem": "La définition du « traitement » ne figure pas à l'article 4, point 1, qui définit les « données à caractère personnel », mais à l'article 4, point 2.",
+     "action": "Remplacer « en son article 4, 1) » par « en son article 4, 2) »."
+    }
+   ],
+   "sources": [
+    {
+     "label": "EUR-Lex — règlement (UE) 2016/679, texte publié (CELEX 32016R0679)",
+     "url": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32016R0679",
+     "locator": "Article 4, points 1 et 2 ; référence « JO L 119 du 4.5.2016, p. 1-88 »",
+     "language": "fr",
+     "consulted_on": "2026-09-25",
+     "basis": "lecture directe",
+     "excerpt": "1) “données à caractère personnel”, toute information se rapportant à une personne physique identifiée ou identifiable […] ; 2) “traitement”, toute opération ou tout ensemble d'opérations […]"
+    }
+   ]
+  },
+  {
+   "id": "OCC-3",
+   "source_id": "SRC-3",
+   "title": "C.J.U.E., 6 octobre 2015, Schrems, C-362/14",
+   "original": "C.J.U.E., 6 octobre 2015, Schrems, C-362/14, ECLI:EU:C:2015:651",
+   "checked": "C.J.U.E. (gr. ch.), 6 octobre 2015, Schrems, C-362/14, ECLI:EU:C:2015:650",
+   "location": "Point 3",
+   "status": "VERIFIED_WITH_ANOMALY",
+   "checks": [
+    "Numéro d'affaire, intitulé et date : fiche officielle de l'affaire et texte de l'arrêt",
+    "ECLI de l'arrêt Schrems affiché par la Cour : ECLI:EU:C:2015:650",
+    "ECLI cité (ECLI:EU:C:2015:651) recherché tel quel dans InfoCuria : il désigne l'arrêt Post Danmark (C-23/14) du même jour"
+   ],
+   "limits": "Le soutien de la proposition (invalidation de la décision « sphère de sécurité ») n'a pas été évalué ; le dispositif de l'arrêt vise bien la décision 2000/520/CE.",
+   "findings": [
+    {
+     "id": "F-SCHREMS-ECLI",
+     "kind": "error",
+     "severity": "MAJOR",
+     "problem": "L'ECLI cité désigne un autre arrêt rendu le même jour (Post Danmark, C-23/14). L'arrêt Schrems reste identifié avec certitude par son numéro d'affaire, sa date et son intitulé.",
+     "action": "Remplacer « ECLI:EU:C:2015:651 » par « ECLI:EU:C:2015:650 »."
+    }
+   ],
+   "sources": [
+    {
+     "label": "InfoCuria — fiche de l'affaire C-362/14",
+     "url": "https://infocuria.curia.europa.eu/tabs/affair?lang=fr&sort=AFF_NUM-DESC&searchTerm=%2522C%252D362%252F14%2522&publishedId=C-362%2F14",
+     "locator": "Documents de jurisprudence",
+     "language": "fr",
+     "consulted_on": "2026-09-25",
+     "basis": "notice officielle",
+     "excerpt": "Arrêt, 06/10/2015, ECLI:EU:C:2015:650"
+    },
+    {
+     "label": "EUR-Lex — arrêt C-362/14 (CELEX 62014CJ0362)",
+     "url": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:62014CJ0362",
+     "locator": "En-tête et dispositif, point 1",
+     "language": "fr",
+     "consulted_on": "2026-09-25",
+     "basis": "lecture directe"
+    },
+    {
+     "label": "InfoCuria — fiche de l'affaire C-23/14 (Post Danmark)",
+     "url": "https://infocuria.curia.europa.eu/tabs/affair?lang=fr&sort=AFF_NUM-DESC&searchTerm=%2522C%252D23%252F14%2522&publishedId=C-23%2F14",
+     "locator": "Documents de jurisprudence",
+     "language": "fr",
+     "consulted_on": "2026-09-25",
+     "basis": "notice officielle",
+     "excerpt": "C-23/14 - Post Danmark […] Arrêt, 06/10/2015, ECLI:EU:C:2015:651"
+    }
+   ]
+  },
+  {
+   "id": "OCC-4",
+   "source_id": "SRC-4",
+   "title": "Cour eur. D.H. (GC), Salduz c. Turquie, 27 novembre 2008",
+   "original": "Cour eur. D.H. (GC), arrêt Salduz c. Turquie, 27 novembre 2008, req. n° 36391/02",
+   "checked": "Cour eur. D.H. (GC), arrêt Salduz c. Turquie, 27 novembre 2008, req. n° 36391/02, ECLI:CE:ECHR:2008:1127JUD003639102",
+   "location": "Point 4",
+   "status": "VERIFIED",
+   "checks": [
+    "Numéro de requête, date, État défendeur et nature (arrêt) : métadonnées HUDOC",
+    "Formation de Grande Chambre : en-tête du texte français de l'arrêt",
+    "Distinction avec la décision sur la recevabilité du 28 mars 2006 portant le même numéro de requête"
+   ],
+   "limits": "L'interface web de HUDOC a imposé une vérification anti-robot, non contournée ; la lecture a été faite par l'interface publique de recherche et de conversion de HUDOC.",
+   "findings": [
+    {
+     "id": "S-SALDUZ-LOC",
+     "kind": "suggestion",
+     "severity": "INFORMATION",
+     "problem": "La référence ne comporte pas de localisateur ; le principe évoqué est énoncé au § 55 de l'arrêt, avec la réserve « en règle générale » et une exception pour des raisons impérieuses.",
+     "action": "Ajouter « § 55 » si un renvoi précis est souhaité."
+    }
+   ],
+   "sources": [
+    {
+     "label": "HUDOC — arrêt Salduz c. Turquie [GC], texte français (document 001-89894)",
+     "url": "https://hudoc.echr.coe.int/app/conversion/docx/html/body?library=ECHR&id=001-89894",
+     "locator": "En-tête (« Grande Chambre », « Requête no 36391/02 », « 27 novembre 2008 ») et § 55",
+     "language": "fr",
+     "consulted_on": "2026-09-25",
+     "basis": "lecture directe"
+    }
+   ]
+  },
+  {
+   "id": "OCC-5",
+   "source_id": "SRC-5",
+   "title": "Loi du 29 juillet 1991 relative à la motivation formelle des actes administratifs, article 3",
+   "original": "L'article 3 de la loi du 29 juillet 1991 relative à la motivation formelle des actes administratifs dispose : « La motivation exigée consiste dans l'indication, dans l'acte, des considérations de droit et de fait servant de fondement à la décision. Elle doit être adéquate. »",
+   "checked": "Loi du 29 juillet 1991 relative à la motivation formelle des actes administratifs, M.B., 12 septembre 1991, p. 19976, article 3",
+   "location": "Point 5",
+   "status": "VERIFIED",
+   "checks": [
+    "Date et intitulé de la loi, publication (Moniteur belge du 12 septembre 1991, numéro 1991000416) : Justel",
+    "Texte de l'article 3 : Justel (version consolidée) et image de la publication officielle au Moniteur belge",
+    "Mots de la citation comparés au texte publié : voir le contrôle de la citation"
+   ],
+   "limits": "",
+   "findings": [
+    {
+     "id": "F-LOI1991-ART3",
+     "kind": "error",
+     "severity": "MINOR",
+     "problem": "La citation porte « consiste dans l'indication » alors que le texte publié et consolidé porte « consiste en l'indication ».",
+     "action": "Remplacer « consiste dans l'indication » par « consiste en l'indication »."
+    }
+   ],
+   "sources": [
+    {
+     "label": "Justel — loi du 29 juillet 1991 (numéro 1991000416)",
+     "url": "https://www.ejustice.just.fgov.be/cgi_loi/article.pl?language=fr&sum_date=&pd_search=1991-09-12&numac_search=1991000416&page=1&lg_txt=F&caller=list&1991000416=0&trier=promulgation&dt=LOI&fr=f&text1=motivation+formelle+des+actes+administratifs&choix1=et&choix2=et",
+     "locator": "Article 3 (texte consolidé)",
+     "language": "fr",
+     "consulted_on": "2026-09-25",
+     "basis": "lecture directe",
+     "excerpt": "Art. 3. La motivation exigée consiste en l'indication, dans l'acte, des considérations de droit et de fait servant de fondement à la décision. Elle doit être adéquate."
+    },
+    {
+     "label": "Moniteur belge du 12 septembre 1991 — image de la publication officielle",
+     "url": "https://www.ejustice.just.fgov.be/mopdf/1991/09/12_1.pdf",
+     "locator": "Page 5 du fichier PDF (la loi débute p. 19976), article 3",
+     "language": "fr",
+     "consulted_on": "2026-09-25",
+     "basis": "lecture directe",
+     "version": "texte publié d'origine"
+    }
+   ]
+  },
+  {
+   "id": "OCC-6",
+   "source_id": "SRC-6",
+   "title": "J. Dupont-Verhaegen, « La motivation formelle à l'ère algorithmique », R.B.D.C., 2021, p. 512",
+   "original": "Voy. J. Dupont-Verhaegen, « La motivation formelle à l'ère algorithmique », R.B.D.C., 2021, p. 512.",
+   "checked": "Non retrouvée",
+   "location": "Point 6",
+   "status": "NOT_VERIFIABLE_WITH_ACCESSIBLE_SOURCES",
+   "checks": [
+    "Titre exact : aucune occurrence dans un moteur de recherche général ni dans Crossref",
+    "Auteur : aucun résultat dans ORBi ; DIAL inexploitable (redirection vers la page d'accueil) ; aucun auteur de ce nom dans Crossref",
+    "Revue (Revue belge de droit constitutionnel, 2021) : sommaire partiel du numéro 2021/1 sans cet article ; sommaires complets sur Jurisquare inaccessibles"
+   ],
+   "limits": "Aucune contradiction établie : le sommaire complet du volume 2021 n'a pas pu être consulté. Indices neutres : ni l'auteur ni le titre n'apparaissent dans les sources ouvertes consultées. Contrôle humain prioritaire recommandé (sommaire 2021 de la revue sur Jurisquare ou Strada lex, ou exemplaire papier en bibliothèque).",
+   "sources": [
+    {
+     "label": "UCLouvain (CRECO) — annonce du numéro 2021/1 de la Revue belge de droit constitutionnel",
+     "url": "https://www.uclouvain.be/fr/instituts-recherche/juri/creco/news/rbdc-2021-1",
+     "locator": "Sommaire partiel (études doctrinales)",
+     "language": "fr",
+     "consulted_on": "2026-09-25",
+     "basis": "notice"
+    },
+    {
+     "label": "ORBi (ULiège) — recherche « Dupont-Verhaegen »",
+     "url": "https://orbi.uliege.be/simple-search?query=%22Dupont-Verhaegen%22",
+     "locator": "Page de résultats : « No result »",
+     "language": "en",
+     "consulted_on": "2026-09-25",
+     "basis": "recherche"
+    }
+   ]
+  }
+ ],
+ "quotations": [
+  {
+   "id": "QUO-1",
+   "record_id": "OCC-5",
+   "title": "Article 3 de la loi du 29 juillet 1991",
+   "location": "Point 5",
+   "status": "MINOR_DEVIATION",
+   "integrity": "FAITHFUL",
+   "comparison": "Texte comparé intégralement à l'article 3 publié au Moniteur belge et à la version consolidée Justel, en français. Un seul écart : « consiste dans l'indication » au lieu de « consiste en l'indication ». Le passage à l'alinéa avant « Elle doit être adéquate » n'est pas reproduit, ce qui relève de la typographie. Aucune ellipse ni insertion.",
+   "context": "Texte de loi cité en entier ; l'écart est une variante de préposition sans effet sur la portée de la règle.",
+   "temporal_assessment": "La version consolidée consultée ne signale aucune modification de l'article 3 depuis la publication d'origine ; le texte d'origine et la version actuelle concordent."
+  }
+ ]
+}

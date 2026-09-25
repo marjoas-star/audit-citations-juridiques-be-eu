@@ -18,6 +18,8 @@ description: >
 
 # Audit des citations juridiques — Belgique & Europe
 
+Version du skill : `0.5.0-beta.3` (à reporter dans le champ `skill_version` du rapport).
+
 ## 1. Objet
 
 Auditer les références juridiques d'un document complet : mémoires, conclusions, avis, notes, consultations, articles, projets d'ouvrages, rapports, travaux universitaires, documents générés ou assistés par IA.
@@ -31,7 +33,7 @@ Périmètre : législation belge (Moniteur, Justel, RefLex), Cour constitutionne
 > **Vérifier la source, jamais la vraisemblance de la référence.**
 
 1. **Ne jamais inventer**, compléter ou reconstruire de mémoire un ECLI, CELEX, ELI, NUMAC, DOI, ISBN, numéro de rôle, d'arrêt ou parlementaire, ni une URL profonde.
-   *Sonde autorisée* : ouvrir l'adresse de consultation d'une base officielle à partir d'un identifiant **tel qu'il figure dans la référence auditée** (ECLI, CELEX, ELI, numéro d'affaire) ou de sa transcription mécanique et documentée (par ex. « directive 2019/1024 » → CELEX `32019L1024`) est une tentative de recherche, pas une reconstruction. La consigner comme telle ; ne rien en conclure avant d'avoir contrôlé que le document reçu correspond à tous les champs cités ; un échec ou une page vide reste `TECHNICAL_FAILURE` ou `NO_RESULT`, jamais une inexistence. Un identifiant absent de la référence et non dérivable mécaniquement (NUMAC, ECLI d'un arrêt, numéro de document) se trouve par une recherche, jamais de mémoire. Un identifiant sondé n'apparaît dans le rapport que s'il est affiché par la source officielle.
+   *Sonde autorisée* : ouvrir l'adresse de consultation d'une base officielle à partir d'un identifiant **tel qu'il figure dans la référence auditée ou tel qu'une source officielle consultée l'a affiché** (ECLI, CELEX, ELI, numéro d'affaire, identifiant de document d'un résultat de recherche) ou de sa transcription mécanique et documentée (par ex. « directive 2019/1024 » → CELEX `32019L1024`) est une tentative de recherche, pas une reconstruction. La consigner comme telle ; ne rien en conclure avant d'avoir contrôlé que le document reçu correspond à tous les champs cités ; un échec ou une page vide reste `TECHNICAL_FAILURE` ou `NO_RESULT`, jamais une inexistence. Un identifiant absent de la référence et non dérivable mécaniquement (NUMAC, ECLI d'un arrêt, numéro de document) se trouve par une recherche, jamais de mémoire. Ne jamais sonder un identifiant supposé (ECLI voisin, numéro deviné) avant de l'avoir vu affiché, même sans intention d'en tirer une conclusion. Un identifiant sondé n'apparaît dans le rapport que s'il est affiché par la source officielle.
 2. **Ne jamais sur-vérifier** : le statut ne peut jamais dépasser le niveau de preuve réellement obtenu. Identité fortement corroborée + ECLI non vérifié + texte officiel inaccessible → `🟠 PARTIALLY_VERIFIED`, pas `VERIFIED`.
 3. **Panne ≠ inexistence** : toujours distinguer `TECHNICAL_FAILURE` de `NO_RESULT`. Un timeout, une erreur ou une interface inaccessible ne prouve rien.
 4. **Un snippet oriente, il ne vérifie pas** : il ne suffit jamais pour une citation textuelle, une page, un ECLI litigieux ou un statut `VERIFIED`.

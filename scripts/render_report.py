@@ -115,6 +115,15 @@ def unique_findings(data, kind='error'):
     return sorted(seen.values(), key=lambda pair: order[pair[1]['severity']])
 
 
+def bare_excerpt(text):
+    # The renderer adds its own guillemets; drop one enclosing pair supplied with the excerpt.
+    text = str(text).strip()
+    for left, right in (('«', '»'), ('“', '”'), ('"', '"')):
+        if text.startswith(left) and text.endswith(right) and len(text) > 1:
+            return text[len(left):-len(right)].strip()
+    return text
+
+
 def clean_prose(text):
     # Never apply to verbatim originals, source excerpts, or URLs.
     text = re.sub(r'(?<!\.)\.\.(?!\.)', '.', str(text))
@@ -243,7 +252,7 @@ def sections(data):
             yield ('p', 'Correction : ' + clean_prose(f['action']))
             for proof in r['sources']:
                 if proof.get('excerpt'):
-                    yield ('p', 'Passage source : « ' + proof['excerpt'] + ' »')
+                    yield ('p', 'Passage source : « ' + bare_excerpt(proof['excerpt']) + ' »')
                     yield ('link', (proof['label'], proof['url'], proof['locator'] + ' · ' + proof['language']))
             yield ('card_end', None)
     groups = {}
@@ -285,7 +294,7 @@ def sections(data):
                     if proof['excerpt'] not in entry['excerpts']: entry['excerpts'].append(proof['excerpt'])
         for entry in proof_groups.values():
             proof = entry['proof']
-            for excerpt in entry['excerpts']: yield ('p', 'Passage source : « ' + excerpt + ' »')
+            for excerpt in entry['excerpts']: yield ('p', 'Passage source : « ' + bare_excerpt(excerpt) + ' »')
             loc = ' ; '.join(entry['locators']) + ' · ' + proof['language']
             for field, label in [('version', 'version'), ('basis', 'preuve')]:
                 if proof.get(field): loc += ' · ' + label + ' : ' + proof[field]
@@ -299,11 +308,13 @@ def sections(data):
             yield ('p', r['location'] + ' : ' + clean_prose(f['problem']) + ' ' + clean_prose(f['action']))
     yield ('h1', 'Limites et traçabilité')
     for item in data['limitations']: yield ('bullet', clean_prose(item))
+    yield ('keep_start', None)
     yield ('h2', 'Méthode suivie')
     for item in data['method']: yield ('bullet', clean_prose(item))
     yield ('meta', 'Version du skill : ' + (data.get('skill_version') or data['version']))
     yield ('h2', 'Avertissement')
     yield ('callout', DISCLAIMER)
+    yield ('keep_end', None)
 
 
 def write_markdown(nodes, path):
@@ -324,7 +335,7 @@ def write_markdown(nodes, path):
             result.append('> ' + value)
         elif kind == 'bullet':
             result.append('- ' + value)
-        elif kind not in ('space', 'page', 'card_start', 'card_end'):
+        elif kind not in ('space', 'page', 'card_start', 'card_end', 'keep_start', 'keep_end'):
             result.append(value)
     path.write_text('\n\n'.join(result) + '\n', encoding='utf-8')
 
@@ -354,8 +365,17 @@ def write_pdf(nodes, path, data):
     paragraph = lambda text, name='p': Paragraph(escape(str(text)), styles[name])
     story = []
     card_index = None
+    keep_index = None
     for kind, value in nodes:
-        if kind == 'card_start':
+        if kind == 'keep_start':
+            # Closing block (method, skill version, disclaimer) moves as one unit: no page holding only the disclaimer.
+            keep_index = len(story)
+        elif kind == 'keep_end':
+            block = story[keep_index:]
+            del story[keep_index:]
+            story.append(KeepTogether(block))
+            keep_index = None
+        elif kind == 'card_start':
             card_index = len(story)
         elif kind == 'card_end':
             content = story[card_index:]
@@ -390,7 +410,7 @@ def write_pdf(nodes, path, data):
         else:
             if kind == 'h1':
                 story.append(CondPageBreak(100))
-            if kind == 'h2':
+            if kind == 'h2' and keep_index is None:
                 story.append(CondPageBreak(115))
             story.append(paragraph(value, kind))
     def furniture(canvas, doc):

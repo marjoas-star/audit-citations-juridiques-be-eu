@@ -18,7 +18,7 @@ Le premier appel produit rapport.md et rapport.pdf ; le second uniquement rappor
 
 Objet JSON UTF-8. Les données doivent être rédigées en français courant ; `report_language` vaut `fr`. Le générateur refuse une autre langue pour éviter de produire silencieusement un rapport bilingue. Le skill conserve ses quatre langues de travail ; les rapports NL/DE/EN utilisent le modèle éditorial avec un autre outil de mise en page jusqu’à localisation du générateur.
 
-Un exemple complet et valide, tiré d'un audit réel, se trouve dans [example-audit.json](example-audit.json) : le copier et le remplacer champ par champ.
+Un exemple complet, valide et entièrement fictif se trouve dans [example-audit.json](example-audit.json) : le copier et le remplacer champ par champ. Il ne reproduit aucun cas de test. Dans `excerpt`, donner le passage sans guillemets : le générateur les ajoute (une paire englobante fournie par erreur est retirée).
 
 Champs racine : `title`, `document`, `date` (date du document audité, libre), `skill_version` (version du skill utilisée, par ex. `0.5.0-beta.3` ; l'ancien nom `version` reste accepté, à ne pas confondre avec `report_version`), `scope`, `summary` (textes) ; `limitations` et `method` (listes de textes) ; `records` et `quotations` (listes). Décrire le périmètre réellement audité et les dates inconnues ; ne pas assimiler date d’export et date de rédaction.
 

@@ -13,6 +13,8 @@
 - Générateur de rapport : titres « Méthode suivie » et « Avertissement », avertissement complet (sources, interfaces, vérification humaine), refus d'une date d'établissement ou de révision postérieure à l'heure réelle, libellé combiné lorsqu'une référence exacte comporte une citation inexacte (« Référence vérifiée · citation : écart mineur »), champ `skill_version` (l'ancien `version` reste accepté).
 - `requirements.txt` (ReportLab, pypdf) et exemple d'entrée complet `templates/example-audit.json`, validé par les tests.
 - Gravité précisée pour un identifiant valide désignant un autre document ; module doctrine complété par un seuil d'arrêt des recherches et une manière d'exprimer un doute sérieux sans affirmer l'invention.
+- Rejeu réel de la note piégée à six références : grille satisfaite, un écart de procédure déclaré (sonde d'un identifiant non encore affiché). Voir `tests/results/note-piegee-replay/`.
+- Corrections issues de ce rejeu : exemple d'entrée entièrement fictif, version du skill indiquée dans `SKILL.md`, guillemets d'extrait non doublés, bloc final du PDF indivisible, renvoi à `VALIDATION.md` retiré de `cjue.md`, règle de sonde étendue aux identifiants affichés par une source officielle et interdisant la sonde d'un identifiant supposé.
 
 ## 0.5.0-beta.3 — 25 septembre 2026
 
