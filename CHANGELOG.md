@@ -1,6 +1,8 @@
 # Notes de version
 
-## Non publié
+## 0.6.0-beta.1 — 25 septembre 2026
+
+Version tournée vers les juristes : mode d'emploi en quatre langues centré sur Claude Cowork, contrôle des accès avant l'audit, durée annoncée, messages en langage courant. Règles de sonde, de gravité et de doctrine précisées, générateur de rapport plus lisible, licence logicielle distincte pour le code. Rejeux réels et d'expérience utilisateur consignés ; aucune certification générale.
 
 - `SKILL.md` allégé (environ 3 200 → 2 200 mots) et réorganisé en 12 sections : règles cardinales regroupées, table de routage par famille de sources, doublons avec le module Conseil d'État réduits. Aucune règle d'audit supprimée.
 - Règles de maintenance, benchmarks, release blockers, versionnement et licence déplacés dans `CONTRIBUTING.md`.

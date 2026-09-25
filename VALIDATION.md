@@ -1,4 +1,16 @@
-# Validation publique — 0.5.0-beta.3
+# Validation publique — 0.6.0-beta.1
+
+25 septembre 2026. Aucune certification générale ni taux de fiabilité global n'est revendiqué. Essais de cette version, avec premières réponses, empreintes et comparaisons conservées :
+
+- **Rejeu européen T54–T60 en recherche réelle**, exécuté depuis une connexion résidentielle : sept cas conformes à la grille ([résultats](tests/results/eu-v05-local-replay/README.md)). Depuis un environnement cloud, les sites officiels refusaient les connexions : échec technique documenté, non compté comme résultat.
+- **Note piégée à six références** (bon article, mauvais ECLI, mauvaise disposition, citation altérée, doctrine introuvable) : grille satisfaite, un écart de procédure déclaré ([résultats](tests/results/note-piegee-replay/README.md)).
+- **Expérience utilisateur** : sans accès au web, refus clair de commencer ; avec accès, message de départ, point d'étape et restitution en langage courant ([résultats](tests/results/ux-acces-replay/README.md)).
+- **Rejeux simulés** ELLIPSIS E1–E3 et N–Q après allègement de `SKILL.md` : invariants satisfaits, sans recherche réelle ([résultats](tests/results/skill-allege-replay/README.md)).
+- **31 tests automatisés** du générateur de rapport (présentation et cohérence, pas validité juridique).
+
+Limites : un passage par cas, coordinateur auteur des grilles, cas publics. Chaque rejeu a révélé des ambiguïtés, corrigées ensuite dans cette version sans être toutes rejouées. La compréhension par des juristes réels reste à évaluer en bêta-test.
+
+## Historique — 0.5.0-beta.3
 
 25 septembre 2026. Révision après retours de bêta-test : voir [les résultats et leurs limites](tests/results/beta3-revision.md). Les résultats historiques ci-dessous restent conservés. Aucune certification générale ni taux de fiabilité global n’est revendiqué.
 

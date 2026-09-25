@@ -1,7 +1,9 @@
-# Publication 0.5.0-beta.2
+# Publication 0.6.0-beta.1
 
-Canal : bêta expérimentale. Paquet limité aux instructions, références opérationnelles, convention de données, modèle et générateur de rapport, documentation et tests synthétiques destinés à publication.
+Canal : bêta expérimentale. Public visé : juristes utilisant Claude, en particulier Claude Cowork avec l'application de bureau.
 
-La validation du parcours T53 permet une utilisation accompagnée de preuves. Le statut V1 générale reste non démontré. La disponibilité universelle des juridictions et la fiabilité sur tout ouvrage ne sont pas garanties.
+Paquet : instructions (`SKILL.md`), modes d'emploi FR/NL/DE/EN, références opérationnelles, convention de données, modèle et générateur de rapport, exemple d'entrée fictif, documentation, protocoles et résultats de tests destinés à publication. L'archive correspond au contenu du dépôt pour cette version, hors métadonnées Git ; son empreinte SHA-256 est jointe à la publication. Les documents bruts de recherche et les ouvrages de test restent exclus.
 
-L’archive GitHub correspond au contenu du dépôt pour cette version, hors métadonnées Git. Son empreinte SHA-256 est jointe à la publication. Les fichiers bruts de recherche et les ouvrages de test restent exclus du paquet public.
+Installation pour un juriste : télécharger l'archive `.zip` sans la décompresser et suivre [MODE-EMPLOI.md](MODE-EMPLOI.md) (ou sa traduction).
+
+Le statut V1 générale reste non démontré. La disponibilité des sites officiels dépend de l'environnement : depuis un serveur, EUR-Lex, CURIA et le Conseil d'État peuvent refuser les connexions ; le navigateur intégré de l'application de bureau est recommandé. Voir [VALIDATION.md](VALIDATION.md).
