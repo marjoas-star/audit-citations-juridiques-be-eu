@@ -43,6 +43,10 @@ Chaque citation `quotations` comporte `id`, `record_id`, `title`, `location`, `s
 
 La convention d’audit complète reste dans [citation-record.md](../schemas/citation-record.md). L’entrée de présentation est une projection de ces données, pas leur remplacement. Les traces techniques détaillées restent séparées du rapport lisible.
 
+## Longueur
+
+Viser 5 à 6 pages pour une douzaine de sources. La longueur vient surtout des textes libres : un contrôle tient en une ligne (25 mots au plus, 4 contrôles au plus par fiche) ; un constat en deux phrases (60 mots au plus pour le problème comme pour la correction) ; un passage probant se limite aux mots qui prouvent (60 mots au plus) ; une limite en une phrase. Ne pas répéter dans la fiche ce que dit déjà la correction. Le générateur signale les champs trop longs, sans rien couper : les raccourcir puis relancer.
+
 ## Vérifications de livraison
 
 Le générateur refuse notamment les identifiants dupliqués, les statuts inconnus, les citations sans fiche et les références déclarées vérifiées sans contrôles ni sources. Cela vérifie la cohérence du fichier, pas l’authenticité des preuves. Les compteurs proviennent des fiches : occurrences et sources distinctes restent séparées.

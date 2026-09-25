@@ -212,7 +212,7 @@ Présentation selon [report-template.md](templates/report-template.md) :
 - statuts en langage courant dans la langue du rapport, codes techniques réservés aux données et traces ;
 - expliquer ce qui a été contrôlé sans supposer que le lecteur connaît le schéma ;
 - conserver datation, synthèse, périmètre, corrections, preuves, limites et contrôle des citations ; diagnostic, extrait probant et correction restent réunis ;
-- adapter la longueur (tableau des références, fiches par source ou problème, occurrences en annexe) ; aucune page distincte imposée par rubrique ;
+- adapter la longueur : viser 5 à 6 pages pour une douzaine de sources, avec des contrôles d'une ligne, des constats de deux phrases et des passages probants limités aux mots qui prouvent (voir [report-rendering.md](templates/report-rendering.md)) ; aucune page distincte imposée par rubrique ;
 - pour un audit significatif, montrer le travail accompli : occurrences, sources uniques, vérifiées/partielles/non vérifiables, citations contrôlées, anomalies ;
 - pour une citation adaptée, présenter séparément fidélité textuelle, adaptations détectées, adaptations signalées ou non, intégrité et effet sur le sens ;
 - aucun pourcentage de fiabilité déduit du nombre de références retrouvées ;

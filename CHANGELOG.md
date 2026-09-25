@@ -9,6 +9,7 @@
 - Retours du bêta-test v2 dans Cowork (22 erreurs sur 22 détectées, aucune fausse alerte ; synthèse dans le coffre du coordinateur) : inventaire des références citées sans note et des décisions évoquées ; « référence probablement inexistante » lorsque tous les identifiants renvoient ailleurs et que la recherche par parties et date échoue ; citation fidèle d'une version non applicable distinguée d'une citation inexacte ; comparaison effective avec la version d'origine d'une citation traduite ; doctrine lue sur la seule notice : vérification partielle et proposition de fournir l'extrait.
 - Rapport plus court et plus lisible : dates en toutes lettres, suppression des mentions techniques (« Rapport v1 », « Actualisation ultérieure : aucune », « Référence constatée : identique »), références confirmées sans réserve regroupées en fin de rapport, chiffres de la synthèse contrôlés par rapport aux compteurs.
 - Demande-type des modes d'emploi complétée par la date juridique du document.
+- Régressions du bêta-test v2 corrigées (correction complète, auteur réel d'un passage mal attribué, affirmations datées, borne de date, une source par article, renvois exacts) et vérifiées par un rejeu à l'aveugle des extraits B et D. Longueur : budget de mots par champ, signalé par le générateur sans rien couper ; suggestions facultatives n'empêchant plus le regroupement en fin de rapport.
 
 ## 0.6.0-beta.1 — 25 septembre 2026
 

@@ -272,7 +272,8 @@ def quote_tone(q):
 
 def clean_record(r, data):
     # Confirmed without reservation: shown as a compact annex line instead of a full card.
-    return (r['status'] == 'VERIFIED' and not r.get('findings') and not r['limits'] and not r.get('notes')
+    # Optional suggestions do not prevent it: they are listed in their own section.
+    return (r['status'] == 'VERIFIED' and not any(f['kind'] == 'error' for f in r.get('findings', [])) and not r['limits'] and not r.get('notes')
             and all(q['status'] in QUOTE_OK and q['integrity'] == 'FAITHFUL' for q in data['quotations'] if q['record_id'] == r['id']))
 
 
@@ -298,6 +299,29 @@ def check_summary_counts(data, counts):
         expected = counts[L['counts'][what]]
         if n is not None and n != expected:
             raise ValueError(f'Synthèse incohérente : « {m.group(0)} » alors que le rapport en compte {expected}')
+
+
+WORD_BUDGET = {'excerpt': 60, 'check': 25, 'problem': 60, 'action': 60, 'limits': 40, 'comparison': 60, 'context': 50}
+
+
+def length_warnings(data):
+    # Advisory only: long fields are the main cause of long reports. Nothing is cut or rejected.
+    words = lambda t: len(str(t).split())
+    out = []
+    for r in data['records']:
+        for c in r['checks']:
+            if words(c) > WORD_BUDGET['check']: out.append(f"{r['id']} : contrôle de {words(c)} mots")
+        if len(r['checks']) > 4: out.append(f"{r['id']} : {len(r['checks'])} contrôles (4 au plus conseillés)")
+        if words(r['limits']) > WORD_BUDGET['limits']: out.append(f"{r['id']} : limite de {words(r['limits'])} mots")
+        for src in r['sources']:
+            if words(src.get('excerpt', '')) > WORD_BUDGET['excerpt']: out.append(f"{r['id']} : passage probant de {words(src['excerpt'])} mots")
+        for f in r.get('findings', []):
+            for k in ('problem', 'action'):
+                if words(f[k]) > WORD_BUDGET[k]: out.append(f"{f['id']} : {k} de {words(f[k])} mots")
+    for q in data['quotations']:
+        for k in ('comparison', 'context'):
+            if words(q[k]) > WORD_BUDGET[k]: out.append(f"{q['id']} : {k} de {words(q[k])} mots")
+    return out
 
 
 def unique_findings(data, kind='error'):
@@ -647,6 +671,10 @@ def main():
     parser.add_argument('--markdown-only',action='store_true')
     args=parser.parse_args()
     data=validate(json.loads(args.input.read_text(encoding='utf-8')))
+    warnings=length_warnings(data)
+    if warnings:
+        import sys
+        print('Rapport long : raccourcir ces champs (le générateur ne coupe rien) :', *warnings, sep='\n- ', file=sys.stderr)
     nodes=list(sections(data));args.output.parent.mkdir(parents=True,exist_ok=True)
     write_markdown(nodes,args.output.with_suffix('.md'))
     if not args.markdown_only:
