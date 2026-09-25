@@ -10,6 +10,6 @@ The agent needs search/browser access and tools for reading the supplied documen
 
 Official sources take priority. Never guess an identifier, equate a failed search interface with a nonexistent decision, or treat a snippet as a consulted judgment. Belgian Council of State decisions with a known number must be sought first through the official advanced search form.
 
-See [validation](VALIDATION.md) for real trials, simulations and limits. This beta is not a general V1 certification; no overall accuracy percentage is claimed. Professional use requires human review. Original documentation: [CC BY-NC-SA 4.0](LICENSE). External sources retain their own terms and are not redistributed here.
+See [validation](VALIDATION.md) for real trials, simulations and limits. This beta is not a general V1 certification; no overall accuracy percentage is claimed. Professional use requires human review. Original documentation: CC BY-NC-SA 4.0; Python code (`scripts/`, `tests/`): [PolyForm Noncommercial 1.0.0](LICENSE-CODE.md). See [LICENSE](LICENSE). External sources retain their own terms and are not redistributed here.
 
 Beta testing: [instructions for legal reviewers (French)](tests/beta/guide.md) and [feedback form](tests/beta/fiche-retour.md).

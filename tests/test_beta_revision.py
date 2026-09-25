@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0
 """Synthetic invariants, not a legal benchmark."""
 import copy
 import tempfile

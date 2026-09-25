@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0
 """Presentation tests: dates, combined labels, closing sections and the documented example."""
 from datetime import datetime, timedelta
 import json

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0
 """Render an already established audit; performs no legal research or scoring."""
 import argparse
 from collections import Counter

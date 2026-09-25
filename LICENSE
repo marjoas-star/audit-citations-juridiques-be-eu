@@ -1,16 +1,27 @@
-Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
-(CC BY-NC-SA 4.0)
+Ce dépôt est distribué sous deux licences.
 
-This repository's original documentation and helper scripts are licensed under the Creative Commons
-Attribution-NonCommercial-ShareAlike 4.0 International license.
+1. Documentation — CC BY-NC-SA 4.0
 
-Official legal code:
-https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+   SKILL.md, references/, schemas/, templates/ (y compris example-audit.json),
+   les README, CHANGELOG.md, CONTRIBUTING.md, VALIDATION.md, RELEASE.md et les
+   fichiers Markdown de tests/ sont placés sous la licence Creative Commons
+   Attribution-NonCommercial-ShareAlike 4.0 International.
 
-SPDX-License-Identifier: CC-BY-NC-SA-4.0
+   Texte officiel : https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+   SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-The helper scripts are covered by the same non-commercial terms as the
-documentation. Third-party Python libraries and fonts are not redistributed
-and remain subject to their own licenses.
+2. Code — PolyForm Noncommercial 1.0.0
 
-Scope: original documentation and helper scripts of audit-citations-juridiques-be-eu only. External sources and third-party materials retain their own rights and terms; links do not place those materials under this license. Attribution: audit-citations-juridiques-be-eu, maintained by marjoas-star.
+   Les fichiers Python de scripts/ et de tests/ sont placés sous la licence
+   PolyForm Noncommercial 1.0.0, dont le texte et la mention obligatoire
+   (« Required Notice ») figurent dans LICENSE-CODE.md.
+
+   Texte officiel : https://polyformproject.org/licenses/noncommercial/1.0.0
+   SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0
+
+Ni l'une ni l'autre n'est une licence « open source » au sens de l'OSI, en
+raison de la restriction non commerciale.
+
+Les bibliothèques Python et polices tierces ne sont pas redistribuées et
+restent soumises à leurs propres licences. Les sources juridiques citées
+conservent leur régime propre.

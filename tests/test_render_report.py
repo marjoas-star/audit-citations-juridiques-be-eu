@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0
 """Packaging tests: no legal validity or source availability is inferred."""
 import copy
 import importlib.util

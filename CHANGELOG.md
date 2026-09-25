@@ -15,6 +15,7 @@
 - Gravité précisée pour un identifiant valide désignant un autre document ; module doctrine complété par un seuil d'arrêt des recherches et une manière d'exprimer un doute sérieux sans affirmer l'invention.
 - Rejeu réel de la note piégée à six références : grille satisfaite, un écart de procédure déclaré (sonde d'un identifiant non encore affiché). Voir `tests/results/note-piegee-replay/`.
 - Corrections issues de ce rejeu : exemple d'entrée entièrement fictif, version du skill indiquée dans `SKILL.md`, guillemets d'extrait non doublés, bloc final du PDF indivisible, renvoi à `VALIDATION.md` retiré de `cjue.md`, règle de sonde étendue aux identifiants affichés par une source officielle et interdisant la sonde d'un identifiant supposé.
+- Licence du code : les fichiers Python de `scripts/` et `tests/` passent sous PolyForm Noncommercial 1.0.0 (`LICENSE-CODE.md`, en-têtes SPDX), licence conçue pour du logiciel et qui conserve la restriction non commerciale ; la documentation reste sous CC BY-NC-SA 4.0.
 
 ## 0.5.0-beta.3 — 25 septembre 2026
 

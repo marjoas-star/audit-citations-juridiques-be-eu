@@ -36,7 +36,7 @@ Voir [VALIDATION.md](VALIDATION.md) pour les essais exécutés, les limites et l
 
 Instructions : [SKILL.md](SKILL.md). Modules : `references/`. Convention de données : [schemas/citation-record.md](schemas/citation-record.md). Modèle de rapport : `templates/`.
 
-Documentation originale sous [CC BY-NC-SA 4.0](LICENSE). Les sources externes citées conservent leur régime propre. Le dépôt ne redistribue ni les ouvrages de test, ni les PDF juridictionnels, ni les journaux privés de recherche. Maintenu sous le compte GitHub `marjoas-star` ; contributions décrites dans [CONTRIBUTING.md](CONTRIBUTING.md).
+Documentation originale sous CC BY-NC-SA 4.0 ; code Python (`scripts/`, `tests/`) sous [PolyForm Noncommercial 1.0.0](LICENSE-CODE.md). Voir [LICENSE](LICENSE). Les sources externes citées conservent leur régime propre. Le dépôt ne redistribue ni les ouvrages de test, ni les PDF juridictionnels, ni les journaux privés de recherche. Maintenu sous le compte GitHub `marjoas-star` ; contributions décrites dans [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Participer aux essais
 
