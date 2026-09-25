@@ -10,6 +10,7 @@
 - Rapport plus court et plus lisible : dates en toutes lettres, suppression des mentions techniques (« Rapport v1 », « Actualisation ultérieure : aucune », « Référence constatée : identique »), références confirmées sans réserve regroupées en fin de rapport, chiffres de la synthèse contrôlés par rapport aux compteurs.
 - Demande-type des modes d'emploi complétée par la date juridique du document.
 - Régressions du bêta-test v2 corrigées (correction complète, auteur réel d'un passage mal attribué, affirmations datées, borne de date, une source par article, renvois exacts) et vérifiées par un rejeu à l'aveugle des extraits B et D. Longueur : budget de mots par champ, signalé par le générateur sans rien couper ; suggestions facultatives n'empêchant plus le regroupement en fin de rapport.
+- Interdiction de principe maintenue pour les recherches fondées sur la mémoire (décision de l'auteur du skill) ; réflexe de provenance avant chaque requête et conduite à tenir en cas d'écart.
 
 ## 0.6.0-beta.1 — 25 septembre 2026
 
