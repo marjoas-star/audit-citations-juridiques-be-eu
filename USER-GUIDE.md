@@ -18,7 +18,7 @@ What it **does not do**: it does not assess the quality of your reasoning (unles
 ## 2. What you need
 
 - **Claude Cowork**, available with paid plans (Pro, Max, Team, Enterprise), and preferably the **Claude desktop app** (Mac or Windows) installed on your computer: it provides the browser that the skill needs for several official websites (section 4).
-- The skill file: the `.zip` archive of the latest version, to be downloaded from the [Releases page of the repository](https://github.com/marjoas-star/audit-citations-juridiques-be-eu/releases) ("Assets" section, file `audit-citations-juridiques-be-eu-….zip` — not the one ending in `-complet`, which is for maintainers). **Do not unzip the archive.**
+- The skill file, downloadable in one click: **[download the latest version](https://github.com/marjoas-star/audit-citations-juridiques-be-eu/releases/latest/download/audit-citations-juridiques-be-eu.zip)**. This link always gives the most recent version. You can also use the repository's [Releases page](https://github.com/marjoas-star/audit-citations-juridiques-be-eu/releases), "Assets" section (not the file ending in `-complet`, which is for maintainers). **Do not unzip the archive.**
   - **On a Mac with Safari**, the file is unzipped automatically and you get a folder. Two fixes: right-click the folder › **Compress "audit-citations-juridiques-be-eu"**, which recreates a usable `.zip`; or, once and for all, **Safari › Settings › General**, untick **"Open 'safe' files after downloading"**. Chrome and Firefox do not unzip.
 - Your document as a PDF, Word or text file. A scanned PDF (an image with no text) is harder to read: use the Word version or a "text" PDF if you can.
 

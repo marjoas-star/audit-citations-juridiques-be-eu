@@ -57,4 +57,6 @@ Deux archives par version, construites depuis le tag :
 - **allégée** (celle des modes d'emploi) : `git archive --format=zip --prefix=audit-citations-juridiques-be-eu/ -o audit-citations-juridiques-be-eu-X.Y.Z.zip vX.Y.Z SKILL.md VERSION LICENSE LICENSE-CODE.md requirements.txt MODE-EMPLOI.md HANDLEIDING.md ANLEITUNG.md USER-GUIDE.md references schemas templates scripts` ;
 - **complète** : `git archive --format=zip --prefix=audit-citations-juridiques-be-eu/ -o audit-citations-juridiques-be-eu-X.Y.Z-complet.zip vX.Y.Z`.
 
+Joindre aussi une copie de l'archive allégée sous le nom fixe `audit-citations-juridiques-be-eu.zip` et marquer la publication comme « Latest » : le lien `…/releases/latest/download/audit-citations-juridiques-be-eu.zip` des modes d'emploi en dépend. Une pré-version n'est jamais « Latest » pour GitHub.
+
 Les fichiers de l'archive allégée ne doivent contenir aucun lien relatif vers `tests/` ou les README : utiliser l'adresse GitHub complète.
