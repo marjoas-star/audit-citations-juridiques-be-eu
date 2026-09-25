@@ -19,6 +19,7 @@ Was Claude **nicht tut**: Es beurteilt nicht die Qualität Ihrer Argumentation (
 
 - **Claude Cowork**, verfügbar mit den kostenpflichtigen Abonnements (Pro, Max, Team, Enterprise), und vorzugsweise die auf Ihrem Computer installierte **Claude-Desktop-App** (Mac oder Windows): Sie stellt den Browser bereit, den der Skill für mehrere amtliche Websites benötigt (Abschnitt 4).
 - Die Datei des Skills: das `.zip`-Archiv der neuesten Version, herunterzuladen auf der [Releases-Seite des Repositorys](https://github.com/marjoas-star/audit-citations-juridiques-be-eu/releases) (Rubrik „Assets“, Datei `audit-citations-juridiques-be-eu-….zip` — nicht die Datei mit der Endung `-complet`, die für die Wartung bestimmt ist). **Entpacken Sie das Archiv nicht.**
+  - **Auf einem Mac mit Safari** wird die Datei automatisch entpackt und Sie erhalten einen Ordner. Zwei Lösungen: Rechtsklick auf den Ordner › **„audit-citations-juridiques-be-eu“ komprimieren**, wodurch wieder eine verwendbare `.zip`-Datei entsteht; oder dauerhaft **Safari › Einstellungen › Allgemein** und **„Sichere“ Dateien nach dem Laden öffnen** deaktivieren. Chrome und Firefox entpacken nicht.
 - Ihr Dokument als PDF-, Word- oder Textdatei. Ein eingescanntes PDF (Bild ohne Text) ist schwerer zu lesen: Verwenden Sie nach Möglichkeit die Word-Fassung oder ein „Text“-PDF.
 
 Der Skill funktioniert auch in einer gewöhnlichen Claude-Unterhaltung und in Claude Code; die Einstellungen sind ähnlich (siehe Ende von Abschnitt 3).

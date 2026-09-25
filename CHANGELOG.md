@@ -3,6 +3,7 @@
 ## Non publié
 
 - Deux archives par version : allégée (35 fichiers, à importer dans Claude) et complète (`-complet`). Liens vers `tests/` remplacés par des adresses GitHub, pour rester valables dans l'archive allégée.
+- Modes d'emploi : parade à la décompression automatique des `.zip` par Safari.
 
 ## 0.7.0-beta.1 — 25 septembre 2026
 
