@@ -4,7 +4,7 @@ Le générateur transforme des conclusions établies en PDF et Markdown. Il ne r
 
 ## Utilisation
 
-Python 3.10 ou ultérieur. Le PDF nécessite ReportLab ; ses polices Vera sont utilisées depuis l’installation, sans copie dans le dépôt. Le Markdown seul ne requiert aucune dépendance tierce. Les tests du PDF nécessitent aussi pypdf. PyYAML n’intervient pas.
+Python 3.10 ou ultérieur. Installer les dépendances avec `pip install -r requirements.txt`. Le PDF nécessite ReportLab ; ses polices Vera sont utilisées depuis l’installation, sans copie dans le dépôt. Le Markdown seul ne requiert aucune dépendance tierce. Les tests du PDF nécessitent aussi pypdf. PyYAML n’intervient pas.
 
 ```sh
 python3 scripts/render_report.py audit.json --output rapport
@@ -18,9 +18,11 @@ Le premier appel produit rapport.md et rapport.pdf ; le second uniquement rappor
 
 Objet JSON UTF-8. Les données doivent être rédigées en français courant ; `report_language` vaut `fr`. Le générateur refuse une autre langue pour éviter de produire silencieusement un rapport bilingue. Le skill conserve ses quatre langues de travail ; les rapports NL/DE/EN utilisent le modèle éditorial avec un autre outil de mise en page jusqu’à localisation du générateur.
 
-Champs racine : `title`, `document`, `date`, `version`, `scope`, `summary` (textes) ; `limitations` et `method` (listes de textes) ; `records` et `quotations` (listes). Décrire le périmètre réellement audité et les dates inconnues ; ne pas assimiler date d’export et date de rédaction.
+Un exemple complet et valide, tiré d'un audit réel, se trouve dans [example-audit.json](example-audit.json) : le copier et le remplacer champ par champ.
 
-`report_metadata` est obligatoire : `established_at` (ISO 8601 avec décalage UTC), `timezone`, `precision` (`second` ou `day` si l’heure ancienne n’est pas conservée), `report_version`, `checks_started_on`, `checks_completed_on` (dates ISO) et `legal_reference` (date juridique et provenance, ou incertitude explicite). Une révision ajoute `revision` : `issued_at`, `scope`, `previous_version`. Le générateur ne lit pas l’horloge et ne modifie jamais ces dates. Exemple fictif :
+Champs racine : `title`, `document`, `date` (date du document audité, libre), `skill_version` (version du skill utilisée, par ex. `0.5.0-beta.3` ; l'ancien nom `version` reste accepté, à ne pas confondre avec `report_version`), `scope`, `summary` (textes) ; `limitations` et `method` (listes de textes) ; `records` et `quotations` (listes). Décrire le périmètre réellement audité et les dates inconnues ; ne pas assimiler date d’export et date de rédaction.
+
+`report_metadata` est obligatoire : `established_at` (ISO 8601 avec décalage UTC), `timezone`, `precision` (`second` ou `day` si l’heure ancienne n’est pas conservée), `report_version`, `checks_started_on`, `checks_completed_on` (dates ISO) et `legal_reference` (date juridique et provenance, ou incertitude explicite). Une révision ajoute `revision` : `issued_at`, `scope`, `previous_version`. Le générateur ne modifie jamais ces dates ; il ne lit l’horloge que pour refuser une date d’établissement ou de révision postérieure à l’heure réelle (tolérance de cinq minutes). Relever l’heure sur l’horloge du système au moment d’établir le rapport, jamais l’estimer. Exemple fictif :
 
 ```json
 {"established_at":"2026-09-24","timezone":"Europe/Brussels","precision":"day","report_version":"v2","checks_started_on":"2026-09-24","checks_completed_on":"2026-09-25","legal_reference":"Non précisée dans la consigne","revision":{"issued_at":"2026-09-25T10:00:00+02:00","scope":"Corrections ciblées de deux références ; autres contrôles conservés","previous_version":"v1"}}
@@ -34,6 +36,8 @@ Chaque fiche `records` comporte :
 - `checks` : liste explicite des champs/passages contrôlés, en précisant les différences de preuve si nécessaire ; `limits` : texte, éventuellement vide lorsque la limite commune figure déjà dans la synthèse ;
 - `sources` : liste d’objets `label`, `url`, `locator`, `language`. Ne transmettre que des liens observés et des preuves réellement consultées. Pour des preuves locales, décrire les pièces dans la fiche et la méthode ; ne pas inventer une URL publique pour satisfaire le générateur ; utiliser le modèle manuel si aucune URL pertinente n’est disponible ;
 - facultativement `notes` et `findings`. Chaque constat contient `id` (stable pour une même erreur répétée), `kind` (`error` ou `suggestion`), `severity`, `problem`, `action`. Toute erreur exige un court `excerpt` probant dans ses sources. `consulted_on` précise la date de consultation d’une source. `notes` est une liste de textes. `original_kind: summary` signale honnêtement une référence abrégée, si sa transcription intégrale n’a pas été conservée. Ne pas proposer une correction certaine lorsque la preuve ne le permet pas.
+
+Lorsqu'une référence est exacte mais que sa citation s'écarte du texte, garder le statut de la référence (par ex. `VERIFIED`) et porter l'écart dans `quotations` : le tableau et la fiche afficheront alors « Référence vérifiée · citation : écart mineur », sans laisser croire à un résultat sans réserve.
 
 Chaque citation `quotations` comporte `id`, `record_id`, `title`, `location`, `status`, `integrity`, `comparison`, `context`. Le dernier champ précise notamment le locuteur et l’effet des retraits. `attribution` et `temporal_assessment` permettent de séparer source attribuée et version temporelle de la fidélité des mots. `translation_assessment` est obligatoire pour une traduction ; la conformité littérale et la fidélité de traduction ne se confondent pas. Décrire les mots qui diffèrent, les adaptations signalées et leurs conséquences dans `comparison` et `context`, sans longues reproductions inutiles.
 

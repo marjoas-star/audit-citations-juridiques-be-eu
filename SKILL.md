@@ -99,6 +99,8 @@ Une source peut être identifiée alors qu'un champ reste non vérifié (rôle v
 
 `CRITICAL`, `MAJOR`, `MINOR`, `INFORMATION`. Critiques notamment : identifiant inventé, source fictive, mauvais document présenté comme vérifié, documents distincts fusionnés, citation substantiellement inexacte, adaptation trompeuse.
 
+Identifiant valide mais désignant un autre document (`VALID_IDENTIFIER_WRONG_DOCUMENT`) : `MAJOR` lorsque la source visée reste identifiée avec certitude par les autres champs cités (numéro d'affaire, date, parties, intitulé) ; `CRITICAL` lorsque l'identifiant fautif est le seul moyen d'identification, lorsque le texte s'appuie sur le contenu de l'autre document (par exemple des conclusions présentées comme la position de la Cour), ou lorsque l'identifiant n'existe pas. Un segment tronqué ou une coquille qui ne mène à aucun autre document reste `MINOR`.
+
 ## 6. Citations textuelles
 
 Créer un `QUOTATION_RECORD` pour toute citation attribuée à une source. Contrôler source, version, langue, localisation, mots reproduits, suppressions, insertions et adaptations.

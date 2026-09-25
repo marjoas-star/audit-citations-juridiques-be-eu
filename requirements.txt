@@ -1,0 +1,4 @@
+# Générateur de rapport PDF (scripts/render_report.py). Le Markdown seul ne requiert aucune dépendance.
+reportlab>=4.0
+# Tests du PDF (tests/).
+pypdf>=4.0

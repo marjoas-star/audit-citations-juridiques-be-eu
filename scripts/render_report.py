@@ -22,7 +22,27 @@ TEXT = {'EXACT': 'Texte conforme', 'EXACT_WITH_SIGNALLED_ADAPTATIONS': 'Texte co
         'NOT_VERIFIABLE': 'Citation non vérifiable', 'NOT_APPLICABLE_TRANSLATION': 'Traduction : contrôle distinct'}
 INTEGRITY = {'FAITHFUL': 'Sens préservé', 'MATERIAL_BUT_NOT_MISLEADING': 'Modification notable, sans déformation du sens',
              'MISLEADING': 'Sens déformé', 'NOT_VERIFIABLE': 'Effet sur le sens non vérifiable'}
+DISCLAIMER = ('Ce rapport a été établi avec l’assistance de systèmes d’IA et au moyen de recherches documentaires. '
+              'Sa fiabilité dépend de la disponibilité, de l’accessibilité, de l’indexation et de la mise à jour des sources consultées, '
+              'dont les interfaces peuvent évoluer. L’absence de vérification ne signifie pas qu’une référence est erronée. '
+              'Les conclusions valent à la date des vérifications indiquée ci-dessus, sans actualisation automatique, '
+              'et ne constituent pas une certification générale de fiabilité. Une vérification humaine demeure indispensable '
+              'avant toute utilisation juridictionnelle, procédurale, consultative ou scientifique.')
 SEVERITY = {'CRITICAL': 'Priorité critique', 'MAJOR': 'Correction importante', 'MINOR': 'Correction ponctuelle', 'INFORMATION': 'Information'}
+
+
+FUTURE_TOLERANCE_SECONDS = 300
+
+
+def not_future(value, precision, timezone):
+    # Reads the clock only to refuse a date that has not happened yet; never fills or rewrites a date.
+    now = datetime.now(ZoneInfo(timezone))
+    if precision == 'day':
+        late = date.fromisoformat(value) > now.date()
+    else:
+        late = (datetime.fromisoformat(value) - now).total_seconds() > FUTURE_TOLERANCE_SECONDS
+    if late:
+        raise ValueError('Date postérieure à l’heure réelle : ' + value)
 
 
 def report_dates(data):
@@ -45,12 +65,14 @@ def report_dates(data):
     if m['precision'] not in ('day', 'second'):
         raise ValueError('Précision temporelle inconnue')
     established = timestamp(m['established_at'], m['precision'])
+    not_future(m['established_at'], m['precision'], m['timezone'])
     issued = established
     rev = m.get('revision')
     if rev:
         if not all(rev.get(k) for k in ('issued_at', 'scope', 'previous_version')):
             raise ValueError('Révision incomplète')
         issued = timestamp(rev['issued_at'], 'second')
+        not_future(rev['issued_at'], 'second', m['timezone'])
         if issued < established:
             raise ValueError('Révision antérieure au rapport initial')
         if m['precision'] == 'second' and datetime.fromisoformat(rev['issued_at']) < datetime.fromisoformat(m['established_at']):
@@ -62,6 +84,20 @@ def report_dates(data):
     if start > end or end > issued:
         raise ValueError('Période de consultation incohérente')
     return m
+
+
+QUOTE_OK = ('EXACT', 'EXACT_WITH_SIGNALLED_ADAPTATIONS')
+
+
+def reference_label(r, data):
+    # A correct reference whose quotation deviates must not read as a clean result.
+    label = STATUS[r['status']]
+    quotes = [q for q in data['quotations'] if q['record_id'] == r['id'] and q['status'] not in QUOTE_OK]
+    if quotes:
+        label += ' · citation : ' + ' ; '.join(dict.fromkeys(TEXT[q['status']].lower() for q in quotes))
+    elif r['status'] == 'VERIFIED' and any(f.get('kind') == 'error' for f in r.get('findings', [])):
+        label += ' · correction ci-dessus'
+    return label
 
 
 def unique_findings(data, kind='error'):
@@ -107,7 +143,9 @@ def public_text(data):
 def validate(data):
     if data.get('report_language', 'fr') != 'fr':
         raise ValueError('Ce générateur fournit actuellement la présentation française uniquement')
-    for key in ('title', 'document', 'date', 'version', 'scope', 'summary', 'limitations', 'method', 'records', 'quotations'):
+    if not data.get('skill_version') and not data.get('version'):
+        raise ValueError('Champ manquant : skill_version (version du skill utilisée pour l’audit)')
+    for key in ('title', 'document', 'scope', 'summary', 'limitations', 'method', 'records', 'quotations'):
         if key not in data:
             raise ValueError('Champ manquant : ' + key)
     report_dates(data)
@@ -214,14 +252,14 @@ def sections(data):
     yield ('h1', 'Références et contrôles')
     rows = []
     for group in groups.values():
-        labels = list(dict.fromkeys(STATUS[r['status']] for r in group))
+        labels = list(dict.fromkeys(reference_label(r, data) for r in group))
         rows.append((group[0]['title'], ' ; '.join(dict.fromkeys(r['location'] for r in group)), ' ; '.join(labels)))
     yield ('table', (['Source / référence', 'Emplacements', 'Résultat'], rows))
     for group in groups.values():
         yield ('card_start', None)
         yield ('h2', group[0]['title'])
         for r in group:
-            yield ('badge', STATUS[r['status']])
+            yield ('badge', reference_label(r, data))
             yield ('meta', r['location'])
             prefix = 'Référence relevée (abrégée) : ' if r.get('original_kind') == 'summary' else 'Référence originale : '
             yield ('p', prefix + r['original'])
@@ -261,9 +299,11 @@ def sections(data):
             yield ('p', r['location'] + ' : ' + clean_prose(f['problem']) + ' ' + clean_prose(f['action']))
     yield ('h1', 'Limites et traçabilité')
     for item in data['limitations']: yield ('bullet', clean_prose(item))
-    for item in data['method']: yield ('p', clean_prose(item))
-    yield ('meta', 'Version du skill : ' + data['version'])
-    yield ('callout', 'Rapport assisté par IA. Une référence non vérifiée n’est pas nécessairement erronée. Réutilisation : se reporter aux dates de vérification ; aucune actualisation automatique. Les conclusions ne constituent pas une certification générale de fiabilité.')
+    yield ('h2', 'Méthode suivie')
+    for item in data['method']: yield ('bullet', clean_prose(item))
+    yield ('meta', 'Version du skill : ' + (data.get('skill_version') or data['version']))
+    yield ('h2', 'Avertissement')
+    yield ('callout', DISCLAIMER)
 
 
 def write_markdown(nodes, path):
@@ -344,7 +384,7 @@ def write_pdf(nodes, path, data):
         elif kind == 'badge':
             tone = '#17685F'
             if any(x in value for x in ('correction', 'inexacte', 'déformé', 'contradiction')): tone = '#A32722'
-            elif any(x in value for x in ('partielle', 'Écart', 'Traduction')): tone = '#805500'
+            elif any(x in value for x in ('partielle', 'Écart', 'écart', 'Traduction', 'traduction')): tone = '#805500'
             elif any(x in value for x in ('impossible', 'non vérifiable')): tone = '#52616B'
             story.append(Paragraph(escape(value), style('status', 9, 13, tone, True, keepWithNext=True)))
         else:

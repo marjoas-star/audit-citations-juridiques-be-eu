@@ -6,7 +6,7 @@ Das Release-Archiv entpacken und den Ordner `audit-citations-juridiques-be-eu` �
 
 Beispiel: „Prüfe mit audit-citations-juridiques-be-eu die Fundstellen und Zitate dieses Dokuments. Bewahre die ursprünglichen Angaben und unterscheide nachgewiesene Fehler von Zugangsbeschränkungen.“
 
-Der Agent benötigt Such- und Browserzugang sowie Werkzeuge zum Lesen der bereitgestellten Dokumente. Markdown ist das maßgebliche Berichtsformat; PDF erfordert Erzeugung und visuelle Kontrolle. Ein [französischer PDF/Markdown-Generator](templates/report-rendering.md) ist enthalten (Python und ReportLab für PDF); eine eigenständige Suchmaschine ist nicht enthalten. PyYAML ist für die Nutzung der Anweisungen nicht erforderlich.
+Der Agent benötigt Such- und Browserzugang sowie Werkzeuge zum Lesen der bereitgestellten Dokumente. Markdown ist das maßgebliche Berichtsformat; PDF erfordert Erzeugung und visuelle Kontrolle. Ein [französischer PDF/Markdown-Generator](templates/report-rendering.md) ist enthalten (Python und ReportLab für PDF: `pip install -r requirements.txt`); eine eigenständige Suchmaschine ist nicht enthalten. PyYAML ist für die Nutzung der Anweisungen nicht erforderlich.
 
 Amtliche Quellen haben Vorrang; Kennungen werden nicht erraten. Ein technischer Fehler beweist nicht die Nichtexistenz einer Entscheidung. Bei bekannter Entscheidungsnummer des belgischen Staatsrates ist zuerst das amtliche erweiterte Suchformular zu verwenden.
 

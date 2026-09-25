@@ -1,0 +1,183 @@
+{
+  "report_language": "fr",
+  "title": "Exemple de rapport d'audit des citations",
+  "document": "Note de test à quatre références (exemple du format d'entrée du générateur)",
+  "date": "2026-09-25",
+  "skill_version": "0.5.0-beta.3",
+  "report_metadata": {
+    "established_at": "2026-09-25T13:35:37+02:00",
+    "timezone": "Europe/Brussels",
+    "precision": "second",
+    "report_version": "v1",
+    "checks_started_on": "2026-09-25",
+    "checks_completed_on": "2026-09-25",
+    "legal_reference": "Non précisée dans le document ; textes contrôlés dans leur version d'origine et, pour la loi belge, dans la consolidation consultée le 25 septembre 2026."
+  },
+  "summary": "Quatre références examinées, correspondant à quatre sources distinctes. L'arrêt Google Spain et la loi du 29 juillet 1991 sont correctement référencés ; la citation de l'article 3 de cette loi contient toutefois un écart mineur (« consiste dans » au lieu de « consiste en »), sans effet sur le sens. L'ECLI indiqué pour l'arrêt Schrems appartient à un autre arrêt rendu le même jour. L'article de doctrine attribué à J. Dupont-Verhaegen n'a pu être ni retrouvé ni écarté avec les sources accessibles : ce constat ne signifie pas que la référence est erronée.",
+  "scope": "Niveau 1 (identité documentaire) pour les quatre références et niveau 2 (fidélité citationnelle) pour la seule citation textuelle (point 3). Le soutien substantiel des propositions juridiques (niveau 3) n'a pas été demandé et n'a pas été évalué.",
+  "limitations": [
+    "Les PDF EUR-Lex et la plateforme Jurisquare n'ont pas pu être téléchargés par un client automatisé (réponse vide ou connexion refusée) : difficulté technique, sans conséquence sur l'existence des documents.",
+    "Pour la doctrine, aucune base bibliographique sous abonnement n'a été consultée ; les sommaires complets de la revue pour 2021 n'étaient pas accessibles."
+  ],
+  "method": [
+    "Inventaire des quatre points, dédoublonnage, classement puis routage vers EUR-Lex/InfoCuria, Justel/Moniteur belge et les sources doctrinales.",
+    "Ouverture des documents officiels depuis les liens observés ; aucun identifiant ni lien n'a été reconstruit.",
+    "Comparaison littérale de la citation avec l'image de la publication au Moniteur belge et avec la consolidation Justel."
+  ],
+  "records": [
+    {
+      "id": "OCC-1",
+      "source_id": "SRC-GOOGLE-SPAIN",
+      "title": "CJUE, 13 mai 2014, Google Spain et Google, C-131/12",
+      "original": "C.J.U.E., 13 mai 2014, Google Spain et Google, C-131/12, ECLI:EU:C:2014:317",
+      "checked": "C.J.U.E., 13 mai 2014, Google Spain et Google, C-131/12, ECLI:EU:C:2014:317",
+      "location": "Point 1",
+      "status": "VERIFIED",
+      "checks": [
+        "Nature : arrêt de la Cour (grande chambre) — notice officielle EUR-Lex",
+        "Date 13 mai 2014, affaire C-131/12, parties Google Spain SL et Google Inc. — notice officielle",
+        "ECLI:EU:C:2014:317 — affiché dans la notice officielle du document 62012CJ0131"
+      ],
+      "limits": "Le texte intégral n'a pas été relu : aucune citation n'est attribuée à l'arrêt. La portée de l'arrêt quant au « droit à l'effacement » relève d'un contrôle substantiel non demandé.",
+      "sources": [
+        {
+          "label": "EUR-Lex, notice du document 62012CJ0131",
+          "url": "https://eur-lex.europa.eu/legal-content/FR/ALL/?uri=CELEX:62012CJ0131",
+          "locator": "Notice : intitulé, dates, identifiant ECLI",
+          "language": "FR",
+          "consulted_on": "2026-09-25",
+          "basis": "notice officielle"
+        }
+      ]
+    },
+    {
+      "id": "OCC-3",
+      "source_id": "SRC-SCHREMS",
+      "title": "CJUE, 6 octobre 2015, Schrems, C-362/14",
+      "original": "C.J.U.E., 6 octobre 2015, Schrems, C-362/14, ECLI:EU:C:2015:651",
+      "checked": "C.J.U.E., 6 octobre 2015, Schrems, C-362/14, ECLI:EU:C:2015:650",
+      "location": "Point 2",
+      "status": "VERIFIED_WITH_ANOMALY",
+      "checks": [
+        "Nature, date, numéro et parties : arrêt de la Cour (grande chambre) du 6 octobre 2015, Maximillian Schrems contre Data Protection Commissioner — texte intégral EUR-Lex",
+        "Point 2 du dispositif : la décision 2000/520 est déclarée invalide, ce qui correspond à l'affirmation du document",
+        "L'ECLI officiel de l'arrêt est ECLI:EU:C:2015:650",
+        "L'ECLI cité (ECLI:EU:C:2015:651) désigne un autre arrêt du même jour : Post Danmark, C-23/14 (deuxième chambre)"
+      ],
+      "limits": "",
+      "sources": [
+        {
+          "label": "EUR-Lex, arrêt C-362/14, texte intégral (document 62014CJ0362)",
+          "url": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:62014CJ0362",
+          "locator": "En-tête, identifiant ECLI, dispositif point 2",
+          "language": "FR",
+          "excerpt": "ECLI identifier: ECLI:EU:C:2015:650 — dispositif, point 2 : La décision 2000/520 est invalide.",
+          "consulted_on": "2026-09-25",
+          "basis": "lecture directe"
+        },
+        {
+          "label": "EUR-Lex, document désigné par ECLI:EU:C:2015:651 (62014CJ0023)",
+          "url": "https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=ecli:ECLI:EU:C:2015:651",
+          "locator": "Notice : intitulé et identifiant ECLI",
+          "language": "NL",
+          "excerpt": "Arrest van het Hof (Tweede kamer) van 6 oktober 2015. Post Danmark A/S tegen Konkurrencerådet. Zaak C-23/14.",
+          "consulted_on": "2026-09-25",
+          "basis": "notice officielle"
+        }
+      ],
+      "findings": [
+        {
+          "id": "AUD-3",
+          "kind": "error",
+          "severity": "MAJOR",
+          "problem": "L'ECLI indiqué existe mais désigne un autre arrêt rendu le même jour (Post Danmark, C-23/14). Le numéro d'affaire, la date et l'intitulé désignent bien l'arrêt Schrems.",
+          "action": "Remplacer ECLI:EU:C:2015:651 par ECLI:EU:C:2015:650."
+        }
+      ]
+    },
+    {
+      "id": "OCC-5",
+      "source_id": "SRC-LOI-1991",
+      "title": "Loi du 29 juillet 1991 relative à la motivation formelle des actes administratifs, article 3",
+      "original": "L'article 3 de la loi du 29 juillet 1991 relative à la motivation formelle des actes administratifs dispose : « La motivation exigée consiste dans l'indication, dans l'acte, des considérations de droit et de fait servant de fondement à la décision. Elle doit être adéquate. »",
+      "checked": "Loi du 29 juillet 1991 relative à la motivation formelle des actes administratifs, M.B., 12 septembre 1991, p. 19976, article 3",
+      "location": "Point 3",
+      "status": "VERIFIED",
+      "checks": [
+        "Intitulé, date de la loi, publication au Moniteur belge du 12 septembre 1991 (p. 19976), numéro 1991000416 — fiche Justel",
+        "Texte de l'article 3 — image de la publication officielle au Moniteur belge (p. 19977) et consolidation Justel",
+        "Aucune modification de l'article 3 n'apparaît dans la consolidation consultée"
+      ],
+      "limits": "",
+      "sources": [
+        {
+          "label": "Moniteur belge du 12 septembre 1991, image de la publication officielle",
+          "url": "https://www.ejustice.just.fgov.be/mopdf/1991/09/12_1.pdf",
+          "locator": "p. 19977, article 3",
+          "language": "FR",
+          "excerpt": "Art. 3. La motivation exigée consiste en l'indication, dans l'acte, des considérations de droit et de fait servant de fondement à la décision.",
+          "consulted_on": "2026-09-25",
+          "basis": "lecture directe (image numérisée)"
+        },
+        {
+          "label": "Justel, loi du 29 juillet 1991 (texte consolidé)",
+          "url": "https://www.ejustice.just.fgov.be/eli/loi/1991/07/29/1991000416/justel",
+          "locator": "Article 3 ; métadonnées de publication",
+          "language": "FR",
+          "consulted_on": "2026-09-25",
+          "basis": "consolidation officielle"
+        }
+      ],
+      "findings": [
+        {
+          "id": "AUD-5",
+          "kind": "error",
+          "severity": "MINOR",
+          "problem": "La citation remplace « consiste en » par « consiste dans ». Le reste du texte est conforme ; le sens n'est pas modifié.",
+          "action": "Rétablir « La motivation exigée consiste en l'indication, dans l'acte, […] »."
+        }
+      ]
+    },
+    {
+      "id": "OCC-6",
+      "source_id": "SRC-DUPONT-VERHAEGEN",
+      "title": "J. Dupont-Verhaegen, « La motivation formelle à l'ère algorithmique », R.B.D.C., 2021, p. 512",
+      "original": "Voy. J. Dupont-Verhaegen, « La motivation formelle à l'ère algorithmique », R.B.D.C., 2021, p. 512.",
+      "checked": "Non établie",
+      "location": "Point 4",
+      "status": "NOT_VERIFIABLE_WITH_ACCESSIBLE_SOURCES",
+      "checks": [
+        "La Revue belge de droit constitutionnel paraissait en 2021 (numéro 2021/1 annoncé par le centre de recherche de l'UCLouvain)",
+        "Aucune trace de l'auteur ni du titre dans les recherches générales effectuées",
+        "Plateforme de l'éditeur (Jurisquare) inaccessible : connexion refusée"
+      ],
+      "limits": "L'absence de résultat dans un moteur général ne prouve pas l'inexistence de l'article. À contrôler dans le sommaire imprimé de la revue (2021) ou dans une base sous abonnement (Jurisquare, Strada lex).",
+      "sources": [
+        {
+          "label": "UCLouvain, CRECO, page de la Revue belge de droit constitutionnel",
+          "url": "https://www.uclouvain.be/fr/instituts-recherche/juri/creco/rbdc",
+          "locator": "Liste des numéros (2021/1) ; sommaires partiels",
+          "language": "FR",
+          "consulted_on": "2026-09-25",
+          "basis": "notice institutionnelle"
+        }
+      ],
+      "notes": [
+        "Référence à contrôler en priorité par un humain : aucun élément ne confirme l'existence de l'auteur ou de l'article."
+      ]
+    }
+  ],
+  "quotations": [
+    {
+      "id": "QUO-5",
+      "record_id": "OCC-5",
+      "title": "Article 3 de la loi du 29 juillet 1991",
+      "location": "Point 3",
+      "status": "MINOR_DEVIATION",
+      "integrity": "FAITHFUL",
+      "comparison": "Un mot diffère : « consiste dans » au lieu de « consiste en » (texte publié au Moniteur belge et consolidation Justel identiques sur ce point). Toutes les autres parties, y compris la seconde phrase « Elle doit être adéquate. », sont conformes. Aucune adaptation n'est signalée.",
+      "context": "Texte législatif reproduit intégralement, sans coupure. La variation est purement grammaticale et ne modifie ni la portée ni l'obligation.",
+      "temporal_assessment": "Texte d'origine publié le 12 septembre 1991 ; aucune modification de l'article 3 n'apparaît dans la consolidation consultée le 25 septembre 2026."
+    }
+  ]
+}

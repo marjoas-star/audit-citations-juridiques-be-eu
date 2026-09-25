@@ -26,7 +26,7 @@ Préciser le périmètre, les documents de contexte et, lorsqu’elle compte, la
 
 ## Rapport lisible
 
-Un [générateur de rapport français](templates/report-rendering.md) fournit une présentation PDF et Markdown régulière, avec des libellés compréhensibles par un juriste. Le PDF requiert Python et ReportLab ; le générateur met en page des conclusions déjà établies. Il ne réalise pas les recherches.
+Un [générateur de rapport français](templates/report-rendering.md) fournit une présentation PDF et Markdown régulière, avec des libellés compréhensibles par un juriste. Le PDF requiert Python 3.10+ et ReportLab (`pip install -r requirements.txt`, qui installe aussi pypdf pour les tests) ; le générateur met en page des conclusions déjà établies. Il ne réalise pas les recherches.
 
 ## Validation et limites
 

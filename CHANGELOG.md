@@ -10,6 +10,9 @@
 - Rejeu européen T54–T60 en recherche réelle sur la version allégée, exécuté en local : sept cas conformes à la grille, sans invention, sur-vérification ni fusion. Voir `tests/results/eu-v05-local-replay/`.
 - Sonde par identifiant cité : ouvrir une base officielle avec un ECLI, CELEX, ELI ou numéro d'affaire tel qu'il est cité, ou mécaniquement transcrit, est une tentative de recherche et non une reconstruction ; règle précisée dans `SKILL.md`, `references/eur-lex-legislation.md` et `references/cjue.md`, avec la voie d'accès observée pour EUR-Lex.
 - Isolation des rejeux : liste des fichiers fournis à l'exécutant et exclusion des fichiers de résultats (`CHANGELOG.md`, `VALIDATION.md`, `RELEASE.md`) dans `CONTRIBUTING.md`.
+- Générateur de rapport : titres « Méthode suivie » et « Avertissement », avertissement complet (sources, interfaces, vérification humaine), refus d'une date d'établissement ou de révision postérieure à l'heure réelle, libellé combiné lorsqu'une référence exacte comporte une citation inexacte (« Référence vérifiée · citation : écart mineur »), champ `skill_version` (l'ancien `version` reste accepté).
+- `requirements.txt` (ReportLab, pypdf) et exemple d'entrée complet `templates/example-audit.json`, validé par les tests.
+- Gravité précisée pour un identifiant valide désignant un autre document ; module doctrine complété par un seuil d'arrêt des recherches et une manière d'exprimer un doute sérieux sans affirmer l'invention.
 
 ## 0.5.0-beta.3 — 25 septembre 2026
 
