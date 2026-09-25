@@ -7,6 +7,7 @@
 - Description enrichie de formulations de déclenchement (FR/NL/EN).
 - README : installation dans Claude Code et l'application Claude.
 - Rejeu hors ligne ELLIPSIS E1–E3 et N–Q sur la version allégée : invariants satisfaits (simulations) ; rejeu européen T54–T60 en attente d'un accès réseau. Voir `tests/results/skill-allege-replay/`.
+- Rejeu européen T54–T60 en recherche réelle sur la version allégée, exécuté en local : sept cas conformes à la grille, sans invention, sur-vérification ni fusion. Voir `tests/results/eu-v05-local-replay/`.
 
 ## 0.5.0-beta.3 — 25 septembre 2026
 
