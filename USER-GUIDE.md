@@ -77,13 +77,13 @@ Useful details to add if they apply to you:
 
 ## 6. How long it takes
 
-**A thorough audit takes time**, because each source is actually opened and read, sometimes by several routes. That is the price of a check that does not rely on appearances.
+Each source is actually opened and read, sometimes by several routes: the audit is not instant, but it remains quick.
 
-- Allow **about 1 to 3 minutes per distinct source**, more for legal scholarship, older decisions or slow websites.
-- For example, during testing: 6 references took 7 to 10 minutes; 7 EU law cases, about 11 minutes.
-- Around twenty sources: between 20 minutes and an hour. Beyond about fifty, it is more comfortable to proceed chapter by chapter.
+- Allow **about one minute per distinct source, often less**, more for legal scholarship, older decisions or slow websites.
+- For example, in Cowork testing: an extract with 16 footnotes citing 12 sources was audited in a few minutes.
+- About a dozen sources: roughly 5 to 15 minutes. Beyond about fifty, it is more comfortable to proceed chapter by chapter.
 
-After reading your document, Claude tells you the number of sources and an estimated time range, then gives progress updates ("12 of 25 sources checked"). **Keep the desktop app open and connected**: the Cowork task continues on the servers, but the built-in browser needs the app. You can do something else and come back. Do not resend the request: that would restart the work.
+After reading your document, Claude tells you the number of sources, the **legal reference date** at which it will check the texts (the one you gave, or one it infers from the document) and an estimated time range. **If that date does not suit you, just reply**, for example "check as at 1 January 2016": it will take it into account without starting over. It then gives progress updates ("12 of 25 sources checked"). **Keep the desktop app open and connected**: the Cowork task continues on the servers, but the built-in browser needs the app. You can do something else and come back. Do not resend the request: that would restart the work.
 
 A long audit uses a significant share of your usage allowance (**Settings › Usage**). For a large document, proceeding chapter by chapter spreads it out better.
 

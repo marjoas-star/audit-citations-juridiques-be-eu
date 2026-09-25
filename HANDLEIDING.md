@@ -77,13 +77,13 @@ Nuttige preciseringen, toe te voegen als ze op u van toepassing zijn:
 
 ## 6. Hoe lang het duurt
 
-**Een grondige audit vergt tijd**, omdat elke bron werkelijk wordt geopend en gelezen, soms langs verschillende wegen. Dat is de prijs van een controle die niet op de schijn afgaat.
+Elke bron wordt werkelijk geopend en gelezen, soms langs verschillende wegen: de audit gebeurt dus niet ogenblikkelijk, maar blijft snel.
 
-- Reken op **ongeveer 1 à 3 minuten per afzonderlijke bron**, meer voor rechtsleer, oudere beslissingen of trage websites.
-- Ter illustratie, tijdens de tests: 6 verwijzingen namen 7 à 10 minuten in beslag; 7 zaken van Europees recht ongeveer 11 minuten.
-- Een twintigtal bronnen: tussen 20 minuten en een uur. Vanaf een vijftigtal is het comfortabeler hoofdstuk per hoofdstuk te werken.
+- Reken op **ongeveer een minuut per afzonderlijke bron, vaak minder**, meer voor rechtsleer, oudere beslissingen of trage websites.
+- Ter illustratie, tijdens de tests in Cowork: een uittreksel met 16 voetnoten die naar 12 bronnen verwijzen, werd in enkele minuten gecontroleerd.
+- Een twaalftal bronnen: ongeveer 5 à 15 minuten. Vanaf een vijftigtal is het comfortabeler hoofdstuk per hoofdstuk te werken.
 
-Nadat Claude uw document heeft gelezen, meldt het het aantal bronnen en een geschatte duur, en geeft het tussentijds de stand van zaken ("12 van de 25 bronnen gecontroleerd"). **Laat de desktopapp open en verbonden**: de Cowork-taak loopt verder op de servers, maar de ingebouwde browser heeft de app nodig. U kunt intussen iets anders doen en later terugkomen. Stuur de vraag niet opnieuw: dan begint het werk van voren af aan.
+Nadat Claude uw document heeft gelezen, meldt het het aantal bronnen, de **juridische peildatum** waarop het de teksten controleert (de datum die u opgaf, of een datum die het uit het document afleidt) en een geschatte duur. **Past die datum niet, antwoord dan gewoon**, bijvoorbeeld "controleer op 1 januari 2016": Claude houdt er rekening mee zonder alles opnieuw te doen. Daarna geeft het tussentijds de stand van zaken ("12 van de 25 bronnen gecontroleerd"). **Laat de desktopapp open en verbonden**: de Cowork-taak loopt verder op de servers, maar de ingebouwde browser heeft de app nodig. U kunt intussen iets anders doen en later terugkomen. Stuur de vraag niet opnieuw: dan begint het werk van voren af aan.
 
 Een lange audit verbruikt een aanzienlijk deel van uw gebruiksquotum (**"Settings › Usage"** (Instellingen › Gebruik)). Voor een omvangrijk document kunt u het verbruik beter spreiden door hoofdstuk per hoofdstuk te werken.
 

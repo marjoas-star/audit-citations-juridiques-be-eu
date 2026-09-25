@@ -180,7 +180,8 @@ Après l'inventaire, un seul message court, avant les recherches :
 
 - ce qui a été trouvé : nombre de références et de sources distinctes, citations textuelles à contrôler ;
 - les étapes : vérification de chaque source dans les bases officielles, puis contrôle des citations, puis rapport ;
-- **une fourchette de durée**, présentée comme indicative : compter environ 1 à 3 minutes par source distincte, davantage pour la doctrine, les décisions anciennes ou les sites lents (par exemple : « une vingtaine de sources : entre 20 minutes et une heure ») ; ne jamais donner une durée précise ;
+- **la date juridique retenue** : celle que l'utilisateur a indiquée ; à défaut, celle que le document permet de déduire, présentée comme une hypothèse et avec l'indice qui la fonde ; à défaut, le droit en vigueur au jour de l'audit. Toujours ajouter que l'utilisateur peut indiquer une autre date (« vérifie au 1er janvier 2016 ») ; ne pas attendre sa réponse pour commencer, mais s'il en donne une, refaire les seuls contrôles qui dépendent de la date (versions des textes, décisions postérieures) ;
+- **une fourchette de durée**, présentée comme indicative : compter environ une minute par source distincte, souvent moins, davantage pour la doctrine, les décisions anciennes ou les sites lents (par exemple : « une douzaine de sources : 5 à 15 minutes environ ») ; ne jamais donner une durée précise ; mieux vaut une fourchette courte et honnête qu'une estimation prudente qui décourage ;
 - ce que l'utilisateur doit faire : rien, sauf laisser la conversation ouverte (dans Cowork, laisser aussi l'application de bureau ouverte et connectée, car le navigateur intégré en dépend) ; il peut faire autre chose et revenir ; des points d'étape suivront.
 
 Pour un document très long (plus d'une cinquantaine de sources), proposer de commencer par une partie (un chapitre, les notes d'une section) ou de traiter le document par lots, chaque lot faisant l'objet d'un rapport daté.

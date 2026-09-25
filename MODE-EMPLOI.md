@@ -77,13 +77,13 @@ Précisions utiles, à ajouter si elles vous concernent :
 
 ## 6. Combien de temps cela prend
 
-**Un audit sérieux prend du temps**, parce que chaque source est réellement ouverte et lue, parfois par plusieurs voies. C'est le prix d'une vérification qui ne se fie pas aux apparences.
+Chaque source est réellement ouverte et lue, parfois par plusieurs voies : l'audit n'est donc pas instantané, mais il reste rapide.
 
-- Comptez **environ 1 à 3 minutes par source distincte**, davantage pour la doctrine, les décisions anciennes ou les sites lents.
-- À titre d'exemple, lors des essais : 6 références ont pris 7 à 10 minutes ; 7 cas de droit européen, environ 11 minutes.
-- Une vingtaine de sources : entre 20 minutes et une heure. Au-delà d'une cinquantaine, il est plus confortable de procéder par chapitre.
+- Comptez **environ une minute par source distincte, souvent moins**, davantage pour la doctrine, les décisions anciennes ou les sites lents.
+- À titre d'exemple, lors des essais dans Cowork : un extrait de 16 notes renvoyant à 12 sources a été audité en quelques minutes.
+- Une douzaine de sources : 5 à 15 minutes environ. Au-delà d'une cinquantaine, il est plus confortable de procéder par chapitre.
 
-Après avoir lu votre document, Claude vous annonce le nombre de sources et une fourchette de durée, puis donne des points d'étape (« 12 sources sur 25 vérifiées »). **Laissez l'application de bureau ouverte et connectée** : la tâche Cowork se poursuit sur les serveurs, mais le navigateur intégré a besoin de l'application. Vous pouvez faire autre chose et revenir. Ne relancez pas la demande : cela recommencerait le travail.
+Après avoir lu votre document, Claude vous annonce le nombre de sources, la **date juridique** à laquelle il vérifiera les textes (celle que vous avez donnée, ou celle qu'il déduit du document) et une fourchette de durée. **Si cette date ne vous convient pas, répondez simplement**, par exemple « vérifie au 1er janvier 2016 » : il en tiendra compte sans tout recommencer. Il donne ensuite donne des points d'étape (« 12 sources sur 25 vérifiées »). **Laissez l'application de bureau ouverte et connectée** : la tâche Cowork se poursuit sur les serveurs, mais le navigateur intégré a besoin de l'application. Vous pouvez faire autre chose et revenir. Ne relancez pas la demande : cela recommencerait le travail.
 
 Un long audit consomme une part notable de votre quota d'utilisation (Paramètres › Utilisation, « Settings › Usage »). Pour un document volumineux, procéder par chapitre permet de mieux le répartir.
 

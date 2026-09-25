@@ -77,13 +77,13 @@ Nützliche Präzisierungen, die Sie hinzufügen können, wenn sie Sie betreffen:
 
 ## 6. Wie lange es dauert
 
-**Eine gründliche Prüfung braucht Zeit**, weil jede Quelle tatsächlich geöffnet und gelesen wird, mitunter auf mehreren Wegen. Das ist der Preis einer Überprüfung, die sich nicht auf den Anschein verlässt.
+Jede Quelle wird tatsächlich geöffnet und gelesen, mitunter auf mehreren Wegen: Die Prüfung erfolgt also nicht sofort, bleibt aber zügig.
 
-- Rechnen Sie mit **etwa 1 bis 3 Minuten pro einzelner Quelle**, mehr bei Rechtslehre, älteren Entscheidungen oder langsamen Websites.
-- Zur Veranschaulichung aus den Tests: 6 Fundstellen dauerten 7 bis 10 Minuten; 7 Rechtssachen des Unionsrechts etwa 11 Minuten.
-- Rund zwanzig Quellen: zwischen 20 Minuten und einer Stunde. Ab etwa fünfzig Quellen ist es angenehmer, kapitelweise vorzugehen.
+- Rechnen Sie mit **etwa einer Minute pro einzelner Quelle, oft weniger**, mehr bei Rechtslehre, älteren Entscheidungen oder langsamen Websites.
+- Zur Veranschaulichung aus den Tests in Cowork: Ein Auszug mit 16 Fußnoten und 12 Quellen wurde in wenigen Minuten geprüft.
+- Etwa ein Dutzend Quellen: rund 5 bis 15 Minuten. Ab etwa fünfzig Quellen ist es angenehmer, kapitelweise vorzugehen.
 
-Nachdem Claude Ihr Dokument gelesen hat, nennt es die Anzahl der Quellen und eine voraussichtliche Dauer und meldet dann Zwischenstände („12 von 25 Quellen überprüft“). **Lassen Sie die Desktop-App geöffnet und verbunden**: Die Cowork-Aufgabe läuft auf den Servern weiter, aber der integrierte Browser benötigt die App. Sie können sich anderen Dingen widmen und später zurückkehren. Senden Sie die Anfrage nicht erneut: Die Arbeit würde sonst von vorn beginnen.
+Nachdem Claude Ihr Dokument gelesen hat, nennt es die Anzahl der Quellen, den **rechtlichen Stichtag**, zu dem es die Texte prüft (den von Ihnen angegebenen oder einen aus dem Dokument abgeleiteten), und eine voraussichtliche Dauer. **Passt dieser Stichtag nicht, antworten Sie einfach**, etwa „prüfe zum 1. Januar 2016“: Claude berücksichtigt ihn, ohne von vorn zu beginnen. Danach meldet es Zwischenstände („12 von 25 Quellen überprüft“). **Lassen Sie die Desktop-App geöffnet und verbunden**: Die Cowork-Aufgabe läuft auf den Servern weiter, aber der integrierte Browser benötigt die App. Sie können sich anderen Dingen widmen und später zurückkehren. Senden Sie die Anfrage nicht erneut: Die Arbeit würde sonst von vorn beginnen.
 
 Eine lange Prüfung verbraucht einen erheblichen Teil Ihres Nutzungskontingents (**„Settings › Usage“** (Einstellungen › Nutzung)). Bei einem umfangreichen Dokument lässt sich der Verbrauch durch kapitelweises Vorgehen besser verteilen.
 
