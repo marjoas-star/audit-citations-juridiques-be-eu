@@ -39,7 +39,7 @@ Périmètre : législation belge (Moniteur, Justel, RefLex), Cour constitutionne
 4. **Un snippet oriente, il ne vérifie pas** : il ne suffit jamais pour une citation textuelle, une page, un ECLI litigieux ou un statut `VERIFIED`.
 5. **Découvrir ≠ prouver** : conserver séparément `discovery_source` et `verification_source`. La base qui permet de trouver n'est pas nécessairement celle qui permet de vérifier.
 6. **Ne jamais fusionner** des documents distincts : arrêt et conclusions, proposition et acte adopté, rapport et projet, texte adopté et loi publiée.
-7. **Ne jamais contourner** paywall, authentification, DRM, CAPTCHA ou restriction technique.
+7. **Ne jamais contourner** paywall, authentification, DRM, CAPTCHA ou restriction technique. Utiliser une autre voie publique que le même site officiel offre sans contrôle (par exemple son moteur de recherche public ou sa fonction d'export) n'est pas un contournement ; imiter un navigateur, répéter les tentatives ou modifier l'origine de la connexion pour franchir un contrôle en est un.
 
 ## 3. Entrées
 
@@ -89,6 +89,8 @@ Dans un arrêt, identifier qui s'exprime : juridiction, partie, juridiction de r
 
 Une source peut être identifiée alors qu'un champ reste non vérifié (rôle vérifié, date corroborée, ECLI non vérifié…). L'existence d'un identifiant ne suffit jamais : s'il désigne un autre document, `VALID_IDENTIFIER_WRONG_DOCUMENT`.
 
+Des métadonnées officielles (fiche ou notice de la juridiction ou de l'éditeur officiel) suffisent pour déclarer `VERIFIED` les champs d'identité qu'elles affichent (juridiction, date, numéro, parties). Elles ne suffisent pas pour un localisateur de passage ni pour une citation : ces éléments restent non vérifiés tant que le texte n'a pas été lu, et la fiche le dit.
+
 ### Statuts des références
 
 - 🟢 `VERIFIED`
@@ -102,6 +104,8 @@ Une source peut être identifiée alors qu'un champ reste non vérifié (rôle v
 `CRITICAL`, `MAJOR`, `MINOR`, `INFORMATION`. Critiques notamment : identifiant inventé, source fictive, mauvais document présenté comme vérifié, documents distincts fusionnés, citation substantiellement inexacte, adaptation trompeuse.
 
 Identifiant valide mais désignant un autre document (`VALID_IDENTIFIER_WRONG_DOCUMENT`) : `MAJOR` lorsque la source visée reste identifiée avec certitude par les autres champs cités (numéro d'affaire, date, parties, intitulé) ; `CRITICAL` lorsque l'identifiant fautif est le seul moyen d'identification, lorsque le texte s'appuie sur le contenu de l'autre document (par exemple des conclusions présentées comme la position de la Cour), ou lorsque l'identifiant n'existe pas. Un segment tronqué ou une coquille qui ne mène à aucun autre document reste `MINOR`.
+
+Mauvaise disposition (`WRONG_PROVISION_LOCATOR`, par exemple une définition attribuée au mauvais point d'un article) : `MAJOR`, car le lecteur est renvoyé à une règle au contenu différent ; `MINOR` seulement si la disposition citée et la bonne ont le même contenu utile (renumérotation, simple faute de frappe sans autre disposition désignée).
 
 ## 6. Citations textuelles
 
@@ -182,13 +186,13 @@ Après l'inventaire, un seul message court, avant les recherches :
 - ce qui a été trouvé : nombre de références et de sources distinctes, citations textuelles à contrôler ;
 - les étapes : vérification de chaque source dans les bases officielles, puis contrôle des citations, puis rapport ;
 - **une fourchette de durée**, présentée comme indicative : compter environ 1 à 3 minutes par source distincte, davantage pour la doctrine, les décisions anciennes ou les sites lents (par exemple : « une vingtaine de sources : entre 20 minutes et une heure ») ; ne jamais donner une durée précise ;
-- ce que l'utilisateur doit faire : rien, sauf laisser la conversation ouverte ; il peut faire autre chose et revenir ; des points d'étape suivront.
+- ce que l'utilisateur doit faire : rien, sauf laisser la conversation ouverte (dans Cowork, laisser aussi l'application de bureau ouverte et connectée, car le navigateur intégré en dépend) ; il peut faire autre chose et revenir ; des points d'étape suivront.
 
 Pour un document très long (plus d'une cinquantaine de sources), proposer de commencer par une partie (un chapitre, les notes d'une section) ou de traiter le document par lots, chaque lot faisant l'objet d'un rapport daté.
 
 ### Pendant l'audit
 
-Donner des compteurs réels (« 31 sources sur 57 vérifiées », « 14 citations sur 22 contrôlées ») plutôt qu'un pourcentage. Ne publier un point d'étape qu'à un changement d'état réel : inventaire terminé, nouvelle famille de sources, lot significatif vérifié, difficulté d'accès importante, erreur importante confirmée, début du contrôle des citations, rédaction du rapport. Signaler sobrement une difficulté d'accès (« le site de la Cour européenne des droits de l'homme bloque les consultations automatisées ; je passe par une autre voie »), sans la transformer en inexistence juridique. Pour quelques références simples, ne pas multiplier les messages ni annoncer de durée.
+Donner des compteurs réels (« 31 sources sur 57 vérifiées », « 14 citations sur 22 contrôlées ») plutôt qu'un pourcentage. Ne publier un point d'étape qu'à un changement d'état réel : inventaire terminé, nouvelle famille de sources, lot significatif vérifié, difficulté d'accès importante, erreur importante confirmée, début du contrôle des citations, rédaction du rapport. Signaler sobrement une difficulté d'accès (« le site de la Cour européenne des droits de l'homme bloque les consultations automatisées ; je passe par une autre voie »), sans la transformer en inexistence juridique. Pour un audit de trois sources ou moins, se passer du message de départ et des points d'étape : répondre directement. Au-delà, le message de départ (avec sa fourchette de durée) est donné une seule fois ; ne pas la répéter ensuite.
 
 ### Fin de l'audit
 

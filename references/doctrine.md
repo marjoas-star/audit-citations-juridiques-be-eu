@@ -15,10 +15,12 @@ Résoudre `op. cit.` et `ibid.` dans le document avant d'utiliser le web. Une ab
 Avant de conclure qu'une référence doctrinale n'est pas vérifiable, tenter au minimum, en consignant chaque essai comme `SEARCH_ATTEMPT` :
 
 1. l'auteur : dépôt institutionnel ou page de l'université, annuaire ou catalogue d'autorités (KBR, BnF, VIAF, ORCID) ;
-2. la revue ou l'ouvrage : sommaire du volume ou de l'année cités, sur le site de l'éditeur, d'une base professionnelle ou d'un catalogue de bibliothèque ;
+2. la revue ou l'ouvrage : sommaire du volume ou de l'année cités, sur une page publique de l'éditeur ou de la revue, ou dans un catalogue de bibliothèque ;
 3. le titre : recherche de la formulation exacte dans Crossref, Google Scholar ou un moteur général, dans chaque langue plausible.
 
 S'arrêter dès que la référence est établie, ou lorsque ces trois voies ont été tentées sans élément nouveau. Ne pas multiplier les requêtes voisines. Un accès payant non disponible est une limite, pas un résultat négatif.
+
+**Plateformes d'éditeurs sur abonnement** (par exemple Strada lex) : ne pas les tenter, même sur leurs pages publiques ; elles exigent un compte et refusent généralement les accès automatisés. Les indiquer seulement au juriste comme lieu où vérifier lui-même, s'il y a accès. Jurisquare n'existe plus depuis 2024 (voir l'annonce de la bibliothèque de droit de la KU Leuven : https://bib.kuleuven.be/rbib/collectie/stopzetting-jurisquare) : ne pas le consulter ni le proposer.
 
 ## Exprimer un doute sérieux
 

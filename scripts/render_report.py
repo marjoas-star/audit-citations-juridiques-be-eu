@@ -29,6 +29,14 @@ DISCLAIMER = ('Ce rapport a été établi avec l’assistance de systèmes d’I
               'Les conclusions valent à la date des vérifications indiquée ci-dessus, sans actualisation automatique, '
               'et ne constituent pas une certification générale de fiabilité. Une vérification humaine demeure indispensable '
               'avant toute utilisation juridictionnelle, procédurale, consultative ou scientifique.')
+# Characters absent from the bundled Vera fonts, replaced in the PDF only (the Markdown keeps the original text).
+PDF_GLYPHS = {'\u2010': '-', '\u2011': '-', '\u2012': '-', '\u202f': '\u00a0', '\u2009': ' ', '\u2192': '->'}
+
+
+def pdf_text(text):
+    return str(text).translate(str.maketrans(PDF_GLYPHS))
+
+
 SEVERITY = {'CRITICAL': 'Priorité critique', 'MAJOR': 'Correction importante', 'MINOR': 'Correction ponctuelle', 'INFORMATION': 'Information'}
 
 
@@ -363,7 +371,7 @@ def write_pdf(nodes, path, data):
               'p': style('p'), 'badge': style('badge', 9, 14, teal, True, keepWithNext=True),
               'cell': style('cell', 9, 13), 'stat': style('stat', 23, 29, teal, True),
               'link': style('link', 8.5, 13, teal, keepWithNext=True), 'url': style('url', 8.5, 13, teal), 'callout': style('callout', 9, 14, muted, backColor=colors.HexColor('#EFF4F5'), borderPadding=10, spaceBefore=8)}
-    paragraph = lambda text, name='p': Paragraph(escape(str(text)), styles[name])
+    paragraph = lambda text, name='p': Paragraph(escape(pdf_text(text)), styles[name])
     story = []
     card_index = None
     keep_index = None
@@ -398,7 +406,7 @@ def write_pdf(nodes, path, data):
             story.append(table)
         elif kind == 'link':
             label,url,loc=value
-            story.append(Paragraph(f'Preuve : <link href="{escape(url,quote=True)}" color="{teal}">{escape(label)}</link> — {escape(loc)}.', styles['link']))
+            story.append(Paragraph(f'Preuve : <link href="{escape(url,quote=True)}" color="{teal}">{escape(pdf_text(label))}</link> — {escape(pdf_text(loc))}.', styles['link']))
             story.append(paragraph(url, 'url'))
         elif kind == 'bullet':
             story.append(paragraph('• ' + value))
@@ -407,7 +415,7 @@ def write_pdf(nodes, path, data):
             if any(x in value for x in ('correction', 'inexacte', 'déformé', 'contradiction')): tone = '#A32722'
             elif any(x in value for x in ('partielle', 'Écart', 'écart', 'Traduction', 'traduction')): tone = '#805500'
             elif any(x in value for x in ('impossible', 'non vérifiable')): tone = '#52616B'
-            story.append(Paragraph(escape(value), style('status', 9, 13, tone, True, keepWithNext=True)))
+            story.append(Paragraph(escape(pdf_text(value)), style('status', 9, 13, tone, True, keepWithNext=True)))
         else:
             if kind == 'h1':
                 story.append(CondPageBreak(100))

@@ -64,6 +64,9 @@ class ClarityTests(unittest.TestCase):
         for marker in ('Schrems', 'Post Danmark', 'Dupont-Verhaegen', 'Google Spain', 'Salduz', '29 juillet 1991', 'Rantos', 'ByteDance'):
             self.assertNotIn(marker, text)
 
+    def test_pdf_replaces_glyphs_missing_from_font(self):
+        self.assertEqual(renderer.pdf_text('C\u201123/14\u202f§'), 'C-23/14\u00a0§')
+
 
 if __name__ == '__main__':
     unittest.main()
