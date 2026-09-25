@@ -6,9 +6,11 @@ Couvre traités, règlements, directives, décisions, actes délégués/d'exécu
 
 Le Journal officiel est la publication authentique. Depuis le 1er octobre 2023, le JO est publié acte par acte ; chaque PDF constitue une édition authentique.
 
-Une consolidation est documentaire et n'a pas, par elle-même, valeur juridique authentique. Ne jamais reconstruire un CELEX. Distinguer proposition et acte final. Distinguer procédure et document.
+Une consolidation est documentaire et n'a pas, par elle-même, valeur juridique authentique. Ne jamais reconstruire un CELEX de mémoire ni l'affirmer sans l'avoir vu affiché par EUR-Lex. Former le CELEX d'un acte à partir de son type, de son année et de son numéro tels qu'ils sont cités (`3` + année + `L`/`R`/`D` + numéro sur quatre chiffres) est une sonde au sens de la règle cardinale 1 de `SKILL.md` : vérifier que la notice ouverte correspond à l'acte cité. Cette transcription ne vaut pas pour les actes délégués ou d'exécution, les rectificatifs, les documents préparatoires ni la jurisprudence : passer par la recherche. Distinguer proposition et acte final. Distinguer procédure et document.
 
 Lorsqu'une disposition est citée pour une définition ou une règle précise, vérifier son contenu dans la version temporellement pertinente. L'existence du numéro d'article ne suffit pas : une définition située dans une autre disposition produit `WRONG_PROVISION_LOCATOR`.
+
+Accès observé le 25 septembre 2026 : EUR-Lex renvoie souvent une réponse vide (HTTP 202) aux clients en ligne de commande et aux lecteurs web, et refuse les adresses de centres de données. Un navigateur réel, depuis une connexion résidentielle ou institutionnelle, affiche normalement la notice. Ces échecs sont techniques et ne prouvent rien sur le document.
 
 ## Références au Journal officiel et titres abrégés
 

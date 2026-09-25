@@ -6,6 +6,8 @@ Préserver les originaux, les règles de non-invention et les limitations de cou
 
 Pour tester un comportement, donner à un évaluateur indépendant le skill et l’entrée sans l’oracle. Conserver sa réponse avant la comparaison. Séparer recherche réelle, simulation et contrôle de structure. Les protocoles de `tests/cases/` sont des tests descriptifs, pas une suite automatiquement exécutée.
 
+L'exécutant d'un rejeu reçoit uniquement `SKILL.md`, `references/`, `schemas/`, `templates/`, `scripts/` et l'entrée du cas. Exclure `tests/` et tout fichier qui rapporte des résultats ou des corrigés, notamment `CHANGELOG.md`, `VALIDATION.md` et `RELEASE.md`. Avant l'exécution, rechercher dans la copie fournie les éléments caractéristiques du corrigé (noms, identifiants, dates attendues) ; toute occurrence rend le rejeu non indépendant tant que le fichier n'est pas retiré. Consigner la liste des fichiers fournis avec les empreintes.
+
 Avant une publication : contrôler les liens relatifs et le frontmatter, relire les différences, rejouer les cas affectés, documenter la version et les limites. Ne pas convertir un contrôle de format en validation juridique. Les rapports publics doivent être des synthèses minimales ; conserver les pièces complètes dans le dossier de travail approprié.
 
 La prochaine campagne suit le [protocole prospectif V1](tests/validation-v1/protocole.md) et son [plan de corpus réservé](tests/validation-v1/corpus.md). Ils décrivent des travaux à exécuter, pas des résultats acquis.

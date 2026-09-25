@@ -1,12 +1,12 @@
 # CJUE / Tribunal
 
-**Dernière révision des instructions : 24 septembre 2026**
+**Dernière révision des instructions : 25 septembre 2026**
 
 Les essais réels et leurs limites sont consignés dans les résultats ; cette date de révision ne certifie pas le fonctionnement de toutes les voies d’accès.
 
 Sources primaires : InfoCuria et EUR-Lex.
 
-Si le lien vers le texte échoue, revenir à la fiche ou au dossier effectivement accessible et suivre les liens de langue/format qui y sont proposés. Utiliser l'autre base officielle comme repli, en recherchant l'affaire ; ne pas modifier à la main une URL, son identifiant, son type de document ou sa langue. Un résultat indexé, même long, reste distinct d'un texte ouvert. Consigner séparément chaque tentative et arrêter les répétitions sans nouvel élément utile.
+Si le lien vers le texte échoue, revenir à la fiche ou au dossier effectivement accessible et suivre les liens de langue/format qui y sont proposés. Utiliser l'autre base officielle comme repli, en recherchant l'affaire ; ne pas modifier à la main une URL, son identifiant, son type de document ou sa langue. Ouvrir une adresse de consultation avec l'ECLI ou le numéro d'affaire exactement tels qu'ils sont cités est une sonde au sens de la règle cardinale 1 de `SKILL.md`, utile pour détecter qu'un identifiant désigne un autre document ; ne jamais y substituer un identifiant supposé. Un résultat indexé, même long, reste distinct d'un texte ouvert. Consigner séparément chaque tentative et arrêter les répétitions sans nouvel élément utile.
 
 Avant de comparer une citation, vérifier le contenu effectivement affiché : type, numéro, date, langue et paragraphe. Une réponse vide, une page de contrôle d'accès ou un communiqué ne vaut pas texte de l'arrêt. Le titre d'un résultat de recherche peut indiquer une autre langue que son contenu : seule la version réellement consultée permet la comparaison littérale.
 
