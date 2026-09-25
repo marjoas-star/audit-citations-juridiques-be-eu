@@ -49,3 +49,12 @@ Une V1 publique est interdite tant qu’un benchmark révèle :
 ### Documentation et licence
 
 README en FR/NL/DE/EN : `README.md`, `README.fr.md`, `README.nl.md`, `README.de.md`, `README.en.md`. Documentation sous `CC BY-NC-SA 4.0` ; code Python (`scripts/`, `tests/`) sous `PolyForm Noncommercial 1.0.0` (voir `LICENSE-CODE.md`). Tout nouveau fichier Python porte l'en-tête `# SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0`. Ne pas qualifier le projet d’« open source » au sens OSI compte tenu de la restriction NC.
+
+### Archives de publication
+
+Deux archives par version, construites depuis le tag :
+
+- **allégée** (celle des modes d'emploi) : `git archive --format=zip --prefix=audit-citations-juridiques-be-eu/ -o audit-citations-juridiques-be-eu-X.Y.Z.zip vX.Y.Z SKILL.md VERSION LICENSE LICENSE-CODE.md requirements.txt MODE-EMPLOI.md HANDLEIDING.md ANLEITUNG.md USER-GUIDE.md references schemas templates scripts` ;
+- **complète** : `git archive --format=zip --prefix=audit-citations-juridiques-be-eu/ -o audit-citations-juridiques-be-eu-X.Y.Z-complet.zip vX.Y.Z`.
+
+Les fichiers de l'archive allégée ne doivent contenir aucun lien relatif vers `tests/` ou les README : utiliser l'adresse GitHub complète.

@@ -1,5 +1,9 @@
 # Notes de version
 
+## Non publié
+
+- Deux archives par version : allégée (35 fichiers, à importer dans Claude) et complète (`-complet`). Liens vers `tests/` remplacés par des adresses GitHub, pour rester valables dans l'archive allégée.
+
 ## 0.7.0-beta.1 — 25 septembre 2026
 
 Rapport en français, néerlandais, allemand ou anglais. Corrections issues du bêta-test v2 dans Claude Cowork (22 erreurs sur 22 détectées, aucune fausse alerte), régressions corrigées et vérifiées à l'aveugle sur deux extraits. Rapport plus court et plus lisible, durée et date juridique mieux annoncées, description adaptée à l'aperçu de l'application, interdiction renforcée des recherches fondées sur la mémoire. Aucune certification générale.

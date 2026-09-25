@@ -246,4 +246,4 @@ COUNCIL_OF_STATE_EXACT_NUMBER_RETRIEVAL = GREEN
 
 Conserver les observations brutes et la sortie réelle séparément de l'oracle. Les variantes simulées testent les décisions face aux observations fournies, pas le pilotage du site. Un succès sur un arrêt ne prouve pas la récupération générale. Un test sans sortie conservée reste `NOT_DEMONSTRATED`.
 
-Complément de protocole : [récupération et lecture](../tests/cases/conseil-etat-recuperation.md).
+Complément de protocole : [récupération et lecture](https://github.com/marjoas-star/audit-citations-juridiques-be-eu/blob/main/tests/cases/conseil-etat-recuperation.md).

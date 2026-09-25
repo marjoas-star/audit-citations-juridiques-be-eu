@@ -18,7 +18,7 @@ Wat Claude **niet doet**: het beoordeelt de kwaliteit van uw argumentatie niet (
 ## 2. Wat u nodig hebt
 
 - **Claude Cowork**, beschikbaar met de betalende abonnementen (Pro, Max, Team, Enterprise), en bij voorkeur de **Claude-desktopapp** (Mac of Windows) op uw computer: die levert de browser die de skill nodig heeft voor verschillende officiële websites (punt 4).
-- Het bestand van de skill: het `.zip`-archief van de laatste versie, te downloaden op de [Releases-pagina van de repository](https://github.com/marjoas-star/audit-citations-juridiques-be-eu/releases) (rubriek "Assets", bestand `audit-citations-juridiques-be-eu-….zip`). **Pak het archief niet uit.**
+- Het bestand van de skill: het `.zip`-archief van de laatste versie, te downloaden op de [Releases-pagina van de repository](https://github.com/marjoas-star/audit-citations-juridiques-be-eu/releases) (rubriek "Assets", bestand `audit-citations-juridiques-be-eu-….zip` — niet het bestand dat eindigt op `-complet`, dat voor het onderhoud bestemd is). **Pak het archief niet uit.**
 - Uw document in pdf, Word of tekst. Een gescande pdf (een afbeelding zonder tekst) is moeilijker te lezen: gebruik bij voorkeur de Word-versie of een "tekst"-pdf.
 
 De skill werkt ook in een gewoon Claude-gesprek en in Claude Code; de instellingen zijn vergelijkbaar (zie het einde van punt 3).
@@ -123,4 +123,4 @@ Het verslag is een hulpmiddel: **lees de correcties na voordat u ze overneemt**,
 
 ## 10. Uw mening geven
 
-Uw feedback als jurist is waardevol, vooral wanneer een conclusie u fout of onduidelijk lijkt: gebruik het [feedbackformulier](tests/beta/fiche-retour.md) (in het Frans) of open een "issue" in de [GitHub-repository](https://github.com/marjoas-star/audit-citations-juridiques-be-eu/issues). Voeg nooit een vertrouwelijk document toe.
+Uw feedback als jurist is waardevol, vooral wanneer een conclusie u fout of onduidelijk lijkt: gebruik het [feedbackformulier](https://github.com/marjoas-star/audit-citations-juridiques-be-eu/blob/main/tests/beta/fiche-retour.md) (in het Frans) of open een "issue" in de [GitHub-repository](https://github.com/marjoas-star/audit-citations-juridiques-be-eu/issues). Voeg nooit een vertrouwelijk document toe.

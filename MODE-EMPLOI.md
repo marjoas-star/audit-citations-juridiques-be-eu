@@ -18,7 +18,7 @@ Ce qu'il **ne fait pas** : il ne juge pas la qualité de votre argumentation (sa
 ## 2. Ce qu'il vous faut
 
 - **Claude Cowork**, disponible avec les abonnements payants (Pro, Max, Team, Enterprise), et de préférence l'**application de bureau Claude** (Mac ou Windows) installée sur votre ordinateur : c'est elle qui fournit le navigateur dont le skill a besoin pour plusieurs sites officiels (section 4).
-- Le fichier du skill : l'archive `.zip` de la dernière version, à télécharger sur la page [Releases du dépôt](https://github.com/marjoas-star/audit-citations-juridiques-be-eu/releases) (rubrique « Assets », fichier `audit-citations-juridiques-be-eu-….zip`). **Ne décompressez pas l'archive.**
+- Le fichier du skill : l'archive `.zip` de la dernière version, à télécharger sur la page [Releases du dépôt](https://github.com/marjoas-star/audit-citations-juridiques-be-eu/releases) (rubrique « Assets », fichier `audit-citations-juridiques-be-eu-….zip` — pas celui qui se termine par `-complet`, réservé à la maintenance). **Ne décompressez pas l'archive.**
 - Votre document en PDF, Word ou texte. Un PDF scanné (image sans texte) est plus difficile à lire : préférez la version Word ou un PDF « texte ».
 
 Le skill fonctionne aussi dans une conversation Claude ordinaire et dans Claude Code ; les réglages sont semblables (voir la fin de la section 3).
@@ -123,4 +123,4 @@ Le rapport est une aide : **relisez les corrections avant de les reporter**, en 
 
 ## 10. Donner votre avis
 
-Vos retours de juriste sont précieux, surtout lorsqu'une conclusion vous paraît fausse ou peu claire : utilisez la [fiche de retour](tests/beta/fiche-retour.md) ou ouvrez un « issue » sur le [dépôt GitHub](https://github.com/marjoas-star/audit-citations-juridiques-be-eu/issues). Ne joignez jamais un document confidentiel.
+Vos retours de juriste sont précieux, surtout lorsqu'une conclusion vous paraît fausse ou peu claire : utilisez la [fiche de retour](https://github.com/marjoas-star/audit-citations-juridiques-be-eu/blob/main/tests/beta/fiche-retour.md) ou ouvrez un « issue » sur le [dépôt GitHub](https://github.com/marjoas-star/audit-citations-juridiques-be-eu/issues). Ne joignez jamais un document confidentiel.

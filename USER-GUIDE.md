@@ -18,7 +18,7 @@ What it **does not do**: it does not assess the quality of your reasoning (unles
 ## 2. What you need
 
 - **Claude Cowork**, available with paid plans (Pro, Max, Team, Enterprise), and preferably the **Claude desktop app** (Mac or Windows) installed on your computer: it provides the browser that the skill needs for several official websites (section 4).
-- The skill file: the `.zip` archive of the latest version, to be downloaded from the [Releases page of the repository](https://github.com/marjoas-star/audit-citations-juridiques-be-eu/releases) ("Assets" section, file `audit-citations-juridiques-be-eu-….zip`). **Do not unzip the archive.**
+- The skill file: the `.zip` archive of the latest version, to be downloaded from the [Releases page of the repository](https://github.com/marjoas-star/audit-citations-juridiques-be-eu/releases) ("Assets" section, file `audit-citations-juridiques-be-eu-….zip` — not the one ending in `-complet`, which is for maintainers). **Do not unzip the archive.**
 - Your document as a PDF, Word or text file. A scanned PDF (an image with no text) is harder to read: use the Word version or a "text" PDF if you can.
 
 The skill also works in an ordinary Claude conversation and in Claude Code; the settings are similar (see the end of section 3).
@@ -123,4 +123,4 @@ The report is an aid: **review the corrections before carrying them over**, espe
 
 ## 10. Giving feedback
 
-Your feedback as a legal practitioner is valuable, especially when a conclusion seems wrong or unclear to you: use the [feedback form](tests/beta/fiche-retour.md) (in French) or open an "issue" on the [GitHub repository](https://github.com/marjoas-star/audit-citations-juridiques-be-eu/issues). Never attach a confidential document.
+Your feedback as a legal practitioner is valuable, especially when a conclusion seems wrong or unclear to you: use the [feedback form](https://github.com/marjoas-star/audit-citations-juridiques-be-eu/blob/main/tests/beta/fiche-retour.md) (in French) or open an "issue" on the [GitHub repository](https://github.com/marjoas-star/audit-citations-juridiques-be-eu/issues). Never attach a confidential document.

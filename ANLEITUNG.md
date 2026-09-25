@@ -18,7 +18,7 @@ Was Claude **nicht tut**: Es beurteilt nicht die Qualität Ihrer Argumentation (
 ## 2. Was Sie benötigen
 
 - **Claude Cowork**, verfügbar mit den kostenpflichtigen Abonnements (Pro, Max, Team, Enterprise), und vorzugsweise die auf Ihrem Computer installierte **Claude-Desktop-App** (Mac oder Windows): Sie stellt den Browser bereit, den der Skill für mehrere amtliche Websites benötigt (Abschnitt 4).
-- Die Datei des Skills: das `.zip`-Archiv der neuesten Version, herunterzuladen auf der [Releases-Seite des Repositorys](https://github.com/marjoas-star/audit-citations-juridiques-be-eu/releases) (Rubrik „Assets“, Datei `audit-citations-juridiques-be-eu-….zip`). **Entpacken Sie das Archiv nicht.**
+- Die Datei des Skills: das `.zip`-Archiv der neuesten Version, herunterzuladen auf der [Releases-Seite des Repositorys](https://github.com/marjoas-star/audit-citations-juridiques-be-eu/releases) (Rubrik „Assets“, Datei `audit-citations-juridiques-be-eu-….zip` — nicht die Datei mit der Endung `-complet`, die für die Wartung bestimmt ist). **Entpacken Sie das Archiv nicht.**
 - Ihr Dokument als PDF-, Word- oder Textdatei. Ein eingescanntes PDF (Bild ohne Text) ist schwerer zu lesen: Verwenden Sie nach Möglichkeit die Word-Fassung oder ein „Text“-PDF.
 
 Der Skill funktioniert auch in einer gewöhnlichen Claude-Unterhaltung und in Claude Code; die Einstellungen sind ähnlich (siehe Ende von Abschnitt 3).
@@ -123,4 +123,4 @@ Der Bericht ist ein Hilfsmittel: **Lesen Sie die Korrekturen durch, bevor Sie si
 
 ## 10. Ihre Meinung
 
-Ihre Rückmeldungen als Juristin oder Jurist sind wertvoll, vor allem wenn Ihnen eine Schlussfolgerung falsch oder unklar erscheint: Verwenden Sie das [Rückmeldeformular](tests/beta/fiche-retour.md) (auf Französisch) oder eröffnen Sie ein „Issue“ im [GitHub-Repository](https://github.com/marjoas-star/audit-citations-juridiques-be-eu/issues). Fügen Sie niemals ein vertrauliches Dokument bei.
+Ihre Rückmeldungen als Juristin oder Jurist sind wertvoll, vor allem wenn Ihnen eine Schlussfolgerung falsch oder unklar erscheint: Verwenden Sie das [Rückmeldeformular](https://github.com/marjoas-star/audit-citations-juridiques-be-eu/blob/main/tests/beta/fiche-retour.md) (auf Französisch) oder eröffnen Sie ein „Issue“ im [GitHub-Repository](https://github.com/marjoas-star/audit-citations-juridiques-be-eu/issues). Fügen Sie niemals ein vertrauliches Dokument bei.
