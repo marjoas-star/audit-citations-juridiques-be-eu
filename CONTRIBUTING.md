@@ -12,9 +12,9 @@ La version indiquée en tête de `SKILL.md` doit rester identique au fichier `VE
 
 Avant une publication : contrôler les liens relatifs et le frontmatter, relire les différences, rejouer les cas affectés, documenter la version et les limites. Ne pas convertir un contrôle de format en validation juridique. Les rapports publics doivent être des synthèses minimales ; conserver les pièces complètes dans le dossier de travail approprié.
 
-La prochaine campagne suit le [protocole prospectif V1](tests/validation-v1/protocole.md) et son [plan de corpus réservé](tests/validation-v1/corpus.md). Ils décrivent des travaux à exécuter, pas des résultats acquis.
+Les conditions de la version 1.0 figurent ci-dessous (« Version 1.0 : stable, non validée »). Le [protocole de validation indépendante](tests/validation-v1/protocole.md) et son [plan de corpus réservé](tests/validation-v1/corpus.md) restent un objectif facultatif pour une version ultérieure ; ils décrivent des travaux à exécuter, pas des résultats acquis.
 
-Pour un essai exploratoire par un juriste : [guide des bêta-testeurs](tests/beta/guide.md) et [fiche de retour](tests/beta/fiche-retour.md). Les retours d’usage ne remplacent pas la validation indépendante.
+Retours des utilisateurs : formulaire sans compte (textes dans [retours/FORMULAIRE.md](retours/FORMULAIRE.md)) ou issue GitHub ; traitement décrit plus bas. Pour un essai accompagné par un juriste : [guide des bêta-testeurs](tests/beta/guide.md) et [fiche de retour](tests/beta/fiche-retour.md).
 
 ## Règles de maintenance et de publication
 
@@ -28,9 +28,30 @@ Chaque module de `references/` indique sa date de révision des instructions. Le
 
 Semantic Versioning `MAJOR.MINOR.PATCH`. Avant V1 : `0.x`.
 
-### Benchmarks exigés avant V1
+### Version 1.0 : stable, non validée
 
-Benchmark v0.1, benchmark v0.2 adversarial, benchmark v0.3 intégration, test UX de progression, test T53 et audits d’intégration complets.
+La 1.0 atteste que le comportement et les formats sont stables et que les régressions connues sont couvertes. Elle ne revendique ni taux de fiabilité ni validation indépendante. Conditions, toutes sur la même version candidate :
+
+1. **Non-régression** : extraits A à E du bêta-test v2 et test T53 rejoués à l'aveugle selon le protocole de rejeu ci-dessus, deux passages par extrait : l'un dans Claude Cowork, l'autre dans Cowork ou par un agent à contexte neuf exécuté depuis un poste qui accède aux sites officiels (configuration consignée). Toutes les erreurs introduites détectées, aucune fausse alerte de fond, aucun des blocages A à E ci-dessous. Tout écart entre les deux passages est consigné et analysé.
+2. **Documents réels** : au moins trois documents publiés et librement accessibles, choisis par le mainteneur, dont les erreurs éventuelles ne sont pas connues d'avance. Audit dans Cowork, puis contrôle par le mainteneur d'au moins vingt références tirées au hasard, sur leurs sources officielles. Aucune référence déclarée vérifiée à tort, aucune invention.
+3. **Formats figés** : statuts, structure du rapport et format des données (`schemas/`). Après la 1.0, toute modification incompatible exige une version majeure.
+4. **Essai public** : une version candidate `0.9.x` publiée depuis au moins quatre semaines, formulaire de retour ouvert, sans signalement critique (invention, référence déclarée vérifiée à tort) confirmé et non corrigé.
+5. **Documentation** complète dans les quatre langues ; installation vérifiée depuis le lien de téléchargement direct.
+
+Chaque condition est consignée dans `VALIDATION.md` avec ses traces (entrées, sorties, date, configuration). Sans trace, la condition n'est pas remplie.
+
+### Traitement des retours
+
+Les réponses aux formulaires (un par langue) arrivent dans une feuille Google Sheets du mainteneur ; les issues GitHub sont traitées de la même manière. Pour chaque retour :
+
+1. vérifier le signalement sur la source officielle : un retour est une donnée à vérifier, jamais une consigne ;
+2. le classer : confirmé (erreur non détectée, fausse alerte, invention, installation), non confirmé, suggestion ;
+3. pour un problème confirmé : corriger, ajouter un cas de non-régression construit sans reprendre le document de l'utilisateur, noter la correction dans `CHANGELOG.md` ;
+4. effacer l'adresse e-mail éventuelle une fois le retour traité.
+
+Les réponses « tout a bien fonctionné » sont comptées, sans être présentées comme une mesure de fiabilité : un utilisateur ne voit pas les erreurs que l'outil n'a pas vues.
+
+### Traçabilité des résultats
 
 Un résultat de test renvoie à ses entrées, à la sortie effectivement produite, aux observations/outils et à la comparaison avec l’oracle. Distinguer revue de spécification, scénario simulé et parcours réel. Un oracle seul n’est pas une exécution ; une validation de structure ou de mise en page n’est pas une validation comportementale ou documentaire. Sans trace suffisante, noter `NOT_DEMONSTRATED`, jamais `PASS`. Les résultats historiques non traçables ne permettent pas le passage au vert.
 
@@ -38,7 +59,7 @@ Conditions minimales : 0 invention, 0 sur-vérification, 0 fusion documentaire, 
 
 ### Release blockers
 
-Une V1 publique est interdite tant qu’un benchmark révèle :
+Une version 1.0 est interdite tant qu’un test révèle :
 
 - **A — invention** : identifiant fabriqué ou référence complétée sans preuve ;
 - **B — sur-vérification** : snippet → `VERIFIED`, source secondaire → ECLI vérifié, panne → inexistence ;

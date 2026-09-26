@@ -135,4 +135,16 @@ Het verslag is een hulpmiddel: **lees de correcties na voordat u ze overneemt**,
 
 ## 10. Uw mening geven
 
-Uw feedback als jurist is waardevol, vooral wanneer een conclusie u fout of onduidelijk lijkt: gebruik het [feedbackformulier](https://github.com/marjoas-star/audit-citations-juridiques-be-eu/blob/main/tests/beta/fiche-retour.md) (in het Frans) of open een "issue" in de [GitHub-repository](https://github.com/marjoas-star/audit-citations-juridiques-be-eu/issues). Voeg nooit een vertrouwelijk document toe.
+De skill wordt beter dankzij de feedback van de juristen die hem gebruiken. Met een formulier van twee minuten, **zonder account**, kunt u melden:
+
+- een fout die het verslag niet heeft opgemerkt;
+- een vals alarm of een onduidelijke conclusie;
+- een verwijzing die volgens u verzonnen is;
+- een probleem bij de installatie of het gebruik;
+- of gewoon dat alles goed werkte.
+
+👉 **[Feedbackformulier](https://docs.google.com/forms/d/e/1FAIpQLSdGEC1njpDohmjYCASNJkWZXOCVrlEYciUxdvNY9QvGGyvTEA/viewform)** — de link staat ook aan het einde van elk verslag, in de taal van het verslag.
+
+Vermeld de betrokken verwijzing en, indien mogelijk, de link naar de officiële bron die het juiste antwoord toont. **Plak nooit een vertrouwelijk document of gegevens over een cliënt.** Elk bevestigd probleem wordt verbeterd en aan de tests van de skill toegevoegd, zodat het zich niet herhaalt.
+
+Hebt u een GitHub-account en bewijst de skill u diensten? Een ster ⭐ op de [projectpagina](https://github.com/marjoas-star/audit-citations-juridiques-be-eu) helpt andere juristen hem te ontdekken.

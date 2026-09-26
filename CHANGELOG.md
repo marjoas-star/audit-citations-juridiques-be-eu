@@ -2,6 +2,8 @@
 
 ## Non publié
 
+- Retours des utilisateurs sans compte GitHub : formulaire de deux minutes en quatre langues (Google Forms, textes dans `retours/FORMULAIRE.md`), lien en fin de chaque rapport dans sa langue (« Votre avis »), dans le message de fin d'audit, les modes d'emploi et les README, avec invitation à mettre une étoile sur GitHub (test ajouté).
+- Version 1.0 redéfinie comme « stable » et non « validée » : non-régression rejouée deux fois (dont une dans Cowork), épreuve sur documents réels, formats figés, essai public d'au moins quatre semaines d'une version 0.9.x, documentation complète (`CONTRIBUTING.md`). Procédure de traitement des retours. Le protocole de validation indépendante devient un objectif facultatif.
 - Possibilité d'utiliser le skill avec ChatGPT (skills des offres Business, Enterprise, Healthcare et Edu ; ChatGPT Work dans l'application de bureau) : section dédiée dans les quatre modes d'emploi, mentions du navigateur rendues neutres dans `SKILL.md`. Non encore testé.
 - Retour du rapport E en néerlandais (0.7.0-beta.1, Cowork) : rapport entièrement localisé, 7 pages au lieu de 9, 3 erreurs sur 3. Corrigé : une traduction fidèle non signalée est une suggestion, non une erreur ; l'édition du Moniteur (« deuxième édition ») est recherchée explicitement pour la correction.
 - Deux archives par version : allégée (30 fichiers, à importer dans Claude) et complète (`-complet`). Liens vers `tests/` remplacés par des adresses GitHub, pour rester valables dans l'archive allégée.

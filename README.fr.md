@@ -45,6 +45,10 @@ Instructions : [SKILL.md](SKILL.md). Modules : `references/`. Convention de donn
 
 Documentation originale sous CC BY-NC-SA 4.0 ; code Python (`scripts/`, `tests/`) sous [PolyForm Noncommercial 1.0.0](LICENSE-CODE.md). Voir [LICENSE](LICENSE). Les sources externes citées conservent leur régime propre. Le dépôt ne redistribue ni les ouvrages de test, ni les PDF juridictionnels, ni les journaux privés de recherche. Maintenu sous le compte GitHub `marjoas-star` ; contributions décrites dans [CONTRIBUTING.md](CONTRIBUTING.md).
 
+## Votre avis
+
+Un problème, une erreur non détectée, ou tout simplement satisfait ? [Formulaire de retour](https://docs.google.com/forms/d/e/1FAIpQLSfQPQXVYSUUx5HGUq20m-ukle7YhquYHlJlACBjdg8oP3EQ6w/viewform) en deux minutes, sans compte GitHub ([NL](https://docs.google.com/forms/d/e/1FAIpQLSdGEC1njpDohmjYCASNJkWZXOCVrlEYciUxdvNY9QvGGyvTEA/viewform), [DE](https://docs.google.com/forms/d/e/1FAIpQLScTwVeTDbksjMzbX2lJ-7Vnc7JcOJOzoC-_EjmsCMBzoLHrPQ/viewform), [EN](https://docs.google.com/forms/d/e/1FAIpQLSfjMg3pOWrlxo6dnVdRbHvz0nSqQSnizGY8b4lv_lHQ6HURFQ/viewform)). Si le skill vous est utile, une étoile ⭐ sur ce dépôt aide à le faire connaître.
+
 ## Participer aux essais
 
 Juristes volontaires : [guide des bêta-testeurs](tests/beta/guide.md) et [fiche de retour](tests/beta/fiche-retour.md). Un parcours accompagné permet de participer sans installation.

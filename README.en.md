@@ -14,4 +14,6 @@ Official sources take priority. Never guess an identifier, equate a failed searc
 
 See [validation](VALIDATION.md) for real trials, simulations and limits. This beta is not a general V1 certification; no overall accuracy percentage is claimed. Professional use requires human review. Original documentation: CC BY-NC-SA 4.0; Python code (`scripts/`, `tests/`): [PolyForm Noncommercial 1.0.0](LICENSE-CODE.md). See [LICENSE](LICENSE). External sources retain their own terms and are not redistributed here.
 
+Feedback: [two-minute form, no GitHub account needed](https://docs.google.com/forms/d/e/1FAIpQLSfjMg3pOWrlxo6dnVdRbHvz0nSqQSnizGY8b4lv_lHQ6HURFQ/viewform). If the skill is useful to you, a star ⭐ on this repository helps others find it.
+
 Beta testing: [instructions for legal reviewers (French)](tests/beta/guide.md) and [feedback form](tests/beta/fiche-retour.md).

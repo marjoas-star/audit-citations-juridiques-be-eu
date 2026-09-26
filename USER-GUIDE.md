@@ -135,4 +135,16 @@ The report is an aid: **review the corrections before carrying them over**, espe
 
 ## 10. Giving feedback
 
-Your feedback as a legal practitioner is valuable, especially when a conclusion seems wrong or unclear to you: use the [feedback form](https://github.com/marjoas-star/audit-citations-juridiques-be-eu/blob/main/tests/beta/fiche-retour.md) (in French) or open an "issue" on the [GitHub repository](https://github.com/marjoas-star/audit-citations-juridiques-be-eu/issues). Never attach a confidential document.
+The skill improves thanks to feedback from the legal practitioners who use it. A two-minute form, **no account needed**, lets you report:
+
+- an error the report did not catch;
+- a false alert or an unclear conclusion;
+- a reference that looks invented to you;
+- a problem installing or using the skill;
+- or simply that everything worked well.
+
+👉 **[Feedback form](https://docs.google.com/forms/d/e/1FAIpQLSfjMg3pOWrlxo6dnVdRbHvz0nSqQSnizGY8b4lv_lHQ6HURFQ/viewform)** — the link is also at the end of every report, in the report's language.
+
+Give the reference concerned and, if possible, the link to the official source showing the right answer. **Never paste a confidential document or client data.** Every confirmed problem is fixed and added to the skill's tests, so that it does not happen again.
+
+Have a GitHub account and find the skill useful? A star ⭐ on the [project page](https://github.com/marjoas-star/audit-citations-juridiques-be-eu) helps other legal practitioners discover it.

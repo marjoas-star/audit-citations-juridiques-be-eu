@@ -135,4 +135,16 @@ Le rapport est une aide : **relisez les corrections avant de les reporter**, en 
 
 ## 10. Donner votre avis
 
-Vos retours de juriste sont précieux, surtout lorsqu'une conclusion vous paraît fausse ou peu claire : utilisez la [fiche de retour](https://github.com/marjoas-star/audit-citations-juridiques-be-eu/blob/main/tests/beta/fiche-retour.md) ou ouvrez un « issue » sur le [dépôt GitHub](https://github.com/marjoas-star/audit-citations-juridiques-be-eu/issues). Ne joignez jamais un document confidentiel.
+Le skill progresse grâce aux retours des juristes qui l'utilisent. Un formulaire de deux minutes, **sans compte à créer**, vous permet de signaler :
+
+- une erreur que le rapport n'a pas vue ;
+- une fausse alerte ou une conclusion peu claire ;
+- une référence qui vous paraît inventée ;
+- une difficulté d'installation ou d'utilisation ;
+- ou simplement que tout a bien fonctionné.
+
+👉 **[Formulaire de retour](https://docs.google.com/forms/d/e/1FAIpQLSfQPQXVYSUUx5HGUq20m-ukle7YhquYHlJlACBjdg8oP3EQ6w/viewform)** — le lien figure aussi à la fin de chaque rapport, dans la langue du rapport.
+
+Indiquez la référence en cause et, si possible, le lien vers la source officielle qui montre la bonne réponse. **Ne collez jamais de document confidentiel ni de donnée de client.** Chaque problème confirmé est corrigé puis ajouté aux tests du skill, pour qu'il ne se reproduise pas.
+
+Vous avez un compte GitHub et le skill vous rend service ? Une étoile ⭐ sur la [page du projet](https://github.com/marjoas-star/audit-citations-juridiques-be-eu) aide d'autres juristes à le découvrir.

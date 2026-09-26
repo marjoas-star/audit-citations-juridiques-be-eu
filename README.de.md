@@ -14,4 +14,6 @@ Amtliche Quellen haben Vorrang; Kennungen werden nicht erraten. Ein technischer 
 
 [VALIDATION.md](VALIDATION.md) trennt reale Prüfungen, Simulationen und Grenzen. Die Beta ist keine allgemeine V1-Zertifizierung; eine allgemeine Genauigkeitsquote wird nicht behauptet. Für professionelle Verwendung bleibt menschliche Prüfung erforderlich. Ursprüngliche Dokumentation: CC BY-NC-SA 4.0; Python-Code (`scripts/`, `tests/`): [PolyForm Noncommercial 1.0.0](LICENSE-CODE.md). Siehe [LICENSE](LICENSE). Externe Quellen unterliegen weiterhin ihren eigenen Bedingungen und werden hier nicht weiterverbreitet.
 
+Rückmeldung: [Formular, zwei Minuten, ohne GitHub-Konto](https://docs.google.com/forms/d/e/1FAIpQLScTwVeTDbksjMzbX2lJ-7Vnc7JcOJOzoC-_EjmsCMBzoLHrPQ/viewform). Ist der Skill für Sie nützlich? Ein Stern ⭐ für dieses Repository hilft anderen, ihn zu finden.
+
 Betatest: [Anleitung für Juristen (Französisch)](tests/beta/guide.md) und [Rückmeldeformular](tests/beta/fiche-retour.md).

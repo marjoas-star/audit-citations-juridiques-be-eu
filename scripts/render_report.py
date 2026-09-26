@@ -16,6 +16,39 @@ def _nl_date(d): return f'{d.day} {LANG["nl"]["months"][d.month - 1]} {d.year}'
 def _de_date(d): return f'{d.day}. {LANG["de"]["months"][d.month - 1]} {d.year}'
 def _en_date(d): return f'{d.day} {LANG["en"]["months"][d.month - 1]} {d.year}'
 
+REPO_URL = 'https://github.com/marjoas-star/audit-citations-juridiques-be-eu'
+FEEDBACK_FORMS = {
+    'fr': 'https://docs.google.com/forms/d/e/1FAIpQLSfQPQXVYSUUx5HGUq20m-ukle7YhquYHlJlACBjdg8oP3EQ6w/viewform',
+    'nl': 'https://docs.google.com/forms/d/e/1FAIpQLSdGEC1njpDohmjYCASNJkWZXOCVrlEYciUxdvNY9QvGGyvTEA/viewform',
+    'de': 'https://docs.google.com/forms/d/e/1FAIpQLScTwVeTDbksjMzbX2lJ-7Vnc7JcOJOzoC-_EjmsCMBzoLHrPQ/viewform',
+    'en': 'https://docs.google.com/forms/d/e/1FAIpQLSfjMg3pOWrlxo6dnVdRbHvz0nSqQSnizGY8b4lv_lHQ6HURFQ/viewform',
+}
+# Closing invitation: (text, link) segments; link None for plain text, 'form' or 'repo' otherwise.
+FEEDBACK = {
+    'fr': ('Votre avis', [('Une erreur non détectée, une fausse alerte, une conclusion peu claire ? ', None),
+                          ('Signalez-le en deux minutes, sans compte', 'form'),
+                          (' (ne joignez aucun document confidentiel). Le rapport vous a été utile ? Dites-le par le même formulaire ou ', None),
+                          ('mettez une étoile au projet sur GitHub', 'repo'), ('.', None)]),
+    'nl': ('Uw mening', [('Een niet-opgemerkte fout, een vals alarm, een onduidelijke conclusie? ', None),
+                         ('Meld het in twee minuten, zonder account', 'form'),
+                         (' (voeg geen vertrouwelijk document toe). Was het verslag nuttig? Laat het weten via hetzelfde formulier of ', None),
+                         ('geef het project een ster op GitHub', 'repo'), ('.', None)]),
+    'de': ('Ihre Meinung', [('Ein nicht erkannter Fehler, ein Fehlalarm, eine unklare Schlussfolgerung? ', None),
+                            ('Melden Sie es in zwei Minuten, ohne Konto', 'form'),
+                            (' (fügen Sie kein vertrauliches Dokument bei). War der Bericht nützlich? Sagen Sie es über dasselbe Formular oder ', None),
+                            ('geben Sie dem Projekt einen Stern auf GitHub', 'repo'), ('.', None)]),
+    'en': ('Your feedback', [('An undetected error, a false alert, an unclear conclusion? ', None),
+                             ('Report it in two minutes, no account needed', 'form'),
+                             (' (do not attach any confidential document). Was the report useful? Say so through the same form or ', None),
+                             ('give the project a star on GitHub', 'repo'), ('.', None)]),
+}
+
+
+def feedback_segments(lang):
+    urls = {'form': FEEDBACK_FORMS[lang], 'repo': REPO_URL}
+    title, parts = FEEDBACK[lang]
+    return title, [(text, urls.get(link)) for text, link in parts]
+
 
 LANG = {
     'fr': {
@@ -167,6 +200,10 @@ def set_language(code):
     if code not in LANG:
         raise ValueError('Langue de rapport non prise en charge : ' + str(code) + ' (fr, nl, de, en)')
     L = LANG[code]
+
+
+def current_language():
+    return next(code for code, table in LANG.items() if table is L)
 
 
 # Characters absent from the bundled Vera fonts, replaced in the PDF only (the Markdown keeps the original text).
@@ -556,6 +593,9 @@ def sections(data):
     yield ('meta', u['skill_version'] + (data.get('skill_version') or data['version']))
     yield ('h2', u['disclaimer'])
     yield ('callout', L['disclaimer'])
+    title, segments = feedback_segments(current_language())
+    yield ('h2', title)
+    yield ('feedback', segments)
     yield ('keep_end', None)
 
 
@@ -579,6 +619,8 @@ def write_markdown(nodes, path):
             result.append('- ' + value)
         elif kind == 'badge':
             result.append(value[0])
+        elif kind == 'feedback':
+            result.append(''.join(f'[{text}]({url})' if url else text for text, url in value))
         elif kind not in ('space', 'page', 'card_start', 'card_end', 'keep_start', 'keep_end'):
             result.append(value)
     path.write_text('\n\n'.join(result) + '\n', encoding='utf-8')
@@ -643,6 +685,9 @@ def write_pdf(nodes, path, data):
             label,url,loc=value
             story.append(Paragraph(f"{L['ui']['proof']}{' :' if L is LANG['fr'] else ':'} " + f'<link href="{escape(url,quote=True)}" color="{teal}">{escape(pdf_text(label))}</link> — {escape(pdf_text(loc))}.', styles['link']))
             story.append(paragraph(url, 'url'))
+        elif kind == 'feedback':
+            story.append(Paragraph(''.join(f'<link href="{escape(url, quote=True)}" color="{teal}"><u>{escape(pdf_text(text))}</u></link>' if url else escape(pdf_text(text))
+                                           for text, url in value), styles['p']))
         elif kind == 'bullet':
             story.append(paragraph('• ' + value))
         elif kind == 'badge':

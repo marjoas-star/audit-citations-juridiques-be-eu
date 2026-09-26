@@ -14,4 +14,6 @@ Officiële bronnen krijgen voorrang. Identificatoren worden niet geraden. Een te
 
 Zie [VALIDATION.md](VALIDATION.md) voor echte proeven, simulaties en beperkingen. Deze bèta is geen algemene V1-certificering; er wordt geen algemeen betrouwbaarheidspercentage gegeven. Menselijke controle blijft nodig voor professioneel gebruik. Oorspronkelijke documentatie: CC BY-NC-SA 4.0; Python-code (`scripts/`, `tests/`): [PolyForm Noncommercial 1.0.0](LICENSE-CODE.md). Zie [LICENSE](LICENSE). Externe bronnen behouden hun eigen voorwaarden en worden hier niet verspreid.
 
+Feedback: [formulier van twee minuten, zonder GitHub-account](https://docs.google.com/forms/d/e/1FAIpQLSdGEC1njpDohmjYCASNJkWZXOCVrlEYciUxdvNY9QvGGyvTEA/viewform). Is de skill nuttig voor u? Een ster ⭐ op deze repository helpt anderen hem te vinden.
+
 Bètatest: [instructies voor juristen (Frans)](tests/beta/guide.md) en [feedbackformulier](tests/beta/fiche-retour.md).

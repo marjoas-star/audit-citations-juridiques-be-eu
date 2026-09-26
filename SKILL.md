@@ -198,7 +198,7 @@ Donner des compteurs réels (« 31 sources sur 57 vérifiées », « 14 citation
 
 ### Fin de l'audit
 
-Commencer par ce que le juriste doit faire : corrections établies, puis points à vérifier lui-même, puis ce qui est confirmé. Rappeler en une phrase qu'une référence « non vérifiable » n'est pas pour autant erronée. Indiquer où se trouvent le rapport et ses fichiers.
+Commencer par ce que le juriste doit faire : corrections établies, puis points à vérifier lui-même, puis ce qui est confirmé. Rappeler en une phrase qu'une référence « non vérifiable » n'est pas pour autant erronée. Indiquer où se trouvent le rapport et ses fichiers. Terminer par une phrase invitant à signaler un problème ou à dire que l'audit a été utile, avec le lien du formulaire de retour dans la langue de l'utilisateur (adresses dans `FEEDBACK_FORMS` de `scripts/render_report.py` ; le rapport généré le reprend en fin de document) ; sans compte, et sans jamais joindre de document confidentiel.
 
 ## 11. Rapport
 

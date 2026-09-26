@@ -1,6 +1,6 @@
 # Protocole prospectif de validation V1
 
-Version du protocole : 1, 24 septembre 2026. Statut : préparé, campagne non commencée. Ces seuils sont des choix de projet ; ils ne constituent ni une norme professionnelle ni une certification externe. La bêta publiée reste inchangée.
+Version du protocole : 1, 24 septembre 2026. Statut : préparé, campagne non commencée. Depuis le 26 septembre 2026, ce protocole ne conditionne plus la version 1.0, définie comme « stable » dans `CONTRIBUTING.md` ; il reste un objectif facultatif si des évaluateurs indépendants se proposent. Ces seuils sont des choix de projet ; ils ne constituent ni une norme professionnelle ni une certification externe. La bêta publiée reste inchangée.
 
 ## Objet et conditions de validité
 

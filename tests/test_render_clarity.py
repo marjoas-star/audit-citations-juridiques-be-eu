@@ -88,6 +88,18 @@ class ClarityTests(unittest.TestCase):
         d = sample(); d['report_language'] = 'es'
         with self.assertRaises(ValueError): renderer.validate(d)
 
+    def test_report_ends_with_feedback_invitation_in_its_language(self):
+        for code in ('fr', 'nl', 'de', 'en'):
+            d = sample(); d['report_language'] = code
+            nodes = list(renderer.sections(renderer.validate(d)))
+            self.assertEqual(nodes[-2][0], 'feedback', code)
+            urls = [url for _, url in nodes[-2][1] if url]
+            self.assertEqual(urls, [renderer.FEEDBACK_FORMS[code], renderer.REPO_URL])
+            self.assertEqual(len(set(renderer.FEEDBACK_FORMS.values())), 4)
+            with tempfile.TemporaryDirectory() as tmp:
+                renderer.write_markdown(nodes, Path(tmp) / 'r.md')
+                self.assertIn('](' + renderer.FEEDBACK_FORMS[code] + ')', (Path(tmp) / 'r.md').read_text(encoding='utf-8'))
+
     def test_confirmed_references_go_to_compact_annex(self):
         d = sample(); r = d['records'][0]
         r.update(status='VERIFIED', checks=['Intitulé'], limits='', sources=[dict(label='Source', url='https://example.org', locator='art. 1', language='FR')])

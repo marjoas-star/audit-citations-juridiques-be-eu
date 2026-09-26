@@ -135,4 +135,16 @@ Der Bericht ist ein Hilfsmittel: **Lesen Sie die Korrekturen durch, bevor Sie si
 
 ## 10. Ihre Meinung
 
-Ihre Rückmeldungen als Juristin oder Jurist sind wertvoll, vor allem wenn Ihnen eine Schlussfolgerung falsch oder unklar erscheint: Verwenden Sie das [Rückmeldeformular](https://github.com/marjoas-star/audit-citations-juridiques-be-eu/blob/main/tests/beta/fiche-retour.md) (auf Französisch) oder eröffnen Sie ein „Issue“ im [GitHub-Repository](https://github.com/marjoas-star/audit-citations-juridiques-be-eu/issues). Fügen Sie niemals ein vertrauliches Dokument bei.
+Der Skill wird dank der Rückmeldungen der Juristinnen und Juristen besser, die ihn nutzen. Mit einem Formular von zwei Minuten, **ohne Konto**, können Sie melden:
+
+- einen Fehler, den der Bericht nicht erkannt hat;
+- einen Fehlalarm oder eine unklare Schlussfolgerung;
+- eine Fundstelle, die Ihnen erfunden erscheint;
+- ein Problem bei Installation oder Nutzung;
+- oder einfach, dass alles gut funktioniert hat.
+
+👉 **[Rückmeldeformular](https://docs.google.com/forms/d/e/1FAIpQLScTwVeTDbksjMzbX2lJ-7Vnc7JcOJOzoC-_EjmsCMBzoLHrPQ/viewform)** — der Link steht auch am Ende jedes Berichts, in der Sprache des Berichts.
+
+Geben Sie die betroffene Fundstelle an und, wenn möglich, den Link zur amtlichen Quelle, die die richtige Antwort zeigt. **Fügen Sie niemals ein vertrauliches Dokument oder Mandantendaten ein.** Jedes bestätigte Problem wird behoben und in die Tests des Skills aufgenommen, damit es sich nicht wiederholt.
+
+Sie haben ein GitHub-Konto und der Skill ist Ihnen nützlich? Ein Stern ⭐ auf der [Projektseite](https://github.com/marjoas-star/audit-citations-juridiques-be-eu) hilft anderen, ihn zu entdecken.
