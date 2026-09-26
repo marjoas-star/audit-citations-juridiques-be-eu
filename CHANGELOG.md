@@ -1,6 +1,6 @@
 # Notes de version
 
-## 0.9.0-rc.3 — 27 septembre 2026
+## 0.9.0-rc.3 — 26 septembre 2026
 
 Corrections issues des deux passages de non-régression sur la 0.9.0-rc.2 (Cowork et agents : 44 erreurs introduites sur 44 détectées, une fausse alerte mineure en B).
 
