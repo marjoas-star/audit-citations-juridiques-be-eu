@@ -2,6 +2,7 @@
 
 ## Non publié
 
+- Modes d'emploi et page d'installation : mise à jour par « Remplacer » (menu ⋮ de la fiche du skill) au lieu de supprimer puis réimporter.
 - Rapports plus courts sans perte d'information : une référence qui appelle une correction n'est présentée qu'une fois, avec sa correction ; une même preuve n'est plus répétée ; tableau récapitulatif et listes plus compacts ; le générateur compte les pages et signale un dépassement de la cible ; budget de 120 mots pour la synthèse ; raccourcir et relancer une fois devient obligatoire. Sur les rapports du bêta-test : B 14 → 11 pages, D 11 → 9, E 7 → 6, sans réécriture du contenu.
 - Retours des utilisateurs sans compte GitHub : formulaire de deux minutes en quatre langues (Google Forms, textes dans `retours/FORMULAIRE.md`), lien en fin de chaque rapport dans sa langue (« Votre avis »), dans le message de fin d'audit, les modes d'emploi et les README, avec invitation à mettre une étoile sur GitHub (test ajouté).
 - Version 1.0 redéfinie comme « stable » et non « validée » : non-régression rejouée deux fois (dont une dans Cowork), épreuve sur documents réels, formats figés, essai public d'au moins quatre semaines d'une version 0.9.x, documentation complète (`CONTRIBUTING.md`). Procédure de traitement des retours. Le protocole de validation indépendante devient un objectif facultatif.

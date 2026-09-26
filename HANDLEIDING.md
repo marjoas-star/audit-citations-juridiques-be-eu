@@ -34,6 +34,8 @@ De skill werkt ook in een gewoon Claude-gesprek en in Claude Code; de instelling
 
 De skill is dan beschikbaar in Cowork en in gewone gesprekken. Officiële hulp (in het Engels): [Use skills in Claude](https://support.claude.com/en/articles/12512180-use-skills-in-claude).
 
+**Een nieuwe versie installeren.** Download het nieuwe archief (zelfde knop), open dan in de instellingen onder **Skills** de fiche van de skill, menu **⋮** › **Vervangen** (optie met het pijltje omhoog, « Replace » in de Engelse interface) en kies het `.zip`-bestand. De oude versie hoeft u niet te verwijderen. De geïnstalleerde versie staat aan het einde van elk verslag (« Versie van de skill »); de vermelding « v1 » op de fiche is een teller van de app zelf.
+
 **In Claude Code** (tabblad "Code" van de desktopapp) is de eenvoudigste manier het aan Claude te vragen: "Installeer voor al mijn projecten de skill uit de GitHub-repository marjoas-star/audit-citations-juridiques-be-eu (laatst gepubliceerde versie)."
 
 ### Gebruikt u ChatGPT in plaats van Claude?

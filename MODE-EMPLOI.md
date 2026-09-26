@@ -34,6 +34,8 @@ Le skill fonctionne aussi dans une conversation Claude ordinaire et dans Claude 
 
 Le skill est alors disponible dans Cowork comme dans les conversations ordinaires. Aide officielle : [Use skills in Claude](https://support.claude.com/en/articles/12512180-use-skills-in-claude).
 
+**Installer une nouvelle version.** Téléchargez la nouvelle archive (même bouton), puis dans **Paramètres › Compétences**, ouvrez la fiche du skill, menu **⋮** › **Remplacer**, et choisissez le fichier `.zip`. Inutile de supprimer l'ancienne version. La version installée est indiquée à la fin de chaque rapport (« Version du skill ») ; la mention « v1 » de la fiche est un compteur propre à l'application.
+
 **Dans Claude Code** (onglet « Code » de l'application de bureau), le plus simple est de le demander à Claude : « Installe pour tous mes projets le skill du dépôt GitHub marjoas-star/audit-citations-juridiques-be-eu (dernière version publiée). »
 
 ### Vous utilisez ChatGPT plutôt que Claude ?
