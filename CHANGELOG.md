@@ -1,5 +1,9 @@
 # Notes de version
 
+## Non publié
+
+- Modes d'emploi et page d'installation : « Remplacer » ne met pas le contenu à jour (essai du 26 septembre 2026, la fiche se dit mise à jour mais garde l'ancienne version) ; retour à « Supprimer » puis réimporter, avec vérification de la version dans l'onglet Contenu de la fiche.
+
 ## 0.9.0-rc.1 — 26 septembre 2026
 
 Version candidate pour les essais de stabilité qui conditionnent la 1.0 (voir `CONTRIBUTING.md`) : formulaire de retour sans compte, rapports plus courts sans perte d'information, mise à jour par « Remplacer », règle sur les traductions, possibilité d'utiliser ChatGPT (non testée). Pré-version : la 0.7.0-beta.1 reste la version proposée par défaut.

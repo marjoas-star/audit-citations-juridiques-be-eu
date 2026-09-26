@@ -34,7 +34,7 @@ Der Skill funktioniert auch in einer gewöhnlichen Claude-Unterhaltung und in Cl
 
 Der Skill steht dann sowohl in Cowork als auch in gewöhnlichen Unterhaltungen zur Verfügung. Offizielle Hilfe (auf Englisch): [Use skills in Claude](https://support.claude.com/en/articles/12512180-use-skills-in-claude).
 
-**Eine neue Version installieren.** Laden Sie das neue Archiv herunter (gleiche Schaltfläche), öffnen Sie dann in den Einstellungen unter **Skills** die Seite des Skills, Menü **⋮** › **Ersetzen** (Option mit dem Pfeil nach oben, „Replace“ in der englischen Oberfläche) und wählen Sie die `.zip`-Datei. Die alte Version müssen Sie nicht löschen. Die installierte Version steht am Ende jedes Berichts („Version des Skills“); die Angabe „v1“ auf der Seite ist ein Zähler der App.
+**Eine neue Version installieren.** Laden Sie das neue Archiv herunter (gleiche Schaltfläche). Öffnen Sie in den Einstellungen unter **Skills** die Seite des Skills, Menü **⋮** › **Löschen**, und wiederholen Sie dann die Schritte 3 bis 5. Verwenden Sie nicht „Ersetzen“ („Replace“): Bei unseren Tests (September 2026) meldet die Seite eine Aktualisierung, behält aber den alten Inhalt. Um die installierte Version zu prüfen, öffnen Sie die Registerkarte **Inhalt** der Seite, Datei `SKILL.md`: Die Version steht unter dem Titel (die Angabe „v1“ auf der Seite ist ein Zähler der App). Sie steht auch am Ende jedes Berichts.
 
 **In Claude Code** (Registerkarte „Code“ der Desktop-App) ist es am einfachsten, Claude darum zu bitten: „Installiere für alle meine Projekte den Skill aus dem GitHub-Repository marjoas-star/audit-citations-juridiques-be-eu (neueste veröffentlichte Version).“
 
