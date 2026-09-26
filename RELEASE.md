@@ -1,4 +1,4 @@
-# Publication 0.9.0-rc.1
+# Publication 0.9.0-rc.2
 
 Canal : version candidate (pré-version), pour les essais de stabilité définis dans `CONTRIBUTING.md` ; la 0.7.0-beta.1 reste la version proposée par défaut. Public visé : juristes utilisant Claude, en particulier Claude Cowork avec l'application de bureau.
 

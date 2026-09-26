@@ -80,7 +80,7 @@ LANG = {
                'correction': 'Correction : ', 'passage': 'Passage source : ', 'references': 'Références et contrôles',
                'heads': ['Source / référence', 'Emplacements', 'Résultat'], 'cited': 'Référence citée : ',
                'cited_short': 'Référence citée (abrégée) : ', 'exact': 'Référence exacte : ', 'limit': 'Limite : ',
-               'attribution': 'Attribution', 'version': 'Version', 'translation': 'Traduction', 'quote': ' · citation : ',
+               'other_version': 'Texte d’une autre version que celle applicable', 'other_version_short': 'autre version', 'attribution': 'Attribution', 'version': 'Version', 'translation': 'Traduction', 'quote': ' · citation : ',
                'fix_above': ' · correction nécessaire (voir ci-dessus)', 'confirmed': 'Références confirmées sans réserve',
                'one_quote': ' Citation conforme.', 'n_quotes': ' {} citations conformes.', 'suggestions': 'Suggestions facultatives',
                'limits': 'Limites et traçabilité', 'method': 'Méthode suivie', 'skill_version': 'Version du skill : ',
@@ -115,7 +115,7 @@ LANG = {
                'correction': 'Correctie: ', 'passage': 'Passage uit de bron: ', 'references': 'Verwijzingen en controles',
                'heads': ['Bron / verwijzing', 'Vindplaatsen', 'Resultaat'], 'cited': 'Geciteerde verwijzing: ',
                'cited_short': 'Geciteerde verwijzing (verkort): ', 'exact': 'Juiste verwijzing: ', 'limit': 'Beperking: ',
-               'attribution': 'Toeschrijving', 'version': 'Versie', 'translation': 'Vertaling', 'quote': ' · citaat: ',
+               'other_version': 'Tekst van een andere versie dan de toepasselijke', 'other_version_short': 'andere versie', 'attribution': 'Toeschrijving', 'version': 'Versie', 'translation': 'Vertaling', 'quote': ' · citaat: ',
                'fix_above': ' · correctie nodig (zie hierboven)', 'confirmed': 'Zonder voorbehoud bevestigde verwijzingen',
                'one_quote': ' Citaat conform.', 'n_quotes': ' {} citaten conform.', 'suggestions': 'Facultatieve suggesties',
                'limits': 'Beperkingen en traceerbaarheid', 'method': 'Gevolgde methode', 'skill_version': 'Versie van de skill: ',
@@ -150,7 +150,7 @@ LANG = {
                'correction': 'Korrektur: ', 'passage': 'Belegstelle: ', 'references': 'Fundstellen und Prüfungen',
                'heads': ['Quelle / Fundstelle', 'Stellen im Dokument', 'Ergebnis'], 'cited': 'Zitierte Fundstelle: ',
                'cited_short': 'Zitierte Fundstelle (verkürzt): ', 'exact': 'Zutreffende Fundstelle: ', 'limit': 'Einschränkung: ',
-               'attribution': 'Zuordnung', 'version': 'Fassung', 'translation': 'Übersetzung', 'quote': ' · Zitat: ',
+               'other_version': 'Text einer anderen als der anwendbaren Fassung', 'other_version_short': 'andere Fassung', 'attribution': 'Zuordnung', 'version': 'Fassung', 'translation': 'Übersetzung', 'quote': ' · Zitat: ',
                'fix_above': ' · Korrektur erforderlich (siehe oben)', 'confirmed': 'Ohne Vorbehalt bestätigte Fundstellen',
                'one_quote': ' Zitat übereinstimmend.', 'n_quotes': ' {} Zitate übereinstimmend.', 'suggestions': 'Fakultative Vorschläge',
                'limits': 'Grenzen und Nachvollziehbarkeit', 'method': 'Vorgehen', 'skill_version': 'Version des Skills: ',
@@ -185,7 +185,7 @@ LANG = {
                'correction': 'Correction: ', 'passage': 'Source passage: ', 'references': 'References and checks',
                'heads': ['Source / reference', 'Locations', 'Result'], 'cited': 'Reference as cited: ',
                'cited_short': 'Reference as cited (abridged): ', 'exact': 'Correct reference: ', 'limit': 'Limitation: ',
-               'attribution': 'Attribution', 'version': 'Version', 'translation': 'Translation', 'quote': ' · quotation: ',
+               'other_version': 'Text of a version other than the applicable one', 'other_version_short': 'other version', 'attribution': 'Attribution', 'version': 'Version', 'translation': 'Translation', 'quote': ' · quotation: ',
                'fix_above': ' · correction needed (see above)', 'confirmed': 'References confirmed without reservation',
                'one_quote': ' Quotation matches.', 'n_quotes': ' {} quotations match.', 'suggestions': 'Optional suggestions',
                'limits': 'Limitations and traceability', 'method': 'Method', 'skill_version': 'Skill version: ',
@@ -277,9 +277,9 @@ QUOTE_OK = ('EXACT', 'EXACT_WITH_SIGNALLED_ADAPTATIONS')
 def reference_label(r, data):
     # A correct reference whose quotation deviates must not read as a clean result.
     label = L['status'][r['status']]
-    quotes = [q for q in data['quotations'] if q['record_id'] == r['id'] and q['status'] in L['quote_short']]
+    quotes = [q for q in data['quotations'] if q['record_id'] == r['id'] and (q['status'] in L['quote_short'] or q.get('applicable_version') is False)]
     if quotes:
-        label += L['ui']['quote'] + ' ; '.join(dict.fromkeys(L['quote_short'][q['status']] for q in quotes))
+        label += L['ui']['quote'] + ' ; '.join(dict.fromkeys(L['ui']['other_version_short'] if q.get('applicable_version') is False else L['quote_short'][q['status']] for q in quotes))
     elif r['status'] == 'VERIFIED' and any(f.get('kind') == 'error' for f in r.get('findings', [])):
         label += L['ui']['fix_above']
     return label
@@ -290,7 +290,7 @@ def reference_tone(r, data):
     if r['status'] in ('VERIFIED_WITH_ANOMALY', 'NOT_FOUND_OR_CONTRADICTORY') or any(f.get('kind') == 'error' for f in r.get('findings', [])) \
             or any(q['status'] == 'INEXACT' or q['integrity'] == 'MISLEADING' for q in quotes):
         return 'bad'
-    if r['status'] == 'PARTIALLY_VERIFIED' or any(q['status'] == 'MINOR_DEVIATION' for q in quotes):
+    if r['status'] == 'PARTIALLY_VERIFIED' or any(q['status'] == 'MINOR_DEVIATION' or q.get('applicable_version') is False for q in quotes):
         return 'warn'
     if r['status'] == 'NOT_VERIFIABLE_WITH_ACCESSIBLE_SOURCES':
         return 'muted'
@@ -300,7 +300,7 @@ def reference_tone(r, data):
 def quote_tone(q):
     if q['status'] == 'INEXACT' or q['integrity'] == 'MISLEADING':
         return 'bad'
-    if q['status'] in ('MINOR_DEVIATION', 'NOT_APPLICABLE_TRANSLATION') or q['integrity'] == 'MATERIAL_BUT_NOT_MISLEADING':
+    if q['status'] in ('MINOR_DEVIATION', 'NOT_APPLICABLE_TRANSLATION') or q['integrity'] == 'MATERIAL_BUT_NOT_MISLEADING' or q.get('applicable_version') is False:
         return 'warn'
     if q['status'] == 'NOT_VERIFIABLE':
         return 'muted'
@@ -311,7 +311,8 @@ def clean_record(r, data):
     # Confirmed without reservation: shown as a compact annex line instead of a full card.
     # Optional suggestions do not prevent it: they are listed in their own section.
     return (r['status'] == 'VERIFIED' and not any(f['kind'] == 'error' for f in r.get('findings', [])) and not r['limits'] and not r.get('notes')
-            and all(q['status'] in QUOTE_OK and q['integrity'] == 'FAITHFUL' for q in data['quotations'] if q['record_id'] == r['id']))
+            and all(q['status'] in QUOTE_OK and q['integrity'] == 'FAITHFUL' and q.get('applicable_version') is not False
+                    for q in data['quotations'] if q['record_id'] == r['id']))
 
 
 def human_date(value):
@@ -515,7 +516,10 @@ def record_body(r, data):
     for note in r.get('notes', []): yield ('p', clean_prose(note))
     for q in (q for q in data['quotations'] if q['record_id'] == r['id']):
         yield ('meta', q['title'] + ' · ' + q['location'])
-        yield ('badge', (L['text'][q['status']] + ' · ' + L['integrity'][q['integrity']], quote_tone(q)))
+        if q.get('applicable_version') is False:
+            yield ('badge', (L['ui']['other_version'], 'warn'))
+        else:
+            yield ('badge', (L['text'][q['status']] + ' · ' + L['integrity'][q['integrity']], quote_tone(q)))
         yield ('p', clean_prose(q['comparison']))
         yield ('p', clean_prose(q['context']))
         for key in ('attribution', 'temporal_assessment', 'translation_assessment'):

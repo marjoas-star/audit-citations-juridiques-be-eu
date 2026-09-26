@@ -1,4 +1,8 @@
-# Validation publique — 0.9.0-rc.1
+# Validation publique — 0.9.0-rc.2
+
+26 septembre 2026. Second passage de non-régression sur la 0.9.0-rc.1, par cinq agents à contexte neuf (extraits v2 A à E, navigateur intégré, sans accès aux corrigés, empreintes du skill identiques avant et après) : 22 erreurs introduites sur 22 détectées, aucune fausse alerte de fond, rapports de 6 à 8 pages (cible dépassée d'une page pour A, B et D). Critère T53 conforme (A, D). Un écart grave : lecture de HUDOC par une adresse interne derrière une vérification anti-robot (C) ; règle 8 durcie dans cette version. Passages Cowork à faire sur cette version.
+
+## Historique — 0.9.0-rc.1
 
 26 septembre 2026. Version candidate : les essais de stabilité qui conditionnent la 1.0 (non-régression rejouée deux fois, documents réels, formats figés, essai public) sont à exécuter sur cette version ; leurs résultats seront consignés ici. Générateur : 38 tests automatisés, dont la présentation unique d'une référence corrigée, l'absence de preuve répétée et le lien de retour dans la langue du rapport. Rapports du bêta-test régénérés avec la nouvelle mise en page : B 14 → 11 pages, D 11 → 9, E 7 → 6, contenu inchangé.
 

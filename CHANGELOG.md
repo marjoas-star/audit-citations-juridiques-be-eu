@@ -1,8 +1,17 @@
 # Notes de version
 
-## Non publié
+## 0.9.0-rc.2 — 26 septembre 2026
 
+Corrections issues du second passage de non-régression de la 0.9.0-rc.1 (cinq agents à l'aveugle : 22 erreurs sur 22, aucune fausse alerte de fond, rapports de 6 à 8 pages ; évaluation dans le dossier du coordinateur).
+
+- Règles 1 et 8 : une adresse tirée du code d'un site n'est pas une adresse affichée ; face à une vérification anti-robot, s'arrêter, noter l'accès bloqué et proposer au juriste de la valider lui-même dans le navigateur (un agent avait lu HUDOC par une adresse d'export interne). Module CEDH aligné.
+- Effet sur le sens : un changement de mots touchant un délai, une condition, une exception, une négation, une obligation ou la personne visée est trompeur et critique, sauf portée identique établie.
+- Citation fidèle d'une version non applicable : champ `applicable_version: false`, affiché « Texte d'une autre version » et non « Sens préservé » (test ajouté).
+- Traduction non signalée : suggestion seulement si la source n'existe pas officiellement dans la langue du document ; sinon erreur, avec le texte officiel.
+- Règle 8 précisée après un passage dans Cowork : le navigateur de l'application de bureau, qui consulte depuis la connexion de l'utilisateur, est la voie normale, non un changement d'origine ; seul un intermédiaire (proxy, VPN, service tiers) en est un. Plusieurs documents : l'un après l'autre, sans agents parallèles partageant le navigateur.
+- Date sans consigne : borne = la plus tardive de toutes les dates du document. Écarts aux règles cardinales reportés dans les limites du rapport. Le raccourcissement ne réduit jamais une correction prête à coller, un passage probant ou une précision de localisation.
 - Modes d'emploi et page d'installation : « Remplacer » ne met pas le contenu à jour (essai du 26 septembre 2026, la fiche se dit mise à jour mais garde l'ancienne version) ; retour à « Supprimer » puis réimporter, avec vérification de la version dans l'onglet Contenu de la fiche.
+
 
 ## 0.9.0-rc.1 — 26 septembre 2026
 

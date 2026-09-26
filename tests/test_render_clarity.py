@@ -112,6 +112,16 @@ class ClarityTests(unittest.TestCase):
         d = sample(); d['summary'] = 'mot ' * 130
         self.assertTrue(any('synthèse' in w for w in renderer.length_warnings(d)))
 
+    def test_quotation_of_other_version_not_shown_as_preserved(self):
+        d = sample(); r = d['records'][0]
+        r.update(status='VERIFIED', checks=['Intitulé'], sources=[dict(label='Source', url='https://example.org', locator='art. 1', language='FR')])
+        d['quotations'] = [dict(id='Q1', record_id='R1', title='Citation', location='Page 1', status='EXACT', integrity='FAITHFUL',
+                                applicable_version=False, comparison='Mots de la version antérieure.', context='Portée changée.')]
+        text = str(list(renderer.sections(renderer.validate(d))))
+        self.assertIn('Texte d’une autre version que celle applicable', text)
+        self.assertNotIn('Sens préservé', text)
+        self.assertIn('citation : autre version', text)
+
     def test_confirmed_references_go_to_compact_annex(self):
         d = sample(); r = d['records'][0]
         r.update(status='VERIFIED', checks=['Intitulé'], limits='', sources=[dict(label='Source', url='https://example.org', locator='art. 1', language='FR')])
