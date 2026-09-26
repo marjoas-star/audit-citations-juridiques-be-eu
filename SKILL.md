@@ -12,7 +12,7 @@ description: >
 
 # Audit des citations juridiques — Belgique & Europe
 
-Version du skill : `0.9.0-rc.2` (à reporter dans le champ `skill_version` du rapport).
+Version du skill : `0.9.0-rc.3` (à reporter dans le champ `skill_version` du rapport).
 
 ## 1. Objet
 
@@ -155,7 +155,7 @@ Travail natif en FR, NL, DE, EN. Distinguer `document_language`, `citation_langu
 
 - Toujours conserver `original` (copié littéralement) et `verified` ; la normalisation va dans le corrigé. Respecter la convention et la langue du document dans la formulation prête à reprendre.
 - Ne proposer une correction que lorsqu'elle est établie ; ne jamais transformer « non vérifié » en « corrigé » par approximation.
-- Séparer erreurs établies et suggestions : une paraphrase susceptible d'être complétée n'est pas, à elle seule, une citation fautive.
+- Séparer erreurs établies et suggestions : une paraphrase susceptible d'être complétée n'est pas, à elle seule, une citation fautive. Une affirmation **exacte à la date retenue** mais qui pourrait être précisée (par exemple une faculté qui existait déjà avant la date mentionnée, une formule simplifiée sans erreur) est une suggestion, jamais une correction. Une correction suppose une affirmation fausse à la date retenue.
 - Après correction, vérifier les marqueurs chronologiques (« déjà », « récemment », « depuis ») affectés par la nouvelle source.
 - Une erreur répétée garde un identifiant de constat unique ; ses occurrences restent localisées. Une occurrence qui reprend correctement la référence (*ibid.*, « précité », renvoi) est dite exacte dans sa fiche, même si la référence d'origine est à corriger.
 - **Correction complète.** La formulation prête à coller reprend tous les éléments officiels de la référence corrigée, y compris ceux que l'auteur avait omis ou mal rendus (édition du Moniteur lorsque la fiche Justel ou le Moniteur l'indique, par exemple « deuxième édition » / « tweede editie » : la rechercher explicitement ; chambre ; numéro de rôle). Lorsque l'origine de l'erreur est manifeste (date d'entrée en vigueur prise pour la date de publication, numéro de rôle pris pour un numéro d'arrêt), l'indiquer en une phrase : cela aide le juriste à éviter la même erreur ailleurs.
@@ -212,7 +212,7 @@ Présentation selon [report-template.md](templates/report-template.md) :
 - statuts en langage courant dans la langue du rapport, codes techniques réservés aux données et traces ;
 - expliquer ce qui a été contrôlé sans supposer que le lecteur connaît le schéma ;
 - conserver datation, synthèse, périmètre, corrections, preuves, limites et contrôle des citations ; diagnostic, extrait probant et correction restent réunis ;
-- adapter la longueur : viser 5 à 6 pages pour une douzaine de sources, avec une synthèse de quelques phrases, des contrôles d'une ligne, des constats de deux phrases et des passages probants limités aux mots qui prouvent (voir [report-rendering.md](templates/report-rendering.md)) ; aucune page distincte imposée par rubrique. Si le générateur signale des champs trop longs ou un rapport au-delà de la cible, raccourcir les champs signalés et relancer **une fois** avant de livrer, sans jamais supprimer une correction, une preuve ou une limite, ni réduire une formulation prête à coller ou un passage probant à un simple renvoi, ni retirer une précision de localisation établie ;
+- adapter la longueur : viser 5 à 6 pages pour une douzaine de sources, avec une synthèse de quelques phrases, des contrôles d'une ligne, des constats de deux phrases et des passages probants limités aux mots qui prouvent (voir [report-rendering.md](templates/report-rendering.md)) ; aucune page distincte imposée par rubrique. Si le générateur signale des champs trop longs ou un rapport au-delà de la cible, raccourcir les champs signalés et relancer **une fois** avant de livrer, sans jamais supprimer une correction, une preuve ou une limite (y compris les limites générales de la section « Limites »), ni réduire une formulation prête à coller ou un passage probant à un simple renvoi, ni retirer une précision de localisation établie ;
 - pour un audit significatif, montrer le travail accompli : occurrences, sources uniques, vérifiées/partielles/non vérifiables, citations contrôlées, anomalies ;
 - pour une citation adaptée, présenter séparément fidélité textuelle, adaptations détectées, adaptations signalées ou non, intégrité et effet sur le sens ;
 - aucun pourcentage de fiabilité déduit du nombre de références retrouvées ;

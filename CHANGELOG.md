@@ -1,5 +1,12 @@
 # Notes de version
 
+## 0.9.0-rc.3 — 27 septembre 2026
+
+Corrections issues des deux passages de non-régression sur la 0.9.0-rc.2 (Cowork et agents : 44 erreurs introduites sur 44 détectées, une fausse alerte mineure en B).
+
+- Une affirmation exacte à la date retenue mais qui pourrait être précisée est une suggestion, jamais une correction (fausse alerte sur le règlement sur les données, art. 29, § 2).
+- Rappel : le raccourcissement ne supprime jamais une limite, y compris les limites générales.
+
 ## 0.9.0-rc.2 — 26 septembre 2026
 
 Corrections issues du second passage de non-régression de la 0.9.0-rc.1 (cinq agents à l'aveugle : 22 erreurs sur 22, aucune fausse alerte de fond, rapports de 6 à 8 pages ; évaluation dans le dossier du coordinateur).

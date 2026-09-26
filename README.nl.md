@@ -2,7 +2,7 @@
 
 > **Juristen:** een stapsgewijze [handleiding](HANDLEIDING.md) legt uit hoe u de skill installeert, welke toegang Claude nodig heeft, hoe lang een audit duurt en hoe u het rapport leest.
 
-**0.9.0-rc.2, kandidaat-versie (stabiliteitstest vóór 1.0).** Deze skill begeleidt een agent bij de controle van verwijzingen, citaten en interne verwijzingen in Belgische, EU- en EVRM-documenten. De instructies zijn in het Frans; werktalen zijn FR/NL/DE/EN.
+**0.9.0-rc.3, kandidaat-versie (stabiliteitstest vóór 1.0).** Deze skill begeleidt een agent bij de controle van verwijzingen, citaten en interne verwijzingen in Belgische, EU- en EVRM-documenten. De instructies zijn in het Frans; werktalen zijn FR/NL/DE/EN.
 
 Pak het release-archief uit en installeer de map `audit-citations-juridiques-be-eu` via het skillmechanisme van de gebruikte toepassing. Voor Codex: onder `~/.codex/skills/`, of de skills-map van het ingestelde CODEX_HOME. Voor Claude Code: onder `~/.claude/skills/` (alle projecten) of `.claude/skills/` van een project; in de Claude-app een zip van de map uploaden via de Skills-instellingen. Behoud de submappen. Startbestand: `SKILL.md`.
 

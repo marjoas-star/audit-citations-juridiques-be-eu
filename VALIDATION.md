@@ -1,4 +1,8 @@
-# Validation publique — 0.9.0-rc.2
+# Validation publique — 0.9.0-rc.3
+
+27 septembre 2026. Condition 1 (non-régression) sur la 0.9.0-rc.2 : passage Cowork (cinq extraits dans une seule tâche, dates des fiches non transmises) 22/22 sans fausse alerte, rapports de 5 à 7 pages ; passage par agents à contexte neuf, un à la fois, 22/22 avec une fausse alerte mineure (B, règlement sur les données) et deux limites supprimées au raccourcissement (B). La rc.3 corrige ces deux points ; l'extrait B est rejoué sur la rc.3 (Cowork et agent), les autres extraits restent validés sur la rc.2, les modifications ne touchant que la qualification d'une affirmation exacte et le raccourcissement. Condition 2 (documents réels) : trois documents audités dans Cowork sur la rc.2 (arrêt C.E. n° 266.935, avis 78.822/1, R.C.J.B. 1999 p. 691-729), 152 références ; contrôle de 20 références tirées au hasard en cours.
+
+## Historique — 0.9.0-rc.2
 
 26 septembre 2026. Second passage de non-régression sur la 0.9.0-rc.1, par cinq agents à contexte neuf (extraits v2 A à E, navigateur intégré, sans accès aux corrigés, empreintes du skill identiques avant et après) : 22 erreurs introduites sur 22 détectées, aucune fausse alerte de fond, rapports de 6 à 8 pages (cible dépassée d'une page pour A, B et D). Critère T53 conforme (A, D). Un écart grave : lecture de HUDOC par une adresse interne derrière une vérification anti-robot (C) ; règle 8 durcie dans cette version. Passages Cowork à faire sur cette version.
 
