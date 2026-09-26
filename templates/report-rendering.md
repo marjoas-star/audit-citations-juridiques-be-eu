@@ -45,7 +45,7 @@ La convention d’audit complète reste dans [citation-record.md](../schemas/cit
 
 ## Longueur
 
-Viser 5 à 6 pages pour une douzaine de sources. La longueur vient surtout des textes libres : un contrôle tient en une ligne (25 mots au plus, 4 contrôles au plus par fiche) ; un constat en deux phrases (60 mots au plus pour le problème comme pour la correction) ; un passage probant se limite aux mots qui prouvent (60 mots au plus) ; une limite en une phrase. Ne pas répéter dans la fiche ce que dit déjà la correction. Le générateur signale les champs trop longs, sans rien couper : les raccourcir puis relancer.
+Viser 5 à 6 pages pour une douzaine de sources ; le générateur compte les pages du PDF et signale un dépassement (cible : 6 pages jusqu'à 12 sources distinctes, une page de plus par tranche de 4 sources supplémentaires). La longueur vient surtout des textes libres : une synthèse de quelques phrases (120 mots au plus) ; un contrôle tient en une ligne (25 mots au plus, 4 contrôles au plus par fiche) ; un constat en deux phrases (60 mots au plus pour le problème comme pour la correction) ; un passage probant se limite aux mots qui prouvent (60 mots au plus) ; une limite en une phrase. Une référence qui appelle une correction n'est présentée qu'une fois, avec sa correction ; une même preuve n'est pas répétée. Le générateur signale les champs trop longs sans rien couper : les raccourcir puis relancer une fois, sans supprimer de correction, de preuve ni de limite.
 
 ## Vérifications de livraison
 

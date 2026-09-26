@@ -338,13 +338,14 @@ def check_summary_counts(data, counts):
             raise ValueError(f'Synthèse incohérente : « {m.group(0)} » alors que le rapport en compte {expected}')
 
 
-WORD_BUDGET = {'excerpt': 60, 'check': 25, 'problem': 60, 'action': 60, 'limits': 40, 'comparison': 60, 'context': 50}
+WORD_BUDGET = {'summary': 120, 'excerpt': 60, 'check': 25, 'problem': 60, 'action': 60, 'limits': 40, 'comparison': 60, 'context': 50}
 
 
 def length_warnings(data):
     # Advisory only: long fields are the main cause of long reports. Nothing is cut or rejected.
     words = lambda t: len(str(t).split())
     out = []
+    if words(data['summary']) > WORD_BUDGET['summary']: out.append(f"synthèse de {words(data['summary'])} mots")
     for r in data['records']:
         for c in r['checks']:
             if words(c) > WORD_BUDGET['check']: out.append(f"{r['id']} : contrôle de {words(c)} mots")
@@ -488,6 +489,41 @@ def proof_link(proof, locators):
 
 
 def sections(data):
+    """Canonical tree; a proof already shown with the same locator is not repeated."""
+    shown = set()
+    for kind, value in _sections(data):
+        if kind == 'link':
+            if value in shown: continue
+            shown.add(value)
+        yield kind, value
+
+
+def page_target(data):
+    # 5 to 6 pages for a dozen sources; one more page per four further sources.
+    sources = len({r['source_id'] for r in data['records']})
+    return 6 + max(0, -(-(sources - 12) // 4))
+
+
+def record_body(r, data):
+    u = L['ui']
+    yield ('p', (u['cited_short'] if r.get('original_kind') == 'summary' else u['cited']) + r['original'])
+    if r['checked'] != r['original']:
+        yield ('p', u['exact'] + clean_prose(r['checked']))
+    for check in r['checks']:
+        yield ('bullet', clean_prose(check))
+    if r['limits']: yield ('p', u['limit'] + clean_prose(r['limits']))
+    for note in r.get('notes', []): yield ('p', clean_prose(note))
+    for q in (q for q in data['quotations'] if q['record_id'] == r['id']):
+        yield ('meta', q['title'] + ' · ' + q['location'])
+        yield ('badge', (L['text'][q['status']] + ' · ' + L['integrity'][q['integrity']], quote_tone(q)))
+        yield ('p', clean_prose(q['comparison']))
+        yield ('p', clean_prose(q['context']))
+        for key in ('attribution', 'temporal_assessment', 'translation_assessment'):
+            label = {'attribution': u['attribution'], 'temporal_assessment': u['version'], 'translation_assessment': u['translation']}[key]
+            if q.get(key): yield ('p', label + ' : ' + clean_prose(q[key]) if L is LANG['fr'] else label + ': ' + clean_prose(q[key]))
+
+
+def _sections(data):
     """Compact canonical tree; no research, status inference, or automatic dating."""
     set_language(data.get('report_language', 'fr'))
     u = L['ui']
@@ -510,6 +546,7 @@ def sections(data):
     yield ('stats', list(zip([str(sum(1 + len(r.get('additional_occurrences', [])) for r in data['records'])),
                               str(len({r['source_id'] for r in data['records']})), str(len(errors))], u['stats'])))
     yield ('p', clean_prose(data['scope']))
+    in_corrections = set()
     if errors:
         yield ('h1', u['corrections'])
         for r, f in errors:
@@ -523,6 +560,12 @@ def sections(data):
                 if proof.get('excerpt'):
                     yield ('p', u['passage'] + quoted(bare_excerpt(proof['excerpt'])))
                     yield ('link', proof_link(proof, [proof['locator']]))
+            if r['id'] not in in_corrections:
+                # The reference is shown once, with its first correction; its card is not repeated below.
+                in_corrections.add(r['id'])
+                yield from record_body(r, data)
+                for proof in r['sources']:
+                    yield ('link', proof_link(proof, [proof['locator']]))
             yield ('card_end', None)
     groups = {}
     for r in data['records']:
@@ -535,26 +578,14 @@ def sections(data):
     yield ('table', (u['heads'], rows))
     annex = [g for g in groups.values() if all(clean_record(r, data) for r in g)]
     for group in (g for g in groups.values() if g not in annex):
+        group = [r for r in group if r['id'] not in in_corrections]
+        if not group: continue
         yield ('card_start', None)
         yield ('h2', group[0]['title'])
         for r in group:
             yield ('badge', (reference_label(r, data), reference_tone(r, data)))
             yield ('meta', r['location'])
-            yield ('p', (u['cited_short'] if r.get('original_kind') == 'summary' else u['cited']) + r['original'])
-            if r['checked'] != r['original']:
-                yield ('p', u['exact'] + clean_prose(r['checked']))
-            for check in r['checks']:
-                yield ('bullet', clean_prose(check))
-            if r['limits']: yield ('p', u['limit'] + clean_prose(r['limits']))
-            for note in r.get('notes', []): yield ('p', clean_prose(note))
-            for q in (q for q in data['quotations'] if q['record_id'] == r['id']):
-                yield ('meta', q['title'] + ' · ' + q['location'])
-                yield ('badge', (L['text'][q['status']] + ' · ' + L['integrity'][q['integrity']], quote_tone(q)))
-                yield ('p', clean_prose(q['comparison']))
-                yield ('p', clean_prose(q['context']))
-                for key in ('attribution', 'temporal_assessment', 'translation_assessment'):
-                    label = {'attribution': u['attribution'], 'temporal_assessment': u['version'], 'translation_assessment': u['translation']}[key]
-                    if q.get(key): yield ('p', label + ' : ' + clean_prose(q[key]) if L is LANG['fr'] else label + ': ' + clean_prose(q[key]))
+            yield from record_body(r, data)
         proof_groups = {}
         for r in group:
             for proof in r['sources']:
@@ -587,10 +618,10 @@ def sections(data):
             yield ('p', r['location'] + ' : ' + clean_prose(f['problem']) + ' ' + clean_prose(f['action']))
     yield ('h1', u['limits'])
     for item in data['limitations']: yield ('bullet', clean_prose(item))
-    yield ('keep_start', None)
     yield ('h2', u['method'])
     for item in data['method']: yield ('bullet', clean_prose(item))
     yield ('meta', u['skill_version'] + (data.get('skill_version') or data['version']))
+    yield ('keep_start', None)
     yield ('h2', u['disclaimer'])
     yield ('callout', L['disclaimer'])
     title, segments = feedback_segments(current_language())
@@ -640,21 +671,22 @@ def write_pdf(nodes, path, data):
     navy, teal, muted = '#173449', '#17685F', '#52616B'
     def style(name, size=9, lead=12.5, color=navy, bold=False, **kw):
         return ParagraphStyle(name, fontName='AuditBold' if bold else 'AuditRegular', fontSize=size, leading=lead,
-                              textColor=colors.HexColor(color), spaceAfter=5, alignment=TA_LEFT, **kw)
+                              textColor=colors.HexColor(color), alignment=TA_LEFT, **{'spaceAfter': 5, **kw})
     styles = {'title': style('title', 25, 31, bold=True, spaceBefore=22),
               'subtitle': style('subtitle', 12, 18), 'meta': style('meta', 8.5, 12, muted),
               'h1': style('h1', 17, 23, bold=True, spaceBefore=16),
               'h2': style('h2', 11.5, 17, bold=True, spaceBefore=12, keepWithNext=True),
-              'p': style('p'), 'badge': style('badge', 9, 14, teal, True, keepWithNext=True),
-              'cell': style('cell', 9, 13), 'stat': style('stat', 23, 29, teal, True),
+              'p': style('p'), 'bullet': style('bullet', 9, 12.5, spaceAfter=1.5, leftIndent=10, firstLineIndent=-8), 'badge': style('badge', 9, 14, teal, True, keepWithNext=True),
+              'cell': style('cell', 8.5, 11.5), 'stat': style('stat', 23, 29, teal, True),
               'link': style('link', 8.5, 13, teal, keepWithNext=True), 'url': style('url', 8.5, 13, teal), 'callout': style('callout', 9, 14, muted, backColor=colors.HexColor('#EFF4F5'), borderPadding=10, spaceBefore=8)}
     paragraph = lambda text, name='p': Paragraph(escape(pdf_text(text)), styles[name])
     story = []
     card_index = None
     keep_index = None
+    printed_urls = set()
     for kind, value in nodes:
         if kind == 'keep_start':
-            # Closing block (method, skill version, disclaimer) moves as one unit: no page holding only the disclaimer.
+            # Closing block (disclaimer, feedback) moves as one unit.
             keep_index = len(story)
         elif kind == 'keep_end':
             block = story[keep_index:]
@@ -678,18 +710,20 @@ def write_pdf(nodes, path, data):
             story.extend([Spacer(1,10), table, Spacer(1,10)])
         elif kind == 'table':
             heads, rows = value
-            table = Table([[paragraph(c,'cell') for c in row] for row in [heads] + rows], colWidths=([155,150,190] if len(heads)==3 else [420,75]), repeatRows=1, splitInRow=1, hAlign='LEFT')
-            table.setStyle(TableStyle([('BACKGROUND',(0,0),(-1,0),colors.HexColor('#E4ECEF')),('VALIGN',(0,0),(-1,-1),'TOP'),('LINEBELOW',(0,0),(-1,-1),0.3,colors.HexColor('#D9E1E4')),('TOPPADDING',(0,0),(-1,-1),7),('BOTTOMPADDING',(0,0),(-1,-1),7)]))
+            table = Table([[paragraph(c,'cell') for c in row] for row in [heads] + rows], colWidths=([250,115,130] if len(heads)==3 else [420,75]), repeatRows=1, splitInRow=1, hAlign='LEFT')
+            table.setStyle(TableStyle([('BACKGROUND',(0,0),(-1,0),colors.HexColor('#E4ECEF')),('VALIGN',(0,0),(-1,-1),'TOP'),('LINEBELOW',(0,0),(-1,-1),0.3,colors.HexColor('#D9E1E4')),('TOPPADDING',(0,0),(-1,-1),3.5),('BOTTOMPADDING',(0,0),(-1,-1),3.5)]))
             story.append(table)
         elif kind == 'link':
             label,url,loc=value
             story.append(Paragraph(f"{L['ui']['proof']}{' :' if L is LANG['fr'] else ':'} " + f'<link href="{escape(url,quote=True)}" color="{teal}">{escape(pdf_text(label))}</link> — {escape(pdf_text(loc))}.', styles['link']))
-            story.append(paragraph(url, 'url'))
+            if url not in printed_urls:
+                printed_urls.add(url)
+                story.append(paragraph(url, 'url'))
         elif kind == 'feedback':
             story.append(Paragraph(''.join(f'<link href="{escape(url, quote=True)}" color="{teal}"><u>{escape(pdf_text(text))}</u></link>' if url else escape(pdf_text(text))
                                            for text, url in value), styles['p']))
         elif kind == 'bullet':
-            story.append(paragraph('• ' + value))
+            story.append(paragraph('• ' + value, 'bullet'))
         elif kind == 'badge':
             text, tone = value
             color = {'ok': '#17685F', 'bad': '#A32722', 'warn': '#805500', 'muted': '#52616B'}[tone]
@@ -700,13 +734,16 @@ def write_pdf(nodes, path, data):
             if kind == 'h2' and keep_index is None:
                 story.append(CondPageBreak(115))
             story.append(paragraph(value, kind))
+    pages = []
     def furniture(canvas, doc):
+        pages.append(doc.page)
         canvas.setStrokeColor(colors.HexColor('#D9E1E4'));canvas.line(50,39,545,39)
         canvas.setFont('AuditRegular',8);canvas.setFillColor(colors.HexColor(muted))
         canvas.drawString(50,25,pdf_text(L['ui']['established'] + human_date(data['report_metadata']['established_at'])))
         canvas.drawRightString(545,25,str(doc.page))
     SimpleDocTemplate(str(path), pagesize=(595.28,841.89), leftMargin=50,rightMargin=50,topMargin=35,bottomMargin=55,
                       title=data['title'],author='Audit des citations juridiques').build(story,onFirstPage=furniture,onLaterPages=furniture)
+    return max(pages)
 
 
 def main():
@@ -723,7 +760,11 @@ def main():
     nodes=list(sections(data));args.output.parent.mkdir(parents=True,exist_ok=True)
     write_markdown(nodes,args.output.with_suffix('.md'))
     if not args.markdown_only:
-        write_pdf(nodes,args.output.with_suffix('.pdf'),data)
+        pages=write_pdf(nodes,args.output.with_suffix('.pdf'),data)
+        if pages>page_target(data):
+            import sys
+            print(f'Rapport de {pages} pages pour {len({r["source_id"] for r in data["records"]})} sources (cible : {page_target(data)} pages au plus) : '
+                  'raccourcir les contrôles, constats et passages probants, puis relancer.', file=sys.stderr)
 
 
 if __name__=='__main__':

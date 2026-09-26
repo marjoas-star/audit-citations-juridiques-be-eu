@@ -100,6 +100,18 @@ class ClarityTests(unittest.TestCase):
                 renderer.write_markdown(nodes, Path(tmp) / 'r.md')
                 self.assertIn('](' + renderer.FEEDBACK_FORMS[code] + ')', (Path(tmp) / 'r.md').read_text(encoding='utf-8'))
 
+    def test_reference_with_error_shown_once_and_proofs_not_repeated(self):
+        d = sample()
+        nodes = list(renderer.sections(renderer.validate(d)))
+        self.assertEqual(sum(1 for k, v in nodes if k == 'p' and v.startswith('Référence citée')), 1)
+        links = [v for k, v in nodes if k == 'link']
+        self.assertEqual(len(links), len(set(links)))
+        self.assertEqual(renderer.page_target(d), 6)
+
+    def test_long_summary_flagged(self):
+        d = sample(); d['summary'] = 'mot ' * 130
+        self.assertTrue(any('synthèse' in w for w in renderer.length_warnings(d)))
+
     def test_confirmed_references_go_to_compact_annex(self):
         d = sample(); r = d['records'][0]
         r.update(status='VERIFIED', checks=['Intitulé'], limits='', sources=[dict(label='Source', url='https://example.org', locator='art. 1', language='FR')])
