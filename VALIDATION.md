@@ -1,4 +1,8 @@
-# Validation publique — 0.7.0-beta.1
+# Validation publique — 0.9.0-rc.1
+
+26 septembre 2026. Version candidate : les essais de stabilité qui conditionnent la 1.0 (non-régression rejouée deux fois, documents réels, formats figés, essai public) sont à exécuter sur cette version ; leurs résultats seront consignés ici. Générateur : 38 tests automatisés, dont la présentation unique d'une référence corrigée, l'absence de preuve répétée et le lien de retour dans la langue du rapport. Rapports du bêta-test régénérés avec la nouvelle mise en page : B 14 → 11 pages, D 11 → 9, E 7 → 6, contenu inchangé.
+
+## Historique — 0.7.0-beta.1
 
 25 septembre 2026. Aucune certification générale ni taux de fiabilité global n'est revendiqué.
 

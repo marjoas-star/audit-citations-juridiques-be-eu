@@ -1,6 +1,6 @@
-# Publication 0.7.0-beta.1
+# Publication 0.9.0-rc.1
 
-Canal : bêta expérimentale. Public visé : juristes utilisant Claude, en particulier Claude Cowork avec l'application de bureau.
+Canal : version candidate (pré-version), pour les essais de stabilité définis dans `CONTRIBUTING.md` ; la 0.7.0-beta.1 reste la version proposée par défaut. Public visé : juristes utilisant Claude, en particulier Claude Cowork avec l'application de bureau.
 
 Paquet : instructions (`SKILL.md`), modes d'emploi FR/NL/DE/EN, générateur de rapport en quatre langues, références opérationnelles, convention de données, modèle et générateur de rapport, exemple d'entrée fictif, documentation, protocoles et résultats de tests destinés à publication. L'archive correspond au contenu du dépôt pour cette version, hors métadonnées Git ; son empreinte SHA-256 est jointe à la publication. Les documents bruts de recherche et les ouvrages de test restent exclus.
 

@@ -1,6 +1,8 @@
 # Notes de version
 
-## Non publié
+## 0.9.0-rc.1 — 26 septembre 2026
+
+Version candidate pour les essais de stabilité qui conditionnent la 1.0 (voir `CONTRIBUTING.md`) : formulaire de retour sans compte, rapports plus courts sans perte d'information, mise à jour par « Remplacer », règle sur les traductions, possibilité d'utiliser ChatGPT (non testée). Pré-version : la 0.7.0-beta.1 reste la version proposée par défaut.
 
 - Modes d'emploi et page d'installation : mise à jour par « Remplacer » (menu ⋮ de la fiche du skill) au lieu de supprimer puis réimporter.
 - Rapports plus courts sans perte d'information : une référence qui appelle une correction n'est présentée qu'une fois, avec sa correction ; une même preuve n'est plus répétée ; tableau récapitulatif et listes plus compacts ; le générateur compte les pages et signale un dépassement de la cible ; budget de 120 mots pour la synthèse ; raccourcir et relancer une fois devient obligatoire. Sur les rapports du bêta-test : B 14 → 11 pages, D 11 → 9, E 7 → 6, sans réécriture du contenu.
