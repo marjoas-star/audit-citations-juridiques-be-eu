@@ -1,4 +1,8 @@
-# Validation publique — 0.9.1
+# Validation publique — 0.9.2
+
+27 septembre 2026. La 0.9.2 ne modifie que la licence (autorisation complémentaire pour l'usage professionnel) et la documentation ; le comportement du skill est celui de la 0.9.1.
+
+## 0.9.1
 
 27 septembre 2026. La 0.9.1 ajoute une seule règle (« piste probable ») à la 0.9.0. Test ciblé par un agent à contexte neuf sur les notes 47 à 49 de la R.C.J.B. 1999, p. 707 : la date erronée d'un arrêté wallon (19 janvier au lieu du 19 février 1998), relevée par le mainteneur lors du contrôle de la condition 2, est établie sur le Moniteur belge et le préambule de l'arrêté ; aucune fausse alerte sur les notes témoins ; deux écarts de procédure déclarés dans les limites (une adresse Justel composée avant d'être affichée, résultat non utilisé ; un prénom ajouté de mémoire à une requête sans résultat). L'essai public de quatre semaines court à partir de la diffusion de cette version. Les conditions 1 et 2 ci-dessous restent acquises : la règle ajoutée ne modifie ni la recherche ni les statuts.
 

@@ -15,6 +15,8 @@ You give Claude a legal document (written submissions, memo, article, opinion, b
 
 What it **does not do**: it does not assess the quality of your reasoning (unless you expressly ask it to), it does not get around any subscription or paywall, and it never invents a number or an ECLI. When it cannot verify something, it says so: **"not verifiable" does not mean "wrong".**
 
+**Free for all legal practitioners**, including in your professional practice (auditing your own documents, your clients' or those of opposing parties). It may not be sold or built into a paid product: see the [licence](https://github.com/marjoas-star/audit-citations-juridiques-be-eu/blob/main/LICENSE) (in French).
+
 ## 2. What you need
 
 - **Claude Cowork**, available with paid plans (Pro, Max, Team, Enterprise), and preferably the **Claude desktop app** (Mac or Windows) installed on your computer: it provides the browser that the skill needs for several official websites (section 4).

@@ -15,6 +15,8 @@ U bezorgt Claude een juridisch document (conclusies, nota, artikel, advies, memo
 
 Wat Claude **niet doet**: het beoordeelt de kwaliteit van uw argumentatie niet (tenzij u daar uitdrukkelijk om vraagt), het omzeilt geen abonnement of betaalde toegang, en het verzint nooit een nummer of een ECLI. Wanneer Claude iets niet kan controleren, zegt het dat: **"niet verifieerbaar" betekent niet "fout".**
 
+**Gratis voor alle juristen**, ook in uw beroepspraktijk (uw eigen documenten, die van uw cliënten of die van de tegenpartij controleren). De skill mag niet verkocht of in een betaald product opgenomen worden: zie de [licentie](https://github.com/marjoas-star/audit-citations-juridiques-be-eu/blob/main/LICENSE) (in het Frans).
+
 ## 2. Wat u nodig hebt
 
 - **Claude Cowork**, beschikbaar met de betalende abonnementen (Pro, Max, Team, Enterprise), en bij voorkeur de **Claude-desktopapp** (Mac of Windows) op uw computer: die levert de browser die de skill nodig heeft voor verschillende officiële websites (punt 4).

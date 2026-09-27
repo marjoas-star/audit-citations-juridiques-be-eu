@@ -69,7 +69,7 @@ Une version 1.0 est interdite tant qu’un test révèle :
 
 ### Documentation et licence
 
-README en FR/NL/DE/EN : `README.md`, `README.fr.md`, `README.nl.md`, `README.de.md`, `README.en.md`. Documentation sous `CC BY-NC-SA 4.0` ; code Python (`scripts/`, `tests/`) sous `PolyForm Noncommercial 1.0.0` (voir `LICENSE-CODE.md`). Tout nouveau fichier Python porte l'en-tête `# SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0`. Ne pas qualifier le projet d’« open source » au sens OSI compte tenu de la restriction NC.
+README en FR/NL/DE/EN : `README.md`, `README.fr.md`, `README.nl.md`, `README.de.md`, `README.en.md`. Documentation sous `CC BY-NC-SA 4.0` ; code Python (`scripts/`, `tests/`) sous `PolyForm Noncommercial 1.0.0` (voir `LICENSE-CODE.md`). Tout nouveau fichier Python porte l'en-tête `# SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0`. Ne pas qualifier le projet d’« open source » au sens OSI compte tenu de la restriction NC. L'autorisation complémentaire (section 3 de `LICENSE`) permet l'usage professionnel gratuit et interdit la revente et l'intégration dans un produit payant ; la reprendre telle quelle dans toute communication.
 
 ### Archives de publication
 

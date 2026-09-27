@@ -1,5 +1,9 @@
 # Notes de version
 
+## 0.9.2 — 27 septembre 2026
+
+- Licence : autorisation complémentaire de l'auteur (section 3 de `LICENSE`, reprise dans `LICENSE-CODE.md`) : usage gratuit par tous, y compris dans une activité professionnelle rémunérée (auditer ses documents, ceux de ses clients ou ceux de ses adversaires) ; vente, location, mise à disposition payante et intégration dans un produit commercial interdites sans accord écrit. Mention dans les modes d'emploi et les README. Aucun changement du comportement du skill.
+
 ## 0.9.1 — 27 septembre 2026
 
 - **Piste probable** : lorsqu'une référence reste introuvable mais qu'une source officielle consultée pour elle affiche un document de même nature, de même auteur et de même objet à une date ou un numéro voisins, le rapport le signale au juriste comme piste à vérifier ; il n'en fait une correction que si la correspondance est établie sur le texte. Issue du contrôle des documents réels (arrêté du Gouvernement wallon cité au 19 janvier 1998, en réalité du 19 février). Test sur les notes 47 à 49 de la R.C.J.B. 1999 : date corrigée sur le Moniteur et le préambule de l'arrêté, aucune fausse alerte sur les deux notes témoins.

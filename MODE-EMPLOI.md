@@ -15,6 +15,8 @@ Vous confiez à Claude un document juridique (conclusions, note, article, avis, 
 
 Ce qu'il **ne fait pas** : il ne juge pas la qualité de votre argumentation (sauf si vous le demandez expressément), il ne contourne ni abonnement ni accès payant, et il n'invente jamais un numéro ou un ECLI. Quand il ne peut pas vérifier, il le dit : **« non vérifiable » ne veut pas dire « erroné ».**
 
+**Gratuit pour tous les juristes**, y compris dans votre pratique professionnelle (auditer vos documents, ceux de vos clients ou ceux de vos adversaires). Il ne peut être ni vendu ni intégré dans un produit payant : voir la [licence](https://github.com/marjoas-star/audit-citations-juridiques-be-eu/blob/main/LICENSE).
+
 ## 2. Ce qu'il vous faut
 
 - **Claude Cowork**, disponible avec les abonnements payants (Pro, Max, Team, Enterprise), et de préférence l'**application de bureau Claude** (Mac ou Windows) installée sur votre ordinateur : c'est elle qui fournit le navigateur dont le skill a besoin pour plusieurs sites officiels (section 4).

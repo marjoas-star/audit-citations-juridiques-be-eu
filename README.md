@@ -1,6 +1,6 @@
 # Audit des citations juridiques — Belgique & Europe
 
-**Version 0.9.1 — essai public avant la 1.0 (quatre semaines au moins à partir de sa diffusion).** Méthode pour auditer les références et citations d’un document en droit belge, droit de l’Union européenne et CEDH. Ce skill accompagne un agent ; ce n’est pas un moteur de recherche autonome.
+**Version 0.9.2 — essai public avant la 1.0 (quatre semaines au moins à partir de sa diffusion).** Méthode pour auditer les références et citations d’un document en droit belge, droit de l’Union européenne et CEDH. Ce skill accompagne un agent ; ce n’est pas un moteur de recherche autonome.
 
 > **Vous êtes juriste ?** Lisez d'abord le **[mode d'emploi](MODE-EMPLOI.md)** : installation pas à pas, accès à donner à Claude, temps à prévoir et lecture du rapport. Aucune connaissance informatique n'est nécessaire. Aussi en [néerlandais](HANDLEIDING.md), [allemand](ANLEITUNG.md) et [anglais](USER-GUIDE.md).
 
@@ -43,7 +43,7 @@ Voir [VALIDATION.md](VALIDATION.md) pour les essais exécutés, les limites et l
 
 Instructions : [SKILL.md](SKILL.md). Modules : `references/`. Convention de données : [schemas/citation-record.md](schemas/citation-record.md). Modèle de rapport : `templates/`.
 
-Documentation originale sous CC BY-NC-SA 4.0 ; code Python (`scripts/`, `tests/`) sous [PolyForm Noncommercial 1.0.0](LICENSE-CODE.md). Voir [LICENSE](LICENSE). Les sources externes citées conservent leur régime propre. Le dépôt ne redistribue ni les ouvrages de test, ni les PDF juridictionnels, ni les journaux privés de recherche. Maintenu sous le compte GitHub `marjoas-star` ; contributions décrites dans [CONTRIBUTING.md](CONTRIBUTING.md).
+**Gratuit pour tous les juristes, y compris dans leur pratique professionnelle ; ni vente ni intégration dans un produit payant** (autorisation complémentaire, section 3 de [LICENSE](LICENSE)). Documentation originale sous CC BY-NC-SA 4.0 ; code Python (`scripts/`, `tests/`) sous [PolyForm Noncommercial 1.0.0](LICENSE-CODE.md). Voir [LICENSE](LICENSE). Les sources externes citées conservent leur régime propre. Le dépôt ne redistribue ni les ouvrages de test, ni les PDF juridictionnels, ni les journaux privés de recherche. Maintenu sous le compte GitHub `marjoas-star` ; contributions décrites dans [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Votre avis
 

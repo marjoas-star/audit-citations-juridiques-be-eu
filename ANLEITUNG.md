@@ -15,6 +15,8 @@ Sie übergeben Claude ein juristisches Dokument (Schriftsatz, Vermerk, Aufsatz, 
 
 Was Claude **nicht tut**: Es beurteilt nicht die Qualität Ihrer Argumentation (es sei denn, Sie verlangen dies ausdrücklich), es umgeht weder Abonnements noch kostenpflichtige Zugänge, und es erfindet niemals eine Nummer oder einen ECLI. Kann Claude etwas nicht überprüfen, sagt es dies: **„nicht überprüfbar“ bedeutet nicht „falsch“.**
 
+**Kostenlos für alle Juristinnen und Juristen**, auch in Ihrer beruflichen Praxis (Ihre eigenen Dokumente, die Ihrer Mandanten oder die der Gegenseite prüfen). Der Skill darf weder verkauft noch in ein kostenpflichtiges Produkt integriert werden: siehe die [Lizenz](https://github.com/marjoas-star/audit-citations-juridiques-be-eu/blob/main/LICENSE) (auf Französisch).
+
 ## 2. Was Sie benötigen
 
 - **Claude Cowork**, verfügbar mit den kostenpflichtigen Abonnements (Pro, Max, Team, Enterprise), und vorzugsweise die auf Ihrem Computer installierte **Claude-Desktop-App** (Mac oder Windows): Sie stellt den Browser bereit, den der Skill für mehrere amtliche Websites benötigt (Abschnitt 4).

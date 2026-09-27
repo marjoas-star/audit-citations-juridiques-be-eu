@@ -1,5 +1,7 @@
 Required Notice: Copyright 2026 Marc Joassart (https://github.com/marjoas-star/audit-citations-juridiques-be-eu)
 
+Additional permission: in addition to the license below, the licensor permits anyone to use the software in the course of their professional activity, including paid activity (in particular to audit their own documents, those of their clients or those of opposing parties), free of charge; such use is not considered commercial use under this license. Selling, renting or otherwise making the software or a modified version available for a fee, and integrating it into a commercial product or service, remain prohibited without the licensor's prior written consent. See LICENSE, section 3.
+
 # PolyForm Noncommercial License 1.0.0
 
 <https://polyformproject.org/licenses/noncommercial/1.0.0>
