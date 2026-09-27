@@ -1,6 +1,6 @@
-# Publication 0.9.0
+# Publication 0.9.1
 
-Canal : version proposée par défaut (« Latest »), ouverte à l'essai public d'au moins quatre semaines qui conditionne la 1.0 (voir `CONTRIBUTING.md`). Contenu identique à la 0.9.0-rc.3 testée, seul le numéro change. Public visé : juristes utilisant Claude, en particulier Claude Cowork avec l'application de bureau.
+Canal : version proposée par défaut (« Latest »), ouverte à l'essai public d'au moins quatre semaines qui conditionne la 1.0 (voir `CONTRIBUTING.md`). Ajoute à la 0.9.0 la règle de la « piste probable ». Public visé : juristes utilisant Claude, en particulier Claude Cowork avec l'application de bureau.
 
 Paquet : instructions (`SKILL.md`), modes d'emploi FR/NL/DE/EN, générateur de rapport en quatre langues, références opérationnelles, convention de données, modèle et générateur de rapport, exemple d'entrée fictif, documentation, protocoles et résultats de tests destinés à publication. L'archive correspond au contenu du dépôt pour cette version, hors métadonnées Git ; son empreinte SHA-256 est jointe à la publication. Les documents bruts de recherche et les ouvrages de test restent exclus.
 

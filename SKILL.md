@@ -12,7 +12,7 @@ description: >
 
 # Audit des citations juridiques — Belgique & Europe
 
-Version du skill : `0.9.0` (à reporter dans le champ `skill_version` du rapport).
+Version du skill : `0.9.1` (à reporter dans le champ `skill_version` du rapport).
 
 ## 1. Objet
 
@@ -95,6 +95,8 @@ Des métadonnées officielles (fiche ou notice de la juridiction ou de l'éditeu
 - 🔴 `NOT_FOUND_OR_CONTRADICTORY`
 
 **Référence probablement inexistante.** Pour une décision ou un texte officiel, lorsque chaque identifiant cité (numéro d'affaire, ECLI, numéro d'arrêt, date) renvoie à un autre document ou à rien, et qu'une recherche par les parties, la date et l'objet dans la base officielle ne donne aucun document correspondant, écrire « référence probablement inexistante » en énumérant ces constats. Proposer de supprimer la référence ou une reformulation prête à coller qui ne prête plus rien à la juridiction ; ne jamais substituer une autre décision sans preuve qu'elle est celle visée. Pour la doctrine, appliquer la règle plus prudente de [doctrine.md](references/doctrine.md).
+
+**Piste probable.** Lorsqu'une référence reste introuvable ou non vérifiable mais qu'une source officielle **effectivement consultée** affiche un document de même nature, de même auteur et de même objet à une date ou un numéro voisins (écart d'un chiffre, d'un jour, d'un mois ou d'une année ; chiffres inversés), le signaler au juriste comme **piste à vérifier** : identifiants tels qu'affichés, écart constaté (date, numéro), source où la piste a été vue. Ne pas en faire une correction ni changer le statut de la référence tant que la correspondance n'est pas établie sur le texte (intitulé et objet lus) ; si elle l'est, c'est une correction ordinaire. Ne jamais chercher une telle piste de mémoire : elle doit apparaître dans une source consultée pour la référence auditée.
 
 ### Gravité
 

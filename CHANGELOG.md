@@ -1,5 +1,9 @@
 # Notes de version
 
+## 0.9.1 — 27 septembre 2026
+
+- **Piste probable** : lorsqu'une référence reste introuvable mais qu'une source officielle consultée pour elle affiche un document de même nature, de même auteur et de même objet à une date ou un numéro voisins, le rapport le signale au juriste comme piste à vérifier ; il n'en fait une correction que si la correspondance est établie sur le texte. Issue du contrôle des documents réels (arrêté du Gouvernement wallon cité au 19 janvier 1998, en réalité du 19 février). Test sur les notes 47 à 49 de la R.C.J.B. 1999 : date corrigée sur le Moniteur et le préambule de l'arrêté, aucune fausse alerte sur les deux notes témoins.
+
 ## 0.9.0 — 27 septembre 2026
 
 Première version proposée par défaut depuis la 0.7.0-beta.1, et début de l'essai public de quatre semaines qui conditionne la 1.0 « stable ». Contenu identique à la 0.9.0-rc.3 ; seul le numéro change. Conditions 1 (non-régression) et 2 (documents réels) remplies : voir `VALIDATION.md`.
