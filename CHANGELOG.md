@@ -1,5 +1,11 @@
 # Notes de version
 
+## 0.9.0 — 27 septembre 2026
+
+Première version proposée par défaut depuis la 0.7.0-beta.1, et début de l'essai public de quatre semaines qui conditionne la 1.0 « stable ». Contenu identique à la 0.9.0-rc.3 ; seul le numéro change. Conditions 1 (non-régression) et 2 (documents réels) remplies : voir `VALIDATION.md`.
+
+Nouveautés depuis la 0.7.0-beta.1 : formulaire de retour sans compte dans quatre langues et lien en fin de rapport ; rapports plus courts sans perte d'information ; règle 8 précisée (navigateur de l'application = voie normale ; arrêt face à une vérification anti-robot) ; qualification plus stricte des citations qui changent un délai, une condition ou une exception ; citation d'une autre version du texte présentée comme telle ; traductions non signalées selon l'existence d'une version officielle ; affirmation exacte mais précisable = suggestion ; plusieurs documents traités l'un après l'autre ; mise à jour par « Supprimer » puis réimporter.
+
 ## 0.9.0-rc.3 — 26 septembre 2026
 
 Corrections issues des deux passages de non-régression sur la 0.9.0-rc.2 (Cowork et agents : 44 erreurs introduites sur 44 détectées, une fausse alerte mineure en B).
