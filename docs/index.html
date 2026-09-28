@@ -1,0 +1,175 @@
+<title>Installer l'audit des citations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --paper:#f7f8f6; --card:#ffffff; --ink:#173449; --muted:#52616b; --line:#d9e1e4;
+  --teal:#17685f; --teal-soft:#e6f1ef; --warn:#8a5a00; --warn-soft:#fbf3e2; --code:#eef2f3;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#10181f; --card:#16212a; --ink:#e3ebef; --muted:#9fb0ba; --line:#2a3945;
+    --teal:#5fc2b3; --teal-soft:#16302e; --warn:#e6b85c; --warn-soft:#2c2415; --code:#1c2a34;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#10181f; --card:#16212a; --ink:#e3ebef; --muted:#9fb0ba; --line:#2a3945;
+  --teal:#5fc2b3; --teal-soft:#16302e; --warn:#e6b85c; --warn-soft:#2c2415; --code:#1c2a34;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font:16px/1.6 "IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;padding-inline:16px;padding-block:32px 56px}
+main{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
+h1,h2{font-family:"IBM Plex Serif",Georgia,serif;font-weight:600;text-wrap:balance;margin:0}
+h1{font-size:clamp(28px,5vw,38px);line-height:1.15}
+h2{font-size:22px;line-height:1.25}
+p{margin:0}
+a{color:var(--teal);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:500}
+header{display:flex;flex-direction:column;gap:12px}
+.lead{font-size:18px;color:var(--muted);max-width:62ch}
+.needs{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.need{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:14px 16px;display:flex;flex-direction:column;gap:4px}
+.need b{font-weight:600}
+.need span{color:var(--muted);font-size:14px}
+ol.steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:18px;counter-reset:s}
+ol.steps>li{counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px 20px 20px 64px;position:relative;display:flex;flex-direction:column;gap:10px}
+ol.steps>li::before{content:counter(s);position:absolute;left:18px;top:18px;width:32px;height:32px;border-radius:50%;background:var(--teal);color:var(--card);font:600 16px/32px "IBM Plex Sans",sans-serif;text-align:center}
+ol.steps h2{font-size:19px}
+.sub{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+.path{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:14px;background:var(--code);border-radius:4px;padding:1px 6px;white-space:nowrap}
+.download{align-self:flex-start;display:inline-flex;flex-direction:column;gap:2px;background:var(--teal);color:var(--card);text-decoration:none;border-radius:8px;padding:12px 18px;font-weight:600;font-size:17px}
+.download small{font-weight:400;font-size:13px;opacity:.9}
+.download:hover{filter:brightness(1.08)}
+.note{background:var(--warn-soft);border-left:3px solid var(--warn);border-radius:0 6px 6px 0;padding:10px 14px;font-size:15px}
+.note b{color:var(--warn)}
+.tip{background:var(--teal-soft);border-radius:6px;padding:10px 14px;font-size:15px}
+.prompt{background:var(--code);border-radius:8px;padding:14px 16px;display:flex;flex-direction:column;gap:10px}
+.prompt q{quotes:none;font-size:15.5px}
+button{align-self:flex-start;font:500 14px "IBM Plex Sans",sans-serif;color:var(--card);background:var(--teal);border:0;border-radius:6px;padding:8px 14px;cursor:pointer}
+section{display:flex;flex-direction:column;gap:12px}
+.faq{display:flex;flex-direction:column;gap:10px}
+details{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:12px 16px}
+summary{cursor:pointer;font-weight:500}
+details p{margin-top:8px;color:var(--muted)}
+footer{font-size:14px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px;display:flex;flex-direction:column;gap:6px}
+@media (max-width:480px){ol.steps>li{padding:56px 16px 16px}ol.steps>li::before{left:16px;top:14px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<main>
+  <header>
+    <span class="eyebrow">Audit des citations juridiques · Belgique, UE, CEDH</span>
+    <h1>Installer le skill dans Claude, en cinq étapes</h1>
+    <p class="lead">Ce skill fait vérifier par Claude les références et les citations d'un document juridique dans les sources officielles. L'installation prend dix minutes et ne se fait qu'une fois. Aucune connaissance informatique n'est nécessaire.</p>
+  </header>
+
+  <section aria-labelledby="avant">
+    <h2 id="avant">Avant de commencer</h2>
+    <div class="needs">
+      <div class="need"><b>Un abonnement Claude payant</b><span>Pro, Max, Team ou Enterprise, qui donne accès à Cowork.</span></div>
+      <div class="need"><b>L'application de bureau Claude</b><span>Sur Mac ou Windows. Elle fournit le navigateur dont le skill a besoin.</span></div>
+      <div class="need"><b>Dans un cabinet ou une institution</b><span>Votre administrateur Claude doit avoir activé les réglages de l'encadré en bas de page.</span></div>
+    </div>
+  </section>
+
+  <ol class="steps">
+    <li>
+      <h2>Télécharger le fichier du skill</h2>
+      <a class="download" href="https://github.com/marjoas-star/audit-citations-juridiques-be-eu/releases/latest/download/audit-citations-juridiques-be-eu.zip">Télécharger le skill<small>audit-citations-juridiques-be-eu.zip · toujours la dernière version</small></a>
+      <p>Un clic suffit : le fichier arrive dans vos Téléchargements. Aucun compte GitHub n'est nécessaire.</p>
+      <p class="note"><b>Ne décompressez pas ce fichier.</b> Claude attend l'archive <span class="path">.zip</span> telle quelle.</p>
+      <p class="tip">Sur Mac avec Safari, le fichier est décompressé automatiquement et vous obtenez un dossier. Deux solutions : clic droit sur le dossier › <b>Compresser « audit-citations-juridiques-be-eu »</b>, ce qui recrée un fichier <span class="path">.zip</span> utilisable ; ou, une fois pour toutes, <span class="path">Safari › Réglages › Général</span> et décochez <b>« Ouvrir les fichiers fiables après téléchargement »</b>. Chrome et Firefox ne décompressent pas.</p>
+    </li>
+
+    <li>
+      <h2>Autoriser les skills</h2>
+      <p>Dans l'application Claude, ouvrez <span class="path">Paramètres › Capacités</span> et activez l'<b>exécution de code et la création de fichiers</b>.</p>
+      <p>Sans cette option, aucun skill ne fonctionne.</p>
+    </li>
+
+    <li>
+      <h2>Importer le skill</h2>
+      <ul class="sub">
+        <li>Toujours dans les paramètres, rubrique <b>Personnaliser</b>, ouvrez <span class="path">Compétences</span>.</li>
+        <li>Cliquez sur le bouton <b>+ Ajouter</b>, en haut à droite, puis sur <b>Importer une compétence</b>.</li>
+        <li>Choisissez le fichier <span class="path">.zip</span> téléchargé à l'étape 1.</li>
+        <li>Vérifiez que <b>audit-citations-juridiques-be-eu</b> apparaît dans vos compétences et que son interrupteur est bleu. La mention « Ajoute uniquement des instructions pour Claude » est normale, de même que « v1 » : c'est le compteur de l'application, pas la version du skill.</li>
+      </ul>
+    </li>
+
+    <li>
+      <h2>Choisir le navigateur intégré</h2>
+      <p>Ouvrez <span class="path">Paramètres › Cowork</span> et choisissez le <b>navigateur intégré</b> comme navigateur préféré.</p>
+      <p>Pourquoi : EUR-Lex, CURIA, HUDOC et le Conseil d'État refusent les connexions qui viennent de serveurs. Le navigateur intégré fonctionne depuis votre ordinateur, et ces sites l'acceptent. Sans lui, ces sources ne seront vérifiées que partiellement.</p>
+    </li>
+
+    <li>
+      <h2>Lancer un premier audit</h2>
+      <ul class="sub">
+        <li>Démarrez une nouvelle tâche <b>Cowork</b> dans l'application de bureau.</li>
+        <li>Joignez votre document (PDF ou Word) avec le trombone.</li>
+        <li>Copiez cette demande :</li>
+      </ul>
+      <div class="prompt">
+        <q id="prompt-text">Utilise le skill audit-citations-juridiques-be-eu pour vérifier toutes les références et citations du document joint. Produis un rapport en français, en PDF. Le document se place à la date du 1er mars 2024.</q>
+        <button type="button" id="copy-btn">Copier la demande</button>
+      </div>
+      <p>Remplacez la date par celle de votre document. Pour un rapport en néerlandais, en allemand ou en anglais, remplacez aussi « en français ».</p>
+      <p>Claude vérifie d'abord ses accès, compte les sources et annonce une durée : <b>environ une minute par source, souvent moins</b>. Une douzaine de références prend 5 à 15 minutes. Laissez l'application ouverte pendant ce temps.</p>
+      <p>Il indique aussi la <b>date juridique</b> à laquelle il vérifiera les textes : celle que vous avez donnée ou, à défaut, celle qu'il déduit du document. Si elle ne vous convient pas, répondez simplement, par exemple « vérifie au 1er janvier 2016 ».</p>
+    </li>
+  </ol>
+
+  <section aria-labelledby="admin">
+    <h2 id="admin">Pour l'administrateur (Team, Enterprise)</h2>
+    <p>À transmettre à la personne qui gère votre compte Claude :</p>
+    <ul class="sub">
+      <li><span class="path">Organization settings › Cowork</span> : activer Cowork et le navigateur intégré.</li>
+      <li><span class="path">Organization settings › Capabilities</span> : activer les Skills, « Code execution and file creation » et la recherche web.</li>
+      <li>Si l'accès réseau de l'exécution de code est restreint, autoriser les domaines listés dans le <a href="https://github.com/marjoas-star/audit-citations-juridiques-be-eu/blob/main/MODE-EMPLOI.md#pour-ladministrateur-dune-organisation-team-enterprise">mode d'emploi</a> (EUR-Lex, CURIA, HUDOC, Moniteur belge, Conseil d'État, Cour constitutionnelle…).</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="questions">
+    <h2 id="questions">Si quelque chose coince</h2>
+    <div class="faq">
+      <details><summary>Claude répond sans utiliser le skill</summary><p>Citez son nom dans la demande, comme dans le texte à copier, et vérifiez à l'étape 3 que son interrupteur est activé.</p></details>
+      <details><summary>L'import refuse mon fichier</summary><p>Vous avez sans doute importé un dossier décompressé. Reprenez l'étape 1 avec le bouton de téléchargement, ou recompressez le dossier comme indiqué pour Safari.</p></details>
+      <details><summary>Presque tout est « non vérifiable »</summary><p>La recherche web ou le navigateur intégré manque, ou l'application a été fermée pendant l'audit. Vérifiez l'étape 4 et relancez dans une nouvelle tâche. « Non vérifiable » ne veut pas dire « erroné ».</p></details>
+      <details><summary>Installer une nouvelle version</summary><p>Téléchargez la nouvelle archive avec le bouton de l'étape 1 (il donne toujours la dernière version). Dans Paramètres › Compétences, ouvrez la fiche du skill, menu ⋮ › <strong>Supprimer</strong>, puis refaites l'étape 3. N'utilisez pas « Remplacer » : la fiche se dit mise à jour mais garde l'ancien contenu. Pour vérifier la version installée : onglet <strong>Contenu</strong> de la fiche, fichier SKILL.md, sous le titre (la mention « v1 » de la fiche est un compteur propre à l'application).</p></details>
+      <details><summary>Vous utilisez ChatGPT plutôt que Claude ?</summary><p>Le même fichier .zip s'importe dans ChatGPT (offres Business, Enterprise, Healthcare et Edu) : barre latérale › Plugins › onglet Skills › Create › Upload from your computer. Lancez ensuite l'audit dans ChatGPT Work, de préférence dans l'application de bureau. Ce parcours n'a pas encore été testé : voir le <a href="https://github.com/marjoas-star/audit-citations-juridiques-be-eu/blob/main/MODE-EMPLOI.md#vous-utilisez-chatgpt-plutôt-que-claude-">mode d'emploi</a>.</p></details>
+      <details><summary>Voir toutes les versions et leurs notes</summary><p>Page <a href="https://github.com/marjoas-star/audit-citations-juridiques-be-eu/releases">Releases du dépôt</a>, rubrique « Assets » de chaque version. Le fichier qui se termine par « -complet » est réservé à la maintenance.</p></details>
+    </div>
+  </section>
+
+  <section aria-labelledby="avis">
+    <h2 id="avis">Votre avis</h2>
+    <p>Une erreur que le rapport n'a pas vue, une fausse alerte, une conclusion peu claire, ou tout simplement un audit utile ? Dites-le en deux minutes, <strong>sans créer de compte</strong> : <a href="https://docs.google.com/forms/d/e/1FAIpQLSfQPQXVYSUUx5HGUq20m-ukle7YhquYHlJlACBjdg8oP3EQ6w/viewform">formulaire de retour</a> (aussi en <a href="https://docs.google.com/forms/d/e/1FAIpQLSdGEC1njpDohmjYCASNJkWZXOCVrlEYciUxdvNY9QvGGyvTEA/viewform">néerlandais</a>, <a href="https://docs.google.com/forms/d/e/1FAIpQLScTwVeTDbksjMzbX2lJ-7Vnc7JcOJOzoC-_EjmsCMBzoLHrPQ/viewform">allemand</a> et <a href="https://docs.google.com/forms/d/e/1FAIpQLSfjMg3pOWrlxo6dnVdRbHvz0nSqQSnizGY8b4lv_lHQ6HURFQ/viewform">anglais</a>). Le lien figure aussi à la fin de chaque rapport. Ne collez jamais de document confidentiel : la référence en cause et la source officielle suffisent.</p>
+    <p>Vous avez un compte GitHub ? Une étoile sur la <a href="https://github.com/marjoas-star/audit-citations-juridiques-be-eu">page du projet</a> aide d'autres juristes à le découvrir.</p>
+  </section>
+
+  <footer>
+    <p>Mode d'emploi complet (accès, lecture du rapport, confidentialité) : <a href="https://github.com/marjoas-star/audit-citations-juridiques-be-eu/blob/main/MODE-EMPLOI.md">français</a> · <a href="https://github.com/marjoas-star/audit-citations-juridiques-be-eu/blob/main/HANDLEIDING.md">Nederlands</a> · <a href="https://github.com/marjoas-star/audit-citations-juridiques-be-eu/blob/main/ANLEITUNG.md">Deutsch</a> · <a href="https://github.com/marjoas-star/audit-citations-juridiques-be-eu/blob/main/USER-GUIDE.md">English</a></p>
+    <p>Les libellés des menus sont ceux de l'interface française de Claude ; ils peuvent évoluer. Version 0.9, en essai public avant la 1.0 : relisez toujours les corrections proposées avant de les reporter.</p>
+    <p>Gratuit pour tous les juristes, y compris dans leur pratique professionnelle (auditer ses documents, ceux de ses clients ou ceux de ses adversaires). Le skill ne peut être ni vendu ni intégré dans un produit payant : voir la <a href="https://github.com/marjoas-star/audit-citations-juridiques-be-eu/blob/main/LICENSE">licence</a>.</p>
+  </footer>
+</main>
+
+<script>
+(function(){
+  var btn=document.getElementById('copy-btn');
+  var text=document.getElementById('prompt-text');
+  btn.addEventListener('click',function(){
+    var value=text.textContent;
+    function selectIt(){var r=document.createRange();r.selectNodeContents(text);var s=window.getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Texte sélectionné : Cmd+C ou Ctrl+C';}
+    try{
+      navigator.clipboard.writeText(value).then(function(){btn.textContent='Copié';setTimeout(function(){btn.textContent='Copier la demande';},2000);},selectIt);
+    }catch(e){selectIt();}
+  });
+})();
+</script>
