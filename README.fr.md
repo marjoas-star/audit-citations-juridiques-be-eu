@@ -20,6 +20,8 @@ Pour un arrêt du Conseil d’État belge dont le numéro est connu, la recherch
 
 Le skill fonctionne aussi, en principe, avec ChatGPT (offres Business, Enterprise, Edu) : voir le mode d'emploi, section « Vous utilisez ChatGPT ? » (non encore testé).
 
+Gemini : le format est compatible en principe avec les skills de **Gemini Enterprise** (Google Cloud, fonction à activer par l'administrateur), mais ce parcours n'a pas été testé et l'accès aux sites officiels n'y est pas documenté. Les skills de l'application Gemini grand public (Google AI Pro, Ultra) ne sont pas disponibles dans l'Espace économique européen (aide Google, septembre 2026).
+
 La procédure détaillée pour les juristes figure dans le [mode d'emploi](MODE-EMPLOI.md) ; ce qui suit s'adresse aux utilisateurs techniques.
 
 

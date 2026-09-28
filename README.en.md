@@ -19,3 +19,5 @@ Feedback: [two-minute form, no GitHub account needed](https://docs.google.com/fo
 Beta testing: [instructions for legal reviewers (French)](tests/beta/guide.md) and [feedback form](tests/beta/fiche-retour.md).
 
 Free for all legal practitioners, including in their professional practice; it may not be sold or built into a paid product (additional permission, section 3 of [LICENSE](LICENSE)).
+
+ChatGPT (Business, Enterprise, Edu) and Gemini Enterprise (Google Cloud, enabled by the administrator) accept the same skill format in principle; neither route has been tested yet. Skills in the consumer Gemini app (Google AI Pro, Ultra) are not available in the European Economic Area (Google help, September 2026).

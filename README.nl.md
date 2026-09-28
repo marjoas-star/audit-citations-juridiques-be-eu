@@ -19,3 +19,5 @@ Feedback: [formulier van twee minuten, zonder GitHub-account](https://docs.googl
 Bètatest: [instructies voor juristen (Frans)](tests/beta/guide.md) en [feedbackformulier](tests/beta/fiche-retour.md).
 
 Gratis voor alle juristen, ook in hun beroepspraktijk; de skill mag niet verkocht of in een betaald product opgenomen worden (aanvullende toestemming, afdeling 3 van [LICENSE](LICENSE)).
+
+ChatGPT (Business, Enterprise, Edu) en Gemini Enterprise (Google Cloud, door de beheerder te activeren) aanvaarden in principe hetzelfde skillformaat; geen van beide is al getest. Skills in de Gemini-app voor particulieren (Google AI Pro, Ultra) zijn niet beschikbaar in de Europese Economische Ruimte (hulp van Google, september 2026).
