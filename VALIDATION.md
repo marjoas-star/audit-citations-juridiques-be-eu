@@ -15,7 +15,7 @@
 | 1. Non-régression, deux passages | **Remplie.** Extraits v2 A, C, D, E sur la rc.2 et B sur la rc.3 : Cowork 22/22, agents 22/22, aucune fausse alerte de fond ; critère T53 conforme ; aucune invention, sur-vérification, fusion ni ellipse trompeuse. Réserves : passage Cowork de A, C, D, E dans une seule tâche et sans les dates des fiches ; trois rapports d'agents dépassent la cible d'une page. |
 | 2. Documents réels | **Remplie.** Trois documents publiés audités dans Cowork sur la rc.2 (C.E. n° 266.935, avis 78.822/1, R.C.J.B. 1999 p. 691-729 : 152 références) ; 20 références tirées au hasard (graine 20260926) contrôlées par le mainteneur : 20 conformes, aucune vérifiée à tort, aucune invention. Observation : pour un arrêté introuvable à la date citée, le sommaire consulté montrait un arrêté de même objet à une date voisine, que le rapport aurait pu signaler comme piste. |
 | 3. Formats figés | À confirmer à la 1.0. |
-| 4. Essai public | Quatre semaines au moins à partir de la diffusion de la 0.9.1, formulaire de retour ouvert. |
+| 4. Essai public | En cours : diffusion publique le 28 septembre 2026 (article LinkedIn du mainteneur), au moins jusqu'au 26 octobre 2026 ; formulaire de retour ouvert. |
 | 5. Documentation | Quatre langues ; installation par le lien direct à vérifier sur cette version. |
 
 ## Historique — 0.9.0-rc.3
