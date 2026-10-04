@@ -1,5 +1,12 @@
 # Notes de version
 
+## 0.9.3 — 4 octobre 2026
+
+Deux suggestions d'un juriste à la suite de l'annonce publique.
+- **Connecteurs juridiques** : un connecteur (MCP) donnant accès à des sources juridiques est utilisé en priorité pour trouver les références ; branché sur la base officielle, il vaut consultation de cette base ; un agrégateur (par exemple Legal Data Hunter) ne vaut que découverte, la vérification se faisant sur l'adresse officielle qu'il fournit. Dates et numéros lus dans le texte, jamais dans la fiche du connecteur ; un « non trouvé » ne prouve rien.
+- **Confidentialité** : les requêtes ne contiennent que des éléments des références auditées, jamais les faits du dossier ni le nom d'une personne absente de la référence citée (règle 2). Modes d'emploi : recommandation d'anonymiser les éléments factuels avant l'audit ; mention des conditions du service lorsqu'un connecteur est utilisé.
+- Test sur l'extrait E avec Legal Data Hunter branché : 3 erreurs sur 3, aucune fausse alerte ; 7 sources sur 8 trouvées par le connecteur, toutes vérifiées ensuite sur la source officielle ; le connecteur renvoyait le n° 240.188 vers l'arrêt homonyme, la recherche officielle a identifié le bon ; aucune requête hors des éléments des références.
+
 ## 0.9.2 — 27 septembre 2026
 
 - Licence : autorisation complémentaire de l'auteur (section 3 de `LICENSE`, reprise dans `LICENSE-CODE.md`) : usage gratuit par tous, y compris dans une activité professionnelle rémunérée (auditer ses documents, ceux de ses clients ou ceux de ses adversaires) ; vente, location, mise à disposition payante et intégration dans un produit commercial interdites sans accord écrit. Mention dans les modes d'emploi et les README. Aucun changement du comportement du skill.

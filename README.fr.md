@@ -1,6 +1,6 @@
 # Audit des citations juridiques — Belgique & Europe
 
-**Version 0.9.2 — essai public avant la 1.0 (quatre semaines au moins à partir de sa diffusion).** Méthode pour auditer les références et citations d’un document en droit belge, droit de l’Union européenne et CEDH. Ce skill accompagne un agent ; ce n’est pas un moteur de recherche autonome.
+**Version 0.9.3 — essai public avant la 1.0 (quatre semaines au moins à partir de sa diffusion).** Méthode pour auditer les références et citations d’un document en droit belge, droit de l’Union européenne et CEDH. Ce skill accompagne un agent ; ce n’est pas un moteur de recherche autonome.
 
 > **Vous êtes juriste ?** Installation pas à pas : **[page d'installation](https://marjoas-star.github.io/audit-citations-juridiques-be-eu/)**. Puis le **[mode d'emploi](MODE-EMPLOI.md)** : installation pas à pas, accès à donner à Claude, temps à prévoir et lecture du rapport. Aucune connaissance informatique n'est nécessaire. Aussi en [néerlandais](HANDLEIDING.md), [allemand](ANLEITUNG.md) et [anglais](USER-GUIDE.md).
 

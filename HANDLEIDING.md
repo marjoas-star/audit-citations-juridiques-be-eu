@@ -126,7 +126,8 @@ Het verslag is een hulpmiddel: **lees de correcties na voordat u ze overneemt**,
 
 - Uw document wordt door Claude verwerkt volgens de voorwaarden van uw abonnement of van uw organisatie.
 - Om de verwijzingen te controleren stuurt Claude **verwijzingen en korte fragmenten** (rolnummer of nummer van een arrest, titel van een artikel, geciteerde zin) naar zoekmachines en officiële websites. De skill is er niet op gericht uw document zelf door te sturen.
-- Voor een dossier dat onder het beroepsgeheim valt: ga na of het gebruik van de tool door uw organisatie is toegestaan, of verwijder eerst de namen van de partijen. De audit heeft betrekking op de verwijzingen, niet op de feiten van het dossier.
+- De opzoekingen kunnen elementen van de gecontroleerde **verwijzingen** bevatten (nummer, titel, partijen van een gepubliceerde beslissing, geciteerde zin). De skill heeft de instructie er nooit de **feiten** van het dossier of de naam van uw cliënten of tegenpartijen in op te nemen. Uit voorzorg, voor een dossier dat onder het beroepsgeheim valt: ga na of het gebruik van de tool door uw organisatie is toegestaan en **anonimiseer eerst de feitelijke gegevens** (namen, adressen, feiten), zonder de te controleren verwijzingen te wijzigen.
+- Als u een **juridische connector** hebt geïnstalleerd (bijvoorbeeld Legal Data Hunter), gebruikt de skill die om verwijzingen sneller te vinden en controleert hij daarna in de officiële bron. De opzoekingen gaan dan ook langs die dienst: raadpleeg de voorwaarden ervan.
 
 ## 9. Vaak voorkomende problemen
 

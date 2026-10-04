@@ -126,7 +126,8 @@ Der Bericht ist ein Hilfsmittel: **Lesen Sie die Korrekturen durch, bevor Sie si
 
 - Ihr Dokument wird von Claude nach den Bedingungen Ihres Abonnements oder Ihrer Organisation verarbeitet.
 - Um die Fundstellen zu überprüfen, sendet Claude **Fundstellen und kurze Auszüge** (Nummer eines Urteils, Titel eines Aufsatzes, zitierter Satz) an Suchmaschinen und amtliche Websites. Der Skill sieht nicht vor, ihnen Ihr Dokument selbst zu übermitteln.
-- Bei einer Akte, die dem Berufsgeheimnis unterliegt, vergewissern Sie sich, dass das Werkzeug von Ihrer Organisation zugelassen ist, oder entfernen Sie zuerst die Namen der Parteien: Die Prüfung betrifft die Fundstellen, nicht den Sachverhalt der Akte.
+- Die Suchanfragen können Elemente der geprüften **Fundstellen** enthalten (Nummer, Titel, Parteien einer veröffentlichten Entscheidung, zitierter Satz). Der Skill ist angewiesen, niemals die **Tatsachen** der Akte oder die Namen Ihrer Mandanten oder der Gegenseite aufzunehmen. Vorsichtshalber, bei einer Akte, die dem Berufsgeheimnis unterliegt: vergewissern Sie sich, dass das Werkzeug von Ihrer Organisation zugelassen ist, und **anonymisieren Sie zuerst die tatsächlichen Angaben** (Namen, Adressen, Tatsachen), ohne die zu prüfenden Fundstellen zu verändern.
+- Wenn Sie einen **juristischen Konnektor** installiert haben (zum Beispiel Legal Data Hunter), nutzt der Skill ihn, um Fundstellen schneller zu finden, und prüft anschließend an der amtlichen Quelle. Die Anfragen laufen dann auch über diesen Dienst: Beachten Sie dessen Bedingungen.
 
 ## 9. Häufige Probleme
 

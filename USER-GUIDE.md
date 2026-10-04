@@ -126,7 +126,8 @@ The report is an aid: **review the corrections before carrying them over**, espe
 
 - Your document is processed by Claude under the terms of your plan or your organization.
 - To check the references, Claude sends **references and short extracts** (case number, title of an article, quoted sentence) to search engines and official websites. The skill is not designed to send them your document itself.
-- For a matter covered by professional secrecy, check that the tool is authorized by your organization, or first remove the names of the parties: the audit concerns the references, not the facts of the case.
+- Searches may contain elements of the audited **references** (number, title, parties to a published decision, quoted sentence). The skill is instructed never to include the **facts** of the matter or the names of your clients or opposing parties. As a precaution, for a matter covered by professional secrecy, check that the tool is authorized by your organization and **first anonymize the factual elements** (names, addresses, facts), leaving the references to be audited intact.
+- If you have installed a **legal connector** (for example Legal Data Hunter), the skill uses it to find references faster, then checks the official source. Queries then also go through that service: check its terms.
 
 ## 9. Common problems
 

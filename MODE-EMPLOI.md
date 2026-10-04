@@ -126,7 +126,8 @@ Le rapport est une aide : **relisez les corrections avant de les reporter**, en 
 
 - Votre document est traité par Claude selon les conditions de votre abonnement ou de votre organisation.
 - Pour vérifier les références, Claude envoie des **références et des extraits courts** (numéro d'arrêt, titre d'un article, phrase citée) aux moteurs de recherche et aux sites officiels. Le skill ne prévoit pas d'y transmettre votre document lui-même.
-- Pour un dossier couvert par le secret professionnel, vérifiez que l'outil est autorisé par votre organisation, ou retirez d'abord les noms des parties : l'audit porte sur les références, pas sur les faits du dossier.
+- Les recherches peuvent contenir les éléments des **références** auditées (numéro, intitulé, parties d'une décision publiée, phrase citée). Le skill a pour consigne de ne jamais y mettre les **faits** du dossier ni le nom de vos clients ou de vos adversaires. Par prudence, pour un dossier couvert par le secret professionnel, vérifiez que l'outil est autorisé par votre organisation et **anonymisez d'abord les éléments factuels** (noms, adresses, faits), en laissant intactes les références à auditer.
+- Si vous avez installé un **connecteur juridique** (par exemple Legal Data Hunter), le skill l'utilise pour trouver les références plus vite, puis vérifie sur la source officielle. Les requêtes passent alors aussi par ce service : consultez ses conditions.
 
 ## 9. Problèmes fréquents
 

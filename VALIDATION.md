@@ -1,4 +1,8 @@
-# Validation publique — 0.9.2
+# Validation publique — 0.9.3
+
+4 octobre 2026. Règles ajoutées : connecteurs juridiques (découverte, vérification sur la source officielle) et confidentialité des requêtes. Test ciblé sur l'extrait E (agent à contexte neuf, connecteur Legal Data Hunter disponible) : 3/3, aucune fausse alerte, 7 pages ; connecteur utilisé pour 8 sources (7 trouvées, toutes vérifiées sur la source officielle) ; aucune requête contenant autre chose que des éléments des références. La recherche par le web reste inchangée ; les conditions 1 et 2 restent acquises.
+
+## 0.9.2
 
 27 septembre 2026. La 0.9.2 ne modifie que la licence (autorisation complémentaire pour l'usage professionnel) et la documentation ; le comportement du skill est celui de la 0.9.1.
 
