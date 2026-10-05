@@ -1,6 +1,6 @@
 # Doctrine
 
-**Dernière révision des instructions : 25 septembre 2026**
+**Dernière révision des instructions : 5 octobre 2026**
 
 Trois niveaux : D1 identité bibliographique, D2 localisation, D3 citation textuelle.
 
@@ -23,6 +23,22 @@ S'arrêter dès que la référence est établie, ou lorsque ces trois voies ont 
 **Plateformes d'éditeurs sur abonnement** (par exemple Strada lex) : ne pas les tenter, même sur leurs pages publiques ; elles exigent un compte et refusent généralement les accès automatisés. Les indiquer seulement au juriste comme lieu où vérifier lui-même, s'il y a accès. Jurisquare n'existe plus depuis 2024 (voir l'annonce de la bibliothèque de droit de la KU Leuven : https://bib.kuleuven.be/rbib/collectie/stopzetting-jurisquare) : ne pas le consulter ni le proposer.
 
 **Contenu non lu.** Une notice d'éditeur ou de bibliothèque établit l'identité (auteur, titre, revue, année, pages) mais pas le contenu : lorsque le document attribue à l'ouvrage une proposition, une page précise ou une citation, le statut est `PARTIALLY_VERIFIED` et la fiche dit « contenu non vérifié ». Proposer alors au juriste de fournir l'extrait concerné (copie des pages ou PDF qu'il possède) pour compléter le contrôle.
+
+## Doctrine ancienne et ouvrages numérisés
+
+Avant de déclarer non vérifiable un ouvrage ou un article ancien (auteur classique, revue antérieure aux bases en ligne), chercher une numérisation publique :
+
+- ouvrages belges classiques et revues belges anciennes : bibliothèque de droit de la KU Leuven (voir [recueils-numerises-kul.md](recueils-numerises-kul.md)) ; dépôts numériques des universités pour leurs propres revues ;
+- ouvrages et revues étrangers du domaine public : bibliothèque numérique nationale du pays (pour la France, Gallica) ; son catalogue signale aussi des **bibliothèques partenaires**, où se trouvent parfois les éditions qu'elle n'a pas elle-même (par exemple les éditions d'un même traité numérisées par une université) ;
+- une reproduction en ligne dans une revue ou un site universitaire est une source secondaire : elle peut vérifier les mots, mais la fiche dit que le recueil d'origine n'a pas été consulté.
+
+**Méthode dans une bibliothèque numérique.** Mode texte du volume pour repérer le passage ; recherche interne au document pour obtenir la vue ; table de pagination pour passer de la page imprimée à la vue ; **image de la page** pour vérifier. Relever la page imprimée et la vue. Si le site soumet l'accès à un contrôle anti-robot, appliquer la règle 8 : s'arrêter et proposer au juriste de le valider lui-même dans le navigateur.
+
+**Édition exacte.** Vérifier l'édition que cite le document (numéro d'édition, année, éditeur lus sur la page de titre). Une autre édition peut confirmer que l'idée est bien de l'auteur ; elle ne vérifie ni la page ni les mots, car le texte a pu être réécrit d'une édition à l'autre. Dans ce cas : D1 vérifié pour l'ouvrage, D2 et D3 non vérifiés pour l'édition citée, et la fiche nomme l'édition lue. Une réédition moderne d'un texte ancien a sa propre pagination et son propre appareil (préface, notes) protégé par le droit d'auteur.
+
+**Citation de seconde main.** Lorsqu'un passage est cité d'après un autre auteur (« cité par », ou reprise manifeste d'une formule), vérifier l'original s'il est accessible. Écarts fréquents : formule tronquée ou un mot changé ; résumé de l'auteur intermédiaire pris pour une citation de l'auteur d'origine ; date ou page reprises d'un recueil intermédiaire ; rubrique d'une chronique citée comme un article autonome. Si l'original reste inaccessible, la fiche dit « cité d'après … ; original non consulté » : statut `PARTIALLY_VERIFIED`, et jamais de correction fondée sur la seule source intermédiaire.
+
+**Dépôts non officiels.** Un document déposé par un particulier sur une plateforme de partage peut orienter vers un passage ; il ne vérifie rien et ne se cite pas dans le rapport comme source de vérification.
 
 ## Exprimer un doute sérieux
 

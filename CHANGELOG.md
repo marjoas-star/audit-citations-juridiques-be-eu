@@ -1,5 +1,10 @@
 # Notes de version
 
+## 0.9.4 — 5 octobre 2026
+
+- **Sources anciennes** (antérieures aux bases en ligne) : une telle source n'est pas « non vérifiable » tant qu'une numérisation publique n'a pas été cherchée (recueils et revues numérisés par la bibliothèque de droit de la KU Leuven, bibliothèques numériques patrimoniales, listes historiques des assemblées). Quatre contrôles : l'image de la page vérifie, l'OCR localise ; le motif et non le sommaire ; l'édition exacte d'un ouvrage ; l'original d'une citation de seconde main. Modules `recueils-numerises-kul.md` (fonds, méthode pour un arrêt ancien du Conseil d'État, revues anciennes), `doctrine.md` (doctrine ancienne, édition exacte, seconde main, dépôts non officiels), `travaux-parlementaires-federal.md` (documents anciens), `conseil-etat-belgique.md` et `routing.md`.
+- Test sur trois notes de la R.C.J.B. 1999 citant six arrêts du Conseil d'État de 1986 à 1992 : les six retrouvés dans le *Recueil des arrêts du Conseil d'État* numérisé, en-têtes lus sur l'image, pages imprimées relevées ; aucune fausse correction.
+
 ## 0.9.3 — 4 octobre 2026
 
 Deux suggestions d'un juriste à la suite de l'annonce publique.

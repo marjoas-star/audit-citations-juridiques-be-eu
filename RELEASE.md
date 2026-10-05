@@ -1,4 +1,4 @@
-# Publication 0.9.3
+# Publication 0.9.4
 
 Canal : version proposée par défaut (« Latest »), ouverte à l'essai public d'au moins quatre semaines qui conditionne la 1.0 (voir `CONTRIBUTING.md`). Ajoute à la 0.9.0 la règle de la « piste probable ». Public visé : juristes utilisant Claude, en particulier Claude Cowork avec l'application de bureau.
 

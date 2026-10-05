@@ -1,4 +1,8 @@
-# Validation publique — 0.9.3
+# Validation publique — 0.9.4
+
+5 octobre 2026. Règles ajoutées pour les sources anciennes. Test ciblé (agent à contexte neuf) sur les notes 38, 64 et 65 de la R.C.J.B. 1999 : six arrêts du Conseil d'État de 1986 à 1992, tous retrouvés dans le *Recueil des arrêts du Conseil d'État* numérisé par la KU Leuven (fascicule du mois, page imprimée et page du fichier, en-tête lu sur l'image), aucune correction ni fausse alerte ; écarts déclarés : téléchargements relancés après des erreurs réseau, deux limites mentionnées dans les traces mais pas dans le rapport.
+
+## 0.9.3
 
 4 octobre 2026. Règles ajoutées : connecteurs juridiques (découverte, vérification sur la source officielle) et confidentialité des requêtes. Test ciblé sur l'extrait E (agent à contexte neuf, connecteur Legal Data Hunter disponible) : 3/3, aucune fausse alerte, 7 pages ; connecteur utilisé pour 8 sources (7 trouvées, toutes vérifiées sur la source officielle) ; aucune requête contenant autre chose que des éléments des références. La recherche par le web reste inchangée ; les conditions 1 et 2 restent acquises.
 

@@ -1,6 +1,6 @@
 # Conseil d'État de Belgique — jurisprudence
 
-**Dernière révision des instructions : 24 septembre 2026**
+**Dernière révision des instructions : 5 octobre 2026**
 
 ## 1. Objet
 
@@ -167,6 +167,8 @@ Pour les décisions antérieures à la collection moderne, utiliser `references/
 Principe :
 
 > **L'OCR sert à trouver ; le scan sert à vérifier.**
+
+Chercher l'arrêt dans le fascicule du mois de son prononcé, par son numéro. Contrôler la citation dans les **motifs** et non dans le sommaire qui précède l'arrêt : le sommaire peut en généraliser la portée. Donner la page imprimée du recueil.
 
 Ne jamais inventer un ECLI pour une ancienne décision qui n'en possède pas ou dont l'identifiant n'a pas été vérifié.
 

@@ -1,6 +1,6 @@
 # Routage des références
 
-**Dernière révision des instructions : 24 septembre 2026**
+**Dernière révision des instructions : 5 octobre 2026**
 
 ## Principe
 
@@ -17,15 +17,15 @@ Priorité des identifiants lorsque présents : ECLI, CELEX, ELI, NUMAC, numéro 
 - législation belge → `moniteur-belge-justel.md`
 - relations entre normes → `reflex.md`
 - Conseil d'État belge → `conseil-etat-belgique.md`
-- anciennes décisions CE → `recueils-numerises-kul.md`
+- anciennes décisions CE, recueils et revues belges anciens → `recueils-numerises-kul.md`
 - Cour constitutionnelle → `cour-constitutionnelle.md`
 - Cassation / juridictions judiciaires → `juportal.md`
-- travaux parlementaires fédéraux → `travaux-parlementaires-federal.md`
+- travaux parlementaires fédéraux → `travaux-parlementaires-federal.md` (législatures anciennes : section « Documents anciens »)
 - travaux des entités fédérées → `travaux-parlementaires-entites-federees.md`
 - droit UE → `eur-lex-legislation.md`
 - CJUE / Tribunal → `cjue.md`
 - CEDH → `cedh.md`
-- doctrine → `doctrine.md`
+- doctrine → `doctrine.md` (ouvrages et revues anciens : section « Doctrine ancienne et ouvrages numérisés »)
 - langue / traduction → toujours appliquer `language-policy.md`
 
 ## Conseil d'État belge — numéro exact
@@ -51,6 +51,10 @@ Toujours distinguer dossier, document, rapport, amendement, texte adopté, déba
 ## Doctrine
 
 Résoudre d'abord les renvois internes (`op. cit.`, `ibid.`). Puis vérifier identité, localisation et citation.
+
+## Sources anciennes
+
+Une source antérieure aux bases en ligne n'est pas non vérifiable avant qu'une numérisation publique ait été cherchée. Quatre contrôles : l'image de la page vérifie, l'OCR localise ; le motif et non le sommaire ; l'édition exacte ; l'original d'une citation de seconde main.
 
 ## Référence composite
 

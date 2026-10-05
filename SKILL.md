@@ -12,7 +12,7 @@ description: >
 
 # Audit des citations juridiques — Belgique & Europe
 
-Version du skill : `0.9.3` (à reporter dans le champ `skill_version` du rapport).
+Version du skill : `0.9.4` (à reporter dans le champ `skill_version` du rapport).
 
 ## 1. Objet
 
@@ -135,15 +135,15 @@ Travail natif en FR, NL, DE, EN. Distinguer `document_language`, `citation_langu
 |---|---|---|
 | Législation belge | [moniteur-belge-justel.md](references/moniteur-belge-justel.md), [reflex.md](references/reflex.md) | acte, publication, version temporelle, entrée en vigueur, modifications, rectificatifs |
 | Conseil d'État | [conseil-etat-belgique.md](references/conseil-etat-belgique.md) | voir ci-dessous |
-| Jurisprudence CE ancienne | [recueils-numerises-kul.md](references/recueils-numerises-kul.md) | une table ne vaut pas texte intégral |
+| Jurisprudence ancienne, recueils et revues numérisés | [recueils-numerises-kul.md](references/recueils-numerises-kul.md) | une table ne vaut pas texte intégral ; le sommaire n'est pas le motif |
 | Cour constitutionnelle | [cour-constitutionnelle.md](references/cour-constitutionnelle.md) | rôle ≠ numéro d'arrêt ≠ ECLI |
 | Cassation, juridictions | [juportal.md](references/juportal.md) | document officiel > métadonnées > résultat > secondaire > snippet ; absence ≠ inexistence |
-| Parlement fédéral | [travaux-parlementaires-federal.md](references/travaux-parlementaires-federal.md) | dossier ≠ pièce ≠ rapport ≠ texte adopté ≠ débat ≠ norme publiée |
+| Parlement fédéral | [travaux-parlementaires-federal.md](references/travaux-parlementaires-federal.md) | dossier ≠ pièce ≠ rapport ≠ texte adopté ≠ débat ≠ norme publiée ; documents anciens : séance et page contrôlées sur le document |
 | Entités fédérées | [travaux-parlementaires-entites-federees.md](references/travaux-parlementaires-entites-federees.md) | Bruxelles : identifier l'institution (PRBC, COCOM, COCOF, VGC) avant le numéro |
 | Droit de l'Union | [eur-lex-legislation.md](references/eur-lex-legislation.md) | acte publié ≠ consolidation ≠ préparatoire ≠ procédure |
 | CJUE / Tribunal | [cjue.md](references/cjue.md) | numéro d'affaire ≠ document |
 | CEDH | [cedh.md](references/cedh.md) | requête, décision, arrêt, version linguistique, traduction |
-| Doctrine | [doctrine.md](references/doctrine.md) | D1 identité, D2 localisation, D3 citation |
+| Doctrine | [doctrine.md](references/doctrine.md) | D1 identité, D2 localisation, D3 citation ; édition exacte ; citation de seconde main |
 
 **Conseil d'État — numéro exact connu.** Voie primaire : la **Recherche avancée** officielle (ou l'adresse de résultat que ce formulaire a produite, réutilisée avec un autre numéro **cité dans le document**), champs `Numéro début` = `Numéro fin`. Ne jamais transformer le numéro en URL ou en ECLI supposés. Ouvrir le document officiel ; si le lecteur échoue, télécharger le lien effectivement observé avec un client standard et lire le PDF localement. Vérifier numéro, date, nature, parties, langue, rectifications, puis le passage cité. Ne relever un ECLI que s'il est fourni par une source suffisamment forte. Un formulaire inutilisable donne `TECHNICAL_FAILURE`, jamais `NO_RESULT`. La collection annonce tous les arrêts depuis septembre 1994 (régime particulier pour les étrangers) : une impossibilité récurrente d'y accéder est une limite technique, pas une preuve d'absence. juriDict découvre, il ne remplace pas le document intégral ; ses arbres FR et NL sont indépendants.
 
@@ -154,6 +154,15 @@ Travail natif en FR, NL, DE, EN. Distinguer `document_language`, `citation_langu
 **CJUE.** Ne jamais fusionner arrêt, ordonnance, conclusions ou avis. Vérifier séparément intitulé, chaque numéro d'affaire, date et type de document. Une graphie fautive d'une partie avec numéro et date certains → source identifiée, `VERIFIED_WITH_ANOMALY`. Pour des affaires jointes, contrôler chaque numéro en entier (`C-469/1` au lieu de `C-469/10` est une anomalie). Le statut `pending`/`closed` vaut pour une instance précise : une affaire du Tribunal clôturée n'est pas pendante parce que son pourvoi l'est → `PROCEDURAL_STATUS_MISMATCH`.
 
 **Doctrine.** Pour les universitaires belges, consulter tôt les dépôts institutionnels. Un AAM/postprint vérifie les mots de l'auteur, pas automatiquement la pagination de la version éditeur.
+
+**Sources anciennes (antérieures aux bases en ligne).** Un arrêt du Conseil d'État antérieur à septembre 1994, une revue ou un ouvrage ancien, des travaux préparatoires anciens ou un auteur classique ne sont pas « non vérifiables » tant qu'une numérisation publique n'a pas été cherchée : recueils et revues belges numérisés par la bibliothèque de droit de la KU Leuven ([recueils-numerises-kul.md](references/recueils-numerises-kul.md)), bibliothèques numériques patrimoniales pour les ouvrages et revues du domaine public ([doctrine.md](references/doctrine.md)), listes historiques des assemblées ([travaux-parlementaires-federal.md](references/travaux-parlementaires-federal.md)). Quatre contrôles propres à ces sources :
+
+- **l'image de la page vérifie, l'OCR localise** : relever la page imprimée et, séparément, la vue ou la page du fichier ;
+- **le motif, pas le sommaire** : contrôler les mots de la décision elle-même ; le sommaire qui la précède dans un recueil peut généraliser un motif que l'arrêt limitait au cas d'espèce ;
+- **l'édition exacte** : une autre édition du même ouvrage peut confirmer l'idée, jamais la page ni les mots, car le texte a pu être réécrit ; la fiche dit quelle édition a été lue ;
+- **la citation de seconde main** : lorsqu'une source est citée d'après un autre auteur, vérifier l'original si une numérisation existe (formule tronquée, résumé d'un tiers pris pour une citation, date ou page reprises d'un recueil intermédiaire) ; à défaut, la fiche dit « cité d'après … ; original non consulté » et le statut reste `PARTIALLY_VERIFIED`.
+
+Une numérisation par une bibliothèque est une source institutionnelle (`INSTITUTIONAL_FULL_DOCUMENT`), non une publication officielle. Un dépôt non officiel (plateforme de partage de documents) peut orienter ; il ne vérifie rien. Un contrôle anti-robot d'une bibliothèque numérique relève de la règle 8 : s'arrêter et proposer au juriste de le valider lui-même.
 
 ## 9. Corrections
 
