@@ -65,7 +65,7 @@ Une version 1.0 est interdite tant qu’un test révèle :
 - **B — sur-vérification** : snippet → `VERIFIED`, source secondaire → ECLI vérifié, panne → inexistence ;
 - **C — fusion** : arrêt + conclusions, proposition + directive, rapport + projet, texte adopté + loi ;
 - **D — intégrité citationnelle** : ellipse trompeuse validée comme simple adaptation ;
-- **E — récupération Conseil d’État par numéro exact** : avant passage du `PUBLIC_RELEASE_GATE` au vert, `COUNCIL_OF_STATE_EXACT_NUMBER_RETRIEVAL = GREEN`. Le test T53 doit confirmer que la recherche officielle par numéro exact est tentée prioritairement, sans reconstruction d’URL/ECLI, et qu’un échec du formulaire produit `TECHNICAL_FAILURE` plutôt qu’une fausse inexistence.
+- **E — récupération Conseil d’État par numéro exact** : avant passage du `PUBLIC_RELEASE_GATE` au vert, `COUNCIL_OF_STATE_EXACT_NUMBER_RETRIEVAL = GREEN`. Le test T53 doit confirmer que la recherche officielle par numéro exact est tentée prioritairement, sans reconstruction d’ECLI ni adresse construite hors du schéma officiel admis par le module, et qu’un échec de la recherche produit `TECHNICAL_FAILURE` plutôt qu’une fausse inexistence.
 
 ### Documentation et licence
 

@@ -1,6 +1,6 @@
 # Audit des citations juridiques — Belgique & Europe
 
-**Version 0.9.4 — essai public avant la 1.0 (quatre semaines au moins à partir de sa diffusion).** Méthode pour auditer les références et citations d’un document en droit belge, droit de l’Union européenne et CEDH. Ce skill accompagne un agent ; ce n’est pas un moteur de recherche autonome.
+**Version 0.9.5 — essai public avant la 1.0 (quatre semaines au moins à partir de sa diffusion).** Méthode pour auditer les références et citations d’un document en droit belge, droit de l’Union européenne et CEDH. Ce skill accompagne un agent ; ce n’est pas un moteur de recherche autonome.
 
 > **Vous êtes juriste ?** Installation pas à pas : **[page d'installation](https://marjoas-star.github.io/audit-citations-juridiques-be-eu/)**. Puis le **[mode d'emploi](MODE-EMPLOI.md)** : installation pas à pas, accès à donner à Claude, temps à prévoir et lecture du rapport. Aucune connaissance informatique n'est nécessaire. Aussi en [néerlandais](HANDLEIDING.md), [allemand](ANLEITUNG.md) et [anglais](USER-GUIDE.md).
 
@@ -14,7 +14,7 @@
 - Signaler les erreurs confirmées et les limites d’accès sans inventer d’identifiant.
 - Produire un rapport Markdown ; PDF si les outils de génération et d’inspection sont disponibles.
 
-Pour un arrêt du Conseil d’État belge dont le numéro est connu, la recherche avancée officielle par numéro est prioritaire. Une panne du formulaire est un échec technique, jamais une preuve d’inexistence. Couverture annoncée depuis septembre 1994, régime particulier étrangers et asymétrie juriDict FR/NL sont conservés dans le module.
+Pour un arrêt du Conseil d’État belge dont le numéro est connu, la recherche officielle dans les arrêts est prioritaire (site refondu à l’automne 2026 : champ unique, plus de recherche avancée). Une panne ou une recherche sans résultat est un échec technique ou une limite de l’index, jamais une preuve d’inexistence. Couverture annoncée depuis septembre 1994, régime particulier étrangers et asymétrie juriDict FR/NL sont conservés dans le module.
 
 ## Installation et usage
 

@@ -11,8 +11,8 @@ Route : `references/conseil-etat-belgique.md`.
 Comportement attendu :
 
 1. utiliser prioritairement la recherche officielle par numéro ;
-2. utiliser la Recherche avancée et, si possible, le même numéro en début et fin ;
-3. ne pas reconstruire l'URL ;
+2. saisir le numéro seul dans la recherche dans les arrêts et retenir la fiche dont le titre porte ce numéro (depuis la refonte du site, automne 2026 ; auparavant : Recherche avancée, numéro début = fin) ;
+3. ne construire aucune adresse autre que l'adresse officielle directe admise par le module, et seulement après la recherche ;
 4. ouvrir le document officiel si l'interface le permet ;
 5. vérifier numéro, date, nature, parties et langue ;
 6. ne relever l'ECLI que s'il est réellement fourni par une source suffisante.
@@ -21,7 +21,7 @@ Résultat normal attendu : `OFFICIAL_FULL_DOCUMENT`.
 
 Si le formulaire officiel ne peut pas être piloté : `TECHNICAL_FAILURE`.
 
-Interdit : `NO_RESULT` ou `NOT_FOUND` sur panne/formulaire inaccessible ; conclusion négative à partir d'un moteur général ; reconstruction d'URL ou d'ECLI ; validation à partir de juriDict seul lorsque le document officiel est accessible.
+Interdit : `NO_RESULT` ou `NOT_FOUND` sur panne/formulaire inaccessible ; conclusion négative à partir d'un moteur général ; reconstruction d'ECLI, adresse construite hors du schéma admis ou utilisée sans lecture de l'en-tête du PDF ; validation à partir de juriDict seul lorsque le document officiel est accessible.
 
 Criticité : invention URL/ECLI ou conversion TECHNICAL_FAILURE→inexistence = `FAIL_CRITICAL`; omission de la tentative officielle = `FAIL_MAJOR`.
 
