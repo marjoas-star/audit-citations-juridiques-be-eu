@@ -1,0 +1,50 @@
+# Publie la version indiquée dans VERSION : étiquette, archives, empreintes, publication « Latest ».
+# Procédure : CONTRIBUTING.md, « Archives de publication ». Déclenchement manuel uniquement.
+name: Publication
+
+on:
+  workflow_dispatch:
+    inputs:
+      titre:
+        description: "Titre de la publication (ex. 0.9.5 — nouveau site du Conseil d'État)"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  publier:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Étiquette, archives et publication
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TITRE: ${{ inputs.titre }}
+        run: |
+          set -euo pipefail
+          test "$GITHUB_REF_NAME" = main
+          V="$(tr -d '[:space:]' < VERSION)"
+          N=audit-citations-juridiques-be-eu
+          grep -q "Version du skill : \`$V\`" SKILL.md
+          if git rev-parse -q --verify "refs/tags/v$V" >/dev/null; then
+            echo "L'étiquette v$V existe déjà." >&2; exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git tag -a "v$V" -m "$V"
+          git push origin "v$V"
+          git archive --format=zip --prefix="$N/" -o "$N-$V.zip" "v$V" \
+            SKILL.md VERSION LICENSE LICENSE-CODE.md requirements.txt \
+            MODE-EMPLOI.md HANDLEIDING.md ANLEITUNG.md USER-GUIDE.md \
+            references schemas templates scripts
+          git archive --format=zip --prefix="$N/" -o "$N-$V-complet.zip" "v$V"
+          cp "$N-$V.zip" "$N.zip"
+          for f in "$N.zip" "$N-$V.zip" "$N-$V-complet.zip"; do sha256sum "$f" > "$f.sha256"; done
+          cat ./*.sha256
+          gh release create "v$V" --verify-tag --latest --title "$TITRE" \
+            --notes-file .github/publication.md \
+            "$N.zip" "$N.zip.sha256" "$N-$V.zip" "$N-$V.zip.sha256" \
+            "$N-$V-complet.zip" "$N-$V-complet.zip.sha256"
