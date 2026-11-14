@@ -1,4 +1,8 @@
-# Validation publique — 0.9.4
+# Validation publique — 0.9.5
+
+14 novembre 2026. Module Conseil d'État adapté au site refondu. Constats faits sur le site officiel avec un client standard (session de mise à jour du module, non à l'aveugle), depuis un serveur : les arrêts n° 247.602 (20 mai 2020) et n° 230.687 (27 mars 2015) sont retrouvés par la recherche dans les arrêts (numéro seul), parmi d'autres fiches, et leurs PDF ouverts ; l'arrêt n° 50.000 (28 octobre 1994) n'est pas trouvé par la recherche mais son PDF est servi à l'adresse directe ; l'arrêt n° 268.329 (12 novembre 2026) porte son ECLI en pied de page. Ce ne sont pas des passages à l'aveugle du skill : le critère T53 et les cas T53-R9 à R16 restent à rejouer sur la 0.9.5 dans Cowork et par un agent à contexte neuf avant d'être déclarés conformes. Les mentions ci-dessous de la « recherche avancée » décrivent le site tel qu'il était à la date de chaque essai ; leurs liens renvoient aujourd'hui à la page d'accueil. Détail : [constats](tests/results/site-conseil-etat-095/README.md).
+
+## 0.9.4
 
 5 octobre 2026. Règles ajoutées pour les sources anciennes. Test ciblé (agent à contexte neuf) sur les notes 38, 64 et 65 de la R.C.J.B. 1999 : six arrêts du Conseil d'État de 1986 à 1992, tous retrouvés dans le *Recueil des arrêts du Conseil d'État* numérisé par la KU Leuven (fascicule du mois, page imprimée et page du fichier, en-tête lu sur l'image), aucune correction ni fausse alerte ; écarts déclarés : téléchargements relancés après des erreurs réseau, deux limites mentionnées dans les traces mais pas dans le rapport.
 

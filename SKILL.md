@@ -12,7 +12,7 @@ description: >
 
 # Audit des citations juridiques — Belgique & Europe
 
-Version du skill : `0.9.4` (à reporter dans le champ `skill_version` du rapport).
+Version du skill : `0.9.5` (à reporter dans le champ `skill_version` du rapport).
 
 ## 1. Objet
 
@@ -145,7 +145,7 @@ Travail natif en FR, NL, DE, EN. Distinguer `document_language`, `citation_langu
 | CEDH | [cedh.md](references/cedh.md) | requête, décision, arrêt, version linguistique, traduction |
 | Doctrine | [doctrine.md](references/doctrine.md) | D1 identité, D2 localisation, D3 citation ; édition exacte ; citation de seconde main |
 
-**Conseil d'État — numéro exact connu.** Voie primaire : la **Recherche avancée** officielle (ou l'adresse de résultat que ce formulaire a produite, réutilisée avec un autre numéro **cité dans le document**), champs `Numéro début` = `Numéro fin`. Ne jamais transformer le numéro en URL ou en ECLI supposés. Ouvrir le document officiel ; si le lecteur échoue, télécharger le lien effectivement observé avec un client standard et lire le PDF localement. Vérifier numéro, date, nature, parties, langue, rectifications, puis le passage cité. Ne relever un ECLI que s'il est fourni par une source suffisamment forte. Un formulaire inutilisable donne `TECHNICAL_FAILURE`, jamais `NO_RESULT`. La collection annonce tous les arrêts depuis septembre 1994 (régime particulier pour les étrangers) : une impossibilité récurrente d'y accéder est une limite technique, pas une preuve d'absence. juriDict découvre, il ne remplace pas le document intégral ; ses arbres FR et NL sont indépendants.
+**Conseil d'État — numéro exact connu.** Le site a été refondu à l'automne 2026 : il n'y a plus de recherche avancée ni de champ « numéro ». Voie primaire : la **recherche officielle dans les arrêts**, numéro seul dans le champ unique (ou l'adresse de résultats qu'elle a produite, réutilisée avec un autre numéro **cité dans le document**). Cette recherche porte sur le texte : retenir la fiche dont le **titre** porte le numéro, jamais le premier résultat. Si cette fiche n'apparaît pas, essayer l'adresse officielle directe décrite dans le module (`/arrets/<numéro>`, `/arresten/<numéro>`) : l'index de recherche est incomplet, et seul le PDF ouvert, dont l'en-tête porte le numéro et la date, fait preuve. Ne construire aucune autre adresse, et jamais un ECLI. Ouvrir le document officiel ; si le lecteur échoue, télécharger le lien effectivement observé avec un client standard et lire le PDF localement. Vérifier numéro, date, nature, parties, langue, rectifications, puis le passage cité. Ne relever un ECLI que s'il est imprimé dans le PDF (arrêts récents) ou fourni par une source suffisamment forte. Les arrêts publiés depuis février 2024 sont pseudonymisés : un nom de partie absent du PDF n'est pas une anomalie. Une recherche inutilisable donne `TECHNICAL_FAILURE`, jamais `NO_RESULT` ; « 0 résultat » ou une réponse 404 ne prouve pas l'inexistence. La collection annonce tous les arrêts depuis septembre 1994 (étrangers : systématiquement depuis juin 2018) : une impossibilité récurrente d'y accéder est une limite technique, pas une preuve d'absence. juriDict découvre, il ne remplace pas le document intégral ; ses arbres FR et NL sont indépendants.
 
 > **Le numéro permet de chercher ; le document officiel permet de vérifier ; juriDict permet de découvrir.**
 

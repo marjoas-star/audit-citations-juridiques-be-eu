@@ -30,7 +30,7 @@ Priorité des identifiants lorsque présents : ECLI, CELEX, ELI, NUMAC, numéro 
 
 ## Conseil d'État belge — numéro exact
 
-Si un numéro exact est connu, tenter en priorité la Recherche avancée officielle par numéro. Ne pas substituer juriDict ou un moteur général à cette route. Un formulaire officiel inaccessible donne `TECHNICAL_FAILURE`, pas `NOT_FOUND`.
+Si un numéro exact est connu, tenter en priorité la recherche officielle dans les arrêts (numéro seul, fiche dont le titre porte ce numéro) ; à défaut de fiche, l'adresse officielle directe décrite dans `conseil-etat-belgique.md`, puis juriDict. Ne pas substituer un moteur général à cette route. Une recherche officielle inaccessible donne `TECHNICAL_FAILURE`, pas `NOT_FOUND` ; « 0 résultat » n'établit pas l'inexistence.
 
 ## Législation belge
 

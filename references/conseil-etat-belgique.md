@@ -1,6 +1,6 @@
 # Conseil d'État de Belgique — jurisprudence
 
-**Dernière révision des instructions : 5 octobre 2026**
+**Dernière révision des instructions : 14 novembre 2026** (refonte du site officiel constatée à cette date)
 
 ## 1. Objet
 
@@ -8,26 +8,34 @@ Ce module décrit la vérification des arrêts et ordonnances de non-admission d
 
 ## 2. Sources officielles
 
-Source primaire moderne : site officiel du Conseil d'État de Belgique, rubrique **Chercher > Arrêts**.
+Source primaire moderne : site officiel du Conseil d'État de Belgique, rubrique **Arrêts > Recherche dans les arrêts**. Le site a été refondu à l'automne 2026 ; ce module décrit l'interface observée le 14 novembre 2026. Les ordonnances de cassation et les avis de la section de législation ont chacun leur propre recherche (section 9.1).
 
-Le site annonce que la collection numérisée comprend :
+Le site annonce :
 
-- tous les arrêts à partir de septembre 1994 ;
-- toutes les ordonnances de non-admission ;
-- avec un régime particulier pour le contentieux des étrangers, où seules les décisions présentant un intérêt pour la jurisprudence ou la recherche juridique sont publiées ;
-- publication dans la langue du prononcé.
+- tous les arrêts depuis septembre 1994 et toutes les ordonnances de non-admission ;
+- pour le contentieux des étrangers, une publication systématique depuis juin 2018 seulement ; auparavant, seules les décisions présentant un intérêt pour la jurisprudence ou la recherche juridique étaient publiées ;
+- la publication dans la langue du prononcé ;
+- la pseudonymisation de tous les arrêts et ordonnances depuis février 2024 (section 6.1).
 
-La page officielle **Recherche avancée** offre notamment les champs :
+### 2.1. La recherche dans les arrêts
 
-- Date ;
-- Numéro début ;
-- Numéro fin ;
-- Numéro de rôle ;
-- Parties ;
-- Décision ;
-- type de document ;
-- langue.
+L'ancienne « Recherche avancée » n'existe plus : il n'y a plus de champs `Numéro début`, `Numéro fin`, `Numéro de rôle`, `Parties`, `Décision` ni de date exacte. L'interface comprend :
 
+- un champ unique de recherche **dans le texte** (« Chercher un arrêt ») ;
+- quatre filtres : **Année**, **Langue**, **Chambre**, **Matière** ;
+- un tri par pertinence ou par date ;
+- dix résultats par page, sous forme de fiches intitulées « Arrêt 247.602 », avec la date, la chambre, le numéro de rôle, le début des parties ou la matière, et un lien vers le PDF.
+
+Syntaxe indiquée par l'aide du site : plusieurs mots = tous requis ; expression exacte entre guillemets ; `|` = l'un ou l'autre ; `-mot` = exclusion ; `perm*` = début de mot.
+
+### 2.2. L'index de recherche est moins complet que la collection
+
+Constats du 14 novembre 2026 :
+
+- le filtre Année compte 30 documents pour 1994, 472 pour 1995 et 1.932 pour 1996, bien moins que les arrêts prononcés ;
+- l'arrêt n° 50.000 du 28 octobre 1994 n'est trouvé ni par son numéro ni par le nom d'une partie, alors que son PDF est servi par le site à son adresse directe (section 4.1).
+
+Conséquence : **« 0 résultat » ou l'absence de la fiche attendue ne prouve pas que l'arrêt est absent de la collection**, surtout pour les années 1994 à 1996.
 ## 3. Règle fondamentale
 
 > **Le numéro permet de chercher ; le document officiel permet de vérifier ; juriDict permet de découvrir.**
@@ -38,39 +46,67 @@ Une occurrence dans un moteur de recherche, un snippet, une référence doctrina
 
 Lorsqu'un numéro exact d'arrêt est connu :
 
-1. utiliser en priorité la recherche officielle du Conseil d'État ;
-2. utiliser `Numéro début` et `Numéro fin` avec le même numéro lorsque l'interface le permet ; consigner les langues et les autres filtres effectivement sélectionnés (un filtre linguistique restreint la portée d’un résultat nul) ;
-3. ne jamais construire une URL profonde à partir du numéro ;
+1. saisir le numéro seul dans le champ de la recherche officielle dans les arrêts, sans filtre ; l'écriture avec ou sans point (`247602`, `247.602`) a donné les mêmes résultats ;
+2. repérer la fiche dont **le titre** porte ce numéro (« Arrêt 247.602 ») ; ne jamais retenir le premier résultat sans lire son titre (section 4.0) ;
+3. si aucune fiche ne porte ce numéro, essayer l'adresse officielle directe (section 4.1) avant de conclure ;
 4. ne jamais construire un ECLI à partir de la date, du numéro ou d'un modèle supposé ;
-5. ouvrir le document officiel lorsque le résultat le permet ;
-6. vérifier séparément :
+5. ouvrir le document officiel ;
+6. vérifier séparément, **dans le document** :
    - nature du document ;
    - numéro ;
    - date ;
-   - parties ;
+   - parties (section 6.1) ;
    - langue ;
    - numéro de rôle si pertinent ;
-   - passage cité si le texte intégral est accessible ;
-7. ne relever un ECLI que s'il est effectivement présent dans une source suffisamment forte ;
+   - passage cité ;
+7. ne relever un ECLI que s'il est effectivement imprimé dans le document ou affiché par une source suffisamment forte (section 4.2) ;
 8. conserver le niveau de preuve par champ.
 
-### 4.0. Récupérer et lire efficacement le document
+### 4.0. Lire la liste de résultats
 
-Rechercher d’abord le numéro seul (début = fin), sans ajouter le nom ou la date cités : les critères supplémentaires sont combinés par AND et une erreur dans la citation masquerait le bon résultat. Sélectionner explicitement les langues pertinentes et le type de document ; ne pas confondre langue de l’interface et langues recherchées.
+La recherche porte sur le texte des arrêts : un numéro saisi ramène aussi les arrêts qui **citent** ce numéro et ceux dont le **numéro de rôle** le contient. Exemples du 14 novembre 2026 : `247602` donne l'arrêt n° 247.602 et l'arrêt n° 258.417, rendu dans la même affaire ; `230687` donne l'arrêt n° 230.687 et deux arrêts du rôle A. 230.687. Un numéro rond ou court donne des centaines de résultats (`50000` : 608).
 
-Après la recherche, relever le `href` réel du lien du résultat, son titre et l’URL de la page de résultats. Ne pas reconstruire un lien à partir d’un texte visuellement abrégé. Distinguer le PDF original et les éventuelles traductions ; ouvrir leur première page pour le confirmer.
+- Identifier l'arrêt par le titre de la fiche, puis par l'en-tête du PDF ; la date et le numéro de rôle de la fiche servent de premier contrôle.
+- Chercher d'abord le numéro seul. Les mots ajoutés et les filtres se combinent par ET : une erreur dans la citation masquerait le bon résultat.
+- Si les résultats sont trop nombreux, restreindre par le filtre Année tiré de la citation. Si la fiche n'apparaît toujours pas, retirer ce filtre et essayer les années voisines avant de passer à l'adresse directe : la date citée peut être fausse.
+- Le filtre Langue porte sur la langue du document : `Français` masque un arrêt néerlandais (l'arrêt n° 268.329, néerlandais, donne 0 résultat avec ce filtre). Ne pas l'utiliser pour identifier un arrêt ; s'il est utilisé, le consigner.
+- Un arrêt ancien publié avec sa traduction apparaît sur deux fiches (« En cause » et « In zake ») ; les deux fiches peuvent renvoyer à la même adresse. Contrôler la langue du PDF reçu (section 7).
+- L'adresse de la page de résultats (`/fr/recherche/arrets?query=…`, avec `year`, `language`, `chambre`, `category`, `sort`, `page`) reflète la recherche effectuée : elle peut être conservée dans les traces et réutilisée avec un autre numéro **cité dans le document**.
 
-Lorsque le lecteur intégré échoue ou empêche l’extraction, utiliser un téléchargement standard du lien effectivement observé, puis lire le PDF localement. Un outil tel que `curl --fail --location` a fonctionné dans le parcours du 24 septembre 2026 alors qu’un autre client et le lecteur web échouaient ; ce résultat ne garantit pas tous les environnements. Ne pas contourner un contrôle d’accès ni un CAPTCHA. Conserver l’échec du premier client et le résultat du repli.
+### 4.1. Adresse officielle directe d'un arrêt
 
-Conserver le lien complet, y compris son fragment éventuel `#xml=...`. Pour télécharger le fichier, le fragment peut être retiré : il concerne l’affichage des occurrences et ne fait pas partie de la requête HTTP. Le domaine, le chemin et les paramètres de requête restent inchangés ; ce retrait n’autorise aucune reconstruction d’URL.
+Sur le nouveau site, chaque arrêt a une adresse stable, celle que portent les fiches de résultats et les fiches juriDict :
 
-Un statut HTTP 200 ne suffit pas : vérifier la signature PDF, l’ouverture par un lecteur, le nombre de pages et l’identité du document. Une page HTML d’erreur servie en 200 reste un échec de récupération. Lire l’en-tête, la langue, les mentions de traduction et de rectification avant le passage cité. Chercher ensuite le passage dans le texte extrait et rendre visuellement les pages pertinentes si l’extraction est douteuse. Ne pas transformer des espaces parasites d’extraction en fautes de l’auteur.
+```text
+https://www.raadvst-consetat.be/arrets/<numéro sans point>     texte français
+https://www.raadvst-consetat.be/arresten/<numéro sans point>   texte néerlandais
+```
 
-Pour un lot, réutiliser le formulaire, conserver les liens observés dans un manifeste, limiter les téléchargements simultanés et réutiliser les fichiers déjà obtenus. Un seul changement de client standard suffit pour tester un repli ; en cas d’échec persistant, consigner la limite et passer à une voie de corroboration. Séparer recherche, téléchargement et lecture dans les traces : la panne du lecteur ne doit pas être attribuée au formulaire qui a abouti.
+Pour un arrêt rendu dans une seule langue, les deux adresses livrent le même PDF. Pour un arrêt publié avec sa traduction (constaté sur les n° 70.412 et 92.340), chacune livre un texte différent, dont l'un porte en tête « Texte français » ou « Nederlandse tekst » avec la mention du titre VI, chapitre II, des lois coordonnées : c'est la traduction.
 
-### 4.1. Échec du formulaire
+Règle :
 
-Si le formulaire officiel ne peut pas être piloté, renvoie une erreur, un timeout ou une réponse techniquement inexploitable :
+- la recherche reste la voie primaire ; l'adresse directe n'est essayée qu'après une recherche par numéro qui n'a pas montré la fiche attendue, ou lorsque la recherche est en panne ;
+- **l'adresse n'est jamais une preuve** : seul le PDF ouvert, dont l'en-tête porte le numéro et la date, établit l'existence et l'identité de l'arrêt ;
+- une réponse 404 à cette adresse ne prouve pas l'inexistence (constatée pour le n° 61.000, cité par l'ancienne documentation de juriDict) : consigner l'échec et poursuivre par juriDict ou une corroboration ;
+- consigner dans les traces que le document a été obtenu par l'adresse directe, après quelle recherche ;
+- cette tolérance ne vaut que pour ces deux schémas, observés sur le site officiel. Aucune autre adresse n'est construite, et jamais un ECLI.
+
+### 4.2. ECLI
+
+Les arrêts récents portent leur ECLI en pied de chaque page du PDF (constaté sur l'arrêt n° 268.329 du 12 novembre 2026 : `ECLI:BE:RVSCE:2026:ARR.268.329`). Les arrêts n° 247.602 (2020) et n° 50.000 (1994) n'en portent pas ; ni les fiches de résultats ni les fiches juriDict n'en affichent. Relever l'ECLI tel qu'il est imprimé dans le PDF ; ne pas en composer un pour un arrêt qui n'en porte pas.
+
+### 4.3. Récupérer et lire le document
+
+Le lien d'une fiche ouvre directement le PDF. Si le lecteur intégré échoue ou empêche l'extraction, télécharger le lien observé avec un client standard et lire le PDF localement ; `curl --fail --location` a fonctionné le 14 novembre 2026 pour la recherche comme pour les PDF, ce qui ne garantit pas tous les environnements. Ne pas contourner un contrôle d'accès ni un CAPTCHA. Conserver l'échec du premier client et le résultat du repli.
+
+Un statut HTTP 200 ne suffit pas : vérifier la signature PDF, l'ouverture par un lecteur, le nombre de pages et l'identité du document. Une page HTML servie en 200 reste un échec de récupération ; c'est le cas des anciennes adresses `?page=…`, qui renvoient désormais la page d'accueil (section 9). Lire l'en-tête, la langue, les mentions de traduction et de rectification avant le passage cité. Chercher ensuite le passage dans le texte extrait et rendre visuellement les pages pertinentes si l'extraction est douteuse. Ne pas transformer des espaces parasites d'extraction en fautes de l'auteur.
+
+Pour un lot, conserver les liens observés dans un manifeste, limiter les téléchargements simultanés et réutiliser les fichiers déjà obtenus. Un seul changement de client standard suffit pour tester un repli ; en cas d'échec persistant, consigner la limite et passer à une voie de corroboration. Séparer recherche, téléchargement et lecture dans les traces.
+
+### 4.4. Échec de la recherche
+
+Si la recherche officielle ne peut pas être pilotée, renvoie une erreur, un timeout ou une réponse techniquement inexploitable :
 
 ```text
 TECHNICAL_FAILURE
@@ -83,9 +119,9 @@ NO_RESULT
 NOT_FOUND
 ```
 
-L'absence d'un résultat dans Google/Bing ou un autre moteur général ne peut pas davantage établir l'inexistence de l'arrêt.
+L'absence d'un résultat dans Google/Bing ou un autre moteur général ne peut pas davantage établir l'inexistence de l'arrêt. Il en va de même d'un « 0 résultat » de la recherche officielle elle-même (section 2.2) : essayer l'adresse directe, puis juriDict, avant toute conclusion ; à défaut de document, le statut est `NOT_VERIFIABLE_WITH_ACCESSIBLE_SOURCES`, pas une inexistence.
 
-### 4.2. Arrêt postérieur à septembre 1994
+### 4.5. Arrêt postérieur à septembre 1994
 
 Si l'arrêt est postérieur à septembre 1994 et ne relève pas d'une exception de publication connue, une impossibilité persistante d'accéder au document doit être décrite comme une limitation technique de l'audit.
 
@@ -97,13 +133,15 @@ juriDict donne accès au contenu juridique de la jurisprudence et renvoie à des
 
 La structure est divisée en branches francophone et néerlandophone.
 
-### 5.1. Couverture
+### 5.1. Accès et couverture
 
-La documentation officielle francophone indique un accès systématique à partir du n° 61.000 du 17 juillet 1996 ; avant cette date, la reprise est sporadique. Les décisions ne tranchant pas de nouvelles questions juridiques peuvent ne pas y figurer.
+Adresse : `/fr/banques-de-donnees/juridict` (néerlandais : `/nl/databanken/juridict`). Sans préférence de langue enregistrée, l'adresse française a renvoyé l'interface néerlandaise : contrôler la langue de l'interface reçue avant de lire les rubriques.
 
-La [présentation néerlandaise](https://www.raadvst-consetat.be/?lang=nl&page=juridict) annonce une couverture systématique depuis le 1er janvier 2000, et depuis juin 2018 pour les affaires d’étrangers ; auparavant, celles-ci étaient sélectionnées selon leur intérêt. Les décisions de procédure sont exclues. Le manuel présente encore une formulation plus restrictive pour les étrangers : conserver cette différence documentaire, sans extrapoler une exhaustivité.
+Le champ simple accepte des mots, un numéro d'arrêt ou une date. La recherche avancée offre : Requérant, Décision, Chambre, N° d'arrêt, dates Du/Au, Domaine, Type (arrêt, ordonnance, question préjudicielle, assemblée générale). Le site précise que les arrêts dépersonnalisés et les ordonnances ne sont pas cherchés par nom. Les résultats sont des **points de droit** ; chacun renvoie au PDF de l'arrêt par son adresse directe (section 4.1). juriDict peut ainsi retrouver par numéro un arrêt que la recherche plein texte ne montre pas, dans les limites de sa couverture.
 
-Ces indications concernent juriDict, pas la collection générale des PDF depuis septembre 1994. Vérifier séparément les informations dans chaque langue.
+Les présentations française et néerlandaise, relues le 14 novembre 2026, annoncent chacune pour sa structure un accès systématique aux arrêts depuis le 1er janvier 2000, et depuis juin 2018 pour le contentieux des étrangers ; la jurisprudence plus ancienne est reprise de manière sélective ; les arrêts de procédure sont exclus ; les ordonnances de non-admission ne figurent que si elles présentent un intérêt. (L'ancienne documentation française annonçait le n° 61.000 du 17 juillet 1996 comme point de départ : cette indication n'est plus affichée.)
+
+Ces indications concernent juriDict, pas la collection générale des PDF depuis septembre 1994.
 
 ### 5.2. Taxonomies FR/NL
 
@@ -146,6 +184,12 @@ Distinguer strictement :
 
 Un document de l'auditorat n'est pas une « conclusion d'avocat général ».
 
+## 6.1. Parties et pseudonymisation
+
+Depuis février 2024, tous les arrêts et ordonnances publiés sont pseudonymisés ; dans le contentieux des étrangers, l'identité des requérants est toujours omise (« XXXXX »), et une partie peut obtenir l'omission de son identité. Des arrêts plus anciens affichent encore les noms.
+
+Un nom de partie cité dans le document audité mais absent du PDF publié n'est donc pas une anomalie de la citation : marquer le champ « parties » comme non vérifiable sur la version publiée, sans proposer de correction.
+
 ## 7. Langue
 
 Conserver séparément :
@@ -158,6 +202,8 @@ translation_status:
 
 Le site officiel publie les arrêts et ordonnances dans la langue où ils ont été prononcés.
 
+Le chemin de l'adresse indique la langue demandée, pas la langue du prononcé : `/arrets/` pour le français, `/arresten/` pour le néerlandais (section 4.1). Constater la langue sur le PDF reçu. Ne jamais déclarer `EXACT` une citation française à partir d'un texte néerlandais, ni l'inverse.
+
 Si une traduction institutionnelle existe, ne pas la présenter comme texte authentique sans base juridique spécifique.
 
 ## 8. Décisions anciennes
@@ -168,25 +214,30 @@ Principe :
 
 > **L'OCR sert à trouver ; le scan sert à vérifier.**
 
-Chercher l'arrêt dans le fascicule du mois de son prononcé, par son numéro. Contrôler la citation dans les **motifs** et non dans le sommaire qui précède l'arrêt : le sommaire peut en généraliser la portée. Donner la page imprimée du recueil.
+Les quelques documents antérieurs à 1994 que montre le filtre Année du site ne font pas de celui-ci une source pour cette période. Chercher l'arrêt dans le fascicule du mois de son prononcé, par son numéro. Contrôler la citation dans les **motifs** et non dans le sommaire qui précède l'arrêt : le sommaire peut en généraliser la portée. Donner la page imprimée du recueil.
 
 Ne jamais inventer un ECLI pour une ancienne décision qui n'en possède pas ou dont l'identifiant n'a pas été vérifié.
 
 ## 9. Anciens liens et URL
 
-Ne pas fabriquer ou réutiliser aveuglément d'anciens schémas d'URL, notamment les anciens liens `arr.php`.
+Depuis la refonte (constat du 14 novembre 2026) :
 
-Une URL reconstruite à partir d'un numéro n'est jamais une preuve d'existence documentaire.
+- les anciennes pages `?lang=fr&page=…` (`caselaw`, `caselaw_page4`, `juridict`, aides) renvoient la **page d'accueil** avec un statut 200 : ce n'est ni la page demandée ni une preuve de quoi que ce soit ;
+- un ancien lien `arr.php?nr=<numéro>` est redirigé vers `/arresten/<numéro>`, c'est-à-dire l'adresse **néerlandaise** : un arrêt francophone unilingue arrive en français, mais un arrêt publié dans les deux langues arrive en néerlandais. Contrôler la langue reçue et, au besoin, reprendre l'adresse française de la fiche de résultats ;
+- les domaines `conseildetat.be` et `raadvanstate.be` affichent la même page d'accueil.
 
-Un lien `arr.php` réellement affiché peut être suivi tel quel ; son seul nom ne justifie pas de l’écarter. Dans le parcours du 24 septembre 2026, un lien de la fiche FR de juriDict a livré le texte néerlandais du même arrêt : contrôler la langue reçue et revenir au résultat PDF approprié, sans ajouter soi-même un paramètre de langue.
+Un lien `arr.php` trouvé dans une source peut être suivi tel quel. Hors des deux schémas de la section 4.1, ne fabriquer aucune adresse à partir d'un numéro.
+
+Une adresse, même officielle, n'est jamais une preuve d'existence documentaire : seul le document ouvert l'est.
 
 ## 9.1. Autres voies de consultation
 
-- Recherche simple : utile pour des mots, une expression entre guillemets ou une recherche booléenne ; elle porte sur le texte et ne remplace pas le champ numérique pour identifier un arrêt exact. L’aide annonce une limite de 1 000 documents.
-- juriDict : une recherche peut produire plusieurs points de droit pour un seul arrêt. Ne pas compter ces lignes comme autant de sources. Le manuel annonce un maximum de 100 résultats et une séparation linguistique des collections.
-- Décisions récentes : accès par mois et matière, utile pour découvrir des décisions nouvelles. La date d’ajout n’est pas la date du prononcé. Un lien défaillant de cette liste ne démontre pas l’inexistence du document ; revenir au formulaire avec le bon type.
+- **Ordonnances de cassation** : recherche distincte (`/fr/recherche/ordonnances`), filtres Année et Langue, fiches « Ordonnance de cassation 16.903 », adresse `/cassations/<numéro>`. La numérotation est propre aux ordonnances : chercher un numéro dans la collection qui correspond à la nature du document cité.
+- **Avis de la section de législation** : recherche distincte (`/fr/recherche/avis`), filtres Année, Chambre, Matière, Type de norme, Demandeur d'avis, Délai ; une fiche donne l'avis (`/avis/<numéro>`) et, séparément, le projet soumis (`/avis/<numéro>/projet`). Ne pas confondre les deux documents.
+- **juriDict** : une recherche peut produire plusieurs points de droit pour un seul arrêt. Ne pas compter ces lignes comme autant de sources.
+- **Décisions récentes** : l'ancienne liste par mois a disparu ; le tri « Les plus récents en premier » la remplace.
 
-Aides consultées : [recherche avancée](https://www.raadvst-consetat.be/?lang=fr&page=search_help_adv), [recherche simple](https://www.raadvst-consetat.be/?lang=fr&page=search_help), [manuel juriDict NL](https://www.raadvst-consetat.be/?lang=nl&page=juridict_help).
+Pages consultées le 14 novembre 2026 : [recherche dans les arrêts](https://www.raadvst-consetat.be/fr/recherche/arrets/), [Qu'est-ce qu'un arrêt ?](https://www.raadvst-consetat.be/fr/arrets/qu-est-ce-qu-un-arret/), [Qu'est-ce que juriDict ?](https://www.raadvst-consetat.be/fr/banques-de-donnees/qu-est-ce-que-juridict/), [Wat is juriDict?](https://www.raadvst-consetat.be/nl/databanken/wat-is-juridict/), [manuel juriDict](https://www.raadvst-consetat.be/fr/publications/brochures/manuel-juridict/).
 
 ## 10. Procédure recommandée
 
@@ -194,7 +245,9 @@ Aides consultées : [recherche avancée](https://www.raadvst-consetat.be/?lang=f
 
 ```text
 numéro exact
-→ Recherche avancée officielle
+→ recherche officielle dans les arrêts (numéro seul)
+→ fiche dont le titre porte le numéro
+   (à défaut : adresse officielle directe, puis juriDict)
 → document officiel
 → métadonnées
 → texte
@@ -238,11 +291,15 @@ Le module n'est considéré prêt pour V1 que si :
 COUNCIL_OF_STATE_EXACT_NUMBER_RETRIEVAL = GREEN
 ```
 
-## 13. Points d'entrée officiels vérifiés
+## 13. Points d'entrée officiels vérifiés (14 novembre 2026)
 
-- Jurisprudence / collection numérisée : https://www.raadvst-consetat.be/?lang=fr&page=caselaw
-- Recherche avancée : https://www.raadvst-consetat.be/?lang=fr&page=caselaw_page4
-- juriDict : https://www.raadvst-consetat.be/?lang=fr&page=juridict
+- Arrêts, présentation et couverture : https://www.raadvst-consetat.be/fr/arrets/
+- Recherche dans les arrêts : https://www.raadvst-consetat.be/fr/recherche/arrets/ (néerlandais : https://www.raadvst-consetat.be/nl/zoeken/arresten)
+- Recherche dans les ordonnances de cassation : https://www.raadvst-consetat.be/fr/recherche/ordonnances
+- Recherche dans les avis : https://www.raadvst-consetat.be/fr/recherche/avis
+- juriDict : https://www.raadvst-consetat.be/fr/banques-de-donnees/juridict
+
+Si ces adresses ne répondent plus ou renvoient la page d'accueil, repartir du menu **Arrêts** de la page d'accueil et signaler au juriste que le module est à réviser.
 
 ## Traçabilité de T53
 

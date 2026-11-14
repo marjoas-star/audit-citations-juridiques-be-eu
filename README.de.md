@@ -2,7 +2,7 @@
 
 > **Juristinnen und Juristen:** Eine schrittweise [Anleitung](ANLEITUNG.md) erklärt Installation, die nötigen Zugriffe für Claude, die Dauer einer Prüfung und das Lesen des Berichts.
 
-**0.9.4, öffentliche Testphase vor 1.0 (mindestens vier Wochen ab Verbreitung).** Dieser Skill unterstützt einen Agenten bei der Prüfung von Fundstellen, Zitaten und internen Verweisen in belgischen, EU- und EMRK-Dokumenten. Die Anweisungen sind französisch; Arbeitssprachen sind FR/NL/DE/EN.
+**0.9.5, öffentliche Testphase vor 1.0 (mindestens vier Wochen ab Verbreitung).** Dieser Skill unterstützt einen Agenten bei der Prüfung von Fundstellen, Zitaten und internen Verweisen in belgischen, EU- und EMRK-Dokumenten. Die Anweisungen sind französisch; Arbeitssprachen sind FR/NL/DE/EN.
 
 Das Release-Archiv entpacken und den Ordner `audit-citations-juridiques-be-eu` über die Skill-Funktion der jeweiligen Anwendung installieren. Für Codex liegt er unter `~/.codex/skills/` oder im skills-Ordner des konfigurierten CODEX_HOME. Für Claude Code unter `~/.claude/skills/` (alle Projekte) oder im `.claude/skills/` eines Projekts; in der Claude-App ein Zip des Ordners über die Skills-Einstellungen hochladen. Unterordner beibehalten; Einstiegspunkt ist `SKILL.md`.
 
@@ -10,7 +10,7 @@ Beispiel: „Prüfe mit audit-citations-juridiques-be-eu die Fundstellen und Zit
 
 Der Agent benötigt Such- und Browserzugang sowie Werkzeuge zum Lesen der bereitgestellten Dokumente. Markdown ist das maßgebliche Berichtsformat; PDF erfordert Erzeugung und visuelle Kontrolle. Ein [PDF/Markdown-Generator auf Französisch, Niederländisch, Deutsch oder Englisch](templates/report-rendering.md) ist enthalten (Python und ReportLab für PDF: `pip install -r requirements.txt`); eine eigenständige Suchmaschine ist nicht enthalten. PyYAML ist für die Nutzung der Anweisungen nicht erforderlich.
 
-Amtliche Quellen haben Vorrang; Kennungen werden nicht erraten. Ein technischer Fehler beweist nicht die Nichtexistenz einer Entscheidung. Bei bekannter Entscheidungsnummer des belgischen Staatsrates ist zuerst das amtliche erweiterte Suchformular zu verwenden.
+Amtliche Quellen haben Vorrang; Kennungen werden nicht erraten. Ein technischer Fehler beweist nicht die Nichtexistenz einer Entscheidung. Bei bekannter Entscheidungsnummer des belgischen Staatsrates ist zuerst die amtliche Suche in den Entscheidungen zu verwenden (die Website wurde im Herbst 2026 erneuert: ein einziges Suchfeld, kein erweitertes Formular mehr); eine Suche ohne Treffer beweist nicht, dass eine Entscheidung nicht existiert.
 
 [VALIDATION.md](VALIDATION.md) trennt reale Prüfungen, Simulationen und Grenzen. Diese Version ist keine allgemeine V1-Zertifizierung; eine allgemeine Genauigkeitsquote wird nicht behauptet. Für professionelle Verwendung bleibt menschliche Prüfung erforderlich. Ursprüngliche Dokumentation: CC BY-NC-SA 4.0; Python-Code (`scripts/`, `tests/`): [PolyForm Noncommercial 1.0.0](LICENSE-CODE.md). Siehe [LICENSE](LICENSE). Externe Quellen unterliegen weiterhin ihren eigenen Bedingungen und werden hier nicht weiterverbreitet.
 
