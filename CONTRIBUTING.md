@@ -80,4 +80,6 @@ Deux archives par version, construites depuis le tag :
 
 Joindre aussi une copie de l'archive allégée sous le nom fixe `audit-citations-juridiques-be-eu.zip` et marquer la publication comme « Latest » : le lien `…/releases/latest/download/audit-citations-juridiques-be-eu.zip` des modes d'emploi en dépend. Une pré-version n'est jamais « Latest » pour GitHub.
 
+Ces étapes sont automatisées par `.github/workflows/publication.yml` (déclenchement manuel depuis `main`, onglet Actions) : il lit `VERSION`, crée l'étiquette, construit les archives et leurs empreintes, et publie avec le texte de `.github/publication.md`, à mettre à jour avant chaque version.
+
 Les fichiers de l'archive allégée ne doivent contenir aucun lien relatif vers `tests/` ou les README : utiliser l'adresse GitHub complète.
