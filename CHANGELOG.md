@@ -1,5 +1,9 @@
 # Notes de version
 
+## Non publié
+
+- **Travaux parlementaires anciens** : `travaux-parlementaires-federal.md` indique les points d'entrée observés le 16 novembre 2026. Chambre : documents parlementaires par session depuis 1830-1831, listes sans titre (numéro et date seulement). Sénat : documents de 1831 à 1995 et Annales des séances plénières avec pages imprimées. Lecture de l'OCR à deux colonnes sur l'image, identification de l'orateur, et place de la *Pasinomie* comme outil de repérage. Constaté sur la loi du 23 décembre 1946 créant le Conseil d'État (Chambre, session 1936-1937, n° 211 ; Annales du Sénat des 4, 5 et 10 décembre 1946, contrôlées sur l'image et comparées à la *Pasinomie* 1946).
+
 ## 0.9.5 — 14 novembre 2026
 
 - **Nouveau site du Conseil d'État** (refonte constatée le 14 novembre 2026). La « Recherche avancée » et ses champs `Numéro début` / `Numéro fin` ont disparu ; les anciennes adresses `?page=…` renvoient la page d'accueil. Module `conseil-etat-belgique.md` réécrit pour l'interface actuelle : champ unique de recherche dans le texte, filtres Année, Langue, Chambre, Matière ; identification de l'arrêt par le **titre de la fiche**, car un numéro saisi ramène aussi les arrêts qui le citent et ceux dont le numéro de rôle le contient.
