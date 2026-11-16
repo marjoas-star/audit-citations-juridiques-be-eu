@@ -1,5 +1,10 @@
 # Notes de version
 
+## Non publié
+
+- **Travaux parlementaires anciens** : `travaux-parlementaires-federal.md` indique les points d'entrée observés le 16 novembre 2026. Chambre : documents parlementaires par session depuis 1830-1831, listes sans titre (numéro et date seulement). Sénat : documents de 1831 à 1995 et Annales des séances plénières avec pages imprimées. Lecture de l'OCR à deux colonnes sur l'image, identification de l'orateur, et place de la *Pasinomie* comme outil de repérage. Constaté sur la loi du 23 décembre 1946 créant le Conseil d'État (Chambre, session 1936-1937, n° 211 ; Sénat, session extraordinaire 1946, n° 58 ; Annales du Sénat des 4, 5 et 10 décembre 1946, contrôlées sur l'image et comparées à la *Pasinomie* 1946). Recherches testées : au Sénat, documents anciens par session et numéro, Annales par session et date ; à la Chambre, recherche plein texte (législatures 32 à 46) bloquée par une vérification anti-robot depuis une session cloud.
+- **Justel et Moniteur depuis une session cloud** : `moniteur-belge-justel.md` décrit la page anti-robot renvoyée par tout le domaine ejustice (statut 200, HTML même pour un PDF). Il décrit comment la reconnaître sans la contourner, puis les voies prévues (navigateur de l'application ou Claude in Chrome, session sur l'ordinateur du juriste) et les autres sources officielles : coordinations officieuses jointes aux documents parlementaires, texte consolidé publié par le Conseil d'État pour ses lois, page d'accès au Moniteur numérisé de la KU Leuven. RefLex était injoignable depuis la session le 16 novembre 2026.
+
 ## 0.9.5 — 14 novembre 2026
 
 - **Nouveau site du Conseil d'État** (refonte constatée le 14 novembre 2026). La « Recherche avancée » et ses champs `Numéro début` / `Numéro fin` ont disparu ; les anciennes adresses `?page=…` renvoient la page d'accueil. Module `conseil-etat-belgique.md` réécrit pour l'interface actuelle : champ unique de recherche dans le texte, filtres Année, Langue, Chambre, Matière ; identification de l'arrêt par le **titre de la fiche**, car un numéro saisi ramène aussi les arrêts qui le citent et ceux dont le numéro de rôle le contient.
